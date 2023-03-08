@@ -385,1001 +385,1081 @@
 383,x,blip,t2i_seed1,cutmix_0.6,model_base_14M_evaluate.txt, 39.22431027588964, 70.85565773690524
 384,x,blip,t2i_seed1,cutmix_0.6,model_base_retrieval_coco_evaluate.txt, 56.485405837664935, 81.44742103158737
 385, 5.38,blip,03_i2t,four_seed100,model_base_evaluate.txt, 68.04, 88.96
-386, 4.2,blip,03_i2t,four_seed100,model_base_retrieval_coco_evaluate.txt, 79.46, 94.66
-387,x,blip,03_i2t,new_blip_same_new_0301_1,model_base_evaluate.txt, 47.54, 82.16
-388,x,blip,03_i2t,new_blip_same_new_0301_1,model_base_14M_evaluate.txt, 42.32, 81.92
-389,x,blip,03_i2t,new_blip_same_new_0301_1,model_base_retrieval_coco_evaluate.txt, 68.64, 92.52
-390, 5.66,blip,03_i2t,four_seed10,model_base_evaluate.txt, 67.64, 89.06
-391, 4.14,blip,03_i2t,four_seed10,model_base_retrieval_coco_evaluate.txt, 79.38, 94.56
-392,x,blip,03_i2t,new_blip_bert_new_0301_4,model_base_evaluate.txt, 35.66, 78.28
-393,x,blip,03_i2t,new_blip_bert_new_0301_4,model_base_14M_evaluate.txt, 29.44, 77.5
-394,x,blip,03_i2t,new_blip_bert_new_0301_4,model_base_retrieval_coco_evaluate.txt, 64.72, 91.64
-395, 46.4,blip,03_i2t,testall_final_least_sim_question,model_base_evaluate.txt, 44.0, 76.18
-396, 12.8,blip,03_i2t,testall_final_least_sim_question,model_base_retrieval_coco_evaluate.txt, 73.6, 92.48
-397, 40.54,blip,03_i2t,testall_blip_noun_random,model_base_evaluate.txt, 45.58, 81.04
-398, 22.46,blip,03_i2t,testall_blip_noun_random,model_base_retrieval_coco_evaluate.txt, 65.54, 91.84
-399,x,blip,03_i2t,new_blip_diff_new_0301_2,model_base_evaluate.txt, 46.48, 81.6
-400,x,blip,03_i2t,new_blip_diff_new_0301_2,model_base_14M_evaluate.txt, 38.84, 80.78
-401,x,blip,03_i2t,new_blip_diff_new_0301_2,model_base_retrieval_coco_evaluate.txt, 70.14, 92.8
-402,x,blip,03_i2t,new_blip_danger_new_0301_0,model_base_retrieval_coco_evaluate.txt, 67.58, 92.4
-403,x,blip,03_i2t,new_blip_diff_new_0301_3,model_base_evaluate.txt, 45.62, 81.5
-404,x,blip,03_i2t,new_blip_diff_new_0301_3,model_base_14M_evaluate.txt, 38.8, 80.7
-405,x,blip,03_i2t,new_blip_diff_new_0301_3,model_base_retrieval_coco_evaluate.txt, 70.52, 92.68
-406,x,blip,03_i2t,new_blip_diff_new_0301_0,model_base_retrieval_coco_evaluate.txt, 70.36, 92.68
-407, 14.94,blip,03_i2t,three_seed10,model_base_evaluate.txt, 62.64, 86.74
-408, 7.08,blip,03_i2t,three_seed10,model_base_retrieval_coco_evaluate.txt, 77.4, 93.98
-409,x,blip,03_i2t,new_blip_diff_new_0301_1,model_base_evaluate.txt, 45.58, 81.46
-410,x,blip,03_i2t,new_blip_diff_new_0301_1,model_base_14M_evaluate.txt, 38.58, 80.94
-411,x,blip,03_i2t,new_blip_diff_new_0301_1,model_base_retrieval_coco_evaluate.txt, 69.24, 92.64
-412,x,blip,03_i2t,new_blip_same_new_0301_3,model_base_evaluate.txt, 47.8, 82.24
-413,x,blip,03_i2t,new_blip_same_new_0301_3,model_base_14M_evaluate.txt, 42.68, 82.24
-414,x,blip,03_i2t,new_blip_same_new_0301_3,model_base_retrieval_coco_evaluate.txt, 69.28, 92.44
-415, 1.86,blip,03_i2t,five_seed100,model_base_evaluate.txt, 69.74, 89.82
-416, 2.46,blip,03_i2t,five_seed100,model_base_retrieval_coco_evaluate.txt, 80.58, 94.86
-417,x,blip,03_i2t,new_blip_bert_new_0301_3,model_base_evaluate.txt, 35.08, 78.54
-418,x,blip,03_i2t,new_blip_bert_new_0301_3,model_base_14M_evaluate.txt, 29.92, 77.84
-419,x,blip,03_i2t,new_blip_bert_new_0301_3,model_base_retrieval_coco_evaluate.txt, 64.82, 91.94
-420,x,blip,03_i2t,new_blip_bert_new_0301_1,model_base_evaluate.txt, 35.1, 78.04
-421,x,blip,03_i2t,new_blip_bert_new_0301_1,model_base_14M_evaluate.txt, 29.24, 78.42
-422,x,blip,03_i2t,new_blip_bert_new_0301_1,model_base_retrieval_coco_evaluate.txt, 64.32, 91.74
-423, 30.52,blip,03_i2t,two_seed100,model_base_evaluate.txt, 53.0, 83.08
-424, 13.1,blip,03_i2t,two_seed100,model_base_retrieval_coco_evaluate.txt, 73.56, 92.92
-425, 14.34,blip,03_i2t,three_seed1,model_base_evaluate.txt, 63.46, 86.72
-426, 7.26,blip,03_i2t,three_seed1,model_base_retrieval_coco_evaluate.txt, 77.42, 93.8
-427, 52.48,blip,03_i2t,testall_final_big_sim_delete,model_base_evaluate.txt, 36.34, 79.42
-428, 30.1,blip,03_i2t,testall_final_big_sim_delete,model_base_retrieval_coco_evaluate.txt, 59.28, 91.3
-429, 25.8,blip,03_i2t,testall_final_least_sim_delete,model_base_evaluate.txt, 57.14, 82.98
-430, 14.06,blip,03_i2t,testall_final_least_sim_delete,model_base_retrieval_coco_evaluate.txt, 72.74, 92.5
-431, 14.88,blip,03_i2t,three_seed100,model_base_evaluate.txt, 62.88, 86.82
-432, 6.96,blip,03_i2t,three_seed100,model_base_retrieval_coco_evaluate.txt, 77.52, 94.02
-433, 30.52,blip,03_i2t,two_seed10,model_base_evaluate.txt, 53.2, 82.6
-434, 12.54,blip,03_i2t,two_seed10,model_base_retrieval_coco_evaluate.txt, 73.7, 92.98
-435, 1.56,blip,03_i2t,five_seed10,model_base_evaluate.txt, 69.9, 89.84
-436, 2.42,blip,03_i2t,five_seed10,model_base_retrieval_coco_evaluate.txt, 80.64, 94.9
-437,x,blip,03_i2t,new_blip_same_new_0301_2,model_base_evaluate.txt, 48.02, 82.64
-438,x,blip,03_i2t,new_blip_same_new_0301_2,model_base_14M_evaluate.txt, 42.36, 82.44
-439,x,blip,03_i2t,new_blip_same_new_0301_2,model_base_retrieval_coco_evaluate.txt, 68.54, 92.7
-440,x,blip,03_i2t,new_blip_diff_new_0301_4,model_base_evaluate.txt, 44.68, 81.6
-441,x,blip,03_i2t,new_blip_diff_new_0301_4,model_base_14M_evaluate.txt, 36.96, 80.38
-442,x,blip,03_i2t,new_blip_diff_new_0301_4,model_base_retrieval_coco_evaluate.txt, 69.28, 92.94
-443, 2.16,blip,03_i2t,five_seed1,model_base_evaluate.txt, 69.56, 89.8
-444, 2.64,blip,03_i2t,five_seed1,model_base_retrieval_coco_evaluate.txt, 80.22, 94.96
-445,x,blip,03_i2t,new_blip_bert_new_0301_2,model_base_evaluate.txt, 35.2, 78.38
-446,x,blip,03_i2t,new_blip_bert_new_0301_2,model_base_14M_evaluate.txt, 29.48, 78.04
-447,x,blip,03_i2t,new_blip_bert_new_0301_2,model_base_retrieval_coco_evaluate.txt, 64.9, 91.72
-448,x,blip,03_i2t,new_blip_danger_new_0301_2,model_base_evaluate.txt, 37.46, 79.38
-449,x,blip,03_i2t,new_blip_danger_new_0301_2,model_base_14M_evaluate.txt, 35.84, 79.92
-450,x,blip,03_i2t,new_blip_danger_new_0301_2,model_base_retrieval_coco_evaluate.txt, 65.58, 92.2
-451,x,blip,03_i2t,new_blip_bert_new_0301_0,model_base_retrieval_coco_evaluate.txt, 63.72, 91.72
-452, 31.2,blip,03_i2t,two_seed1,model_base_evaluate.txt, 52.92, 82.78
-453, 12.64,blip,03_i2t,two_seed1,model_base_retrieval_coco_evaluate.txt, 73.6, 93.36
-454, 74.3,blip,03_i2t,testall_final_big_sim_question,model_base_evaluate.txt, 20.76, 70.52
-455, 22.66,blip,03_i2t,testall_final_big_sim_question,model_base_retrieval_coco_evaluate.txt, 65.38, 91.64
-456,x,blip,03_i2t,new_blip_same_new_0301_0,model_base_retrieval_coco_evaluate.txt, 68.84, 92.56
-457,x,blip,03_i2t,new_blip_same_new_0301_4,model_base_evaluate.txt, 47.28, 82.38
-458,x,blip,03_i2t,new_blip_same_new_0301_4,model_base_14M_evaluate.txt, 41.72, 82.14
-459,x,blip,03_i2t,new_blip_same_new_0301_4,model_base_retrieval_coco_evaluate.txt, 68.38, 92.36
-460,x,blip,03_i2t,new_blip_danger_new_0301_1,model_base_evaluate.txt, 48.86, 82.8
-461,x,blip,03_i2t,new_blip_danger_new_0301_1,model_base_14M_evaluate.txt, 44.8, 82.66
-462,x,blip,03_i2t,new_blip_danger_new_0301_1,model_base_retrieval_coco_evaluate.txt, 70.26, 93.0
-463, 5.28,blip,03_i2t,four_seed1,model_base_evaluate.txt, 68.16, 88.92
-464, 3.8,blip,03_i2t,four_seed1,model_base_retrieval_coco_evaluate.txt, 79.78, 94.56
-465,x,blip,i2t,new_noun_least_sim_bert_up,model_base_evaluate.txt, 57.72, 82.9
-466,x,blip,i2t,new_noun_least_sim_bert_up,model_large_retrieval_coco_evaluate.txt, 76.62, 93.34
-467,x,blip,i2t,new_noun_least_sim_bert_up,model_large_evaluate.txt, 64.64, 87.56
-468,x,blip,i2t,new_noun_least_sim_bert_up,model_base_14M_evaluate.txt, 49.16, 81.32
-469,x,blip,i2t,new_noun_least_sim_bert_up,model_base_retrieval_coco_evaluate.txt, 75.1, 92.94
-470,x,blip,i2t,new_noun_big_sim_criminal,model_base_evaluate.txt, 39.62, 79.16
-471,x,blip,i2t,new_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 69.5, 92.54
-472,x,blip,i2t,new_noun_big_sim_criminal,model_large_evaluate.txt, 50.18, 84.52
-473,x,blip,i2t,new_noun_big_sim_criminal,model_base_14M_evaluate.txt, 30.92, 77.28
-474,x,blip,i2t,new_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.18, 91.76
-475,x,blip,i2t,new_max_noun_big_sim_bert_random_seed1000,model_large_retrieval_coco_evaluate.txt, 66.52, 92.32
-476,x,blip,i2t,new_max_noun_big_sim_bert_random_seed1000,model_large_evaluate.txt, 46.26, 84.64
-477,x,blip,i2t,new_max_noun_big_sim_bert_random_seed1000,model_base_retrieval_coco_evaluate.txt, 65.1, 91.96
-478,x,blip,i2t,new_max_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.68, 92.08
-479,x,blip,i2t,new_max_noun_big_sim_bert_random,model_large_evaluate.txt, 44.76, 84.0
-480,x,blip,i2t,new_max_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.94, 92.16
-481,x,blip,i2t,new_clip_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 71.32, 92.72
-482,x,blip,i2t,new_clip_noun_big_sim_bert_down,model_large_evaluate.txt, 51.42, 85.14
-483,x,blip,i2t,new_clip_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 69.3, 92.46
-484,x,blip,i2t,new_wsl_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 69.4, 92.52
-485,x,blip,i2t,new_wsl_noun_big_sim_criminal,model_large_evaluate.txt, 50.56, 84.46
-486,x,blip,i2t,new_wsl_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.7, 91.9
-487,x,blip,i2t,new_max_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 70.06, 92.58
-488,x,blip,i2t,new_max_noun_big_sim_criminal,model_large_evaluate.txt, 50.84, 84.6
-489,x,blip,i2t,new_max_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.8, 91.96
-490,x,blip,i2t,new_clip_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 73.96, 92.94
-491,x,blip,i2t,new_clip_noun_big_sim_criminal,model_large_evaluate.txt, 56.74, 86.02
-492,x,blip,i2t,new_clip_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 70.12, 92.64
-493,x,blip,i2t,new_noun_big_sim_occured_random,model_base_evaluate.txt, 44.86, 81.78
-494,x,blip,i2t,new_noun_big_sim_occured_random,model_large_retrieval_coco_evaluate.txt, 72.34, 93.12
-495,x,blip,i2t,new_noun_big_sim_occured_random,model_large_evaluate.txt, 56.54, 86.76
-496,x,blip,i2t,new_noun_big_sim_occured_random,model_base_14M_evaluate.txt, 39.1, 81.4
-497,x,blip,i2t,new_noun_big_sim_occured_random,model_base_retrieval_coco_evaluate.txt, 68.66, 92.8
-498,x,blip,i2t,new_region_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.82, 91.88
-499,x,blip,i2t,new_region_noun_big_sim_bert_random,model_large_evaluate.txt, 45.08, 84.12
-500,x,blip,i2t,new_region_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.36, 92.12
-501,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_base_evaluate.txt, 61.04, 84.8
-502,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_large_retrieval_coco_evaluate.txt, 78.2, 93.88
-503,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_large_evaluate.txt, 67.2, 88.42
-504,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_base_14M_evaluate.txt, 55.9, 84.58
-505,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_base_retrieval_coco_evaluate.txt, 76.2, 93.4
-506,x,blip,i2t,new_wsl_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 66.22, 92.4
-507,x,blip,i2t,new_wsl_noun_big_sim_bert_down,model_large_evaluate.txt, 44.68, 83.82
-508,x,blip,i2t,new_wsl_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 64.24, 91.76
-509,x,blip,i2t,new_noun_least_sim_bert_up_tmp,model_base_evaluate.txt, 57.72, 82.9
-510,x,blip,i2t,new_noun_least_sim_bert_up_tmp,model_base_14M_evaluate.txt, 49.16, 81.32
-511,x,blip,i2t,new_noun_least_sim_bert_up_tmp,model_base_retrieval_coco_evaluate.txt, 75.1, 92.94
-512,x,blip,i2t,new_noun_big_sim_bert_down,model_base_evaluate.txt, 30.28, 76.34
-513,x,blip,i2t,new_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 65.98, 92.18
-514,x,blip,i2t,new_noun_big_sim_bert_down,model_large_evaluate.txt, 42.38, 83.22
-515,x,blip,i2t,new_noun_big_sim_bert_down,model_base_14M_evaluate.txt, 25.3, 76.52
-516,x,blip,i2t,new_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 63.92, 91.74
-517,x,blip,i2t,new_noun_big_sim_oneletter_down,model_base_evaluate.txt, 27.78, 74.68
-518,x,blip,i2t,new_noun_big_sim_oneletter_down,model_large_retrieval_coco_evaluate.txt, 67.62, 92.02
-519,x,blip,i2t,new_noun_big_sim_oneletter_down,model_large_evaluate.txt, 36.86, 82.32
-520,x,blip,i2t,new_noun_big_sim_oneletter_down,model_base_14M_evaluate.txt, 23.36, 74.96
-521,x,blip,i2t,new_noun_big_sim_oneletter_down,model_base_retrieval_coco_evaluate.txt, 66.88, 91.9
-522,x,blip,i2t,new_region_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 69.84, 92.5
-523,x,blip,i2t,new_region_noun_big_sim_criminal,model_large_evaluate.txt, 50.74, 84.74
-524,x,blip,i2t,new_region_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.74, 91.9
-525,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_base_evaluate.txt, 45.04, 81.56
-526,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_large_retrieval_coco_evaluate.txt, 70.68, 92.76
-527,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_large_evaluate.txt, 54.14, 86.34
-528,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_base_14M_evaluate.txt, 40.42, 81.82
-529,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_base_retrieval_coco_evaluate.txt, 67.2, 92.46
-530,x,blip,i2t,testall_random_noun_bert_up,model_base_evaluate.txt, 44.06, 80.18
-531,x,blip,i2t,testall_random_noun_bert_up,model_large_retrieval_coco_evaluate.txt, 71.86, 92.52
-532,x,blip,i2t,testall_random_noun_bert_up,model_large_evaluate.txt, 54.92, 85.8
-533,x,blip,i2t,testall_random_noun_bert_up,model_base_14M_evaluate.txt, 38.18, 80.02
-534,x,blip,i2t,testall_random_noun_bert_up,model_base_retrieval_coco_evaluate.txt, 69.84, 92.22
-535,x,blip,i2t,new_noun_big_sim_table,model_base_evaluate.txt, 49.88, 82.3
-536,x,blip,i2t,new_noun_big_sim_table,model_large_retrieval_coco_evaluate.txt, 73.56, 93.24
-537,x,blip,i2t,new_noun_big_sim_table,model_large_evaluate.txt, 60.12, 87.6
-538,x,blip,i2t,new_noun_big_sim_table,model_base_14M_evaluate.txt, 47.84, 83.8
-539,x,blip,i2t,new_noun_big_sim_table,model_base_retrieval_coco_evaluate.txt, 69.66, 92.5
-540,x,blip,i2t,new_noun_big_sim_question,model_base_evaluate.txt, 19.2, 69.54
-541,x,blip,i2t,new_noun_big_sim_question,model_large_retrieval_coco_evaluate.txt, 67.28, 91.98
-542,x,blip,i2t,new_noun_big_sim_question,model_large_evaluate.txt, 31.04, 79.68
-543,x,blip,i2t,new_noun_big_sim_question,model_base_14M_evaluate.txt, 22.46, 74.52
-544,x,blip,i2t,new_noun_big_sim_question,model_base_retrieval_coco_evaluate.txt, 64.38, 91.5
-545,x,blip,i2t,new_max_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 66.72, 92.48
-546,x,blip,i2t,new_max_noun_big_sim_bert_down,model_large_evaluate.txt, 44.74, 83.84
-547,x,blip,i2t,new_max_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 64.24, 91.88
-548,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_base_evaluate.txt, 39.4, 80.18
-549,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_large_retrieval_coco_evaluate.txt, 70.74, 92.82
-550,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_large_evaluate.txt, 50.84, 85.5
-551,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_base_14M_evaluate.txt, 33.52, 79.22
-552,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_base_retrieval_coco_evaluate.txt, 68.24, 92.48
-553,x,blip,i2t,new_region_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 66.28, 92.14
-554,x,blip,i2t,new_region_noun_big_sim_bert_down,model_large_evaluate.txt, 45.24, 83.78
-555,x,blip,i2t,new_region_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 64.18, 91.86
-556,x,blip,i2t,new_wsl_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.3, 92.06
-557,x,blip,i2t,new_wsl_noun_big_sim_bert_random,model_large_evaluate.txt, 44.94, 84.04
-558,x,blip,i2t,new_wsl_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.38, 92.04
-559,x,blip,i2t,new_noun_big_sim_bert_up,model_base_evaluate.txt, 35.96, 78.76
-560,x,blip,i2t,new_noun_big_sim_bert_up,model_large_retrieval_coco_evaluate.txt, 67.62, 92.12
-561,x,blip,i2t,new_noun_big_sim_bert_up,model_large_evaluate.txt, 47.42, 84.78
-562,x,blip,i2t,new_noun_big_sim_bert_up,model_base_14M_evaluate.txt, 30.66, 78.34
-563,x,blip,i2t,new_noun_big_sim_bert_up,model_base_retrieval_coco_evaluate.txt, 65.04, 91.84
-564,x,blip,i2t,original,model_large_retrieval_coco_evaluate.txt, 82.36, 95.42
-565,x,blip,i2t,original,model_large_evaluate.txt, 73.66, 91.64
-566,x,blip,i2t,new_noun_big_sim_bert_random,model_base_evaluate.txt, 33.2, 77.36
-567,x,blip,i2t,new_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.16, 92.02
-568,x,blip,i2t,new_noun_big_sim_bert_random,model_large_evaluate.txt, 44.32, 83.88
-569,x,blip,i2t,new_noun_big_sim_bert_random,model_base_14M_evaluate.txt, 27.22, 76.92
-570,x,blip,i2t,new_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.78, 92.0
-571,x,blip,i2t,new_clip_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 70.66, 92.62
-572,x,blip,i2t,new_clip_noun_big_sim_bert_random,model_large_evaluate.txt, 51.56, 85.46
-573,x,blip,i2t,new_clip_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 69.7, 92.58
-574,x,blip,i2t,new_noun_big_sim_youtube,model_base_evaluate.txt, 56.58, 86.1
-575,x,blip,i2t,new_noun_big_sim_youtube,model_large_retrieval_coco_evaluate.txt, 79.66, 94.28
-576,x,blip,i2t,new_noun_big_sim_youtube,model_large_evaluate.txt, 68.42, 90.3
-577,x,blip,i2t,new_noun_big_sim_youtube,model_base_14M_evaluate.txt, 38.4, 81.76
-578,x,blip,i2t,new_noun_big_sim_youtube,model_base_retrieval_coco_evaluate.txt, 77.4, 93.92
-579,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50x16log.txt, 26.441423430627747, 51.231507397041185
-580,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50log.txt, 25.06997201119552, 49.340263894442224
-581,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50x4log.txt, 25.893642542982807, 50.635745701719316
-582,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50x64log.txt, 30.73170731707317, 55.281887245101956
-583,x,clip_resnet,t2i_seed1,mixup_0.6,RN50x16log.txt, 25.553778488604557, 49.760095961615356
-584,x,clip_resnet,t2i_seed1,mixup_0.6,RN50log.txt, 25.57377049180328, 49.332267093162734
-585,x,clip_resnet,t2i_seed1,mixup_0.6,RN50x4log.txt, 25.385845661735306, 48.696521391443426
-586,x,clip_resnet,t2i_seed1,mixup_0.6,RN50x64log.txt, 30.835665733706517, 55.65373850459816
-587,x,clip_resnet,t2i_seed1,mixup_0.9,RN50x16log.txt, 16.88924430227909, 46.96921231507397
-588,x,clip_resnet,t2i_seed1,mixup_0.9,RN50log.txt, 20.975609756097562, 46.477409036385446
-589,x,clip_resnet,t2i_seed1,mixup_0.9,RN50x4log.txt, 17.473010795681727, 45.34986005597761
-590,x,clip_resnet,t2i_seed1,mixup_0.9,RN50x64log.txt, 26.217512994802078, 54.13034786085566
-591,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50x16log.txt, 24.9140343862455, 50.323870451819275
-592,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50log.txt, 24.49420231907237, 48.932427029188325
-593,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50x4log.txt, 24.78608556577369, 49.768092762894845
-594,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50x64log.txt, 29.77608956417433, 54.73810475809676
-595,x,clip_resnet,t2i_seed1,mixup_0.7,RN50x16log.txt, 22.870851659336264, 48.21671331467413
-596,x,clip_resnet,t2i_seed1,mixup_0.7,RN50log.txt, 24.45421831267493, 48.376649340263896
-597,x,clip_resnet,t2i_seed1,mixup_0.7,RN50x4log.txt, 23.402638944422232, 47.48100759696121
-598,x,clip_resnet,t2i_seed1,mixup_0.7,RN50x64log.txt, 29.368252698920433, 55.15793682526989
-599,x,clip_resnet,t2i_seed1,mixup_0.8,RN50x16log.txt, 19.572171131547382, 47.10515793682527
-600,x,clip_resnet,t2i_seed1,mixup_0.8,RN50log.txt, 22.694922031187524, 47.377049180327866
-601,x,clip_resnet,t2i_seed1,mixup_0.8,RN50x4log.txt, 20.23190723710516, 46.26949220311875
-602,x,clip_resnet,t2i_seed1,mixup_0.8,RN50x64log.txt, 27.72890843662535, 54.42622950819672
-603,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50x16log.txt, 22.10715713714514, 48.48460615753699
-604,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50log.txt, 23.33466613354658, 47.93682526989204
-605,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50x4log.txt, 22.558976409436227, 48.188724510195925
-606,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50x64log.txt, 28.064774090363855, 53.73450619752099
-607,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50x16log.txt, 27.309076369452217, 51.79928028788485
-608,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50log.txt, 25.581767293082766, 49.69612155137945
-609,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50x4log.txt, 26.953218712514992, 51.16353458616553
-610,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50x64log.txt, 31.17153138744502, 55.48180727708917
-611,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50x16log.txt, 46.68, 71.46
-612,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50log.txt, 42.78, 67.12
-613,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50x4log.txt, 44.96, 70.1
-614,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50x64log.txt, 51.12, 75.38
-615,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50x16log.txt, 43.22, 72.76
-616,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50log.txt, 43.84, 69.22
-617,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50x4log.txt, 42.14, 71.24
-618,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50x64log.txt, 49.0, 77.06
-619,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50x16log.txt, 38.42, 69.58
-620,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50log.txt, 37.42, 65.44
-621,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50x4log.txt, 37.42, 67.28
-622,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50x64log.txt, 43.98, 73.92
-623,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50x16log.txt, 37.12, 69.1
-624,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50log.txt, 37.34, 65.08
-625,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50x4log.txt, 35.9, 67.28
-626,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50x64log.txt, 43.2, 73.8
-627,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50x16log.txt, 41.58, 70.3
-628,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50log.txt, 38.86, 66.22
-629,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50x4log.txt, 40.38, 68.88
-630,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50x64log.txt, 45.56, 74.3
-631,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50x16log.txt, 43.16, 73.0
-632,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50log.txt, 43.78, 69.3
-633,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50x4log.txt, 42.38, 71.34
-634,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50x64log.txt, 49.14, 77.34
-635,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50x16log.txt, 43.32, 73.18
-636,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50log.txt, 43.96, 69.44
-637,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50x4log.txt, 42.5, 71.34
-638,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50x64log.txt, 49.22, 77.26
-639,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50x16log.txt, 45.36, 73.56
-640,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50log.txt, 44.38, 69.96
-641,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50x4log.txt, 44.14, 71.78
-642,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50x64log.txt, 50.92, 77.66
-643,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50x16log.txt, 42.32, 71.74
-644,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50log.txt, 38.7, 66.18
-645,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50x4log.txt, 40.28, 69.5
-646,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50x64log.txt, 46.1, 75.12
-647,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50x16log.txt, 37.4, 68.98
-648,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50log.txt, 37.4, 65.26
-649,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50x4log.txt, 36.28, 67.74
-650,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50x64log.txt, 43.52, 73.96
-651,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50x16log.txt, 47.16, 72.64
-652,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50log.txt, 43.24, 67.38
-653,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50x4log.txt, 45.88, 71.2
-654,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50x64log.txt, 50.86, 75.9
-655,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50x16log.txt, 39.02, 70.14
-656,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50log.txt, 37.08, 65.76
-657,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50x4log.txt, 37.56, 68.6
-658,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50x64log.txt, 43.02, 73.54
-659,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50x16log.txt, 37.4, 69.7
-660,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50log.txt, 36.36, 64.88
-661,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50x4log.txt, 36.18, 67.82
-662,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50x64log.txt, 41.74, 73.12
-663,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50x16log.txt, 29.18, 64.52
-664,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50log.txt, 33.3, 63.18
-665,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50x4log.txt, 30.28, 62.84
-666,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50x64log.txt, 40.4, 72.26
-667,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50x16log.txt, 43.34, 72.94
-668,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50log.txt, 43.96, 69.46
-669,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50x4log.txt, 42.78, 71.46
-670,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50x64log.txt, 49.6, 77.34
-671,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50x16log.txt, 39.06, 70.04
-672,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50log.txt, 36.0, 64.94
-673,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50x4log.txt, 37.72, 68.06
-674,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50x64log.txt, 41.72, 73.42
-675,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50x16log.txt, 41.42, 70.6
-676,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50log.txt, 39.88, 66.12
-677,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50x4log.txt, 40.64, 68.66
-678,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50x64log.txt, 46.36, 74.52
-679,x,clip_resnet,i2t,new_noun_big_sim_table,RN50x16log.txt, 43.8, 73.1
-680,x,clip_resnet,i2t,new_noun_big_sim_table,RN50log.txt, 37.48, 65.64
-681,x,clip_resnet,i2t,new_noun_big_sim_table,RN50x4log.txt, 41.24, 70.48
-682,x,clip_resnet,i2t,new_noun_big_sim_table,RN50x64log.txt, 46.08, 74.62
-683,x,clip_resnet,i2t,new_noun_big_sim_question,RN50x16log.txt, 36.24, 69.92
-684,x,clip_resnet,i2t,new_noun_big_sim_question,RN50log.txt, 37.62, 66.04
-685,x,clip_resnet,i2t,new_noun_big_sim_question,RN50x4log.txt, 36.44, 68.8
-686,x,clip_resnet,i2t,new_noun_big_sim_question,RN50x64log.txt, 40.88, 73.22
-687,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50x16log.txt, 39.02, 69.94
-688,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50log.txt, 37.04, 65.5
-689,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50x4log.txt, 37.38, 68.52
-690,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50x64log.txt, 42.78, 73.36
-691,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50x16log.txt, 40.16, 70.96
-692,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50log.txt, 37.86, 65.92
-693,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50x4log.txt, 39.1, 69.04
-694,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50x64log.txt, 44.82, 74.22
-695,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50x16log.txt, 39.26, 70.16
-696,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50log.txt, 37.44, 65.6
-697,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50x4log.txt, 37.76, 68.7
-698,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50x64log.txt, 43.08, 73.56
-699,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50x16log.txt, 37.54, 69.04
-700,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50log.txt, 36.9, 65.18
-701,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50x4log.txt, 36.26, 67.52
-702,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50x64log.txt, 43.5, 73.68
-703,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50x16log.txt, 38.4, 69.64
-704,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50log.txt, 37.7, 66.04
-705,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50x4log.txt, 37.18, 67.84
-706,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50x64log.txt, 44.1, 73.94
-707,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50x16log.txt, 37.12, 68.66
-708,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50log.txt, 36.84, 65.22
-709,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50x4log.txt, 35.38, 67.48
-710,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50x64log.txt, 42.92, 73.46
-711,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50x16log.txt, 39.72, 69.58
-712,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50log.txt, 38.5, 65.8
-713,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50x4log.txt, 37.96, 67.7
-714,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50x64log.txt, 45.04, 74.18
-715,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50x16log.txt, 42.98, 72.84
-716,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50log.txt, 43.1, 69.9
-717,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50x4log.txt, 42.34, 71.02
-718,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50x64log.txt, 51.46, 77.9
-719, 12.60295881647341,vse_infty,t2i_seed10,cutmix_0.7,butd_gridlog.txt, 40.00799680127949, 68.95241903238704
-720, 13.574570171931228,vse_infty,t2i_seed10,cutmix_0.7,butd_regionlog.txt, 38.220711715313875, 67.32506997201119
-721, 7.760895641743303,vse_infty,t2i_seed10,cutmix_0.7,wsl_gridlog.txt, 48.35665733706517, 75.53378648540584
-722, 9.236305477808877,vse_infty,t2i_seed10,mixup_0.6,butd_gridlog.txt, 41.23550579768093, 70.25189924030389
-723, 7.197121151539384,vse_infty,t2i_seed10,mixup_0.6,butd_regionlog.txt, 40.363854458216714, 69.53218712514995
-724, 9.436225509796081,vse_infty,t2i_seed10,mixup_0.6,wsl_gridlog.txt, 47.76489404238305, 75.8296681327469
-725, 36.66133546581367,vse_infty,t2i_seed10,mixup_0.9,butd_gridlog.txt, 30.263894442223112, 63.38264694122351
-726, 30.73970411835266,vse_infty,t2i_seed10,mixup_0.9,butd_regionlog.txt, 31.45141943222711, 62.74290283886445
-727, 38.78048780487805,vse_infty,t2i_seed10,mixup_0.9,wsl_gridlog.txt, 34.226309476209515, 69.23630547780887
-728, 16.561375449820073,vse_infty,t2i_seed10,cutmix_0.8,butd_gridlog.txt, 38.4406237504998, 67.624950019992
-729, 17.277089164334267,vse_infty,t2i_seed10,cutmix_0.8,butd_regionlog.txt, 36.89724110355858, 66.28948420631747
-730, 11.095561775289884,vse_infty,t2i_seed10,cutmix_0.8,wsl_gridlog.txt, 46.84126349460216, 74.56217512994802
-731, 15.493802479008396,vse_infty,t2i_seed10,mixup_0.7,butd_gridlog.txt, 38.972411035585765, 68.23670531787285
-732, 11.987205117952819,vse_infty,t2i_seed10,mixup_0.7,butd_regionlog.txt, 38.768492602958815, 67.78488604558177
-733, 15.669732107157136,vse_infty,t2i_seed10,mixup_0.7,wsl_gridlog.txt, 45.0499800079968, 73.8624550179928
-734, 24.79408236705318,vse_infty,t2i_seed10,mixup_0.8,butd_gridlog.txt, 35.3218712514994, 65.82566973210716
-735, 20.447820871651338,vse_infty,t2i_seed10,mixup_0.8,butd_regionlog.txt, 35.77768892443023, 65.13394642143143
-736, 26.069572171131547,vse_infty,t2i_seed10,mixup_0.8,wsl_gridlog.txt, 40.52379048380648, 71.44342263094762
-737, 24.138344662135147,vse_infty,t2i_seed10,cutmix_0.9,butd_gridlog.txt, 35.453818472610955, 65.73370651739305
-738, 23.50659736105558,vse_infty,t2i_seed10,cutmix_0.9,butd_regionlog.txt, 34.40223910435826, 64.62614954018393
-739, 18.144742103158737,vse_infty,t2i_seed10,cutmix_0.9,wsl_gridlog.txt, 43.73450619752099, 72.61895241903238
-740, 10.171931227508997,vse_infty,t2i_seed10,cutmix_0.6,butd_gridlog.txt, 40.93962415033987, 69.8000799680128
-741, 11.415433826469412,vse_infty,t2i_seed10,cutmix_0.6,butd_regionlog.txt, 39.07237105157937, 68.1047580967613
-742, 6.561375449820072,vse_infty,t2i_seed10,cutmix_0.6,wsl_gridlog.txt, 48.86045581767293, 76.1015593762495
-743, 12.171131547381048,vse_infty,t2i_seed1,cutmix_0.7,butd_gridlog.txt, 40.09196321471411, 69.07237105157937
-744, 13.574570171931228,vse_infty,t2i_seed1,cutmix_0.7,butd_regionlog.txt, 38.220711715313875, 67.32506997201119
-745, 8.280687724910036,vse_infty,t2i_seed1,cutmix_0.7,wsl_gridlog.txt, 48.37265093962415, 75.64574170331868
-746, 9.216313474610155,vse_infty,t2i_seed1,mixup_0.6,butd_gridlog.txt, 41.303478608556574, 70.2638944422231
-747, 7.197121151539384,vse_infty,t2i_seed1,mixup_0.6,butd_regionlog.txt, 40.363854458216714, 69.53218712514995
-748, 9.20031987205118,vse_infty,t2i_seed1,mixup_0.6,wsl_gridlog.txt, 48.14074370251899, 75.68972411035585
-749, 36.61735305877649,vse_infty,t2i_seed1,mixup_0.9,butd_gridlog.txt, 30.19592163134746, 63.45861655337865
-750, 30.73970411835266,vse_infty,t2i_seed1,mixup_0.9,butd_regionlog.txt, 31.45141943222711, 62.74290283886445
-751, 38.884446221511396,vse_infty,t2i_seed1,mixup_0.9,wsl_gridlog.txt, 34.26229508196721, 69.33226709316274
-752, 15.809676129548182,vse_infty,t2i_seed1,cutmix_0.8,butd_gridlog.txt, 38.768492602958815, 67.75689724110356
-753, 17.277089164334267,vse_infty,t2i_seed1,cutmix_0.8,butd_regionlog.txt, 36.89724110355858, 66.28948420631747
-754, 11.243502598960417,vse_infty,t2i_seed1,cutmix_0.8,wsl_gridlog.txt, 46.97321071571371, 74.43022790883647
-755, 15.229908036785286,vse_infty,t2i_seed1,mixup_0.7,butd_gridlog.txt, 39.048380647740906, 68.22870851659336
-756, 11.987205117952819,vse_infty,t2i_seed1,mixup_0.7,butd_regionlog.txt, 38.768492602958815, 67.78488604558177
-757, 15.49780087964814,vse_infty,t2i_seed1,mixup_0.7,wsl_gridlog.txt, 45.36185525789684, 73.91843262694923
-758, 25.25389844062375,vse_infty,t2i_seed1,mixup_0.8,butd_gridlog.txt, 35.2219112355058, 65.88564574170331
-759, 20.447820871651338,vse_infty,t2i_seed1,mixup_0.8,butd_regionlog.txt, 35.77768892443023, 65.13394642143143
-760, 26.533386645341864,vse_infty,t2i_seed1,mixup_0.8,wsl_gridlog.txt, 40.30387844862055, 71.31547381047581
-761, 23.09876049580168,vse_infty,t2i_seed1,cutmix_0.9,butd_gridlog.txt, 35.72171131547381, 65.86165533786486
-762, 23.50659736105558,vse_infty,t2i_seed1,cutmix_0.9,butd_regionlog.txt, 34.40223910435826, 64.62614954018393
-763, 18.388644542183126,vse_infty,t2i_seed1,cutmix_0.9,wsl_gridlog.txt, 43.69452219112355, 72.68692522990804
-764, 10.195921631347462,vse_infty,t2i_seed1,cutmix_0.6,butd_gridlog.txt, 40.79568172730907, 69.82407037185126
-765, 11.415433826469412,vse_infty,t2i_seed1,cutmix_0.6,butd_regionlog.txt, 39.07237105157937, 68.1047580967613
-766, 6.857257097161136,vse_infty,t2i_seed1,cutmix_0.6,wsl_gridlog.txt, 48.892443022790886, 76.28948420631747
-767, 11.575369852059175,vse_infty,t2i_seed100,cutmix_0.7,butd_gridlog.txt, 40.199920031987205, 69.10035985605758
-768, 13.574570171931228,vse_infty,t2i_seed100,cutmix_0.7,butd_regionlog.txt, 38.220711715313875, 67.32506997201119
-769, 8.012794882047181,vse_infty,t2i_seed100,cutmix_0.7,wsl_gridlog.txt, 48.38864454218313, 75.67772890843662
-770, 9.320271891243502,vse_infty,t2i_seed100,mixup_0.6,butd_gridlog.txt, 41.107556977209114, 70.19592163134746
-771, 7.197121151539384,vse_infty,t2i_seed100,mixup_0.6,butd_regionlog.txt, 40.363854458216714, 69.53218712514995
-772, 9.272291083566573,vse_infty,t2i_seed100,mixup_0.6,wsl_gridlog.txt, 48.01279488204718, 75.46581367453018
-773, 36.7453018792483,vse_infty,t2i_seed100,mixup_0.9,butd_gridlog.txt, 30.191923230707715, 63.30667732906837
-774, 30.73970411835266,vse_infty,t2i_seed100,mixup_0.9,butd_regionlog.txt, 31.45141943222711, 62.74290283886445
-775, 38.14074370251899,vse_infty,t2i_seed100,mixup_0.9,wsl_gridlog.txt, 34.43822471011595, 69.43222710915634
-776, 15.101959216313475,vse_infty,t2i_seed100,cutmix_0.8,butd_gridlog.txt, 39.04038384646142, 67.96081567373051
-777, 17.277089164334267,vse_infty,t2i_seed100,cutmix_0.8,butd_regionlog.txt, 36.89724110355858, 66.28948420631747
-778, 11.58736505397841,vse_infty,t2i_seed100,cutmix_0.8,wsl_gridlog.txt, 46.797281087564976, 74.52219112355058
-779, 15.449820071971212,vse_infty,t2i_seed100,mixup_0.7,butd_gridlog.txt, 39.00039984006398, 68.28068772491004
-780, 11.987205117952819,vse_infty,t2i_seed100,mixup_0.7,butd_regionlog.txt, 38.768492602958815, 67.78488604558177
-781, 15.933626549380248,vse_infty,t2i_seed100,mixup_0.7,wsl_gridlog.txt, 44.986005597760894, 73.64254298280687
-782, 24.742103158736505,vse_infty,t2i_seed100,mixup_0.8,butd_gridlog.txt, 35.22990803678528, 65.71371451419432
-783, 20.447820871651338,vse_infty,t2i_seed100,mixup_0.8,butd_regionlog.txt, 35.77768892443023, 65.13394642143143
-784, 26.165533786485405,vse_infty,t2i_seed100,mixup_0.8,wsl_gridlog.txt, 40.36785285885646, 71.46741303478609
-785, 23.31467413034786,vse_infty,t2i_seed100,cutmix_0.9,butd_gridlog.txt, 35.92562974810076, 65.94562175129948
-786, 23.50659736105558,vse_infty,t2i_seed100,cutmix_0.9,butd_regionlog.txt, 34.40223910435826, 64.62614954018393
-787, 18.628548580567774,vse_infty,t2i_seed100,cutmix_0.9,wsl_gridlog.txt, 43.59056377449021, 72.59496201519393
-788, 9.460215913634546,vse_infty,t2i_seed100,cutmix_0.6,butd_gridlog.txt, 41.09556177528989, 69.91603358656538
-789, 11.415433826469412,vse_infty,t2i_seed100,cutmix_0.6,butd_regionlog.txt, 39.07237105157937, 68.1047580967613
-790, 6.313474610155938,vse_infty,t2i_seed100,cutmix_0.6,wsl_gridlog.txt, 49.03238704518193, 76.35345861655338
-791, 37.34,vse_infty,03_i2t,four_seed100,butd_gridlog.txt, 40.88, 76.32
-792, 38.62,vse_infty,03_i2t,four_seed100,butd_regionlog.txt, 40.18, 75.18
-793, 32.2,vse_infty,03_i2t,four_seed100,wsl_gridlog.txt, 48.86, 82.16
-794, 34.0,vse_infty,03_i2t,new_blip_same_new_0301_1,butd_gridlog.txt, 40.76, 78.5
-795, 35.74,vse_infty,03_i2t,new_blip_same_new_0301_1,butd_regionlog.txt, 39.74, 77.2
-796, 29.72,vse_infty,03_i2t,new_blip_same_new_0301_1,wsl_gridlog.txt, 48.4, 84.02
-797, 37.3,vse_infty,03_i2t,four_seed10,butd_gridlog.txt, 41.3, 76.38
-798, 36.66,vse_infty,03_i2t,four_seed10,butd_regionlog.txt, 40.6, 75.72
-799, 33.84,vse_infty,03_i2t,four_seed10,wsl_gridlog.txt, 47.72, 81.9
-800, 49.18,vse_infty,03_i2t,new_blip_bert_new_0301_4,butd_gridlog.txt, 32.02, 75.44
-801, 48.0,vse_infty,03_i2t,new_blip_bert_new_0301_4,butd_regionlog.txt, 31.86, 74.38
-802, 46.5,vse_infty,03_i2t,new_blip_bert_new_0301_4,wsl_gridlog.txt, 37.16, 81.06
-803, 39.78,vse_infty,03_i2t,testall_final_least_sim_question,butd_gridlog.txt, 39.92, 75.52
-804, 38.06,vse_infty,03_i2t,testall_final_least_sim_question,butd_regionlog.txt, 40.58, 74.98
-805, 33.76,vse_infty,03_i2t,testall_final_least_sim_question,wsl_gridlog.txt, 47.32, 81.24
-806, 38.84,vse_infty,03_i2t,new_blip_diff_new_0301_2,butd_gridlog.txt, 38.76, 77.24
-807, 39.5,vse_infty,03_i2t,new_blip_diff_new_0301_2,butd_regionlog.txt, 36.98, 76.2
-808, 35.7,vse_infty,03_i2t,new_blip_diff_new_0301_2,wsl_gridlog.txt, 44.62, 82.3
-809, 41.94,vse_infty,03_i2t,new_blip_danger_new_0301_0,butd_gridlog.txt, 36.28, 76.1
-810, 43.04,vse_infty,03_i2t,new_blip_danger_new_0301_0,butd_regionlog.txt, 34.62, 75.18
-811, 40.2,vse_infty,03_i2t,new_blip_danger_new_0301_0,wsl_gridlog.txt, 41.02, 81.86
-812, 46.46,vse_infty,03_i2t,testall_final_random_delete,butd_gridlog.txt, 34.3, 74.68
-813, 45.58,vse_infty,03_i2t,testall_final_random_delete,butd_regionlog.txt, 34.2, 74.52
-814, 41.68,vse_infty,03_i2t,testall_final_random_delete,wsl_gridlog.txt, 40.8, 80.86
-815, 37.3,vse_infty,03_i2t,new_blip_diff_new_0301_3,butd_gridlog.txt, 39.18, 77.46
-816, 40.32,vse_infty,03_i2t,new_blip_diff_new_0301_3,butd_regionlog.txt, 36.84, 76.3
-817, 34.7,vse_infty,03_i2t,new_blip_diff_new_0301_3,wsl_gridlog.txt, 45.38, 82.68
-818, 39.0,vse_infty,03_i2t,new_blip_diff_new_0301_0,butd_gridlog.txt, 38.8, 77.44
-819, 39.98,vse_infty,03_i2t,new_blip_diff_new_0301_0,butd_regionlog.txt, 37.22, 76.36
-820, 35.1,vse_infty,03_i2t,new_blip_diff_new_0301_0,wsl_gridlog.txt, 44.66, 83.02
-821, 42.3,vse_infty,03_i2t,three_seed10,butd_gridlog.txt, 38.04, 75.58
-822, 43.24,vse_infty,03_i2t,three_seed10,butd_regionlog.txt, 36.5, 74.92
-823, 39.08,vse_infty,03_i2t,three_seed10,wsl_gridlog.txt, 43.22, 81.42
-824, 37.96,vse_infty,03_i2t,new_blip_diff_new_0301_1,butd_gridlog.txt, 38.68, 77.72
-825, 39.44,vse_infty,03_i2t,new_blip_diff_new_0301_1,butd_regionlog.txt, 37.02, 76.66
-826, 34.8,vse_infty,03_i2t,new_blip_diff_new_0301_1,wsl_gridlog.txt, 44.8, 83.06
-827, 33.52,vse_infty,03_i2t,new_blip_same_new_0301_3,butd_gridlog.txt, 41.16, 78.32
-828, 34.24,vse_infty,03_i2t,new_blip_same_new_0301_3,butd_regionlog.txt, 40.02, 77.22
-829, 29.52,vse_infty,03_i2t,new_blip_same_new_0301_3,wsl_gridlog.txt, 49.04, 83.86
-830, 31.22,vse_infty,03_i2t,five_seed100,butd_gridlog.txt, 44.68, 77.5
-831, 32.92,vse_infty,03_i2t,five_seed100,butd_regionlog.txt, 43.36, 76.8
-832, 27.42,vse_infty,03_i2t,five_seed100,wsl_gridlog.txt, 52.06, 82.7
-833, 48.58,vse_infty,03_i2t,new_blip_bert_new_0301_3,butd_gridlog.txt, 32.44, 75.64
-834, 47.52,vse_infty,03_i2t,new_blip_bert_new_0301_3,butd_regionlog.txt, 31.74, 74.92
-835, 45.76,vse_infty,03_i2t,new_blip_bert_new_0301_3,wsl_gridlog.txt, 37.48, 80.98
-836, 48.82,vse_infty,03_i2t,new_blip_bert_new_0301_1,butd_gridlog.txt, 32.18, 75.68
-837, 48.14,vse_infty,03_i2t,new_blip_bert_new_0301_1,butd_regionlog.txt, 31.64, 74.3
-838, 45.66,vse_infty,03_i2t,new_blip_bert_new_0301_1,wsl_gridlog.txt, 37.66, 81.02
-839, 46.3,vse_infty,03_i2t,two_seed100,butd_gridlog.txt, 34.84, 74.8
-840, 46.56,vse_infty,03_i2t,two_seed100,butd_regionlog.txt, 33.82, 74.34
-841, 43.26,vse_infty,03_i2t,two_seed100,wsl_gridlog.txt, 40.28, 81.02
-842, 42.3,vse_infty,03_i2t,three_seed1,butd_gridlog.txt, 37.66, 75.26
-843, 42.76,vse_infty,03_i2t,three_seed1,butd_regionlog.txt, 37.32, 74.26
-844, 37.88,vse_infty,03_i2t,three_seed1,wsl_gridlog.txt, 44.62, 80.78
-845, 51.54,vse_infty,03_i2t,testall_final_big_sim_delete,butd_gridlog.txt, 30.46, 74.68
-846, 50.72,vse_infty,03_i2t,testall_final_big_sim_delete,butd_regionlog.txt, 30.02, 73.7
-847, 47.14,vse_infty,03_i2t,testall_final_big_sim_delete,wsl_gridlog.txt, 36.56, 80.4
-848, 39.78,vse_infty,03_i2t,testall_final_least_sim_delete,butd_gridlog.txt, 39.92, 75.52
-849, 38.06,vse_infty,03_i2t,testall_final_least_sim_delete,butd_regionlog.txt, 40.58, 74.98
-850, 33.76,vse_infty,03_i2t,testall_final_least_sim_delete,wsl_gridlog.txt, 47.32, 81.24
-851, 40.66,vse_infty,03_i2t,three_seed100,butd_gridlog.txt, 38.38, 75.64
-852, 41.98,vse_infty,03_i2t,three_seed100,butd_regionlog.txt, 37.62, 74.84
-853, 38.36,vse_infty,03_i2t,three_seed100,wsl_gridlog.txt, 44.28, 81.2
-854, 45.3,vse_infty,03_i2t,two_seed10,butd_gridlog.txt, 35.12, 74.88
-855, 47.22,vse_infty,03_i2t,two_seed10,butd_regionlog.txt, 34.0, 74.3
-856, 43.66,vse_infty,03_i2t,two_seed10,wsl_gridlog.txt, 40.58, 80.52
-857, 30.14,vse_infty,03_i2t,five_seed10,butd_gridlog.txt, 45.08, 77.76
-858, 33.5,vse_infty,03_i2t,five_seed10,butd_regionlog.txt, 43.14, 76.96
-859, 27.48,vse_infty,03_i2t,five_seed10,wsl_gridlog.txt, 51.82, 82.88
-860, 32.42,vse_infty,03_i2t,new_blip_same_new_0301_2,butd_gridlog.txt, 41.58, 78.58
-861, 34.88,vse_infty,03_i2t,new_blip_same_new_0301_2,butd_regionlog.txt, 40.06, 77.16
-862, 30.28,vse_infty,03_i2t,new_blip_same_new_0301_2,wsl_gridlog.txt, 48.04, 83.78
-863, 38.9,vse_infty,03_i2t,new_blip_diff_new_0301_4,butd_gridlog.txt, 38.12, 77.34
-864, 40.06,vse_infty,03_i2t,new_blip_diff_new_0301_4,butd_regionlog.txt, 36.5, 76.52
-865, 35.0,vse_infty,03_i2t,new_blip_diff_new_0301_4,wsl_gridlog.txt, 44.88, 82.86
-866, 30.34,vse_infty,03_i2t,five_seed1,butd_gridlog.txt, 45.14, 77.78
-867, 32.6,vse_infty,03_i2t,five_seed1,butd_regionlog.txt, 43.0, 76.58
-868, 27.64,vse_infty,03_i2t,five_seed1,wsl_gridlog.txt, 51.32, 82.98
-869, 48.42,vse_infty,03_i2t,new_blip_bert_new_0301_2,butd_gridlog.txt, 32.74, 75.2
-870, 48.4,vse_infty,03_i2t,new_blip_bert_new_0301_2,butd_regionlog.txt, 31.58, 74.32
-871, 46.88,vse_infty,03_i2t,new_blip_bert_new_0301_2,wsl_gridlog.txt, 37.52, 80.86
-872, 31.02,vse_infty,03_i2t,new_blip_danger_new_0301_2,butd_gridlog.txt, 41.28, 78.44
-873, 32.26,vse_infty,03_i2t,new_blip_danger_new_0301_2,butd_regionlog.txt, 39.88, 77.08
-874, 32.56,vse_infty,03_i2t,new_blip_danger_new_0301_2,wsl_gridlog.txt, 44.96, 82.92
-875, 48.76,vse_infty,03_i2t,new_blip_bert_new_0301_0,butd_gridlog.txt, 31.82, 75.1
-876, 47.88,vse_infty,03_i2t,new_blip_bert_new_0301_0,butd_regionlog.txt, 31.74, 74.22
-877, 45.54,vse_infty,03_i2t,new_blip_bert_new_0301_0,wsl_gridlog.txt, 37.88, 81.06
-878,x,vse_infty,03_i2t,seed100,two_seed100_caps.txt,x,x
-879,x,vse_infty,03_i2t,seed100,five_seed100_caps.txt,x,x
-880,x,vse_infty,03_i2t,seed100,five_seed100_tmp_caps.txt,x,x
-881,x,vse_infty,03_i2t,seed100,all_three_seed100_tmp_caps.txt,x,x
-882,x,vse_infty,03_i2t,seed100,four_seed100_caps.txt,x,x
-883,x,vse_infty,03_i2t,seed100,four_seed100_tmp_caps.txt,x,x
-884,x,vse_infty,03_i2t,seed100,three_seed100_caps.txt,x,x
-885,x,vse_infty,03_i2t,seed100,all_two_seed100_tmp_caps.txt,x,x
-886, 46.24,vse_infty,03_i2t,two_seed1,butd_gridlog.txt, 34.4, 75.22
-887, 46.64,vse_infty,03_i2t,two_seed1,butd_regionlog.txt, 34.0, 74.26
-888, 44.46,vse_infty,03_i2t,two_seed1,wsl_gridlog.txt, 39.0, 80.3
-889, 51.54,vse_infty,03_i2t,testall_final_big_sim_question,butd_gridlog.txt, 30.46, 74.68
-890, 50.72,vse_infty,03_i2t,testall_final_big_sim_question,butd_regionlog.txt, 30.02, 73.7
-891, 47.14,vse_infty,03_i2t,testall_final_big_sim_question,wsl_gridlog.txt, 36.56, 80.4
-892, 33.52,vse_infty,03_i2t,new_blip_same_new_0301_0,butd_gridlog.txt, 41.22, 78.48
-893, 35.18,vse_infty,03_i2t,new_blip_same_new_0301_0,butd_regionlog.txt, 40.2, 77.24
-894, 28.82,vse_infty,03_i2t,new_blip_same_new_0301_0,wsl_gridlog.txt, 49.68, 83.78
-895, 34.44,vse_infty,03_i2t,new_blip_same_new_0301_4,butd_gridlog.txt, 40.92, 78.38
-896, 35.58,vse_infty,03_i2t,new_blip_same_new_0301_4,butd_regionlog.txt, 38.92, 76.98
-897, 29.6,vse_infty,03_i2t,new_blip_same_new_0301_4,wsl_gridlog.txt, 48.7, 83.6
-898, 33.0,vse_infty,03_i2t,new_blip_danger_new_0301_1,butd_gridlog.txt, 41.56, 78.44
-899, 36.84,vse_infty,03_i2t,new_blip_danger_new_0301_1,butd_regionlog.txt, 38.48, 76.04
-900, 26.46,vse_infty,03_i2t,new_blip_danger_new_0301_1,wsl_gridlog.txt, 50.2, 84.0
-901, 36.78,vse_infty,03_i2t,four_seed1,butd_gridlog.txt, 41.34, 76.54
-902, 38.1,vse_infty,03_i2t,four_seed1,butd_regionlog.txt, 40.38, 75.42
-903, 32.52,vse_infty,03_i2t,four_seed1,wsl_gridlog.txt, 48.28, 81.64
-904,x,vse_infty,i2t,new_noun_least_sim_bert_up,butd_gridlog.txt, 42.3, 76.64
-905,x,vse_infty,i2t,new_noun_least_sim_bert_up,butd_regionlog.txt, 41.98, 76.0
-906,x,vse_infty,i2t,new_noun_least_sim_bert_up,wsl_gridlog.txt, 49.72, 82.34
-907,x,vse_infty,i2t,new_noun_big_sim_criminal,butd_gridlog.txt, 29.32, 75.32
-908,x,vse_infty,i2t,new_noun_big_sim_criminal,butd_regionlog.txt, 28.58, 74.2
-909,x,vse_infty,i2t,new_noun_big_sim_criminal,wsl_gridlog.txt, 36.1, 80.58
-910,x,vse_infty,i2t,new_noun_big_sim_occured_random,butd_gridlog.txt, 41.02, 78.12
-911,x,vse_infty,i2t,new_noun_big_sim_occured_random,butd_regionlog.txt, 38.64, 76.56
-912,x,vse_infty,i2t,new_noun_big_sim_occured_random,wsl_gridlog.txt, 48.12, 82.98
-913,x,vse_infty,i2t,new_noun_least_sim_occured_random_noun,butd_gridlog.txt, 46.98, 79.1
-914,x,vse_infty,i2t,new_noun_least_sim_occured_random_noun,butd_regionlog.txt, 45.76, 78.04
-915,x,vse_infty,i2t,new_noun_least_sim_occured_random_noun,wsl_gridlog.txt, 55.8, 84.78
-916,x,vse_infty,i2t,new_noun_big_sim_bert_down,butd_gridlog.txt, 32.22, 74.78
-917,x,vse_infty,i2t,new_noun_big_sim_bert_down,butd_regionlog.txt, 30.48, 74.52
-918,x,vse_infty,i2t,new_noun_big_sim_bert_down,wsl_gridlog.txt, 36.84, 80.7
-919,x,vse_infty,i2t,new_noun_big_sim_oneletter_down,butd_gridlog.txt, 41.76, 78.68
-920,x,vse_infty,i2t,new_noun_big_sim_oneletter_down,butd_regionlog.txt, 41.86, 78.12
-921,x,vse_infty,i2t,new_noun_big_sim_oneletter_down,wsl_gridlog.txt, 45.44, 83.18
-922,x,vse_infty,i2t,new_noun_big_sim_same_cate_seed_2,butd_gridlog.txt, 40.76, 78.08
-923,x,vse_infty,i2t,new_noun_big_sim_same_cate_seed_2,butd_regionlog.txt, 38.86, 76.7
-924,x,vse_infty,i2t,new_noun_big_sim_same_cate_seed_2,wsl_gridlog.txt, 47.8, 83.2
-925,x,vse_infty,i2t,testall_random_noun_bert_up,butd_gridlog.txt, 36.82, 75.84
-926,x,vse_infty,i2t,testall_random_noun_bert_up,butd_regionlog.txt, 36.14, 75.72
-927,x,vse_infty,i2t,testall_random_noun_bert_up,wsl_gridlog.txt, 42.04, 81.46
-928,x,vse_infty,i2t,new_noun_big_sim_table,butd_gridlog.txt, 44.76, 78.4
-929,x,vse_infty,i2t,new_noun_big_sim_table,butd_regionlog.txt, 42.16, 77.3
-930,x,vse_infty,i2t,new_noun_big_sim_table,wsl_gridlog.txt, 52.52, 83.88
-931,x,vse_infty,i2t,new_noun_big_sim_question,butd_gridlog.txt, 30.08, 74.44
-932,x,vse_infty,i2t,new_noun_big_sim_question,butd_regionlog.txt, 29.14, 73.94
-933,x,vse_infty,i2t,new_noun_big_sim_question,wsl_gridlog.txt, 35.94, 80.32
-934,x,vse_infty,i2t,new_noun_big_sim_diff_cate_seed_2,butd_gridlog.txt, 36.88, 77.24
-935,x,vse_infty,i2t,new_noun_big_sim_diff_cate_seed_2,butd_regionlog.txt, 35.36, 75.86
-936,x,vse_infty,i2t,new_noun_big_sim_diff_cate_seed_2,wsl_gridlog.txt, 42.8, 82.06
-937,x,vse_infty,i2t,new_noun_big_sim_bert_up,butd_gridlog.txt, 33.4, 75.96
-938,x,vse_infty,i2t,new_noun_big_sim_bert_up,butd_regionlog.txt, 32.46, 75.16
-939,x,vse_infty,i2t,new_noun_big_sim_bert_up,wsl_gridlog.txt, 37.4, 80.98
-940,x,vse_infty,i2t,new_noun_big_sim_bert_random,butd_gridlog.txt, 31.24, 75.88
-941,x,vse_infty,i2t,new_noun_big_sim_bert_random,butd_regionlog.txt, 30.72, 74.94
-942,x,vse_infty,i2t,new_noun_big_sim_bert_random,wsl_gridlog.txt, 36.96, 80.66
-943,x,vse_infty,i2t,new_noun_big_sim_youtube,butd_gridlog.txt, 29.24, 75.12
-944,x,vse_infty,i2t,new_noun_big_sim_youtube,butd_regionlog.txt, 28.86, 74.24
-945,x,vse_infty,i2t,new_noun_big_sim_youtube,wsl_gridlog.txt, 32.88, 79.7
-946,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.7_log.txt, 48.10075969612155, 74.82606957217114
-947,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.9_log.txt, 47.001199520191925, 74.44622151139544
-948,x,albef,t2i_seed10,ALBEF_4M,log.txt,x,x
-949,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.8_log.txt, 47.64094362255098, 74.71011595361855
-950,x,albef,t2i_seed10,ALBEF_4M,mixup_0.9_log.txt, 46.31747301079568, 73.9624150339864
-951,x,albef,t2i_seed10,ALBEF_4M,mixup_0.7_log.txt, 48.22471011595362, 74.83406637345063
-952,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.6_log.txt, 48.34866053578568, 74.9780087964814
-953,x,albef,t2i_seed10,ALBEF_4M,mixup_0.8_log.txt, 47.34906037584966, 74.39424230307877
-954,x,albef,t2i_seed10,ALBEF_4M,mixup_0.6_log.txt, 48.92043182726909, 75.19792083166733
-955, 12.610955617752898,albef,t2i_seed10,mscoco,cutmix_0.7_log.txt, 53.73050779688125, 80.61575369852059
-956, 19.928028788484607,albef,t2i_seed10,mscoco,cutmix_0.9_log.txt, 48.496601359456214, 79.34026389444222
-957,x,albef,t2i_seed10,mscoco,log.txt,x,x
-958, 15.85765693722511,albef,t2i_seed10,mscoco,cutmix_0.8_log.txt, 51.48340663734506, 80.1359456217513
-959, 26.621351459416232,albef,t2i_seed10,mscoco,mixup_0.9_log.txt, 44.07437025189924, 78.56457417033187
-960, 14.38624550179928,albef,t2i_seed10,mscoco,mixup_0.7_log.txt, 52.54698120751699, 80.2998800479808
-961, 11.095561775289884,albef,t2i_seed10,mscoco,cutmix_0.6_log.txt, 54.758096761295484, 80.9156337465014
-962, 20.979608156737307,albef,t2i_seed10,mscoco,mixup_0.8_log.txt, 48.144742103158734, 79.41223510595762
-963, 9.384246301479408,albef,t2i_seed10,mscoco,mixup_0.6_log.txt, 55.8656537385046, 81.26749300279889
-964, 3.130747700919632,albef,t2i_seed10,ALBEF,cutmix_0.7_log.txt, 52.131147540983605, 77.55297880847661
-965, 4.138344662135146,albef,t2i_seed10,ALBEF,cutmix_0.9_log.txt, 51.32746901239504, 77.2890843662535
-966,x,albef,t2i_seed10,ALBEF,log.txt,x,x
-967, 3.7984806077568973,albef,t2i_seed10,ALBEF,cutmix_0.8_log.txt, 51.707317073170735, 77.42902838864454
-968, 4.85405837664934,albef,t2i_seed10,ALBEF,mixup_0.9_log.txt, 50.843662534986, 77.18512594962016
-969, 2.526989204318273,albef,t2i_seed10,ALBEF,mixup_0.7_log.txt, 52.35105957616953, 77.8248700519792
-970, 2.7868852459016393,albef,t2i_seed10,ALBEF,cutmix_0.6_log.txt, 52.375049980007994, 77.67293082766894
-971, 3.7225109956017595,albef,t2i_seed10,ALBEF,mixup_0.8_log.txt, 51.65533786485406, 77.45701719312275
-972, 1.4634146341463414,albef,t2i_seed10,ALBEF,mixup_0.6_log.txt, 52.926829268292686, 78.09676129548181
-973,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.7_log.txt, 48.220711715313875, 74.84606157536986
-974,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.9_log.txt, 47.29308276689324, 74.39824070371851
-975,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.8_log.txt, 47.84486205517793, 74.63014794082368
-976,x,albef,t2i_seed1,ALBEF_4M,mixup_0.9_log.txt, 46.40143942423031, 73.99040383846462
-977,x,albef,t2i_seed1,ALBEF_4M,mixup_0.7_log.txt, 48.46061575369852, 74.90603758496601
-978,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.6_log.txt, 48.532586965213916, 74.99000399840064
-979,x,albef,t2i_seed1,ALBEF_4M,mixup_0.8_log.txt, 47.41303478608557, 74.44222311075569
-980,x,albef,t2i_seed1,ALBEF_4M,mixup_0.6_log.txt, 48.94442223110756, 75.30987604958017
-981,x,albef,t2i_seed1,ALBEF,cutmix_0.7_log.txt, 51.99520191923231, 77.60495801679328
-982,x,albef,t2i_seed1,ALBEF,cutmix_0.9_log.txt, 51.059576169532185, 77.2530987604958
-983,x,albef,t2i_seed1,ALBEF,cutmix_0.8_log.txt, 51.55537784886046, 77.46901239504199
-984,x,albef,t2i_seed1,ALBEF,mixup_0.9_log.txt, 50.75969612155138, 77.02918832467013
-985,x,albef,t2i_seed1,ALBEF,mixup_0.7_log.txt, 52.34306277489004, 77.75689724110356
-986,x,albef,t2i_seed1,ALBEF,cutmix_0.6_log.txt, 52.303078768492604, 77.60495801679328
-987,x,albef,t2i_seed1,ALBEF,mixup_0.8_log.txt, 51.48740503798481, 77.34506197520992
-988,x,albef,t2i_seed1,ALBEF,mixup_0.6_log.txt, 52.86685325869652, 78.09676129548181
-989,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.7_log.txt, 48.20871651339464, 74.88604558176729
-990,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.9_log.txt, 47.20111955217913, 74.52219112355058
-991,x,albef,t2i_seed100,ALBEF_4M,log.txt,x,x
-992,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.8_log.txt, 47.84086365453818, 74.69012395041983
-993,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.6_log.txt, 48.54458216713315, 75.03798480607757
-994, 12.798880447820872,albef,t2i_seed100,mscoco,cutmix_0.7_log.txt, 53.4546181527389, 80.68772491003598
-995, 19.412235105957617,albef,t2i_seed100,mscoco,cutmix_0.9_log.txt, 49.07636945221911, 79.47221111555378
-996,x,albef,t2i_seed100,mscoco,log.txt,x,x
-997, 15.14594162335066,albef,t2i_seed100,mscoco,cutmix_0.8_log.txt, 51.89924030387845, 80.15993602558976
-998, 26.50139944022391,albef,t2i_seed100,mscoco,mixup_0.9_log.txt, 44.210315873650536, 78.62854858056777
-999, 14.442223110755698,albef,t2i_seed100,mscoco,mixup_0.7_log.txt, 52.59496201519392, 80.31187524990004
-1000, 10.859656137544983,albef,t2i_seed100,mscoco,cutmix_0.6_log.txt, 54.718112754898044, 81.03958416633347
-1001, 21.243502598960415,albef,t2i_seed100,mscoco,mixup_0.8_log.txt, 47.948820471811274, 79.40023990403839
-1002, 9.252299080367854,albef,t2i_seed100,mscoco,mixup_0.6_log.txt, 55.845661735305875, 81.359456217513
-1003, 3.1787285085965613,albef,t2i_seed100,ALBEF,cutmix_0.7_log.txt, 51.96321471411436, 77.6969212315074
-1004, 4.106357457017193,albef,t2i_seed100,ALBEF,cutmix_0.9_log.txt, 51.387445021991205, 77.32107157137145
-1005,x,albef,t2i_seed100,ALBEF,log.txt,x,x
-1006, 3.6945221911235504,albef,t2i_seed100,ALBEF,cutmix_0.8_log.txt, 51.66733306677329, 77.48100759696122
-1007, 4.994002399040384,albef,t2i_seed100,ALBEF,mixup_0.9_log.txt, 50.683726509396244, 77.17712914834067
-1008, 2.6429428228708516,albef,t2i_seed100,ALBEF,mixup_0.7_log.txt, 52.247101159536186, 77.796881247501
-1009, 3.054778088764494,albef,t2i_seed100,ALBEF,cutmix_0.6_log.txt, 51.97920831667333, 77.75689724110356
-1010, 3.894442223110756,albef,t2i_seed100,ALBEF,mixup_0.8_log.txt, 51.50739704118352, 77.47301079568173
-1011, 1.7353058776489405,albef,t2i_seed100,ALBEF,mixup_0.6_log.txt, 52.762894842063176, 78.05677728908437
-1012, 1.28,albef,03_i2t,mscoco,four_seed10_log.txt, 77.1, 93.84
-1013, 3.12,albef,03_i2t,mscoco,three_seed100_log.txt, 76.1, 93.28
-1014, 25.4,albef,03_i2t,mscoco,new_blip_same_new_0301_3_log.txt, 60.52, 90.64
-1015, 24.94,albef,03_i2t,mscoco,new_blip_same_new_0301_0_log.txt, 60.6, 90.68
-1016, 26.72,albef,03_i2t,mscoco,new_blip_bert_new_0301_1_log.txt, 59.56, 89.82
-1017, 0.6,albef,03_i2t,mscoco,five_seed100_log.txt, 77.4, 94.02
-1018, 0.76,albef,03_i2t,mscoco,five_seed10_log.txt, 77.26, 93.96
-1019, 32.98,albef,03_i2t,mscoco,testall_final_big_sim_delete_log.txt, 54.16, 89.46
-1020, 25.76,albef,03_i2t,mscoco,new_blip_bert_new_0301_0_log.txt, 60.48, 89.88
-1021, 24.7,albef,03_i2t,mscoco,new_blip_same_new_0301_1_log.txt, 60.78, 90.34
-1022, 3.04,albef,03_i2t,mscoco,three_seed1_log.txt, 76.14, 93.24
-1023,x,albef,03_i2t,mscoco,log.txt,x,x
-1024, 28.78,albef,03_i2t,mscoco,new_blip_danger_new_0301_2_log.txt, 56.82, 89.68
-1025, 24.12,albef,03_i2t,mscoco,new_blip_diff_new_0301_4_log.txt, 61.38, 90.16
-1026, 16.52,albef,03_i2t,mscoco,testall_final_least_sim_question_log.txt, 67.58, 90.6
-1027, 23.34,albef,03_i2t,mscoco,new_blip_diff_new_0301_2_log.txt, 62.06, 90.52
-1028, 23.94,albef,03_i2t,mscoco,new_blip_diff_new_0301_0_log.txt, 61.48, 90.58
-1029, 32.98,albef,03_i2t,mscoco,testall_final_big_sim_question_log.txt, 54.16, 89.46
-1030, 2.9,albef,03_i2t,mscoco,three_seed10_log.txt, 76.26, 93.42
-1031, 25.04,albef,03_i2t,mscoco,new_blip_same_new_0301_2_log.txt, 60.24, 90.68
-1032, 7.2,albef,03_i2t,mscoco,two_seed10_log.txt, 73.72, 92.38
-1033, 26.32,albef,03_i2t,mscoco,new_blip_bert_new_0301_3_log.txt, 60.2, 90.02
-1034, 13.52,albef,03_i2t,mscoco,new_blip_danger_new_0301_1_log.txt, 68.56, 91.68
-1035, 25.62,albef,03_i2t,mscoco,new_blip_bert_new_0301_2_log.txt, 60.14, 89.62
-1036, 24.0,albef,03_i2t,mscoco,new_blip_diff_new_0301_1_log.txt, 61.72, 90.66
-1037, 25.94,albef,03_i2t,mscoco,new_blip_bert_new_0301_4_log.txt, 60.28, 90.0
-1038, 1.16,albef,03_i2t,mscoco,four_seed1_log.txt, 77.18, 93.84
-1039, 18.98,albef,03_i2t,mscoco,new_blip_danger_new_0301_0_log.txt, 64.72, 90.92
-1040, 16.52,albef,03_i2t,mscoco,testall_final_least_sim_delete_log.txt, 67.58, 90.6
-1041, 7.1,albef,03_i2t,mscoco,two_seed1_log.txt, 73.7, 92.28
-1042, 23.36,albef,03_i2t,mscoco,new_blip_diff_new_0301_3_log.txt, 62.56, 90.5
-1043, 25.38,albef,03_i2t,mscoco,new_blip_same_new_0301_4_log.txt, 60.62, 90.44
-1044, 7.06,albef,03_i2t,mscoco,two_seed100_log.txt, 74.08, 92.36
-1045, 0.56,albef,03_i2t,mscoco,five_seed1_log.txt, 77.32, 94.12
-1046, 1.18,albef,03_i2t,mscoco,four_seed100_log.txt, 77.12, 93.72
-1047, 0.3,albef,03_i2t,ALBEF,four_seed10_log.txt, 73.24, 91.1
-1048, 0.94,albef,03_i2t,ALBEF,three_seed100_log.txt, 72.96, 90.94
-1049, 19.2,albef,03_i2t,ALBEF,new_blip_same_new_0301_3_log.txt, 61.44, 87.34
-1050, 18.76,albef,03_i2t,ALBEF,new_blip_same_new_0301_0_log.txt, 62.18, 87.5
-1051, 15.42,albef,03_i2t,ALBEF,new_blip_bert_new_0301_1_log.txt, 64.46, 87.6
-1052, 0.34,albef,03_i2t,ALBEF,five_seed100_log.txt, 73.28, 91.16
-1053, 0.3,albef,03_i2t,ALBEF,five_seed10_log.txt, 73.26, 91.2
-1054, 31.64,albef,03_i2t,ALBEF,testall_final_big_sim_delete_log.txt, 53.02, 85.36
-1055, 15.78,albef,03_i2t,ALBEF,new_blip_bert_new_0301_0_log.txt, 64.36, 87.46
-1056, 18.96,albef,03_i2t,ALBEF,new_blip_same_new_0301_1_log.txt, 61.52, 87.62
-1057, 0.94,albef,03_i2t,ALBEF,three_seed1_log.txt, 73.02, 90.88
-1058,x,albef,03_i2t,ALBEF,log.txt,x,x
-1059, 21.54,albef,03_i2t,ALBEF,new_blip_danger_new_0301_2_log.txt, 59.46, 86.68
-1060, 15.32,albef,03_i2t,ALBEF,new_blip_diff_new_0301_4_log.txt, 64.64, 87.62
-1061, 16.66,albef,03_i2t,ALBEF,testall_final_least_sim_question_log.txt, 64.24, 87.16
-1062, 15.0,albef,03_i2t,ALBEF,new_blip_diff_new_0301_2_log.txt, 64.82, 87.7
-1063, 15.84,albef,03_i2t,ALBEF,new_blip_diff_new_0301_0_log.txt, 64.68, 87.6
-1064, 31.64,albef,03_i2t,ALBEF,testall_final_big_sim_question_log.txt, 53.02, 85.36
-1065, 0.76,albef,03_i2t,ALBEF,three_seed10_log.txt, 73.1, 91.04
-1066, 20.28,albef,03_i2t,ALBEF,new_blip_same_new_0301_2_log.txt, 61.04, 87.52
-1067, 2.52,albef,03_i2t,ALBEF,two_seed10_log.txt, 72.32, 90.34
-1068, 15.4,albef,03_i2t,ALBEF,new_blip_bert_new_0301_3_log.txt, 64.62, 87.54
-1069, 10.14,albef,03_i2t,ALBEF,new_blip_danger_new_0301_1_log.txt, 67.32, 88.82
-1070, 15.44,albef,03_i2t,ALBEF,new_blip_bert_new_0301_2_log.txt, 64.34, 87.64
-1071, 15.98,albef,03_i2t,ALBEF,new_blip_diff_new_0301_1_log.txt, 63.88, 87.6
-1072, 15.3,albef,03_i2t,ALBEF,new_blip_bert_new_0301_4_log.txt, 64.44, 87.4
-1073, 0.48,albef,03_i2t,ALBEF,four_seed1_log.txt, 73.24, 91.14
-1074, 11.38,albef,03_i2t,ALBEF,new_blip_danger_new_0301_0_log.txt, 66.66, 88.44
-1075, 16.66,albef,03_i2t,ALBEF,testall_final_least_sim_delete_log.txt, 64.24, 87.16
-1076, 2.2,albef,03_i2t,ALBEF,two_seed1_log.txt, 72.46, 90.42
-1077, 14.94,albef,03_i2t,ALBEF,new_blip_diff_new_0301_3_log.txt, 64.68, 87.58
-1078, 20.8,albef,03_i2t,ALBEF,new_blip_same_new_0301_4_log.txt, 60.82, 87.14
-1079, 2.48,albef,03_i2t,ALBEF,two_seed100_log.txt, 72.52, 90.48
-1080, 0.32,albef,03_i2t,ALBEF,five_seed1_log.txt, 73.24, 91.18
-1081, 0.52,albef,03_i2t,ALBEF,four_seed100_log.txt, 73.2, 91.2
-1082,x,albef,i2t,ALBEF_4M,new_noun_big_sim_same_cate_seed_2_log.txt, 54.02, 84.3
-1083,x,albef,i2t,ALBEF_4M,new_noun_big_sim_table_log.txt, 55.9, 84.62
-1084,x,albef,i2t,ALBEF_4M,new_noun_least_sim_occured_random_noun_log.txt, 61.66, 85.72
-1085,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_bert_down_log.txt, 55.74, 83.8
-1086,x,albef,i2t,ALBEF_4M,new_clip_noun_big_sim_bert_down_log.txt, 58.58, 84.68
-1087,x,albef,i2t,ALBEF_4M,new_noun_big_sim_oneletter_down_log.txt, 48.4, 81.88
-1088,x,albef,i2t,ALBEF_4M,new_noun_big_sim_bert_up_log.txt, 54.8, 83.46
-1089,x,albef,i2t,ALBEF_4M,new_noun_big_sim_criminal_log.txt, 59.2, 84.6
-1090,x,albef,i2t,ALBEF_4M,new_noun_big_sim_bert_down_log.txt, 54.68, 83.76
-1091,x,albef,i2t,ALBEF_4M,new_wsl_noun_big_sim_bert_random_log.txt, 58.62, 84.98
-1092,x,albef,i2t,ALBEF_4M,new_noun_big_sim_occured_random_log.txt, 55.0, 84.1
-1093,x,albef,i2t,ALBEF_4M,new_region_noun_big_sim_bert_random_log.txt, 59.0, 84.94
-1094,x,albef,i2t,ALBEF_4M,log.txt,x,x
-1095,x,albef,i2t,ALBEF_4M,new_region_noun_big_sim_criminal_log.txt, 58.56, 84.58
-1096,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_criminal_log.txt, 58.68, 84.66
-1097,x,albef,i2t,ALBEF_4M,new_clip_noun_big_sim_bert_random_log.txt, 61.34, 85.88
-1098,x,albef,i2t,ALBEF_4M,new_wsl_noun_big_sim_criminal_log.txt, 58.7, 84.56
-1099,x,albef,i2t,ALBEF_4M,new_noun_least_sim_bert_up_log.txt, 61.48, 84.86
-1100,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_bert_random_log.txt, 58.8, 85.1
-1101,x,albef,i2t,ALBEF_4M,new_noun_big_sim_youtube_log.txt, 66.54, 87.1
-1102,x,albef,i2t,ALBEF_4M,new_noun_big_sim_question_log.txt, 46.08, 81.12
-1103,x,albef,i2t,ALBEF_4M,testall_random_noun_bert_up_log.txt, 59.52, 84.66
-1104,x,albef,i2t,ALBEF_4M,new_noun_big_sim_diff_cate_seed_2_log.txt, 54.7, 84.0
-1105,x,albef,i2t,ALBEF_4M,new_noun_big_sim_bert_random_log.txt, 58.9, 85.16
-1106,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_bert_random_seed1000_log.txt, 60.06, 85.18
-1107,x,albef,i2t,ALBEF_4M,new_clip_noun_big_sim_criminal_log.txt, 60.44, 85.52
-1108,x,albef,i2t,ALBEF_4M,new_region_noun_big_sim_bert_down_log.txt, 55.4, 83.6
-1109,x,albef,i2t,ALBEF_4M,new_wsl_noun_big_sim_bert_down_log.txt, 55.42, 83.78
-1110,x,albef,i2t,mscoco,new_noun_big_sim_same_cate_seed_2_log.txt, 59.82, 90.34
-1111,x,albef,i2t,mscoco,new_noun_big_sim_table_log.txt, 63.62, 90.54
-1112,x,albef,i2t,mscoco,new_noun_least_sim_occured_random_noun_log.txt, 70.32, 91.38
-1113,x,albef,i2t,mscoco,new_max_noun_big_sim_bert_down_log.txt, 59.36, 89.5
-1114,x,albef,i2t,mscoco,new_clip_noun_big_sim_bert_down_log.txt, 64.16, 90.18
-1115,x,albef,i2t,mscoco,new_noun_big_sim_oneletter_down_log.txt, 54.82, 89.18
-1116,x,albef,i2t,mscoco,new_noun_big_sim_bert_up_log.txt,x,x
-1117,x,albef,i2t,mscoco,new_noun_big_sim_criminal_log.txt, 65.02, 90.52
-1118,x,albef,i2t,mscoco,new_noun_big_sim_bert_down_log.txt,x,x
-1119,x,albef,i2t,mscoco,new_wsl_noun_big_sim_bert_random_log.txt, 63.32, 90.6
-1120,x,albef,i2t,mscoco,new_noun_big_sim_occured_random_log.txt, 60.58, 90.38
-1121,x,albef,i2t,mscoco,new_region_noun_big_sim_bert_random_log.txt, 63.42, 90.56
-1122,x,albef,i2t,mscoco,log.txt,x,x
-1123,x,albef,i2t,mscoco,new_region_noun_big_sim_criminal_log.txt, 64.68, 90.52
-1124,x,albef,i2t,mscoco,new_max_noun_big_sim_criminal_log.txt, 64.98, 90.48
-1125,x,albef,i2t,mscoco,new_clip_noun_big_sim_bert_random_log.txt, 67.34, 91.18
-1126,x,albef,i2t,mscoco,new_wsl_noun_big_sim_criminal_log.txt, 64.42, 90.38
-1127,x,albef,i2t,mscoco,new_noun_least_sim_bert_up_log.txt, 69.2, 91.14
-1128,x,albef,i2t,mscoco,new_max_noun_big_sim_bert_random_log.txt, 63.54, 90.54
-1129,x,albef,i2t,mscoco,new_noun_big_sim_youtube_log.txt, 63.16, 90.44
-1130,x,albef,i2t,mscoco,new_noun_big_sim_question_log.txt, 54.04, 89.32
-1131,x,albef,i2t,mscoco,testall_random_noun_bert_up_log.txt, 64.84, 90.44
-1132,x,albef,i2t,mscoco,coco_karpathy_test_log.txt, 73.3, 91.42
-1133,x,albef,i2t,mscoco,new_noun_big_sim_diff_cate_seed_2_log.txt, 60.46, 90.22
-1134,x,albef,i2t,mscoco,new_noun_big_sim_bert_random_log.txt,x,x
-1135,x,albef,i2t,mscoco,new_max_noun_big_sim_bert_random_seed1000_log.txt, 64.76, 90.4
-1136,x,albef,i2t,mscoco,new_clip_noun_big_sim_criminal_log.txt, 68.48, 91.26
-1137,x,albef,i2t,mscoco,original_log.txt,x,x
-1138,x,albef,i2t,mscoco,new_region_noun_big_sim_bert_down_log.txt, 58.86, 89.46
-1139,x,albef,i2t,mscoco,new_wsl_noun_big_sim_bert_down_log.txt, 59.06, 89.2
-1140,x,albef,i2t,ALBEF,new_noun_big_sim_same_cate_seed_2_log.txt, 61.34, 87.16
-1141,x,albef,i2t,ALBEF,new_noun_big_sim_table_log.txt, 62.7, 87.44
-1142,x,albef,i2t,ALBEF,new_noun_least_sim_occured_random_noun_log.txt, 67.88, 88.76
-1143,x,albef,i2t,ALBEF,new_max_noun_big_sim_bert_down_log.txt, 63.02, 87.08
-1144,x,albef,i2t,ALBEF,new_clip_noun_big_sim_bert_down_log.txt, 65.52, 87.92
-1145,x,albef,i2t,ALBEF,new_noun_big_sim_oneletter_down_log.txt, 59.66, 86.68
-1146,x,albef,i2t,ALBEF,new_noun_big_sim_bert_up_log.txt, 63.16, 87.16
-1147,x,albef,i2t,ALBEF,new_noun_big_sim_criminal_log.txt, 69.06, 89.16
-1148,x,albef,i2t,ALBEF,new_noun_big_sim_bert_down_log.txt, 62.8, 87.04
-1149,x,albef,i2t,ALBEF,new_wsl_noun_big_sim_bert_random_log.txt, 66.6, 88.2
-1150,x,albef,i2t,ALBEF,new_noun_big_sim_occured_random_log.txt, 62.82, 87.72
-1151,x,albef,i2t,ALBEF,new_region_noun_big_sim_bert_random_log.txt, 66.8, 88.14
-1152,x,albef,i2t,ALBEF,log.txt,x,x
-1153,x,albef,i2t,ALBEF,new_region_noun_big_sim_criminal_log.txt, 69.08, 88.96
-1154,x,albef,i2t,ALBEF,new_max_noun_big_sim_criminal_log.txt, 69.1, 88.92
-1155,x,albef,i2t,ALBEF,new_clip_noun_big_sim_bert_random_log.txt, 68.6, 88.5
-1156,x,albef,i2t,ALBEF,new_wsl_noun_big_sim_criminal_log.txt, 68.86, 88.9
-1157,x,albef,i2t,ALBEF,new_noun_least_sim_bert_up_log.txt, 69.4, 88.9
-1158,x,albef,i2t,ALBEF,new_max_noun_big_sim_bert_random_log.txt, 66.58, 88.26
-1159,x,albef,i2t,ALBEF,new_noun_big_sim_youtube_log.txt, 70.0, 88.48
-1160,x,albef,i2t,ALBEF,new_noun_big_sim_question_log.txt, 52.5, 85.28
-1161,x,albef,i2t,ALBEF,testall_random_noun_bert_up_log.txt, 66.78, 87.9
-1162,x,albef,i2t,ALBEF,new_noun_big_sim_diff_cate_seed_2_log.txt, 63.1, 87.16
-1163,x,albef,i2t,ALBEF,new_noun_big_sim_bert_random_log.txt, 66.56, 88.42
-1164,x,albef,i2t,ALBEF,new_max_noun_big_sim_bert_random_seed1000_log.txt, 67.96, 88.58
-1165,x,albef,i2t,ALBEF,new_clip_noun_big_sim_criminal_log.txt, 70.1, 89.38
-1166,x,albef,i2t,ALBEF,original_log.txt,x,x
-1167,x,albef,i2t,ALBEF,new_region_noun_big_sim_bert_down_log.txt, 63.36, 86.9
-1168,x,albef,i2t,ALBEF,new_wsl_noun_big_sim_bert_down_log.txt, 63.08, 86.94
-1169, 16.809276289484206,sgraf,t2i_seed10,cutmix_0.7,coco_SAF_log.txt, 35.19392243102759, 63.5265893642543
-1170, 17.117153138744502,sgraf,t2i_seed10,cutmix_0.7,coco_SGR_log.txt, 35.265893642542984, 63.59856057576969
-1171, 12.319072371051579,sgraf,t2i_seed10,mixup_0.6,coco_SAF_log.txt, 36.92522990803678, 64.52219112355058
-1172, 11.963214714114354,sgraf,t2i_seed10,mixup_0.6,coco_SGR_log.txt, 37.197121151539385, 64.79808076769292
-1173, 27.83686525389844,sgraf,t2i_seed10,mixup_0.9,coco_SAF_log.txt, 30.891643342662935, 60.30387844862055
-1174, 28.076769292283085,sgraf,t2i_seed10,mixup_0.9,coco_SGR_log.txt, 30.651739304278287, 60.39984006397441
-1175, 19.692123150739704,sgraf,t2i_seed10,cutmix_0.8,coco_SAF_log.txt, 33.982407037185126, 62.654938024790084
-1176, 19.896041583366653,sgraf,t2i_seed10,cutmix_0.8,coco_SGR_log.txt, 34.234306277489004, 62.73890443822471
-1177, 16.573370651739303,sgraf,t2i_seed10,mixup_0.7,coco_SAF_log.txt, 35.57377049180328, 63.16673330667733
-1178, 16.53738504598161,sgraf,t2i_seed10,mixup_0.7,coco_SGR_log.txt, 35.593762495002, 63.390643742503
-1179, 22.870851659336264,sgraf,t2i_seed10,mixup_0.8,coco_SAF_log.txt, 33.3546581367453, 61.47940823670532
-1180, 22.566973210715712,sgraf,t2i_seed10,mixup_0.8,coco_SGR_log.txt, 33.398640543782484, 61.4954018392643
-1181, 23.782487005197922,sgraf,t2i_seed10,cutmix_0.9,coco_SAF_log.txt, 32.5389844062375, 61.395441823270694
-1182, 23.946421431427428,sgraf,t2i_seed10,cutmix_0.9,coco_SGR_log.txt, 32.38704518192723, 61.5953618552579
-1183, 15.241903238704518,sgraf,t2i_seed10,cutmix_0.6,coco_SAF_log.txt, 35.70171931227509, 64.09036385445822
-1184, 15.533786485405837,sgraf,t2i_seed10,cutmix_0.6,coco_SGR_log.txt, 35.87764894042383, 63.97041183526589
-1185, 16.809276289484206,sgraf,t2i_seed1,cutmix_0.7,coco_SAF_log.txt, 35.19392243102759, 63.5265893642543
-1186, 17.117153138744502,sgraf,t2i_seed1,cutmix_0.7,coco_SGR_log.txt, 35.265893642542984, 63.59856057576969
-1187, 12.319072371051579,sgraf,t2i_seed1,mixup_0.6,coco_SAF_log.txt, 36.92522990803678, 64.52219112355058
-1188, 11.963214714114354,sgraf,t2i_seed1,mixup_0.6,coco_SGR_log.txt, 37.197121151539385, 64.79808076769292
-1189, 27.83686525389844,sgraf,t2i_seed1,mixup_0.9,coco_SAF_log.txt, 30.891643342662935, 60.30387844862055
-1190, 28.076769292283085,sgraf,t2i_seed1,mixup_0.9,coco_SGR_log.txt, 30.651739304278287, 60.39984006397441
-1191, 19.692123150739704,sgraf,t2i_seed1,cutmix_0.8,coco_SAF_log.txt, 33.982407037185126, 62.654938024790084
-1192, 19.896041583366653,sgraf,t2i_seed1,cutmix_0.8,coco_SGR_log.txt, 34.234306277489004, 62.73890443822471
-1193, 16.573370651739303,sgraf,t2i_seed1,mixup_0.7,coco_SAF_log.txt, 35.57377049180328, 63.16673330667733
-1194, 16.53738504598161,sgraf,t2i_seed1,mixup_0.7,coco_SGR_log.txt, 35.593762495002, 63.390643742503
-1195, 22.870851659336264,sgraf,t2i_seed1,mixup_0.8,coco_SAF_log.txt, 33.3546581367453, 61.47940823670532
-1196, 22.566973210715712,sgraf,t2i_seed1,mixup_0.8,coco_SGR_log.txt, 33.398640543782484, 61.4954018392643
-1197, 23.782487005197922,sgraf,t2i_seed1,cutmix_0.9,coco_SAF_log.txt, 32.5389844062375, 61.395441823270694
-1198, 23.946421431427428,sgraf,t2i_seed1,cutmix_0.9,coco_SGR_log.txt, 32.38704518192723, 61.5953618552579
-1199, 15.241903238704518,sgraf,t2i_seed1,cutmix_0.6,coco_SAF_log.txt, 35.70171931227509, 64.09036385445822
-1200, 15.533786485405837,sgraf,t2i_seed1,cutmix_0.6,coco_SGR_log.txt, 35.87764894042383, 63.97041183526589
-1201, 16.809276289484206,sgraf,t2i_seed100,cutmix_0.7,coco_SAF_log.txt, 35.19392243102759, 63.5265893642543
-1202, 17.117153138744502,sgraf,t2i_seed100,cutmix_0.7,coco_SGR_log.txt, 35.265893642542984, 63.59856057576969
-1203, 12.319072371051579,sgraf,t2i_seed100,mixup_0.6,coco_SAF_log.txt, 36.92522990803678, 64.52219112355058
-1204, 11.963214714114354,sgraf,t2i_seed100,mixup_0.6,coco_SGR_log.txt, 37.197121151539385, 64.79808076769292
-1205, 27.83686525389844,sgraf,t2i_seed100,mixup_0.9,coco_SAF_log.txt, 30.891643342662935, 60.30387844862055
-1206, 28.076769292283085,sgraf,t2i_seed100,mixup_0.9,coco_SGR_log.txt, 30.651739304278287, 60.39984006397441
-1207, 19.692123150739704,sgraf,t2i_seed100,cutmix_0.8,coco_SAF_log.txt, 33.982407037185126, 62.654938024790084
-1208, 19.896041583366653,sgraf,t2i_seed100,cutmix_0.8,coco_SGR_log.txt, 34.234306277489004, 62.73890443822471
-1209, 16.573370651739303,sgraf,t2i_seed100,mixup_0.7,coco_SAF_log.txt, 35.57377049180328, 63.16673330667733
-1210, 16.53738504598161,sgraf,t2i_seed100,mixup_0.7,coco_SGR_log.txt, 35.593762495002, 63.390643742503
-1211, 22.870851659336264,sgraf,t2i_seed100,mixup_0.8,coco_SAF_log.txt, 33.3546581367453, 61.47940823670532
-1212, 22.566973210715712,sgraf,t2i_seed100,mixup_0.8,coco_SGR_log.txt, 33.398640543782484, 61.4954018392643
-1213, 23.782487005197922,sgraf,t2i_seed100,cutmix_0.9,coco_SAF_log.txt, 32.5389844062375, 61.395441823270694
-1214, 23.946421431427428,sgraf,t2i_seed100,cutmix_0.9,coco_SGR_log.txt, 32.38704518192723, 61.5953618552579
-1215, 15.241903238704518,sgraf,t2i_seed100,cutmix_0.6,coco_SAF_log.txt, 35.70171931227509, 64.09036385445822
-1216, 15.533786485405837,sgraf,t2i_seed100,cutmix_0.6,coco_SGR_log.txt, 35.87764894042383, 63.97041183526589
-1217, 17.56,sgraf,03_i2t,four_seed100,coco_SGR_log.txt, 49.76, 78.2
-1218, 28.1,sgraf,03_i2t,new_blip_same_new_0301_1,coco_SAF_log.txt, 42.34, 76.38
-1219, 27.74,sgraf,03_i2t,new_blip_same_new_0301_1,coco_SGR_log.txt, 44.06, 76.76
-1220, 14.84,sgraf,03_i2t,four_seed10,coco_SAF_log.txt, 50.26, 79.08
-1221, 17.12,sgraf,03_i2t,four_seed10,coco_SGR_log.txt, 50.0, 78.38
-1222, 31.78,sgraf,03_i2t,new_blip_bert_new_0301_4,coco_SAF_log.txt, 38.86, 76.02
-1223, 29.8,sgraf,03_i2t,new_blip_bert_new_0301_4,coco_SGR_log.txt, 42.14, 75.88
-1224, 21.58,sgraf,03_i2t,new_blip_diff_new_0301_2,coco_SAF_log.txt, 45.56, 78.1
-1225, 21.74,sgraf,03_i2t,new_blip_diff_new_0301_2,coco_SGR_log.txt, 46.72, 77.72
-1226, 30.8,sgraf,03_i2t,new_blip_danger_new_0301_0,coco_SAF_log.txt, 40.54, 75.54
-1227, 29.12,sgraf,03_i2t,new_blip_danger_new_0301_0,coco_SGR_log.txt, 42.7, 75.48
-1228, 22.74,sgraf,03_i2t,new_blip_diff_new_0301_3,coco_SAF_log.txt, 44.86, 77.92
-1229, 22.64,sgraf,03_i2t,new_blip_diff_new_0301_3,coco_SGR_log.txt, 46.06, 77.86
-1230, 22.58,sgraf,03_i2t,new_blip_diff_new_0301_0,coco_SAF_log.txt, 44.9, 77.82
-1231, 22.0,sgraf,03_i2t,new_blip_diff_new_0301_0,coco_SGR_log.txt, 46.64, 77.74
-1232, 20.94,sgraf,03_i2t,three_seed10,coco_SAF_log.txt, 46.94, 77.16
-1233, 22.56,sgraf,03_i2t,three_seed10,coco_SGR_log.txt, 46.72, 77.06
-1234, 22.32,sgraf,03_i2t,new_blip_diff_new_0301_1,coco_SAF_log.txt, 44.82, 77.8
-1235, 21.76,sgraf,03_i2t,new_blip_diff_new_0301_1,coco_SGR_log.txt, 46.86, 77.46
-1236, 28.56,sgraf,03_i2t,new_blip_same_new_0301_3,coco_SAF_log.txt, 41.86, 76.42
-1237, 27.68,sgraf,03_i2t,new_blip_same_new_0301_3,coco_SGR_log.txt, 43.74, 76.1
-1238, 12.42,sgraf,03_i2t,five_seed100,coco_SGR_log.txt, 52.26, 79.38
-1239, 31.18,sgraf,03_i2t,new_blip_bert_new_0301_3,coco_SAF_log.txt, 39.44, 75.52
-1240, 30.16,sgraf,03_i2t,new_blip_bert_new_0301_3,coco_SGR_log.txt, 41.62, 75.74
-1241, 31.92,sgraf,03_i2t,new_blip_bert_new_0301_1,coco_SAF_log.txt, 39.12, 75.9
-1242, 30.72,sgraf,03_i2t,new_blip_bert_new_0301_1,coco_SGR_log.txt, 41.94, 76.02
-1243, 28.3,sgraf,03_i2t,two_seed100,coco_SGR_log.txt, 43.62, 76.14
-1244, 19.64,sgraf,03_i2t,three_seed1,coco_SAF_log.txt, 47.5, 77.42
-1245, 23.4,sgraf,03_i2t,three_seed1,coco_SGR_log.txt, 46.78, 76.76
-1246, 22.42,sgraf,03_i2t,three_seed100,coco_SGR_log.txt, 47.44, 77.08
-1247, 26.46,sgraf,03_i2t,two_seed10,coco_SAF_log.txt, 44.06, 76.22
-1248, 28.98,sgraf,03_i2t,two_seed10,coco_SGR_log.txt, 43.3, 75.62
-1249, 10.94,sgraf,03_i2t,five_seed10,coco_SAF_log.txt, 51.64, 80.02
-1250, 13.62,sgraf,03_i2t,five_seed10,coco_SGR_log.txt, 51.78, 79.44
-1251, 28.68,sgraf,03_i2t,new_blip_same_new_0301_2,coco_SAF_log.txt, 42.14, 76.52
-1252, 28.38,sgraf,03_i2t,new_blip_same_new_0301_2,coco_SGR_log.txt, 43.6, 76.5
-1253, 22.0,sgraf,03_i2t,new_blip_diff_new_0301_4,coco_SAF_log.txt, 44.88, 77.68
-1254, 22.22,sgraf,03_i2t,new_blip_diff_new_0301_4,coco_SGR_log.txt, 46.52, 77.66
-1255, 10.76,sgraf,03_i2t,five_seed1,coco_SAF_log.txt, 51.78, 80.22
-1256, 13.22,sgraf,03_i2t,five_seed1,coco_SGR_log.txt, 51.7, 79.18
-1257, 31.6,sgraf,03_i2t,new_blip_bert_new_0301_2,coco_SAF_log.txt, 39.26, 75.6
-1258, 30.74,sgraf,03_i2t,new_blip_bert_new_0301_2,coco_SGR_log.txt, 41.4, 76.0
-1259, 24.6,sgraf,03_i2t,new_blip_danger_new_0301_2,coco_SAF_log.txt, 43.88, 76.26
-1260, 27.5,sgraf,03_i2t,new_blip_danger_new_0301_2,coco_SGR_log.txt, 43.16, 75.58
-1261, 31.2,sgraf,03_i2t,new_blip_bert_new_0301_0,coco_SAF_log.txt, 39.82, 75.76
-1262, 30.74,sgraf,03_i2t,new_blip_bert_new_0301_0,coco_SGR_log.txt, 41.36, 75.68
-1263, 26.96,sgraf,03_i2t,two_seed1,coco_SAF_log.txt, 44.06, 75.86
-1264, 28.3,sgraf,03_i2t,two_seed1,coco_SGR_log.txt, 43.78, 75.38
-1265, 27.7,sgraf,03_i2t,new_blip_same_new_0301_0,coco_SAF_log.txt, 42.32, 76.56
-1266, 27.54,sgraf,03_i2t,new_blip_same_new_0301_0,coco_SGR_log.txt, 43.56, 76.6
-1267, 28.7,sgraf,03_i2t,new_blip_same_new_0301_4,coco_SAF_log.txt, 41.56, 76.18
-1268, 28.76,sgraf,03_i2t,new_blip_same_new_0301_4,coco_SGR_log.txt, 43.08, 76.54
-1269, 23.64,sgraf,03_i2t,new_blip_danger_new_0301_1,coco_SAF_log.txt, 43.9, 77.2
-1270, 17.54,sgraf,03_i2t,new_blip_danger_new_0301_1,coco_SGR_log.txt, 48.84, 78.04
-1271, 15.4,sgraf,03_i2t,four_seed1,coco_SAF_log.txt, 49.78, 78.9
-1272, 17.78,sgraf,03_i2t,four_seed1,coco_SGR_log.txt, 49.68, 77.88
-1273,x,sgraf,i2t,saf_youtube,coco_SAF_log.txt, 33.54, 73.74
-1274,x,sgraf,i2t,sgr_question,coco_SGR_log.txt, 50.14, 79.76
-1275,x,sgraf,i2t,saf_samecate2,coco_SAF_log.txt, 41.32, 75.76
-1276,x,sgraf,i2t,saf_bertup,coco_SAF_log.txt, 39.26, 75.34
-1277,x,sgraf,i2t,saf_occurrand,coco_SAF_log.txt, 46.02, 78.54
-1278,x,sgraf,i2t,sgr_bertrandom,coco_SGR_log.txt, 40.72, 75.74
-1279,x,sgraf,i2t,sgr_youtube,coco_SGR_log.txt, 36.78, 74.18
-1280,x,sgraf,i2t,sgr_samecateseed2,coco_SGR_log.txt, 43.1, 76.36
-1281,x,sgraf,i2t,saf_leastbertup,coco_SAF_log.txt, 46.88, 78.02
-1282,x,sgraf,i2t,saf_bertdown,coco_SAF_log.txt, 39.3, 76.14
-1283,x,sgraf,i2t,sgr_leastsimrandom,coco_SGR_log.txt, 51.54, 79.44
-1284,x,sgraf,i2t,saf_criminal,coco_SAF_log.txt, 33.54, 73.74
-1285,x,sgraf,i2t,sgr_diffcateseed2,coco_SGR_log.txt, 44.9, 77.24
-1286,x,sgraf,i2t,sgr_random_bertup,coco_SGR_log.txt, 45.38, 76.1
-1287,x,sgraf,i2t,sgr_bertup,coco_SGR_log.txt, 41.78, 75.52
-1288,x,sgraf,i2t,saf_table,coco_SAF_log.txt, 49.46, 80.26
-1289,x,sgraf,i2t,sgr_table,coco_SGR_log.txt, 52.5, 80.22
-1290,x,sgraf,i2t,saf_coneletterdown,coco_SAF_log.txt, 34.9, 73.9
-1291,x,sgraf,i2t,sgr_oneletterdown,coco_SGR_log.txt, 36.76, 73.98
-1292,x,sgraf,i2t,sgr_bertdown,coco_SGR_log.txt, 43.22, 76.16
-1293,x,sgraf,i2t,saf_bertrandom,coco_SAF_log.txt, 38.12, 75.58
-1294,x,sgraf,i2t,saf_diffcate2,coco_SAF_log.txt, 42.52, 77.14
-1295,x,sgraf,i2t,sgr_least_bertup,coco_SGR_log.txt, 49.0, 77.34
-1296,x,sgraf,i2t,sgr_occuredrandom,coco_SGR_log.txt, 47.9, 78.58
-1297,x,sgraf,i2t,sgr_criminal,coco_SGR_log.txt, 36.78, 74.18
-1298,x,vsrn,t2i_seed10,cutmix_0.7,log.txt, 34.1343462614954, 63.39464214314274
-1299,x,vsrn,t2i_seed10,mixup_0.6,log.txt, 36.97321071571371, 65.67373050779688
-1300,x,vsrn,t2i_seed10,mixup_0.9,log.txt, 27.15713714514194, 59.43622550979608
-1301,x,vsrn,t2i_seed10,cutmix_0.8,log.txt, 32.303078768492604, 62.295081967213115
-1302,x,vsrn,t2i_seed10,mixup_0.7,log.txt, 34.818072770891646, 64.05437824870052
-1303,x,vsrn,t2i_seed10,mixup_0.8,log.txt, 31.503398640543782, 61.52738904438225
-1304,x,vsrn,t2i_seed10,cutmix_0.9,log.txt, 29.67612954818073, 60.79168332666933
-1305,x,vsrn,t2i_seed10,cutmix_0.6,log.txt, 34.99800079968013, 64.2063174730108
-1306, 21.311475409836067,vsrn,t2i_seed1,cutmix_0.7,log.txt, 33.94242303078769, 63.78248700519792
-1307, 12.686925229908036,vsrn,t2i_seed1,mixup_0.6,log.txt, 36.97321071571371, 65.88164734106357
-1308, 39.048380647740906,vsrn,t2i_seed1,mixup_0.9,log.txt, 26.81327469012395, 59.51219512195122
-1309, 24.802079168332668,vsrn,t2i_seed1,cutmix_0.8,log.txt, 32.75889644142343, 62.638944422231106
-1310, 19.236305477808877,vsrn,t2i_seed1,mixup_0.7,log.txt, 34.65813674530188, 63.89444222311076
-1311, 28.868452618952418,vsrn,t2i_seed1,mixup_0.8,log.txt, 31.343462614954017, 61.59936025589764
-1312, 31.107556977209118,vsrn,t2i_seed1,cutmix_0.9,log.txt, 30.395841663334664, 61.263494602159135
-1313,x,vsrn,t2i_seed1,cutmix_0.6,log.txt, 34.95401839264294, 64.36625349860056
-1314, 21.311475409836067,vsrn,t2i_seed100,cutmix_0.7,log.txt, 33.94242303078769, 63.78248700519792
-1315, 12.686925229908036,vsrn,t2i_seed100,mixup_0.6,log.txt, 36.97321071571371, 65.88164734106357
-1316, 39.048380647740906,vsrn,t2i_seed100,mixup_0.9,log.txt, 26.81327469012395, 59.51219512195122
-1317, 24.802079168332668,vsrn,t2i_seed100,cutmix_0.8,log.txt, 32.75889644142343, 62.638944422231106
-1318, 19.236305477808877,vsrn,t2i_seed100,mixup_0.7,log.txt, 34.65813674530188, 63.89444222311076
-1319, 28.868452618952418,vsrn,t2i_seed100,mixup_0.8,log.txt, 31.343462614954017, 61.59936025589764
-1320, 31.107556977209118,vsrn,t2i_seed100,cutmix_0.9,log.txt, 30.395841663334664, 61.263494602159135
-1321, 18.58856457417033,vsrn,t2i_seed100,cutmix_0.6,log.txt, 35.02598960415833, 64.26629348260695
-1322, 6.62,vsrn,03_i2t,four_seed100,log.txt, 50.08, 78.88
-1323, 18.08,vsrn,03_i2t,new_blip_same_new_0301_1,log.txt, 44.3, 75.86
-1324, 6.94,vsrn,03_i2t,four_seed10,log.txt, 50.08, 78.74
-1325, 22.5,vsrn,03_i2t,new_blip_bert_new_0301_4,log.txt, 41.96, 75.08
-1326, 2.96,vsrn,03_i2t,testall_final_least_sim_question,log.txt, 51.4, 79.6
-1327, 14.04,vsrn,03_i2t,new_blip_diff_new_0301_2,log.txt, 46.52, 76.96
-1328, 16.08,vsrn,03_i2t,new_blip_danger_new_0301_0,log.txt, 45.24, 76.1
-1329, 18.02,vsrn,03_i2t,testall_final_random_delete,log.txt, 44.7, 75.52
-1330, 13.82,vsrn,03_i2t,new_blip_diff_new_0301_3,log.txt, 46.38, 76.98
-1331, 14.94,vsrn,03_i2t,new_blip_diff_new_0301_0,log.txt, 45.98, 76.76
-1332, 11.74,vsrn,03_i2t,three_seed10,log.txt, 47.8, 77.34
-1333, 14.5,vsrn,03_i2t,new_blip_diff_new_0301_1,log.txt, 45.76, 76.96
-1334, 17.68,vsrn,03_i2t,new_blip_same_new_0301_3,log.txt, 44.94, 75.68
-1335, 4.32,vsrn,03_i2t,five_seed100,log.txt, 51.04, 79.62
-1336, 22.0,vsrn,03_i2t,new_blip_bert_new_0301_3,log.txt, 42.18, 75.12
-1337, 22.16,vsrn,03_i2t,new_blip_bert_new_0301_1,log.txt, 42.3, 75.04
-1338, 17.74,vsrn,03_i2t,two_seed100,log.txt, 45.02, 75.7
-1339, 10.86,vsrn,03_i2t,three_seed1,log.txt, 48.1, 77.74
-1340, 29.36,vsrn,03_i2t,testall_final_big_sim_delete,log.txt, 38.56, 73.16
-1341, 22.56,vsrn,03_i2t,testall_final_least_sim_delete,log.txt, 43.46, 74.62
-1342, 11.4,vsrn,03_i2t,three_seed100,log.txt, 47.76, 77.72
-1343, 17.72,vsrn,03_i2t,two_seed10,log.txt, 45.06, 76.1
-1344, 4.18,vsrn,03_i2t,five_seed10,log.txt, 51.02, 79.96
-1345, 18.34,vsrn,03_i2t,new_blip_same_new_0301_2,log.txt, 44.4, 75.96
-1346, 15.04,vsrn,03_i2t,new_blip_diff_new_0301_4,log.txt, 45.98, 76.82
-1347, 4.38,vsrn,03_i2t,five_seed1,log.txt, 50.9, 79.96
-1348, 22.08,vsrn,03_i2t,new_blip_bert_new_0301_2,log.txt, 42.32, 74.98
-1349, 12.64,vsrn,03_i2t,new_blip_danger_new_0301_2,log.txt, 46.66, 76.66
-1350, 21.98,vsrn,03_i2t,new_blip_bert_new_0301_0,log.txt, 42.36, 75.16
-1351, 17.92,vsrn,03_i2t,two_seed1,log.txt, 45.12, 75.9
-1352, 4.16,vsrn,03_i2t,testall_final_big_sim_question,log.txt, 50.74, 78.98
-1353, 18.02,vsrn,03_i2t,new_blip_same_new_0301_0,log.txt, 44.72, 75.78
-1354, 18.18,vsrn,03_i2t,new_blip_same_new_0301_4,log.txt, 44.42, 75.98
-1355, 9.6,vsrn,03_i2t,new_blip_danger_new_0301_1,log.txt, 48.44, 77.6
-1356, 7.68,vsrn,03_i2t,four_seed1,log.txt, 49.52, 78.92
-1357,x,vsrn,i2t,new_noun_least_sim_bert_up,log.txt, 44.44, 75.58
-1358,x,vsrn,i2t,new_noun_big_sim_criminal,log.txt, 35.86, 72.28
-1359,x,vsrn,i2t,new_max_noun_big_sim_bert_random_seed1000,log.txt, 39.52, 73.98
-1360,x,vsrn,i2t,new_max_noun_big_sim_bert_random,log.txt, 41.46, 75.0
-1361,x,vsrn,i2t,new_clip_noun_big_sim_bert_down,log.txt, 42.78, 75.42
-1362,x,vsrn,i2t,new_wsl_noun_big_sim_criminal,log.txt, 36.44, 72.84
-1363,x,vsrn,i2t,new_max_noun_big_sim_criminal,log.txt, 36.26, 72.52
-1364,x,vsrn,i2t,new_clip_noun_big_sim_criminal,log.txt, 37.22, 72.48
-1365,x,vsrn,i2t,new_noun_big_sim_occured_random,log.txt, 46.1, 77.0
-1366,x,vsrn,i2t,new_region_noun_big_sim_bert_random,log.txt, 41.76, 75.3
-1367,x,vsrn,i2t,new_noun_least_sim_occured_random_noun,log.txt, 48.14, 77.36
-1368,x,vsrn,i2t,new_wsl_noun_big_sim_bert_down,log.txt, 43.02, 74.92
-1369,x,vsrn,i2t,new_noun_big_sim_bert_down,log.txt, 43.58, 75.12
-1370,x,vsrn,i2t,new_noun_big_sim_oneletter_down,log.txt, 38.42, 73.6
-1371,x,vsrn,i2t,new_region_noun_big_sim_criminal,log.txt, 36.68, 72.9
-1372,x,vsrn,i2t,new_noun_big_sim_same_cate_seed_2,log.txt, 44.06, 75.36
-1373,x,vsrn,i2t,testall_random_noun_bert_up,log.txt, 43.42, 75.12
-1374,x,vsrn,i2t,new_noun_big_sim_table,log.txt, 46.78, 76.22
-1375,x,vsrn,i2t,new_noun_big_sim_question,log.txt, 51.96, 80.38
-1376,x,vsrn,i2t,new_max_noun_big_sim_bert_down,log.txt, 42.58, 74.68
-1377,x,vsrn,i2t,new_noun_big_sim_diff_cate_seed_2,log.txt, 44.44, 75.88
-1378,x,vsrn,i2t,new_region_noun_big_sim_bert_down,log.txt, 43.04, 75.06
-1379,x,vsrn,i2t,new_wsl_noun_big_sim_bert_random,log.txt, 41.56, 75.22
-1380,x,vsrn,i2t,new_noun_big_sim_bert_up,log.txt, 41.42, 74.72
-1381,x,vsrn,i2t,new_noun_big_sim_bert_random,log.txt, 40.98, 74.92
-1382,x,vsrn,i2t,new_clip_noun_big_sim_bert_random,log.txt, 41.96, 75.28
-1383,x,vsrn,i2t,new_noun_big_sim_youtube,log.txt, 35.86, 72.28
+386, 4.26,blip,03_i2t,four_seed100,model_large_retrieval_coco_evaluate.txt, 79.8, 94.76
+387, 3.86,blip,03_i2t,four_seed100,model_large_evaluate.txt, 71.66, 90.78
+388, 4.2,blip,03_i2t,four_seed100,model_base_retrieval_coco_evaluate.txt, 79.46, 94.66
+389, 37.52,blip,03_i2t,new_blip_same_new_0301_1,model_base_evaluate.txt, 47.54, 82.16
+390, 15.76,blip,03_i2t,new_blip_same_new_0301_1,model_large_retrieval_coco_evaluate.txt, 71.36, 93.16
+391, 27.82,blip,03_i2t,new_blip_same_new_0301_1,model_large_evaluate.txt, 55.7, 86.48
+392,x,blip,03_i2t,new_blip_same_new_0301_1,model_base_14M_evaluate.txt, 42.32, 81.92
+393,x,blip,03_i2t,new_blip_same_new_0301_1,model_base_retrieval_coco_evaluate.txt, 68.64, 92.52
+394, 5.66,blip,03_i2t,four_seed10,model_base_evaluate.txt, 67.64, 89.06
+395, 4.38,blip,03_i2t,four_seed10,model_large_retrieval_coco_evaluate.txt, 79.68, 94.58
+396, 4.2,blip,03_i2t,four_seed10,model_large_evaluate.txt, 71.44, 90.92
+397, 4.14,blip,03_i2t,four_seed10,model_base_retrieval_coco_evaluate.txt, 79.38, 94.56
+398, 54.48,blip,03_i2t,new_blip_bert_new_0301_4,model_base_evaluate.txt, 35.66, 78.28
+399, 21.32,blip,03_i2t,new_blip_bert_new_0301_4,model_large_retrieval_coco_evaluate.txt, 66.6, 92.0
+400, 40.46,blip,03_i2t,new_blip_bert_new_0301_4,model_large_evaluate.txt, 45.88, 84.26
+401,x,blip,03_i2t,new_blip_bert_new_0301_4,model_base_14M_evaluate.txt, 29.44, 77.5
+402,x,blip,03_i2t,new_blip_bert_new_0301_4,model_base_retrieval_coco_evaluate.txt, 64.72, 91.64
+403, 46.4,blip,03_i2t,testall_final_least_sim_question,model_base_evaluate.txt, 44.0, 76.18
+404, 12.8,blip,03_i2t,testall_final_least_sim_question,model_base_retrieval_coco_evaluate.txt, 73.6, 92.48
+405, 40.54,blip,03_i2t,testall_blip_noun_random,model_base_evaluate.txt, 45.58, 81.04
+406, 22.46,blip,03_i2t,testall_blip_noun_random,model_base_retrieval_coco_evaluate.txt, 65.54, 91.84
+407, 39.92,blip,03_i2t,new_blip_diff_new_0301_2,model_base_evaluate.txt, 46.48, 81.6
+408, 13.98,blip,03_i2t,new_blip_diff_new_0301_2,model_large_retrieval_coco_evaluate.txt, 72.74, 93.04
+409, 27.18,blip,03_i2t,new_blip_diff_new_0301_2,model_large_evaluate.txt, 56.1, 86.72
+410,x,blip,03_i2t,new_blip_diff_new_0301_2,model_base_14M_evaluate.txt, 38.84, 80.78
+411,x,blip,03_i2t,new_blip_diff_new_0301_2,model_base_retrieval_coco_evaluate.txt, 70.14, 92.8
+412, 47.22,blip,03_i2t,new_blip_danger_new_0301_0,model_base_evaluate.txt, 40.86, 79.86
+413, 14.5,blip,03_i2t,new_blip_danger_new_0301_0,model_large_retrieval_coco_evaluate.txt, 71.92, 92.7
+414, 27.6,blip,03_i2t,new_blip_danger_new_0301_0,model_large_evaluate.txt, 55.66, 85.96
+415,x,blip,03_i2t,new_blip_danger_new_0301_0,model_base_retrieval_coco_evaluate.txt, 67.58, 92.4
+416, 18.54,blip,03_i2t,testall_final_random_delete,model_large_retrieval_coco_evaluate.txt, 68.82, 92.02
+417, 34.24,blip,03_i2t,testall_final_random_delete,model_large_evaluate.txt, 51.08, 85.12
+418, 41.0,blip,03_i2t,new_blip_diff_new_0301_3,model_base_evaluate.txt, 45.62, 81.5
+419, 13.1,blip,03_i2t,new_blip_diff_new_0301_3,model_large_retrieval_coco_evaluate.txt, 73.46, 93.22
+420, 26.62,blip,03_i2t,new_blip_diff_new_0301_3,model_large_evaluate.txt, 56.08, 86.64
+421,x,blip,03_i2t,new_blip_diff_new_0301_3,model_base_14M_evaluate.txt, 38.8, 80.7
+422,x,blip,03_i2t,new_blip_diff_new_0301_3,model_base_retrieval_coco_evaluate.txt, 70.52, 92.68
+423, 40.8,blip,03_i2t,new_blip_diff_new_0301_0,model_base_evaluate.txt, 45.52, 81.52
+424, 14.34,blip,03_i2t,new_blip_diff_new_0301_0,model_large_retrieval_coco_evaluate.txt, 72.58, 93.14
+425, 28.06,blip,03_i2t,new_blip_diff_new_0301_0,model_large_evaluate.txt, 55.58, 86.52
+426,x,blip,03_i2t,new_blip_diff_new_0301_0,model_base_retrieval_coco_evaluate.txt, 70.36, 92.68
+427, 14.94,blip,03_i2t,three_seed10,model_base_evaluate.txt, 62.64, 86.74
+428, 7.46,blip,03_i2t,three_seed10,model_large_retrieval_coco_evaluate.txt, 77.78, 93.98
+429, 10.56,blip,03_i2t,three_seed10,model_large_evaluate.txt, 67.9, 89.64
+430, 7.08,blip,03_i2t,three_seed10,model_base_retrieval_coco_evaluate.txt, 77.4, 93.98
+431, 40.84,blip,03_i2t,new_blip_diff_new_0301_1,model_base_evaluate.txt, 45.58, 81.46
+432, 13.6,blip,03_i2t,new_blip_diff_new_0301_1,model_large_retrieval_coco_evaluate.txt, 72.78, 93.22
+433, 27.18,blip,03_i2t,new_blip_diff_new_0301_1,model_large_evaluate.txt, 56.14, 86.96
+434,x,blip,03_i2t,new_blip_diff_new_0301_1,model_base_14M_evaluate.txt, 38.58, 80.94
+435,x,blip,03_i2t,new_blip_diff_new_0301_1,model_base_retrieval_coco_evaluate.txt, 69.24, 92.64
+436, 37.06,blip,03_i2t,new_blip_same_new_0301_3,model_base_evaluate.txt, 47.8, 82.24
+437, 16.2,blip,03_i2t,new_blip_same_new_0301_3,model_large_retrieval_coco_evaluate.txt, 71.0, 93.06
+438, 28.78,blip,03_i2t,new_blip_same_new_0301_3,model_large_evaluate.txt, 54.6, 86.52
+439,x,blip,03_i2t,new_blip_same_new_0301_3,model_base_14M_evaluate.txt, 42.68, 82.24
+440,x,blip,03_i2t,new_blip_same_new_0301_3,model_base_retrieval_coco_evaluate.txt, 69.28, 92.44
+441, 1.86,blip,03_i2t,five_seed100,model_base_evaluate.txt, 69.74, 89.82
+442, 2.68,blip,03_i2t,five_seed100,model_large_retrieval_coco_evaluate.txt, 80.86, 94.84
+443, 1.54,blip,03_i2t,five_seed100,model_large_evaluate.txt, 72.96, 91.32
+444, 2.46,blip,03_i2t,five_seed100,model_base_retrieval_coco_evaluate.txt, 80.58, 94.86
+445, 54.34,blip,03_i2t,new_blip_bert_new_0301_3,model_base_evaluate.txt, 35.08, 78.54
+446, 21.44,blip,03_i2t,new_blip_bert_new_0301_3,model_large_retrieval_coco_evaluate.txt, 66.92, 92.18
+447, 40.5,blip,03_i2t,new_blip_bert_new_0301_3,model_large_evaluate.txt, 46.08, 84.46
+448,x,blip,03_i2t,new_blip_bert_new_0301_3,model_base_14M_evaluate.txt, 29.92, 77.84
+449,x,blip,03_i2t,new_blip_bert_new_0301_3,model_base_retrieval_coco_evaluate.txt, 64.82, 91.94
+450, 54.62,blip,03_i2t,new_blip_bert_new_0301_1,model_base_evaluate.txt, 35.1, 78.04
+451, 20.88,blip,03_i2t,new_blip_bert_new_0301_1,model_large_retrieval_coco_evaluate.txt, 66.88, 91.98
+452, 40.94,blip,03_i2t,new_blip_bert_new_0301_1,model_large_evaluate.txt, 45.78, 84.62
+453,x,blip,03_i2t,new_blip_bert_new_0301_1,model_base_14M_evaluate.txt, 29.24, 78.42
+454,x,blip,03_i2t,new_blip_bert_new_0301_1,model_base_retrieval_coco_evaluate.txt, 64.32, 91.74
+455, 30.52,blip,03_i2t,two_seed100,model_base_evaluate.txt, 53.0, 83.08
+456, 12.94,blip,03_i2t,two_seed100,model_large_retrieval_coco_evaluate.txt, 73.9, 93.08
+457, 21.88,blip,03_i2t,two_seed100,model_large_evaluate.txt, 60.4, 87.22
+458, 13.1,blip,03_i2t,two_seed100,model_base_retrieval_coco_evaluate.txt, 73.56, 92.92
+459, 14.34,blip,03_i2t,three_seed1,model_base_evaluate.txt, 63.46, 86.72
+460, 7.84,blip,03_i2t,three_seed1,model_large_retrieval_coco_evaluate.txt, 77.86, 94.12
+461, 9.84,blip,03_i2t,three_seed1,model_large_evaluate.txt, 68.12, 89.46
+462, 7.26,blip,03_i2t,three_seed1,model_base_retrieval_coco_evaluate.txt, 77.42, 93.8
+463, 52.48,blip,03_i2t,testall_final_big_sim_delete,model_base_evaluate.txt, 36.34, 79.42
+464, 27.48,blip,03_i2t,testall_final_big_sim_delete,model_large_retrieval_coco_evaluate.txt, 61.4, 91.36
+465, 44.52,blip,03_i2t,testall_final_big_sim_delete,model_large_evaluate.txt, 43.04, 83.94
+466, 30.1,blip,03_i2t,testall_final_big_sim_delete,model_base_retrieval_coco_evaluate.txt, 59.28, 91.3
+467, 25.8,blip,03_i2t,testall_final_least_sim_delete,model_base_evaluate.txt, 57.14, 82.98
+468, 11.0,blip,03_i2t,testall_final_least_sim_delete,model_large_retrieval_coco_evaluate.txt, 74.96, 92.6
+469, 20.1,blip,03_i2t,testall_final_least_sim_delete,model_large_evaluate.txt, 61.94, 86.34
+470, 14.06,blip,03_i2t,testall_final_least_sim_delete,model_base_retrieval_coco_evaluate.txt, 72.74, 92.5
+471, 14.88,blip,03_i2t,three_seed100,model_base_evaluate.txt, 62.88, 86.82
+472, 7.06,blip,03_i2t,three_seed100,model_large_retrieval_coco_evaluate.txt, 78.16, 94.22
+473, 10.08,blip,03_i2t,three_seed100,model_large_evaluate.txt, 67.96, 89.72
+474, 6.96,blip,03_i2t,three_seed100,model_base_retrieval_coco_evaluate.txt, 77.52, 94.02
+475, 30.52,blip,03_i2t,two_seed10,model_base_evaluate.txt, 53.2, 82.6
+476, 12.42,blip,03_i2t,two_seed10,model_large_retrieval_coco_evaluate.txt, 74.16, 93.26
+477, 20.78,blip,03_i2t,two_seed10,model_large_evaluate.txt, 60.74, 87.38
+478, 12.54,blip,03_i2t,two_seed10,model_base_retrieval_coco_evaluate.txt, 73.7, 92.98
+479, 1.56,blip,03_i2t,five_seed10,model_base_evaluate.txt, 69.9, 89.84
+480, 2.54,blip,03_i2t,five_seed10,model_large_retrieval_coco_evaluate.txt, 80.98, 94.82
+481, 1.64,blip,03_i2t,five_seed10,model_large_evaluate.txt, 72.86, 91.4
+482, 2.42,blip,03_i2t,five_seed10,model_base_retrieval_coco_evaluate.txt, 80.64, 94.9
+483, 37.24,blip,03_i2t,new_blip_same_new_0301_2,model_base_evaluate.txt, 48.02, 82.64
+484, 16.18,blip,03_i2t,new_blip_same_new_0301_2,model_large_retrieval_coco_evaluate.txt, 71.3, 93.34
+485, 27.74,blip,03_i2t,new_blip_same_new_0301_2,model_large_evaluate.txt, 55.82, 86.68
+486,x,blip,03_i2t,new_blip_same_new_0301_2,model_base_14M_evaluate.txt, 42.36, 82.44
+487,x,blip,03_i2t,new_blip_same_new_0301_2,model_base_retrieval_coco_evaluate.txt, 68.54, 92.7
+488, 41.88,blip,03_i2t,new_blip_diff_new_0301_4,model_base_evaluate.txt, 44.68, 81.6
+489, 14.3,blip,03_i2t,new_blip_diff_new_0301_4,model_large_retrieval_coco_evaluate.txt, 71.96, 93.04
+490, 28.78,blip,03_i2t,new_blip_diff_new_0301_4,model_large_evaluate.txt, 54.56, 86.64
+491,x,blip,03_i2t,new_blip_diff_new_0301_4,model_base_14M_evaluate.txt, 36.96, 80.38
+492,x,blip,03_i2t,new_blip_diff_new_0301_4,model_base_retrieval_coco_evaluate.txt, 69.28, 92.94
+493, 2.16,blip,03_i2t,five_seed1,model_base_evaluate.txt, 69.56, 89.8
+494, 2.4,blip,03_i2t,five_seed1,model_large_retrieval_coco_evaluate.txt, 81.1, 94.88
+495, 1.64,blip,03_i2t,five_seed1,model_large_evaluate.txt, 72.8, 91.34
+496, 2.64,blip,03_i2t,five_seed1,model_base_retrieval_coco_evaluate.txt, 80.22, 94.96
+497, 54.58,blip,03_i2t,new_blip_bert_new_0301_2,model_base_evaluate.txt, 35.2, 78.38
+498, 20.74,blip,03_i2t,new_blip_bert_new_0301_2,model_large_retrieval_coco_evaluate.txt, 67.2, 92.5
+499, 40.82,blip,03_i2t,new_blip_bert_new_0301_2,model_large_evaluate.txt, 45.5, 84.48
+500,x,blip,03_i2t,new_blip_bert_new_0301_2,model_base_14M_evaluate.txt, 29.48, 78.04
+501,x,blip,03_i2t,new_blip_bert_new_0301_2,model_base_retrieval_coco_evaluate.txt, 64.9, 91.72
+502, 49.9,blip,03_i2t,new_blip_danger_new_0301_2,model_base_evaluate.txt, 37.46, 79.38
+503, 17.04,blip,03_i2t,new_blip_danger_new_0301_2,model_large_retrieval_coco_evaluate.txt, 69.44, 92.46
+504, 36.4,blip,03_i2t,new_blip_danger_new_0301_2,model_large_evaluate.txt, 48.06, 84.4
+505,x,blip,03_i2t,new_blip_danger_new_0301_2,model_base_14M_evaluate.txt, 35.84, 79.92
+506,x,blip,03_i2t,new_blip_danger_new_0301_2,model_base_retrieval_coco_evaluate.txt, 65.58, 92.2
+507, 54.9,blip,03_i2t,new_blip_bert_new_0301_0,model_base_evaluate.txt, 35.38, 77.88
+508, 21.54,blip,03_i2t,new_blip_bert_new_0301_0,model_large_retrieval_coco_evaluate.txt, 66.58, 92.22
+509, 39.74,blip,03_i2t,new_blip_bert_new_0301_0,model_large_evaluate.txt, 46.58, 84.32
+510,x,blip,03_i2t,new_blip_bert_new_0301_0,model_base_retrieval_coco_evaluate.txt, 63.72, 91.72
+511, 31.2,blip,03_i2t,two_seed1,model_base_evaluate.txt, 52.92, 82.78
+512, 12.6,blip,03_i2t,two_seed1,model_large_retrieval_coco_evaluate.txt, 73.74, 93.22
+513, 22.32,blip,03_i2t,two_seed1,model_large_evaluate.txt, 59.9, 87.18
+514, 12.64,blip,03_i2t,two_seed1,model_base_retrieval_coco_evaluate.txt, 73.6, 93.36
+515, 74.3,blip,03_i2t,testall_final_big_sim_question,model_base_evaluate.txt, 20.76, 70.52
+516, 22.66,blip,03_i2t,testall_final_big_sim_question,model_base_retrieval_coco_evaluate.txt, 65.38, 91.64
+517, 37.44,blip,03_i2t,new_blip_same_new_0301_0,model_base_evaluate.txt, 48.22, 82.58
+518, 15.9,blip,03_i2t,new_blip_same_new_0301_0,model_large_retrieval_coco_evaluate.txt, 71.14, 92.9
+519, 29.06,blip,03_i2t,new_blip_same_new_0301_0,model_large_evaluate.txt, 54.98, 86.54
+520,x,blip,03_i2t,new_blip_same_new_0301_0,model_base_retrieval_coco_evaluate.txt, 68.84, 92.56
+521, 37.98,blip,03_i2t,new_blip_same_new_0301_4,model_base_evaluate.txt, 47.28, 82.38
+522, 16.08,blip,03_i2t,new_blip_same_new_0301_4,model_large_retrieval_coco_evaluate.txt, 71.0, 92.92
+523, 27.96,blip,03_i2t,new_blip_same_new_0301_4,model_large_evaluate.txt, 55.82, 86.4
+524,x,blip,03_i2t,new_blip_same_new_0301_4,model_base_14M_evaluate.txt, 41.72, 82.14
+525,x,blip,03_i2t,new_blip_same_new_0301_4,model_base_retrieval_coco_evaluate.txt, 68.38, 92.36
+526, 34.86,blip,03_i2t,new_blip_danger_new_0301_1,model_base_evaluate.txt, 48.86, 82.8
+527, 9.64,blip,03_i2t,new_blip_danger_new_0301_1,model_large_retrieval_coco_evaluate.txt, 75.76, 93.22
+528, 15.62,blip,03_i2t,new_blip_danger_new_0301_1,model_large_evaluate.txt, 64.06, 88.16
+529,x,blip,03_i2t,new_blip_danger_new_0301_1,model_base_14M_evaluate.txt, 44.8, 82.66
+530,x,blip,03_i2t,new_blip_danger_new_0301_1,model_base_retrieval_coco_evaluate.txt, 70.26, 93.0
+531, 5.28,blip,03_i2t,four_seed1,model_base_evaluate.txt, 68.16, 88.92
+532, 4.04,blip,03_i2t,four_seed1,model_large_retrieval_coco_evaluate.txt, 79.94, 94.42
+533, 3.74,blip,03_i2t,four_seed1,model_large_evaluate.txt, 71.78, 90.78
+534, 3.8,blip,03_i2t,four_seed1,model_base_retrieval_coco_evaluate.txt, 79.78, 94.56
+535,x,blip,i2t,new_noun_least_sim_bert_up,model_base_evaluate.txt, 57.72, 82.9
+536,x,blip,i2t,new_noun_least_sim_bert_up,model_large_retrieval_coco_evaluate.txt, 76.62, 93.34
+537,x,blip,i2t,new_noun_least_sim_bert_up,model_large_evaluate.txt, 64.64, 87.56
+538,x,blip,i2t,new_noun_least_sim_bert_up,model_base_14M_evaluate.txt, 49.16, 81.32
+539,x,blip,i2t,new_noun_least_sim_bert_up,model_base_retrieval_coco_evaluate.txt, 75.1, 92.94
+540,x,blip,i2t,new_noun_big_sim_criminal,model_base_evaluate.txt, 39.62, 79.16
+541,x,blip,i2t,new_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 69.5, 92.54
+542,x,blip,i2t,new_noun_big_sim_criminal,model_large_evaluate.txt, 50.18, 84.52
+543,x,blip,i2t,new_noun_big_sim_criminal,model_base_14M_evaluate.txt, 30.92, 77.28
+544,x,blip,i2t,new_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.18, 91.76
+545,x,blip,i2t,new_max_noun_big_sim_bert_random_seed1000,model_large_retrieval_coco_evaluate.txt, 66.52, 92.32
+546,x,blip,i2t,new_max_noun_big_sim_bert_random_seed1000,model_large_evaluate.txt, 46.26, 84.64
+547,x,blip,i2t,new_max_noun_big_sim_bert_random_seed1000,model_base_retrieval_coco_evaluate.txt, 65.1, 91.96
+548,x,blip,i2t,new_max_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.68, 92.08
+549,x,blip,i2t,new_max_noun_big_sim_bert_random,model_large_evaluate.txt, 44.76, 84.0
+550,x,blip,i2t,new_max_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.94, 92.16
+551,x,blip,i2t,new_clip_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 71.32, 92.72
+552,x,blip,i2t,new_clip_noun_big_sim_bert_down,model_large_evaluate.txt, 51.42, 85.14
+553,x,blip,i2t,new_clip_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 69.3, 92.46
+554,x,blip,i2t,new_wsl_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 69.4, 92.52
+555,x,blip,i2t,new_wsl_noun_big_sim_criminal,model_large_evaluate.txt, 50.56, 84.46
+556,x,blip,i2t,new_wsl_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.7, 91.9
+557,x,blip,i2t,new_max_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 70.06, 92.58
+558,x,blip,i2t,new_max_noun_big_sim_criminal,model_large_evaluate.txt, 50.84, 84.6
+559,x,blip,i2t,new_max_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.8, 91.96
+560,x,blip,i2t,new_clip_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 73.96, 92.94
+561,x,blip,i2t,new_clip_noun_big_sim_criminal,model_large_evaluate.txt, 56.74, 86.02
+562,x,blip,i2t,new_clip_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 70.12, 92.64
+563,x,blip,i2t,new_noun_big_sim_occured_random,model_base_evaluate.txt, 44.86, 81.78
+564,x,blip,i2t,new_noun_big_sim_occured_random,model_large_retrieval_coco_evaluate.txt, 72.34, 93.12
+565,x,blip,i2t,new_noun_big_sim_occured_random,model_large_evaluate.txt, 56.54, 86.76
+566,x,blip,i2t,new_noun_big_sim_occured_random,model_base_14M_evaluate.txt, 39.1, 81.4
+567,x,blip,i2t,new_noun_big_sim_occured_random,model_base_retrieval_coco_evaluate.txt, 68.66, 92.8
+568,x,blip,i2t,new_region_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.82, 91.88
+569,x,blip,i2t,new_region_noun_big_sim_bert_random,model_large_evaluate.txt, 45.08, 84.12
+570,x,blip,i2t,new_region_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.36, 92.12
+571,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_base_evaluate.txt, 61.04, 84.8
+572,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_large_retrieval_coco_evaluate.txt, 78.2, 93.88
+573,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_large_evaluate.txt, 67.2, 88.42
+574,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_base_14M_evaluate.txt, 55.9, 84.58
+575,x,blip,i2t,new_noun_least_sim_occured_random_noun,model_base_retrieval_coco_evaluate.txt, 76.2, 93.4
+576,x,blip,i2t,new_wsl_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 66.22, 92.4
+577,x,blip,i2t,new_wsl_noun_big_sim_bert_down,model_large_evaluate.txt, 44.68, 83.82
+578,x,blip,i2t,new_wsl_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 64.24, 91.76
+579,x,blip,i2t,new_noun_least_sim_bert_up_tmp,model_base_evaluate.txt, 57.72, 82.9
+580,x,blip,i2t,new_noun_least_sim_bert_up_tmp,model_base_14M_evaluate.txt, 49.16, 81.32
+581,x,blip,i2t,new_noun_least_sim_bert_up_tmp,model_base_retrieval_coco_evaluate.txt, 75.1, 92.94
+582,x,blip,i2t,new_noun_big_sim_bert_down,model_base_evaluate.txt, 30.28, 76.34
+583,x,blip,i2t,new_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 65.98, 92.18
+584,x,blip,i2t,new_noun_big_sim_bert_down,model_large_evaluate.txt, 42.38, 83.22
+585,x,blip,i2t,new_noun_big_sim_bert_down,model_base_14M_evaluate.txt, 25.3, 76.52
+586,x,blip,i2t,new_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 63.92, 91.74
+587,x,blip,i2t,new_noun_big_sim_oneletter_down,model_base_evaluate.txt, 27.78, 74.68
+588,x,blip,i2t,new_noun_big_sim_oneletter_down,model_large_retrieval_coco_evaluate.txt, 67.62, 92.02
+589,x,blip,i2t,new_noun_big_sim_oneletter_down,model_large_evaluate.txt, 36.86, 82.32
+590,x,blip,i2t,new_noun_big_sim_oneletter_down,model_base_14M_evaluate.txt, 23.36, 74.96
+591,x,blip,i2t,new_noun_big_sim_oneletter_down,model_base_retrieval_coco_evaluate.txt, 66.88, 91.9
+592,x,blip,i2t,new_region_noun_big_sim_criminal,model_large_retrieval_coco_evaluate.txt, 69.84, 92.5
+593,x,blip,i2t,new_region_noun_big_sim_criminal,model_large_evaluate.txt, 50.74, 84.74
+594,x,blip,i2t,new_region_noun_big_sim_criminal,model_base_retrieval_coco_evaluate.txt, 64.74, 91.9
+595,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_base_evaluate.txt, 45.04, 81.56
+596,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_large_retrieval_coco_evaluate.txt, 70.68, 92.76
+597,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_large_evaluate.txt, 54.14, 86.34
+598,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_base_14M_evaluate.txt, 40.42, 81.82
+599,x,blip,i2t,new_noun_big_sim_same_cate_seed_2,model_base_retrieval_coco_evaluate.txt, 67.2, 92.46
+600,x,blip,i2t,testall_random_noun_bert_up,model_base_evaluate.txt, 44.06, 80.18
+601,x,blip,i2t,testall_random_noun_bert_up,model_large_retrieval_coco_evaluate.txt, 71.86, 92.52
+602,x,blip,i2t,testall_random_noun_bert_up,model_large_evaluate.txt, 54.92, 85.8
+603,x,blip,i2t,testall_random_noun_bert_up,model_base_14M_evaluate.txt, 38.18, 80.02
+604,x,blip,i2t,testall_random_noun_bert_up,model_base_retrieval_coco_evaluate.txt, 69.84, 92.22
+605,x,blip,i2t,new_noun_big_sim_table,model_base_evaluate.txt, 49.88, 82.3
+606,x,blip,i2t,new_noun_big_sim_table,model_large_retrieval_coco_evaluate.txt, 73.56, 93.24
+607,x,blip,i2t,new_noun_big_sim_table,model_large_evaluate.txt, 60.12, 87.6
+608,x,blip,i2t,new_noun_big_sim_table,model_base_14M_evaluate.txt, 47.84, 83.8
+609,x,blip,i2t,new_noun_big_sim_table,model_base_retrieval_coco_evaluate.txt, 69.66, 92.5
+610,x,blip,i2t,new_noun_big_sim_question,model_base_evaluate.txt, 19.2, 69.54
+611,x,blip,i2t,new_noun_big_sim_question,model_large_retrieval_coco_evaluate.txt, 67.28, 91.98
+612,x,blip,i2t,new_noun_big_sim_question,model_large_evaluate.txt, 31.04, 79.68
+613,x,blip,i2t,new_noun_big_sim_question,model_base_14M_evaluate.txt, 22.46, 74.52
+614,x,blip,i2t,new_noun_big_sim_question,model_base_retrieval_coco_evaluate.txt, 64.38, 91.5
+615,x,blip,i2t,new_max_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 66.72, 92.48
+616,x,blip,i2t,new_max_noun_big_sim_bert_down,model_large_evaluate.txt, 44.74, 83.84
+617,x,blip,i2t,new_max_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 64.24, 91.88
+618,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_base_evaluate.txt, 39.4, 80.18
+619,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_large_retrieval_coco_evaluate.txt, 70.74, 92.82
+620,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_large_evaluate.txt, 50.84, 85.5
+621,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_base_14M_evaluate.txt, 33.52, 79.22
+622,x,blip,i2t,new_noun_big_sim_diff_cate_seed_2,model_base_retrieval_coco_evaluate.txt, 68.24, 92.48
+623,x,blip,i2t,new_region_noun_big_sim_bert_down,model_large_retrieval_coco_evaluate.txt, 66.28, 92.14
+624,x,blip,i2t,new_region_noun_big_sim_bert_down,model_large_evaluate.txt, 45.24, 83.78
+625,x,blip,i2t,new_region_noun_big_sim_bert_down,model_base_retrieval_coco_evaluate.txt, 64.18, 91.86
+626,x,blip,i2t,new_wsl_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.3, 92.06
+627,x,blip,i2t,new_wsl_noun_big_sim_bert_random,model_large_evaluate.txt, 44.94, 84.04
+628,x,blip,i2t,new_wsl_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.38, 92.04
+629,x,blip,i2t,new_noun_big_sim_bert_up,model_base_evaluate.txt, 35.96, 78.76
+630,x,blip,i2t,new_noun_big_sim_bert_up,model_large_retrieval_coco_evaluate.txt, 67.62, 92.12
+631,x,blip,i2t,new_noun_big_sim_bert_up,model_large_evaluate.txt, 47.42, 84.78
+632,x,blip,i2t,new_noun_big_sim_bert_up,model_base_14M_evaluate.txt, 30.66, 78.34
+633,x,blip,i2t,new_noun_big_sim_bert_up,model_base_retrieval_coco_evaluate.txt, 65.04, 91.84
+634,x,blip,i2t,original,model_large_retrieval_coco_evaluate.txt, 82.36, 95.42
+635,x,blip,i2t,original,model_large_evaluate.txt, 73.66, 91.64
+636,x,blip,i2t,new_noun_big_sim_bert_random,model_base_evaluate.txt, 33.2, 77.36
+637,x,blip,i2t,new_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 66.16, 92.02
+638,x,blip,i2t,new_noun_big_sim_bert_random,model_large_evaluate.txt, 44.32, 83.88
+639,x,blip,i2t,new_noun_big_sim_bert_random,model_base_14M_evaluate.txt, 27.22, 76.92
+640,x,blip,i2t,new_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 64.78, 92.0
+641,x,blip,i2t,new_clip_noun_big_sim_bert_random,model_large_retrieval_coco_evaluate.txt, 70.66, 92.62
+642,x,blip,i2t,new_clip_noun_big_sim_bert_random,model_large_evaluate.txt, 51.56, 85.46
+643,x,blip,i2t,new_clip_noun_big_sim_bert_random,model_base_retrieval_coco_evaluate.txt, 69.7, 92.58
+644,x,blip,i2t,new_noun_big_sim_youtube,model_base_evaluate.txt, 56.58, 86.1
+645,x,blip,i2t,new_noun_big_sim_youtube,model_large_retrieval_coco_evaluate.txt, 79.66, 94.28
+646,x,blip,i2t,new_noun_big_sim_youtube,model_large_evaluate.txt, 68.42, 90.3
+647,x,blip,i2t,new_noun_big_sim_youtube,model_base_14M_evaluate.txt, 38.4, 81.76
+648,x,blip,i2t,new_noun_big_sim_youtube,model_base_retrieval_coco_evaluate.txt, 77.4, 93.92
+649,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50x16log.txt, 26.441423430627747, 51.231507397041185
+650,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50log.txt, 25.06997201119552, 49.340263894442224
+651,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50x4log.txt, 25.893642542982807, 50.635745701719316
+652,x,clip_resnet,t2i_seed1,cutmix_0.7,RN50x64log.txt, 30.73170731707317, 55.281887245101956
+653,x,clip_resnet,t2i_seed1,mixup_0.6,RN50x16log.txt, 25.553778488604557, 49.760095961615356
+654,x,clip_resnet,t2i_seed1,mixup_0.6,RN50log.txt, 25.57377049180328, 49.332267093162734
+655,x,clip_resnet,t2i_seed1,mixup_0.6,RN50x4log.txt, 25.385845661735306, 48.696521391443426
+656,x,clip_resnet,t2i_seed1,mixup_0.6,RN50x64log.txt, 30.835665733706517, 55.65373850459816
+657,x,clip_resnet,t2i_seed1,mixup_0.9,RN50x16log.txt, 16.88924430227909, 46.96921231507397
+658,x,clip_resnet,t2i_seed1,mixup_0.9,RN50log.txt, 20.975609756097562, 46.477409036385446
+659,x,clip_resnet,t2i_seed1,mixup_0.9,RN50x4log.txt, 17.473010795681727, 45.34986005597761
+660,x,clip_resnet,t2i_seed1,mixup_0.9,RN50x64log.txt, 26.217512994802078, 54.13034786085566
+661,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50x16log.txt, 24.9140343862455, 50.323870451819275
+662,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50log.txt, 24.49420231907237, 48.932427029188325
+663,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50x4log.txt, 24.78608556577369, 49.768092762894845
+664,x,clip_resnet,t2i_seed1,cutmix_0.8,RN50x64log.txt, 29.77608956417433, 54.73810475809676
+665,x,clip_resnet,t2i_seed1,mixup_0.7,RN50x16log.txt, 22.870851659336264, 48.21671331467413
+666,x,clip_resnet,t2i_seed1,mixup_0.7,RN50log.txt, 24.45421831267493, 48.376649340263896
+667,x,clip_resnet,t2i_seed1,mixup_0.7,RN50x4log.txt, 23.402638944422232, 47.48100759696121
+668,x,clip_resnet,t2i_seed1,mixup_0.7,RN50x64log.txt, 29.368252698920433, 55.15793682526989
+669,x,clip_resnet,t2i_seed1,mixup_0.8,RN50x16log.txt, 19.572171131547382, 47.10515793682527
+670,x,clip_resnet,t2i_seed1,mixup_0.8,RN50log.txt, 22.694922031187524, 47.377049180327866
+671,x,clip_resnet,t2i_seed1,mixup_0.8,RN50x4log.txt, 20.23190723710516, 46.26949220311875
+672,x,clip_resnet,t2i_seed1,mixup_0.8,RN50x64log.txt, 27.72890843662535, 54.42622950819672
+673,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50x16log.txt, 22.10715713714514, 48.48460615753699
+674,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50log.txt, 23.33466613354658, 47.93682526989204
+675,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50x4log.txt, 22.558976409436227, 48.188724510195925
+676,x,clip_resnet,t2i_seed1,cutmix_0.9,RN50x64log.txt, 28.064774090363855, 53.73450619752099
+677,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50x16log.txt, 27.309076369452217, 51.79928028788485
+678,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50log.txt, 25.581767293082766, 49.69612155137945
+679,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50x4log.txt, 26.953218712514992, 51.16353458616553
+680,x,clip_resnet,t2i_seed1,cutmix_0.6,RN50x64log.txt, 31.17153138744502, 55.48180727708917
+681,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50x16log.txt, 46.68, 71.46
+682,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50log.txt, 42.78, 67.12
+683,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50x4log.txt, 44.96, 70.1
+684,x,clip_resnet,i2t,new_noun_least_sim_bert_up,RN50x64log.txt, 51.12, 75.38
+685,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50x16log.txt, 43.22, 72.76
+686,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50log.txt, 43.84, 69.22
+687,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50x4log.txt, 42.14, 71.24
+688,x,clip_resnet,i2t,new_noun_big_sim_criminal,RN50x64log.txt, 49.0, 77.06
+689,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50x16log.txt, 38.42, 69.58
+690,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50log.txt, 37.42, 65.44
+691,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50x4log.txt, 37.42, 67.28
+692,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random_seed1000,RN50x64log.txt, 43.98, 73.92
+693,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50x16log.txt, 37.12, 69.1
+694,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50log.txt, 37.34, 65.08
+695,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50x4log.txt, 35.9, 67.28
+696,x,clip_resnet,i2t,new_max_noun_big_sim_bert_random,RN50x64log.txt, 43.2, 73.8
+697,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50x16log.txt, 41.58, 70.3
+698,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50log.txt, 38.86, 66.22
+699,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50x4log.txt, 40.38, 68.88
+700,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_down,RN50x64log.txt, 45.56, 74.3
+701,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50x16log.txt, 43.16, 73.0
+702,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50log.txt, 43.78, 69.3
+703,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50x4log.txt, 42.38, 71.34
+704,x,clip_resnet,i2t,new_wsl_noun_big_sim_criminal,RN50x64log.txt, 49.14, 77.34
+705,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50x16log.txt, 43.32, 73.18
+706,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50log.txt, 43.96, 69.44
+707,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50x4log.txt, 42.5, 71.34
+708,x,clip_resnet,i2t,new_max_noun_big_sim_criminal,RN50x64log.txt, 49.22, 77.26
+709,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50x16log.txt, 45.36, 73.56
+710,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50log.txt, 44.38, 69.96
+711,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50x4log.txt, 44.14, 71.78
+712,x,clip_resnet,i2t,new_clip_noun_big_sim_criminal,RN50x64log.txt, 50.92, 77.66
+713,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50x16log.txt, 42.32, 71.74
+714,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50log.txt, 38.7, 66.18
+715,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50x4log.txt, 40.28, 69.5
+716,x,clip_resnet,i2t,new_noun_big_sim_occured_random,RN50x64log.txt, 46.1, 75.12
+717,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50x16log.txt, 37.4, 68.98
+718,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50log.txt, 37.4, 65.26
+719,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50x4log.txt, 36.28, 67.74
+720,x,clip_resnet,i2t,new_region_noun_big_sim_bert_random,RN50x64log.txt, 43.52, 73.96
+721,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50x16log.txt, 47.16, 72.64
+722,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50log.txt, 43.24, 67.38
+723,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50x4log.txt, 45.88, 71.2
+724,x,clip_resnet,i2t,new_noun_least_sim_occured_random_noun,RN50x64log.txt, 50.86, 75.9
+725,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50x16log.txt, 39.02, 70.14
+726,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50log.txt, 37.08, 65.76
+727,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50x4log.txt, 37.56, 68.6
+728,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_down,RN50x64log.txt, 43.02, 73.54
+729,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50x16log.txt, 37.4, 69.7
+730,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50log.txt, 36.36, 64.88
+731,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50x4log.txt, 36.18, 67.82
+732,x,clip_resnet,i2t,new_noun_big_sim_bert_down,RN50x64log.txt, 41.74, 73.12
+733,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50x16log.txt, 29.18, 64.52
+734,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50log.txt, 33.3, 63.18
+735,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50x4log.txt, 30.28, 62.84
+736,x,clip_resnet,i2t,new_noun_big_sim_oneletter_down,RN50x64log.txt, 40.4, 72.26
+737,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50x16log.txt, 43.34, 72.94
+738,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50log.txt, 43.96, 69.46
+739,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50x4log.txt, 42.78, 71.46
+740,x,clip_resnet,i2t,new_region_noun_big_sim_criminal,RN50x64log.txt, 49.6, 77.34
+741,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50x16log.txt, 39.06, 70.04
+742,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50log.txt, 36.0, 64.94
+743,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50x4log.txt, 37.72, 68.06
+744,x,clip_resnet,i2t,new_noun_big_sim_same_cate_seed_2,RN50x64log.txt, 41.72, 73.42
+745,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50x16log.txt, 41.42, 70.6
+746,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50log.txt, 39.88, 66.12
+747,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50x4log.txt, 40.64, 68.66
+748,x,clip_resnet,i2t,testall_random_noun_bert_up,RN50x64log.txt, 46.36, 74.52
+749,x,clip_resnet,i2t,new_noun_big_sim_table,RN50x16log.txt, 43.8, 73.1
+750,x,clip_resnet,i2t,new_noun_big_sim_table,RN50log.txt, 37.48, 65.64
+751,x,clip_resnet,i2t,new_noun_big_sim_table,RN50x4log.txt, 41.24, 70.48
+752,x,clip_resnet,i2t,new_noun_big_sim_table,RN50x64log.txt, 46.08, 74.62
+753,x,clip_resnet,i2t,new_noun_big_sim_question,RN50x16log.txt, 36.24, 69.92
+754,x,clip_resnet,i2t,new_noun_big_sim_question,RN50log.txt, 37.62, 66.04
+755,x,clip_resnet,i2t,new_noun_big_sim_question,RN50x4log.txt, 36.44, 68.8
+756,x,clip_resnet,i2t,new_noun_big_sim_question,RN50x64log.txt, 40.88, 73.22
+757,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50x16log.txt, 39.02, 69.94
+758,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50log.txt, 37.04, 65.5
+759,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50x4log.txt, 37.38, 68.52
+760,x,clip_resnet,i2t,new_max_noun_big_sim_bert_down,RN50x64log.txt, 42.78, 73.36
+761,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50x16log.txt, 40.16, 70.96
+762,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50log.txt, 37.86, 65.92
+763,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50x4log.txt, 39.1, 69.04
+764,x,clip_resnet,i2t,new_noun_big_sim_diff_cate_seed_2,RN50x64log.txt, 44.82, 74.22
+765,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50x16log.txt, 39.26, 70.16
+766,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50log.txt, 37.44, 65.6
+767,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50x4log.txt, 37.76, 68.7
+768,x,clip_resnet,i2t,new_region_noun_big_sim_bert_down,RN50x64log.txt, 43.08, 73.56
+769,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50x16log.txt, 37.54, 69.04
+770,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50log.txt, 36.9, 65.18
+771,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50x4log.txt, 36.26, 67.52
+772,x,clip_resnet,i2t,new_wsl_noun_big_sim_bert_random,RN50x64log.txt, 43.5, 73.68
+773,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50x16log.txt, 38.4, 69.64
+774,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50log.txt, 37.7, 66.04
+775,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50x4log.txt, 37.18, 67.84
+776,x,clip_resnet,i2t,new_noun_big_sim_bert_up,RN50x64log.txt, 44.1, 73.94
+777,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50x16log.txt, 37.12, 68.66
+778,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50log.txt, 36.84, 65.22
+779,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50x4log.txt, 35.38, 67.48
+780,x,clip_resnet,i2t,new_noun_big_sim_bert_random,RN50x64log.txt, 42.92, 73.46
+781,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50x16log.txt, 39.72, 69.58
+782,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50log.txt, 38.5, 65.8
+783,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50x4log.txt, 37.96, 67.7
+784,x,clip_resnet,i2t,new_clip_noun_big_sim_bert_random,RN50x64log.txt, 45.04, 74.18
+785,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50x16log.txt, 42.98, 72.84
+786,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50log.txt, 43.1, 69.9
+787,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50x4log.txt, 42.34, 71.02
+788,x,clip_resnet,i2t,new_noun_big_sim_youtube,RN50x64log.txt, 51.46, 77.9
+789, 12.60295881647341,vse_infty,t2i_seed10,cutmix_0.7,butd_gridlog.txt, 40.00799680127949, 68.95241903238704
+790, 13.574570171931228,vse_infty,t2i_seed10,cutmix_0.7,butd_regionlog.txt, 38.220711715313875, 67.32506997201119
+791, 7.760895641743303,vse_infty,t2i_seed10,cutmix_0.7,wsl_gridlog.txt, 48.35665733706517, 75.53378648540584
+792, 9.236305477808877,vse_infty,t2i_seed10,mixup_0.6,butd_gridlog.txt, 41.23550579768093, 70.25189924030389
+793, 7.197121151539384,vse_infty,t2i_seed10,mixup_0.6,butd_regionlog.txt, 40.363854458216714, 69.53218712514995
+794, 9.436225509796081,vse_infty,t2i_seed10,mixup_0.6,wsl_gridlog.txt, 47.76489404238305, 75.8296681327469
+795, 36.66133546581367,vse_infty,t2i_seed10,mixup_0.9,butd_gridlog.txt, 30.263894442223112, 63.38264694122351
+796, 30.73970411835266,vse_infty,t2i_seed10,mixup_0.9,butd_regionlog.txt, 31.45141943222711, 62.74290283886445
+797, 38.78048780487805,vse_infty,t2i_seed10,mixup_0.9,wsl_gridlog.txt, 34.226309476209515, 69.23630547780887
+798, 16.561375449820073,vse_infty,t2i_seed10,cutmix_0.8,butd_gridlog.txt, 38.4406237504998, 67.624950019992
+799, 17.277089164334267,vse_infty,t2i_seed10,cutmix_0.8,butd_regionlog.txt, 36.89724110355858, 66.28948420631747
+800, 11.095561775289884,vse_infty,t2i_seed10,cutmix_0.8,wsl_gridlog.txt, 46.84126349460216, 74.56217512994802
+801, 15.493802479008396,vse_infty,t2i_seed10,mixup_0.7,butd_gridlog.txt, 38.972411035585765, 68.23670531787285
+802, 11.987205117952819,vse_infty,t2i_seed10,mixup_0.7,butd_regionlog.txt, 38.768492602958815, 67.78488604558177
+803, 15.669732107157136,vse_infty,t2i_seed10,mixup_0.7,wsl_gridlog.txt, 45.0499800079968, 73.8624550179928
+804, 24.79408236705318,vse_infty,t2i_seed10,mixup_0.8,butd_gridlog.txt, 35.3218712514994, 65.82566973210716
+805, 20.447820871651338,vse_infty,t2i_seed10,mixup_0.8,butd_regionlog.txt, 35.77768892443023, 65.13394642143143
+806, 26.069572171131547,vse_infty,t2i_seed10,mixup_0.8,wsl_gridlog.txt, 40.52379048380648, 71.44342263094762
+807, 24.138344662135147,vse_infty,t2i_seed10,cutmix_0.9,butd_gridlog.txt, 35.453818472610955, 65.73370651739305
+808, 23.50659736105558,vse_infty,t2i_seed10,cutmix_0.9,butd_regionlog.txt, 34.40223910435826, 64.62614954018393
+809, 18.144742103158737,vse_infty,t2i_seed10,cutmix_0.9,wsl_gridlog.txt, 43.73450619752099, 72.61895241903238
+810, 10.171931227508997,vse_infty,t2i_seed10,cutmix_0.6,butd_gridlog.txt, 40.93962415033987, 69.8000799680128
+811, 11.415433826469412,vse_infty,t2i_seed10,cutmix_0.6,butd_regionlog.txt, 39.07237105157937, 68.1047580967613
+812, 6.561375449820072,vse_infty,t2i_seed10,cutmix_0.6,wsl_gridlog.txt, 48.86045581767293, 76.1015593762495
+813, 12.171131547381048,vse_infty,t2i_seed1,cutmix_0.7,butd_gridlog.txt, 40.09196321471411, 69.07237105157937
+814, 13.574570171931228,vse_infty,t2i_seed1,cutmix_0.7,butd_regionlog.txt, 38.220711715313875, 67.32506997201119
+815, 8.280687724910036,vse_infty,t2i_seed1,cutmix_0.7,wsl_gridlog.txt, 48.37265093962415, 75.64574170331868
+816, 9.216313474610155,vse_infty,t2i_seed1,mixup_0.6,butd_gridlog.txt, 41.303478608556574, 70.2638944422231
+817, 7.197121151539384,vse_infty,t2i_seed1,mixup_0.6,butd_regionlog.txt, 40.363854458216714, 69.53218712514995
+818, 9.20031987205118,vse_infty,t2i_seed1,mixup_0.6,wsl_gridlog.txt, 48.14074370251899, 75.68972411035585
+819, 36.61735305877649,vse_infty,t2i_seed1,mixup_0.9,butd_gridlog.txt, 30.19592163134746, 63.45861655337865
+820, 30.73970411835266,vse_infty,t2i_seed1,mixup_0.9,butd_regionlog.txt, 31.45141943222711, 62.74290283886445
+821, 38.884446221511396,vse_infty,t2i_seed1,mixup_0.9,wsl_gridlog.txt, 34.26229508196721, 69.33226709316274
+822, 15.809676129548182,vse_infty,t2i_seed1,cutmix_0.8,butd_gridlog.txt, 38.768492602958815, 67.75689724110356
+823, 17.277089164334267,vse_infty,t2i_seed1,cutmix_0.8,butd_regionlog.txt, 36.89724110355858, 66.28948420631747
+824, 11.243502598960417,vse_infty,t2i_seed1,cutmix_0.8,wsl_gridlog.txt, 46.97321071571371, 74.43022790883647
+825, 15.229908036785286,vse_infty,t2i_seed1,mixup_0.7,butd_gridlog.txt, 39.048380647740906, 68.22870851659336
+826, 11.987205117952819,vse_infty,t2i_seed1,mixup_0.7,butd_regionlog.txt, 38.768492602958815, 67.78488604558177
+827, 15.49780087964814,vse_infty,t2i_seed1,mixup_0.7,wsl_gridlog.txt, 45.36185525789684, 73.91843262694923
+828, 25.25389844062375,vse_infty,t2i_seed1,mixup_0.8,butd_gridlog.txt, 35.2219112355058, 65.88564574170331
+829, 20.447820871651338,vse_infty,t2i_seed1,mixup_0.8,butd_regionlog.txt, 35.77768892443023, 65.13394642143143
+830, 26.533386645341864,vse_infty,t2i_seed1,mixup_0.8,wsl_gridlog.txt, 40.30387844862055, 71.31547381047581
+831, 23.09876049580168,vse_infty,t2i_seed1,cutmix_0.9,butd_gridlog.txt, 35.72171131547381, 65.86165533786486
+832, 23.50659736105558,vse_infty,t2i_seed1,cutmix_0.9,butd_regionlog.txt, 34.40223910435826, 64.62614954018393
+833, 18.388644542183126,vse_infty,t2i_seed1,cutmix_0.9,wsl_gridlog.txt, 43.69452219112355, 72.68692522990804
+834, 10.195921631347462,vse_infty,t2i_seed1,cutmix_0.6,butd_gridlog.txt, 40.79568172730907, 69.82407037185126
+835, 11.415433826469412,vse_infty,t2i_seed1,cutmix_0.6,butd_regionlog.txt, 39.07237105157937, 68.1047580967613
+836, 6.857257097161136,vse_infty,t2i_seed1,cutmix_0.6,wsl_gridlog.txt, 48.892443022790886, 76.28948420631747
+837, 11.575369852059175,vse_infty,t2i_seed100,cutmix_0.7,butd_gridlog.txt, 40.199920031987205, 69.10035985605758
+838, 13.574570171931228,vse_infty,t2i_seed100,cutmix_0.7,butd_regionlog.txt, 38.220711715313875, 67.32506997201119
+839, 8.012794882047181,vse_infty,t2i_seed100,cutmix_0.7,wsl_gridlog.txt, 48.38864454218313, 75.67772890843662
+840, 9.320271891243502,vse_infty,t2i_seed100,mixup_0.6,butd_gridlog.txt, 41.107556977209114, 70.19592163134746
+841, 7.197121151539384,vse_infty,t2i_seed100,mixup_0.6,butd_regionlog.txt, 40.363854458216714, 69.53218712514995
+842, 9.272291083566573,vse_infty,t2i_seed100,mixup_0.6,wsl_gridlog.txt, 48.01279488204718, 75.46581367453018
+843, 36.7453018792483,vse_infty,t2i_seed100,mixup_0.9,butd_gridlog.txt, 30.191923230707715, 63.30667732906837
+844, 30.73970411835266,vse_infty,t2i_seed100,mixup_0.9,butd_regionlog.txt, 31.45141943222711, 62.74290283886445
+845, 38.14074370251899,vse_infty,t2i_seed100,mixup_0.9,wsl_gridlog.txt, 34.43822471011595, 69.43222710915634
+846, 15.101959216313475,vse_infty,t2i_seed100,cutmix_0.8,butd_gridlog.txt, 39.04038384646142, 67.96081567373051
+847, 17.277089164334267,vse_infty,t2i_seed100,cutmix_0.8,butd_regionlog.txt, 36.89724110355858, 66.28948420631747
+848, 11.58736505397841,vse_infty,t2i_seed100,cutmix_0.8,wsl_gridlog.txt, 46.797281087564976, 74.52219112355058
+849, 15.449820071971212,vse_infty,t2i_seed100,mixup_0.7,butd_gridlog.txt, 39.00039984006398, 68.28068772491004
+850, 11.987205117952819,vse_infty,t2i_seed100,mixup_0.7,butd_regionlog.txt, 38.768492602958815, 67.78488604558177
+851, 15.933626549380248,vse_infty,t2i_seed100,mixup_0.7,wsl_gridlog.txt, 44.986005597760894, 73.64254298280687
+852, 24.742103158736505,vse_infty,t2i_seed100,mixup_0.8,butd_gridlog.txt, 35.22990803678528, 65.71371451419432
+853, 20.447820871651338,vse_infty,t2i_seed100,mixup_0.8,butd_regionlog.txt, 35.77768892443023, 65.13394642143143
+854, 26.165533786485405,vse_infty,t2i_seed100,mixup_0.8,wsl_gridlog.txt, 40.36785285885646, 71.46741303478609
+855, 23.31467413034786,vse_infty,t2i_seed100,cutmix_0.9,butd_gridlog.txt, 35.92562974810076, 65.94562175129948
+856, 23.50659736105558,vse_infty,t2i_seed100,cutmix_0.9,butd_regionlog.txt, 34.40223910435826, 64.62614954018393
+857, 18.628548580567774,vse_infty,t2i_seed100,cutmix_0.9,wsl_gridlog.txt, 43.59056377449021, 72.59496201519393
+858, 9.460215913634546,vse_infty,t2i_seed100,cutmix_0.6,butd_gridlog.txt, 41.09556177528989, 69.91603358656538
+859, 11.415433826469412,vse_infty,t2i_seed100,cutmix_0.6,butd_regionlog.txt, 39.07237105157937, 68.1047580967613
+860, 6.313474610155938,vse_infty,t2i_seed100,cutmix_0.6,wsl_gridlog.txt, 49.03238704518193, 76.35345861655338
+861, 37.34,vse_infty,03_i2t,four_seed100,butd_gridlog.txt, 40.88, 76.32
+862, 38.62,vse_infty,03_i2t,four_seed100,butd_regionlog.txt, 40.18, 75.18
+863, 32.2,vse_infty,03_i2t,four_seed100,wsl_gridlog.txt, 48.86, 82.16
+864, 34.0,vse_infty,03_i2t,new_blip_same_new_0301_1,butd_gridlog.txt, 40.76, 78.5
+865, 35.74,vse_infty,03_i2t,new_blip_same_new_0301_1,butd_regionlog.txt, 39.74, 77.2
+866, 29.72,vse_infty,03_i2t,new_blip_same_new_0301_1,wsl_gridlog.txt, 48.4, 84.02
+867, 37.3,vse_infty,03_i2t,four_seed10,butd_gridlog.txt, 41.3, 76.38
+868, 36.66,vse_infty,03_i2t,four_seed10,butd_regionlog.txt, 40.6, 75.72
+869, 33.84,vse_infty,03_i2t,four_seed10,wsl_gridlog.txt, 47.72, 81.9
+870, 49.18,vse_infty,03_i2t,new_blip_bert_new_0301_4,butd_gridlog.txt, 32.02, 75.44
+871, 48.0,vse_infty,03_i2t,new_blip_bert_new_0301_4,butd_regionlog.txt, 31.86, 74.38
+872, 46.5,vse_infty,03_i2t,new_blip_bert_new_0301_4,wsl_gridlog.txt, 37.16, 81.06
+873, 39.78,vse_infty,03_i2t,testall_final_least_sim_question,butd_gridlog.txt, 39.92, 75.52
+874, 38.06,vse_infty,03_i2t,testall_final_least_sim_question,butd_regionlog.txt, 40.58, 74.98
+875, 33.76,vse_infty,03_i2t,testall_final_least_sim_question,wsl_gridlog.txt, 47.32, 81.24
+876, 38.84,vse_infty,03_i2t,new_blip_diff_new_0301_2,butd_gridlog.txt, 38.76, 77.24
+877, 39.5,vse_infty,03_i2t,new_blip_diff_new_0301_2,butd_regionlog.txt, 36.98, 76.2
+878, 35.7,vse_infty,03_i2t,new_blip_diff_new_0301_2,wsl_gridlog.txt, 44.62, 82.3
+879, 41.94,vse_infty,03_i2t,new_blip_danger_new_0301_0,butd_gridlog.txt, 36.28, 76.1
+880, 43.04,vse_infty,03_i2t,new_blip_danger_new_0301_0,butd_regionlog.txt, 34.62, 75.18
+881, 40.2,vse_infty,03_i2t,new_blip_danger_new_0301_0,wsl_gridlog.txt, 41.02, 81.86
+882, 46.46,vse_infty,03_i2t,testall_final_random_delete,butd_gridlog.txt, 34.3, 74.68
+883, 45.58,vse_infty,03_i2t,testall_final_random_delete,butd_regionlog.txt, 34.2, 74.52
+884, 41.68,vse_infty,03_i2t,testall_final_random_delete,wsl_gridlog.txt, 40.8, 80.86
+885, 37.3,vse_infty,03_i2t,new_blip_diff_new_0301_3,butd_gridlog.txt, 39.18, 77.46
+886, 40.32,vse_infty,03_i2t,new_blip_diff_new_0301_3,butd_regionlog.txt, 36.84, 76.3
+887, 34.7,vse_infty,03_i2t,new_blip_diff_new_0301_3,wsl_gridlog.txt, 45.38, 82.68
+888, 39.0,vse_infty,03_i2t,new_blip_diff_new_0301_0,butd_gridlog.txt, 38.8, 77.44
+889, 39.98,vse_infty,03_i2t,new_blip_diff_new_0301_0,butd_regionlog.txt, 37.22, 76.36
+890, 35.1,vse_infty,03_i2t,new_blip_diff_new_0301_0,wsl_gridlog.txt, 44.66, 83.02
+891, 42.3,vse_infty,03_i2t,three_seed10,butd_gridlog.txt, 38.04, 75.58
+892, 43.24,vse_infty,03_i2t,three_seed10,butd_regionlog.txt, 36.5, 74.92
+893, 39.08,vse_infty,03_i2t,three_seed10,wsl_gridlog.txt, 43.22, 81.42
+894, 37.96,vse_infty,03_i2t,new_blip_diff_new_0301_1,butd_gridlog.txt, 38.68, 77.72
+895, 39.44,vse_infty,03_i2t,new_blip_diff_new_0301_1,butd_regionlog.txt, 37.02, 76.66
+896, 34.8,vse_infty,03_i2t,new_blip_diff_new_0301_1,wsl_gridlog.txt, 44.8, 83.06
+897, 33.52,vse_infty,03_i2t,new_blip_same_new_0301_3,butd_gridlog.txt, 41.16, 78.32
+898, 34.24,vse_infty,03_i2t,new_blip_same_new_0301_3,butd_regionlog.txt, 40.02, 77.22
+899, 29.52,vse_infty,03_i2t,new_blip_same_new_0301_3,wsl_gridlog.txt, 49.04, 83.86
+900, 31.22,vse_infty,03_i2t,five_seed100,butd_gridlog.txt, 44.68, 77.5
+901, 32.92,vse_infty,03_i2t,five_seed100,butd_regionlog.txt, 43.36, 76.8
+902, 27.42,vse_infty,03_i2t,five_seed100,wsl_gridlog.txt, 52.06, 82.7
+903, 48.58,vse_infty,03_i2t,new_blip_bert_new_0301_3,butd_gridlog.txt, 32.44, 75.64
+904, 47.52,vse_infty,03_i2t,new_blip_bert_new_0301_3,butd_regionlog.txt, 31.74, 74.92
+905, 45.76,vse_infty,03_i2t,new_blip_bert_new_0301_3,wsl_gridlog.txt, 37.48, 80.98
+906, 48.82,vse_infty,03_i2t,new_blip_bert_new_0301_1,butd_gridlog.txt, 32.18, 75.68
+907, 48.14,vse_infty,03_i2t,new_blip_bert_new_0301_1,butd_regionlog.txt, 31.64, 74.3
+908, 45.66,vse_infty,03_i2t,new_blip_bert_new_0301_1,wsl_gridlog.txt, 37.66, 81.02
+909, 46.3,vse_infty,03_i2t,two_seed100,butd_gridlog.txt, 34.84, 74.8
+910, 46.56,vse_infty,03_i2t,two_seed100,butd_regionlog.txt, 33.82, 74.34
+911, 43.26,vse_infty,03_i2t,two_seed100,wsl_gridlog.txt, 40.28, 81.02
+912, 42.3,vse_infty,03_i2t,three_seed1,butd_gridlog.txt, 37.66, 75.26
+913, 42.76,vse_infty,03_i2t,three_seed1,butd_regionlog.txt, 37.32, 74.26
+914, 37.88,vse_infty,03_i2t,three_seed1,wsl_gridlog.txt, 44.62, 80.78
+915, 51.54,vse_infty,03_i2t,testall_final_big_sim_delete,butd_gridlog.txt, 30.46, 74.68
+916, 50.72,vse_infty,03_i2t,testall_final_big_sim_delete,butd_regionlog.txt, 30.02, 73.7
+917, 47.14,vse_infty,03_i2t,testall_final_big_sim_delete,wsl_gridlog.txt, 36.56, 80.4
+918, 39.78,vse_infty,03_i2t,testall_final_least_sim_delete,butd_gridlog.txt, 39.92, 75.52
+919, 38.06,vse_infty,03_i2t,testall_final_least_sim_delete,butd_regionlog.txt, 40.58, 74.98
+920, 33.76,vse_infty,03_i2t,testall_final_least_sim_delete,wsl_gridlog.txt, 47.32, 81.24
+921, 40.66,vse_infty,03_i2t,three_seed100,butd_gridlog.txt, 38.38, 75.64
+922, 41.98,vse_infty,03_i2t,three_seed100,butd_regionlog.txt, 37.62, 74.84
+923, 38.36,vse_infty,03_i2t,three_seed100,wsl_gridlog.txt, 44.28, 81.2
+924, 45.3,vse_infty,03_i2t,two_seed10,butd_gridlog.txt, 35.12, 74.88
+925, 47.22,vse_infty,03_i2t,two_seed10,butd_regionlog.txt, 34.0, 74.3
+926, 43.66,vse_infty,03_i2t,two_seed10,wsl_gridlog.txt, 40.58, 80.52
+927, 30.14,vse_infty,03_i2t,five_seed10,butd_gridlog.txt, 45.08, 77.76
+928, 33.5,vse_infty,03_i2t,five_seed10,butd_regionlog.txt, 43.14, 76.96
+929, 27.48,vse_infty,03_i2t,five_seed10,wsl_gridlog.txt, 51.82, 82.88
+930, 32.42,vse_infty,03_i2t,new_blip_same_new_0301_2,butd_gridlog.txt, 41.58, 78.58
+931, 34.88,vse_infty,03_i2t,new_blip_same_new_0301_2,butd_regionlog.txt, 40.06, 77.16
+932, 30.28,vse_infty,03_i2t,new_blip_same_new_0301_2,wsl_gridlog.txt, 48.04, 83.78
+933, 38.9,vse_infty,03_i2t,new_blip_diff_new_0301_4,butd_gridlog.txt, 38.12, 77.34
+934, 40.06,vse_infty,03_i2t,new_blip_diff_new_0301_4,butd_regionlog.txt, 36.5, 76.52
+935, 35.0,vse_infty,03_i2t,new_blip_diff_new_0301_4,wsl_gridlog.txt, 44.88, 82.86
+936, 30.34,vse_infty,03_i2t,five_seed1,butd_gridlog.txt, 45.14, 77.78
+937, 32.6,vse_infty,03_i2t,five_seed1,butd_regionlog.txt, 43.0, 76.58
+938, 27.64,vse_infty,03_i2t,five_seed1,wsl_gridlog.txt, 51.32, 82.98
+939, 48.42,vse_infty,03_i2t,new_blip_bert_new_0301_2,butd_gridlog.txt, 32.74, 75.2
+940, 48.4,vse_infty,03_i2t,new_blip_bert_new_0301_2,butd_regionlog.txt, 31.58, 74.32
+941, 46.88,vse_infty,03_i2t,new_blip_bert_new_0301_2,wsl_gridlog.txt, 37.52, 80.86
+942, 31.02,vse_infty,03_i2t,new_blip_danger_new_0301_2,butd_gridlog.txt, 41.28, 78.44
+943, 32.26,vse_infty,03_i2t,new_blip_danger_new_0301_2,butd_regionlog.txt, 39.88, 77.08
+944, 32.56,vse_infty,03_i2t,new_blip_danger_new_0301_2,wsl_gridlog.txt, 44.96, 82.92
+945, 48.76,vse_infty,03_i2t,new_blip_bert_new_0301_0,butd_gridlog.txt, 31.82, 75.1
+946, 47.88,vse_infty,03_i2t,new_blip_bert_new_0301_0,butd_regionlog.txt, 31.74, 74.22
+947, 45.54,vse_infty,03_i2t,new_blip_bert_new_0301_0,wsl_gridlog.txt, 37.88, 81.06
+948,x,vse_infty,03_i2t,seed100,two_seed100_caps.txt,x,x
+949,x,vse_infty,03_i2t,seed100,five_seed100_caps.txt,x,x
+950,x,vse_infty,03_i2t,seed100,five_seed100_tmp_caps.txt,x,x
+951,x,vse_infty,03_i2t,seed100,all_three_seed100_tmp_caps.txt,x,x
+952,x,vse_infty,03_i2t,seed100,four_seed100_caps.txt,x,x
+953,x,vse_infty,03_i2t,seed100,four_seed100_tmp_caps.txt,x,x
+954,x,vse_infty,03_i2t,seed100,three_seed100_caps.txt,x,x
+955,x,vse_infty,03_i2t,seed100,all_two_seed100_tmp_caps.txt,x,x
+956, 46.24,vse_infty,03_i2t,two_seed1,butd_gridlog.txt, 34.4, 75.22
+957, 46.64,vse_infty,03_i2t,two_seed1,butd_regionlog.txt, 34.0, 74.26
+958, 44.46,vse_infty,03_i2t,two_seed1,wsl_gridlog.txt, 39.0, 80.3
+959, 51.54,vse_infty,03_i2t,testall_final_big_sim_question,butd_gridlog.txt, 30.46, 74.68
+960, 50.72,vse_infty,03_i2t,testall_final_big_sim_question,butd_regionlog.txt, 30.02, 73.7
+961, 47.14,vse_infty,03_i2t,testall_final_big_sim_question,wsl_gridlog.txt, 36.56, 80.4
+962, 33.52,vse_infty,03_i2t,new_blip_same_new_0301_0,butd_gridlog.txt, 41.22, 78.48
+963, 35.18,vse_infty,03_i2t,new_blip_same_new_0301_0,butd_regionlog.txt, 40.2, 77.24
+964, 28.82,vse_infty,03_i2t,new_blip_same_new_0301_0,wsl_gridlog.txt, 49.68, 83.78
+965, 34.44,vse_infty,03_i2t,new_blip_same_new_0301_4,butd_gridlog.txt, 40.92, 78.38
+966, 35.58,vse_infty,03_i2t,new_blip_same_new_0301_4,butd_regionlog.txt, 38.92, 76.98
+967, 29.6,vse_infty,03_i2t,new_blip_same_new_0301_4,wsl_gridlog.txt, 48.7, 83.6
+968, 33.0,vse_infty,03_i2t,new_blip_danger_new_0301_1,butd_gridlog.txt, 41.56, 78.44
+969, 36.84,vse_infty,03_i2t,new_blip_danger_new_0301_1,butd_regionlog.txt, 38.48, 76.04
+970, 26.46,vse_infty,03_i2t,new_blip_danger_new_0301_1,wsl_gridlog.txt, 50.2, 84.0
+971, 36.78,vse_infty,03_i2t,four_seed1,butd_gridlog.txt, 41.34, 76.54
+972, 38.1,vse_infty,03_i2t,four_seed1,butd_regionlog.txt, 40.38, 75.42
+973, 32.52,vse_infty,03_i2t,four_seed1,wsl_gridlog.txt, 48.28, 81.64
+974,x,vse_infty,i2t,new_noun_least_sim_bert_up,butd_gridlog.txt, 42.3, 76.64
+975,x,vse_infty,i2t,new_noun_least_sim_bert_up,butd_regionlog.txt, 41.98, 76.0
+976,x,vse_infty,i2t,new_noun_least_sim_bert_up,wsl_gridlog.txt, 49.72, 82.34
+977,x,vse_infty,i2t,new_noun_big_sim_criminal,butd_gridlog.txt, 29.32, 75.32
+978,x,vse_infty,i2t,new_noun_big_sim_criminal,butd_regionlog.txt, 28.58, 74.2
+979,x,vse_infty,i2t,new_noun_big_sim_criminal,wsl_gridlog.txt, 36.1, 80.58
+980,x,vse_infty,i2t,new_noun_big_sim_occured_random,butd_gridlog.txt, 41.02, 78.12
+981,x,vse_infty,i2t,new_noun_big_sim_occured_random,butd_regionlog.txt, 38.64, 76.56
+982,x,vse_infty,i2t,new_noun_big_sim_occured_random,wsl_gridlog.txt, 48.12, 82.98
+983,x,vse_infty,i2t,new_noun_least_sim_occured_random_noun,butd_gridlog.txt, 46.98, 79.1
+984,x,vse_infty,i2t,new_noun_least_sim_occured_random_noun,butd_regionlog.txt, 45.76, 78.04
+985,x,vse_infty,i2t,new_noun_least_sim_occured_random_noun,wsl_gridlog.txt, 55.8, 84.78
+986,x,vse_infty,i2t,new_noun_big_sim_bert_down,butd_gridlog.txt, 32.22, 74.78
+987,x,vse_infty,i2t,new_noun_big_sim_bert_down,butd_regionlog.txt, 30.48, 74.52
+988,x,vse_infty,i2t,new_noun_big_sim_bert_down,wsl_gridlog.txt, 36.84, 80.7
+989,x,vse_infty,i2t,new_noun_big_sim_oneletter_down,butd_gridlog.txt, 41.76, 78.68
+990,x,vse_infty,i2t,new_noun_big_sim_oneletter_down,butd_regionlog.txt, 41.86, 78.12
+991,x,vse_infty,i2t,new_noun_big_sim_oneletter_down,wsl_gridlog.txt, 45.44, 83.18
+992,x,vse_infty,i2t,new_noun_big_sim_same_cate_seed_2,butd_gridlog.txt, 40.76, 78.08
+993,x,vse_infty,i2t,new_noun_big_sim_same_cate_seed_2,butd_regionlog.txt, 38.86, 76.7
+994,x,vse_infty,i2t,new_noun_big_sim_same_cate_seed_2,wsl_gridlog.txt, 47.8, 83.2
+995,x,vse_infty,i2t,testall_random_noun_bert_up,butd_gridlog.txt, 36.82, 75.84
+996,x,vse_infty,i2t,testall_random_noun_bert_up,butd_regionlog.txt, 36.14, 75.72
+997,x,vse_infty,i2t,testall_random_noun_bert_up,wsl_gridlog.txt, 42.04, 81.46
+998,x,vse_infty,i2t,new_noun_big_sim_table,butd_gridlog.txt, 44.76, 78.4
+999,x,vse_infty,i2t,new_noun_big_sim_table,butd_regionlog.txt, 42.16, 77.3
+1000,x,vse_infty,i2t,new_noun_big_sim_table,wsl_gridlog.txt, 52.52, 83.88
+1001,x,vse_infty,i2t,new_noun_big_sim_question,butd_gridlog.txt, 30.08, 74.44
+1002,x,vse_infty,i2t,new_noun_big_sim_question,butd_regionlog.txt, 29.14, 73.94
+1003,x,vse_infty,i2t,new_noun_big_sim_question,wsl_gridlog.txt, 35.94, 80.32
+1004,x,vse_infty,i2t,new_noun_big_sim_diff_cate_seed_2,butd_gridlog.txt, 36.88, 77.24
+1005,x,vse_infty,i2t,new_noun_big_sim_diff_cate_seed_2,butd_regionlog.txt, 35.36, 75.86
+1006,x,vse_infty,i2t,new_noun_big_sim_diff_cate_seed_2,wsl_gridlog.txt, 42.8, 82.06
+1007,x,vse_infty,i2t,new_noun_big_sim_bert_up,butd_gridlog.txt, 33.4, 75.96
+1008,x,vse_infty,i2t,new_noun_big_sim_bert_up,butd_regionlog.txt, 32.46, 75.16
+1009,x,vse_infty,i2t,new_noun_big_sim_bert_up,wsl_gridlog.txt, 37.4, 80.98
+1010,x,vse_infty,i2t,new_noun_big_sim_bert_random,butd_gridlog.txt, 31.24, 75.88
+1011,x,vse_infty,i2t,new_noun_big_sim_bert_random,butd_regionlog.txt, 30.72, 74.94
+1012,x,vse_infty,i2t,new_noun_big_sim_bert_random,wsl_gridlog.txt, 36.96, 80.66
+1013,x,vse_infty,i2t,new_noun_big_sim_youtube,butd_gridlog.txt, 29.24, 75.12
+1014,x,vse_infty,i2t,new_noun_big_sim_youtube,butd_regionlog.txt, 28.86, 74.24
+1015,x,vse_infty,i2t,new_noun_big_sim_youtube,wsl_gridlog.txt, 32.88, 79.7
+1016,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.7_log.txt, 48.10075969612155, 74.82606957217114
+1017,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.9_log.txt, 47.001199520191925, 74.44622151139544
+1018,x,albef,t2i_seed10,ALBEF_4M,log.txt,x,x
+1019,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.8_log.txt, 47.64094362255098, 74.71011595361855
+1020,x,albef,t2i_seed10,ALBEF_4M,mixup_0.9_log.txt, 46.31747301079568, 73.9624150339864
+1021,x,albef,t2i_seed10,ALBEF_4M,mixup_0.7_log.txt, 48.22471011595362, 74.83406637345063
+1022,x,albef,t2i_seed10,ALBEF_4M,cutmix_0.6_log.txt, 48.34866053578568, 74.9780087964814
+1023,x,albef,t2i_seed10,ALBEF_4M,mixup_0.8_log.txt, 47.34906037584966, 74.39424230307877
+1024,x,albef,t2i_seed10,ALBEF_4M,mixup_0.6_log.txt, 48.92043182726909, 75.19792083166733
+1025, 12.610955617752898,albef,t2i_seed10,mscoco,cutmix_0.7_log.txt, 53.73050779688125, 80.61575369852059
+1026, 19.928028788484607,albef,t2i_seed10,mscoco,cutmix_0.9_log.txt, 48.496601359456214, 79.34026389444222
+1027,x,albef,t2i_seed10,mscoco,log.txt,x,x
+1028, 15.85765693722511,albef,t2i_seed10,mscoco,cutmix_0.8_log.txt, 51.48340663734506, 80.1359456217513
+1029, 26.621351459416232,albef,t2i_seed10,mscoco,mixup_0.9_log.txt, 44.07437025189924, 78.56457417033187
+1030, 14.38624550179928,albef,t2i_seed10,mscoco,mixup_0.7_log.txt, 52.54698120751699, 80.2998800479808
+1031, 11.095561775289884,albef,t2i_seed10,mscoco,cutmix_0.6_log.txt, 54.758096761295484, 80.9156337465014
+1032, 20.979608156737307,albef,t2i_seed10,mscoco,mixup_0.8_log.txt, 48.144742103158734, 79.41223510595762
+1033, 9.384246301479408,albef,t2i_seed10,mscoco,mixup_0.6_log.txt, 55.8656537385046, 81.26749300279889
+1034, 3.130747700919632,albef,t2i_seed10,ALBEF,cutmix_0.7_log.txt, 52.131147540983605, 77.55297880847661
+1035, 4.138344662135146,albef,t2i_seed10,ALBEF,cutmix_0.9_log.txt, 51.32746901239504, 77.2890843662535
+1036,x,albef,t2i_seed10,ALBEF,log.txt,x,x
+1037, 3.7984806077568973,albef,t2i_seed10,ALBEF,cutmix_0.8_log.txt, 51.707317073170735, 77.42902838864454
+1038, 4.85405837664934,albef,t2i_seed10,ALBEF,mixup_0.9_log.txt, 50.843662534986, 77.18512594962016
+1039, 2.526989204318273,albef,t2i_seed10,ALBEF,mixup_0.7_log.txt, 52.35105957616953, 77.8248700519792
+1040, 2.7868852459016393,albef,t2i_seed10,ALBEF,cutmix_0.6_log.txt, 52.375049980007994, 77.67293082766894
+1041, 3.7225109956017595,albef,t2i_seed10,ALBEF,mixup_0.8_log.txt, 51.65533786485406, 77.45701719312275
+1042, 1.4634146341463414,albef,t2i_seed10,ALBEF,mixup_0.6_log.txt, 52.926829268292686, 78.09676129548181
+1043,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.7_log.txt, 48.220711715313875, 74.84606157536986
+1044,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.9_log.txt, 47.29308276689324, 74.39824070371851
+1045,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.8_log.txt, 47.84486205517793, 74.63014794082368
+1046,x,albef,t2i_seed1,ALBEF_4M,mixup_0.9_log.txt, 46.40143942423031, 73.99040383846462
+1047,x,albef,t2i_seed1,ALBEF_4M,mixup_0.7_log.txt, 48.46061575369852, 74.90603758496601
+1048,x,albef,t2i_seed1,ALBEF_4M,cutmix_0.6_log.txt, 48.532586965213916, 74.99000399840064
+1049,x,albef,t2i_seed1,ALBEF_4M,mixup_0.8_log.txt, 47.41303478608557, 74.44222311075569
+1050,x,albef,t2i_seed1,ALBEF_4M,mixup_0.6_log.txt, 48.94442223110756, 75.30987604958017
+1051, 12.203118752499,albef,t2i_seed1,mscoco,cutmix_0.7_log.txt, 53.93842463014794, 80.76769292283086
+1052, 19.408236705317872,albef,t2i_seed1,mscoco,cutmix_0.9_log.txt, 48.99640143942423, 79.44822071171531
+1053,x,albef,t2i_seed1,mscoco,log.txt,x,x
+1054, 14.882047181127549,albef,t2i_seed1,mscoco,cutmix_0.8_log.txt, 52.02319072371051, 80.27588964414234
+1055, 26.673330667732905,albef,t2i_seed1,mscoco,mixup_0.9_log.txt, 44.09836065573771, 78.66053578568572
+1056, 14.478208716513395,albef,t2i_seed1,mscoco,mixup_0.7_log.txt, 52.443022790883646, 80.33986405437825
+1057, 10.795681727309077,albef,t2i_seed1,mscoco,cutmix_0.6_log.txt, 54.76209516193523, 81.14754098360656
+1058, 21.107556977209118,albef,t2i_seed1,mscoco,mixup_0.8_log.txt, 47.97281087564974, 79.30827668932427
+1059, 8.952419032387045,albef,t2i_seed1,mscoco,mixup_0.6_log.txt, 56.001599360255895, 81.35145941623351
+1060, 3.1347461015593763,albef,t2i_seed1,ALBEF,cutmix_0.7_log.txt, 51.99920031987205, 77.624950019992
+1061, 4.222311075569772,albef,t2i_seed1,ALBEF,cutmix_0.9_log.txt, 51.26749300279888, 77.42103158736505
+1062,x,albef,t2i_seed1,ALBEF,log.txt,x,x
+1063, 3.5265893642542983,albef,t2i_seed1,ALBEF,cutmix_0.8_log.txt, 51.80327868852459, 77.51299480207916
+1064, 4.874050379848061,albef,t2i_seed1,ALBEF,mixup_0.9_log.txt, 50.77568972411036, 77.14514194322271
+1065, 2.5669732107157137,albef,t2i_seed1,ALBEF,mixup_0.7_log.txt, 52.295081967213115, 77.80887644942023
+1066,x,albef,t2i_seed1,ALBEF,cutmix_0.6_log.txt, 52.303078768492604, 77.60495801679328
+1067, 3.702518992403039,albef,t2i_seed1,ALBEF,mixup_0.8_log.txt, 51.60335865653739, 77.40503798480607
+1068, 1.723310675729708,albef,t2i_seed1,ALBEF,mixup_0.6_log.txt, 52.810875649740105, 78.05277888844462
+1069,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.7_log.txt, 48.20871651339464, 74.88604558176729
+1070,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.9_log.txt, 47.20111955217913, 74.52219112355058
+1071,x,albef,t2i_seed100,ALBEF_4M,log.txt,x,x
+1072,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.8_log.txt, 47.84086365453818, 74.69012395041983
+1073,x,albef,t2i_seed100,ALBEF_4M,cutmix_0.6_log.txt, 48.54458216713315, 75.03798480607757
+1074, 12.798880447820872,albef,t2i_seed100,mscoco,cutmix_0.7_log.txt, 53.4546181527389, 80.68772491003598
+1075, 19.412235105957617,albef,t2i_seed100,mscoco,cutmix_0.9_log.txt, 49.07636945221911, 79.47221111555378
+1076,x,albef,t2i_seed100,mscoco,log.txt,x,x
+1077, 15.14594162335066,albef,t2i_seed100,mscoco,cutmix_0.8_log.txt, 51.89924030387845, 80.15993602558976
+1078, 26.50139944022391,albef,t2i_seed100,mscoco,mixup_0.9_log.txt, 44.210315873650536, 78.62854858056777
+1079, 14.442223110755698,albef,t2i_seed100,mscoco,mixup_0.7_log.txt, 52.59496201519392, 80.31187524990004
+1080, 10.859656137544983,albef,t2i_seed100,mscoco,cutmix_0.6_log.txt, 54.718112754898044, 81.03958416633347
+1081, 21.243502598960415,albef,t2i_seed100,mscoco,mixup_0.8_log.txt, 47.948820471811274, 79.40023990403839
+1082, 9.252299080367854,albef,t2i_seed100,mscoco,mixup_0.6_log.txt, 55.845661735305875, 81.359456217513
+1083, 3.1787285085965613,albef,t2i_seed100,ALBEF,cutmix_0.7_log.txt, 51.96321471411436, 77.6969212315074
+1084, 4.106357457017193,albef,t2i_seed100,ALBEF,cutmix_0.9_log.txt, 51.387445021991205, 77.32107157137145
+1085,x,albef,t2i_seed100,ALBEF,log.txt,x,x
+1086, 3.6945221911235504,albef,t2i_seed100,ALBEF,cutmix_0.8_log.txt, 51.66733306677329, 77.48100759696122
+1087, 4.994002399040384,albef,t2i_seed100,ALBEF,mixup_0.9_log.txt, 50.683726509396244, 77.17712914834067
+1088, 2.6429428228708516,albef,t2i_seed100,ALBEF,mixup_0.7_log.txt, 52.247101159536186, 77.796881247501
+1089, 3.054778088764494,albef,t2i_seed100,ALBEF,cutmix_0.6_log.txt, 51.97920831667333, 77.75689724110356
+1090, 3.894442223110756,albef,t2i_seed100,ALBEF,mixup_0.8_log.txt, 51.50739704118352, 77.47301079568173
+1091, 1.7353058776489405,albef,t2i_seed100,ALBEF,mixup_0.6_log.txt, 52.762894842063176, 78.05677728908437
+1092, 1.28,albef,03_i2t,mscoco,four_seed10_log.txt, 77.1, 93.84
+1093, 3.12,albef,03_i2t,mscoco,three_seed100_log.txt, 76.1, 93.28
+1094, 25.4,albef,03_i2t,mscoco,new_blip_same_new_0301_3_log.txt, 60.52, 90.64
+1095, 24.94,albef,03_i2t,mscoco,new_blip_same_new_0301_0_log.txt, 60.6, 90.68
+1096, 26.72,albef,03_i2t,mscoco,new_blip_bert_new_0301_1_log.txt, 59.56, 89.82
+1097, 0.6,albef,03_i2t,mscoco,five_seed100_log.txt, 77.4, 94.02
+1098, 0.76,albef,03_i2t,mscoco,five_seed10_log.txt, 77.26, 93.96
+1099, 32.98,albef,03_i2t,mscoco,testall_final_big_sim_delete_log.txt, 54.16, 89.46
+1100, 25.76,albef,03_i2t,mscoco,new_blip_bert_new_0301_0_log.txt, 60.48, 89.88
+1101, 24.7,albef,03_i2t,mscoco,new_blip_same_new_0301_1_log.txt, 60.78, 90.34
+1102, 3.04,albef,03_i2t,mscoco,three_seed1_log.txt, 76.14, 93.24
+1103,x,albef,03_i2t,mscoco,log.txt,x,x
+1104, 28.78,albef,03_i2t,mscoco,new_blip_danger_new_0301_2_log.txt, 56.82, 89.68
+1105, 24.12,albef,03_i2t,mscoco,new_blip_diff_new_0301_4_log.txt, 61.38, 90.16
+1106, 16.52,albef,03_i2t,mscoco,testall_final_least_sim_question_log.txt, 67.58, 90.6
+1107, 23.34,albef,03_i2t,mscoco,new_blip_diff_new_0301_2_log.txt, 62.06, 90.52
+1108, 23.94,albef,03_i2t,mscoco,new_blip_diff_new_0301_0_log.txt, 61.48, 90.58
+1109, 32.98,albef,03_i2t,mscoco,testall_final_big_sim_question_log.txt, 54.16, 89.46
+1110, 2.9,albef,03_i2t,mscoco,three_seed10_log.txt, 76.26, 93.42
+1111, 25.04,albef,03_i2t,mscoco,new_blip_same_new_0301_2_log.txt, 60.24, 90.68
+1112, 7.2,albef,03_i2t,mscoco,two_seed10_log.txt, 73.72, 92.38
+1113, 26.32,albef,03_i2t,mscoco,new_blip_bert_new_0301_3_log.txt, 60.2, 90.02
+1114, 13.52,albef,03_i2t,mscoco,new_blip_danger_new_0301_1_log.txt, 68.56, 91.68
+1115, 25.62,albef,03_i2t,mscoco,new_blip_bert_new_0301_2_log.txt, 60.14, 89.62
+1116, 24.0,albef,03_i2t,mscoco,new_blip_diff_new_0301_1_log.txt, 61.72, 90.66
+1117, 25.94,albef,03_i2t,mscoco,new_blip_bert_new_0301_4_log.txt, 60.28, 90.0
+1118, 1.16,albef,03_i2t,mscoco,four_seed1_log.txt, 77.18, 93.84
+1119, 18.98,albef,03_i2t,mscoco,new_blip_danger_new_0301_0_log.txt, 64.72, 90.92
+1120, 16.52,albef,03_i2t,mscoco,testall_final_least_sim_delete_log.txt, 67.58, 90.6
+1121, 7.1,albef,03_i2t,mscoco,two_seed1_log.txt, 73.7, 92.28
+1122, 23.36,albef,03_i2t,mscoco,new_blip_diff_new_0301_3_log.txt, 62.56, 90.5
+1123, 25.38,albef,03_i2t,mscoco,new_blip_same_new_0301_4_log.txt, 60.62, 90.44
+1124, 7.06,albef,03_i2t,mscoco,two_seed100_log.txt, 74.08, 92.36
+1125, 0.56,albef,03_i2t,mscoco,five_seed1_log.txt, 77.32, 94.12
+1126, 1.18,albef,03_i2t,mscoco,four_seed100_log.txt, 77.12, 93.72
+1127, 0.3,albef,03_i2t,ALBEF,four_seed10_log.txt, 73.24, 91.1
+1128, 0.94,albef,03_i2t,ALBEF,three_seed100_log.txt, 72.96, 90.94
+1129, 19.2,albef,03_i2t,ALBEF,new_blip_same_new_0301_3_log.txt, 61.44, 87.34
+1130, 18.76,albef,03_i2t,ALBEF,new_blip_same_new_0301_0_log.txt, 62.18, 87.5
+1131, 15.42,albef,03_i2t,ALBEF,new_blip_bert_new_0301_1_log.txt, 64.46, 87.6
+1132, 0.34,albef,03_i2t,ALBEF,five_seed100_log.txt, 73.28, 91.16
+1133, 0.3,albef,03_i2t,ALBEF,five_seed10_log.txt, 73.26, 91.2
+1134, 31.64,albef,03_i2t,ALBEF,testall_final_big_sim_delete_log.txt, 53.02, 85.36
+1135, 15.78,albef,03_i2t,ALBEF,new_blip_bert_new_0301_0_log.txt, 64.36, 87.46
+1136, 18.96,albef,03_i2t,ALBEF,new_blip_same_new_0301_1_log.txt, 61.52, 87.62
+1137, 0.94,albef,03_i2t,ALBEF,three_seed1_log.txt, 73.02, 90.88
+1138,x,albef,03_i2t,ALBEF,log.txt,x,x
+1139, 21.54,albef,03_i2t,ALBEF,new_blip_danger_new_0301_2_log.txt, 59.46, 86.68
+1140, 15.32,albef,03_i2t,ALBEF,new_blip_diff_new_0301_4_log.txt, 64.64, 87.62
+1141, 16.66,albef,03_i2t,ALBEF,testall_final_least_sim_question_log.txt, 64.24, 87.16
+1142, 15.0,albef,03_i2t,ALBEF,new_blip_diff_new_0301_2_log.txt, 64.82, 87.7
+1143, 15.84,albef,03_i2t,ALBEF,new_blip_diff_new_0301_0_log.txt, 64.68, 87.6
+1144, 31.64,albef,03_i2t,ALBEF,testall_final_big_sim_question_log.txt, 53.02, 85.36
+1145, 0.76,albef,03_i2t,ALBEF,three_seed10_log.txt, 73.1, 91.04
+1146, 20.28,albef,03_i2t,ALBEF,new_blip_same_new_0301_2_log.txt, 61.04, 87.52
+1147, 2.52,albef,03_i2t,ALBEF,two_seed10_log.txt, 72.32, 90.34
+1148, 15.4,albef,03_i2t,ALBEF,new_blip_bert_new_0301_3_log.txt, 64.62, 87.54
+1149, 10.14,albef,03_i2t,ALBEF,new_blip_danger_new_0301_1_log.txt, 67.32, 88.82
+1150, 15.44,albef,03_i2t,ALBEF,new_blip_bert_new_0301_2_log.txt, 64.34, 87.64
+1151, 15.98,albef,03_i2t,ALBEF,new_blip_diff_new_0301_1_log.txt, 63.88, 87.6
+1152, 15.3,albef,03_i2t,ALBEF,new_blip_bert_new_0301_4_log.txt, 64.44, 87.4
+1153, 0.48,albef,03_i2t,ALBEF,four_seed1_log.txt, 73.24, 91.14
+1154, 11.38,albef,03_i2t,ALBEF,new_blip_danger_new_0301_0_log.txt, 66.66, 88.44
+1155, 16.66,albef,03_i2t,ALBEF,testall_final_least_sim_delete_log.txt, 64.24, 87.16
+1156, 2.2,albef,03_i2t,ALBEF,two_seed1_log.txt, 72.46, 90.42
+1157, 14.94,albef,03_i2t,ALBEF,new_blip_diff_new_0301_3_log.txt, 64.68, 87.58
+1158, 20.8,albef,03_i2t,ALBEF,new_blip_same_new_0301_4_log.txt, 60.82, 87.14
+1159, 2.48,albef,03_i2t,ALBEF,two_seed100_log.txt, 72.52, 90.48
+1160, 0.32,albef,03_i2t,ALBEF,five_seed1_log.txt, 73.24, 91.18
+1161, 0.52,albef,03_i2t,ALBEF,four_seed100_log.txt, 73.2, 91.2
+1162,x,albef,i2t,ALBEF_4M,new_noun_big_sim_same_cate_seed_2_log.txt, 54.02, 84.3
+1163,x,albef,i2t,ALBEF_4M,new_noun_big_sim_table_log.txt, 55.9, 84.62
+1164,x,albef,i2t,ALBEF_4M,new_noun_least_sim_occured_random_noun_log.txt, 61.66, 85.72
+1165,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_bert_down_log.txt, 55.74, 83.8
+1166,x,albef,i2t,ALBEF_4M,new_clip_noun_big_sim_bert_down_log.txt, 58.58, 84.68
+1167,x,albef,i2t,ALBEF_4M,new_noun_big_sim_oneletter_down_log.txt, 48.4, 81.88
+1168,x,albef,i2t,ALBEF_4M,new_noun_big_sim_bert_up_log.txt, 54.8, 83.46
+1169,x,albef,i2t,ALBEF_4M,new_noun_big_sim_criminal_log.txt, 59.2, 84.6
+1170,x,albef,i2t,ALBEF_4M,new_noun_big_sim_bert_down_log.txt, 54.68, 83.76
+1171,x,albef,i2t,ALBEF_4M,new_wsl_noun_big_sim_bert_random_log.txt, 58.62, 84.98
+1172,x,albef,i2t,ALBEF_4M,new_noun_big_sim_occured_random_log.txt, 55.0, 84.1
+1173,x,albef,i2t,ALBEF_4M,new_region_noun_big_sim_bert_random_log.txt, 59.0, 84.94
+1174,x,albef,i2t,ALBEF_4M,log.txt,x,x
+1175,x,albef,i2t,ALBEF_4M,new_region_noun_big_sim_criminal_log.txt, 58.56, 84.58
+1176,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_criminal_log.txt, 58.68, 84.66
+1177,x,albef,i2t,ALBEF_4M,new_clip_noun_big_sim_bert_random_log.txt, 61.34, 85.88
+1178,x,albef,i2t,ALBEF_4M,new_wsl_noun_big_sim_criminal_log.txt, 58.7, 84.56
+1179,x,albef,i2t,ALBEF_4M,new_noun_least_sim_bert_up_log.txt, 61.48, 84.86
+1180,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_bert_random_log.txt, 58.8, 85.1
+1181,x,albef,i2t,ALBEF_4M,new_noun_big_sim_youtube_log.txt, 66.54, 87.1
+1182,x,albef,i2t,ALBEF_4M,new_noun_big_sim_question_log.txt, 46.08, 81.12
+1183,x,albef,i2t,ALBEF_4M,testall_random_noun_bert_up_log.txt, 59.52, 84.66
+1184,x,albef,i2t,ALBEF_4M,new_noun_big_sim_diff_cate_seed_2_log.txt, 54.7, 84.0
+1185,x,albef,i2t,ALBEF_4M,new_noun_big_sim_bert_random_log.txt, 58.9, 85.16
+1186,x,albef,i2t,ALBEF_4M,new_max_noun_big_sim_bert_random_seed1000_log.txt, 60.06, 85.18
+1187,x,albef,i2t,ALBEF_4M,new_clip_noun_big_sim_criminal_log.txt, 60.44, 85.52
+1188,x,albef,i2t,ALBEF_4M,new_region_noun_big_sim_bert_down_log.txt, 55.4, 83.6
+1189,x,albef,i2t,ALBEF_4M,new_wsl_noun_big_sim_bert_down_log.txt, 55.42, 83.78
+1190,x,albef,i2t,mscoco,new_noun_big_sim_same_cate_seed_2_log.txt, 59.82, 90.34
+1191,x,albef,i2t,mscoco,new_noun_big_sim_table_log.txt, 63.62, 90.54
+1192,x,albef,i2t,mscoco,new_noun_least_sim_occured_random_noun_log.txt, 70.32, 91.38
+1193,x,albef,i2t,mscoco,new_max_noun_big_sim_bert_down_log.txt, 59.36, 89.5
+1194,x,albef,i2t,mscoco,new_clip_noun_big_sim_bert_down_log.txt, 64.16, 90.18
+1195,x,albef,i2t,mscoco,new_noun_big_sim_oneletter_down_log.txt, 54.82, 89.18
+1196,x,albef,i2t,mscoco,new_noun_big_sim_bert_up_log.txt,x,x
+1197,x,albef,i2t,mscoco,new_noun_big_sim_criminal_log.txt, 65.02, 90.52
+1198,x,albef,i2t,mscoco,new_noun_big_sim_bert_down_log.txt,x,x
+1199,x,albef,i2t,mscoco,new_wsl_noun_big_sim_bert_random_log.txt, 63.32, 90.6
+1200,x,albef,i2t,mscoco,new_noun_big_sim_occured_random_log.txt, 60.58, 90.38
+1201,x,albef,i2t,mscoco,new_region_noun_big_sim_bert_random_log.txt, 63.42, 90.56
+1202,x,albef,i2t,mscoco,log.txt,x,x
+1203,x,albef,i2t,mscoco,new_region_noun_big_sim_criminal_log.txt, 64.68, 90.52
+1204,x,albef,i2t,mscoco,new_max_noun_big_sim_criminal_log.txt, 64.98, 90.48
+1205,x,albef,i2t,mscoco,new_clip_noun_big_sim_bert_random_log.txt, 67.34, 91.18
+1206,x,albef,i2t,mscoco,new_wsl_noun_big_sim_criminal_log.txt, 64.42, 90.38
+1207,x,albef,i2t,mscoco,new_noun_least_sim_bert_up_log.txt, 69.2, 91.14
+1208,x,albef,i2t,mscoco,new_max_noun_big_sim_bert_random_log.txt, 63.54, 90.54
+1209,x,albef,i2t,mscoco,new_noun_big_sim_youtube_log.txt, 63.16, 90.44
+1210,x,albef,i2t,mscoco,new_noun_big_sim_question_log.txt, 54.04, 89.32
+1211,x,albef,i2t,mscoco,testall_random_noun_bert_up_log.txt, 64.84, 90.44
+1212,x,albef,i2t,mscoco,coco_karpathy_test_log.txt, 73.3, 91.42
+1213,x,albef,i2t,mscoco,new_noun_big_sim_diff_cate_seed_2_log.txt, 60.46, 90.22
+1214,x,albef,i2t,mscoco,new_noun_big_sim_bert_random_log.txt,x,x
+1215,x,albef,i2t,mscoco,new_max_noun_big_sim_bert_random_seed1000_log.txt, 64.76, 90.4
+1216,x,albef,i2t,mscoco,new_clip_noun_big_sim_criminal_log.txt, 68.48, 91.26
+1217,x,albef,i2t,mscoco,original_log.txt,x,x
+1218,x,albef,i2t,mscoco,new_region_noun_big_sim_bert_down_log.txt, 58.86, 89.46
+1219,x,albef,i2t,mscoco,new_wsl_noun_big_sim_bert_down_log.txt, 59.06, 89.2
+1220,x,albef,i2t,ALBEF,new_noun_big_sim_same_cate_seed_2_log.txt, 61.34, 87.16
+1221,x,albef,i2t,ALBEF,new_noun_big_sim_table_log.txt, 62.7, 87.44
+1222,x,albef,i2t,ALBEF,new_noun_least_sim_occured_random_noun_log.txt, 67.88, 88.76
+1223,x,albef,i2t,ALBEF,new_max_noun_big_sim_bert_down_log.txt, 63.02, 87.08
+1224,x,albef,i2t,ALBEF,new_clip_noun_big_sim_bert_down_log.txt, 65.52, 87.92
+1225,x,albef,i2t,ALBEF,new_noun_big_sim_oneletter_down_log.txt, 59.66, 86.68
+1226,x,albef,i2t,ALBEF,new_noun_big_sim_bert_up_log.txt, 63.16, 87.16
+1227,x,albef,i2t,ALBEF,new_noun_big_sim_criminal_log.txt, 69.06, 89.16
+1228,x,albef,i2t,ALBEF,new_noun_big_sim_bert_down_log.txt, 62.8, 87.04
+1229,x,albef,i2t,ALBEF,new_wsl_noun_big_sim_bert_random_log.txt, 66.6, 88.2
+1230,x,albef,i2t,ALBEF,new_noun_big_sim_occured_random_log.txt, 62.82, 87.72
+1231,x,albef,i2t,ALBEF,new_region_noun_big_sim_bert_random_log.txt, 66.8, 88.14
+1232,x,albef,i2t,ALBEF,log.txt,x,x
+1233,x,albef,i2t,ALBEF,new_region_noun_big_sim_criminal_log.txt, 69.08, 88.96
+1234,x,albef,i2t,ALBEF,new_max_noun_big_sim_criminal_log.txt, 69.1, 88.92
+1235,x,albef,i2t,ALBEF,new_clip_noun_big_sim_bert_random_log.txt, 68.6, 88.5
+1236,x,albef,i2t,ALBEF,new_wsl_noun_big_sim_criminal_log.txt, 68.86, 88.9
+1237,x,albef,i2t,ALBEF,new_noun_least_sim_bert_up_log.txt, 69.4, 88.9
+1238,x,albef,i2t,ALBEF,new_max_noun_big_sim_bert_random_log.txt, 66.58, 88.26
+1239,x,albef,i2t,ALBEF,new_noun_big_sim_youtube_log.txt, 70.0, 88.48
+1240,x,albef,i2t,ALBEF,new_noun_big_sim_question_log.txt, 52.5, 85.28
+1241,x,albef,i2t,ALBEF,testall_random_noun_bert_up_log.txt, 66.78, 87.9
+1242,x,albef,i2t,ALBEF,new_noun_big_sim_diff_cate_seed_2_log.txt, 63.1, 87.16
+1243,x,albef,i2t,ALBEF,new_noun_big_sim_bert_random_log.txt, 66.56, 88.42
+1244,x,albef,i2t,ALBEF,new_max_noun_big_sim_bert_random_seed1000_log.txt, 67.96, 88.58
+1245,x,albef,i2t,ALBEF,new_clip_noun_big_sim_criminal_log.txt, 70.1, 89.38
+1246,x,albef,i2t,ALBEF,original_log.txt,x,x
+1247,x,albef,i2t,ALBEF,new_region_noun_big_sim_bert_down_log.txt, 63.36, 86.9
+1248,x,albef,i2t,ALBEF,new_wsl_noun_big_sim_bert_down_log.txt, 63.08, 86.94
+1249, 16.809276289484206,sgraf,t2i_seed10,cutmix_0.7,coco_SAF_log.txt, 35.19392243102759, 63.5265893642543
+1250, 17.117153138744502,sgraf,t2i_seed10,cutmix_0.7,coco_SGR_log.txt, 35.265893642542984, 63.59856057576969
+1251, 12.319072371051579,sgraf,t2i_seed10,mixup_0.6,coco_SAF_log.txt, 36.92522990803678, 64.52219112355058
+1252, 11.963214714114354,sgraf,t2i_seed10,mixup_0.6,coco_SGR_log.txt, 37.197121151539385, 64.79808076769292
+1253, 27.83686525389844,sgraf,t2i_seed10,mixup_0.9,coco_SAF_log.txt, 30.891643342662935, 60.30387844862055
+1254, 28.076769292283085,sgraf,t2i_seed10,mixup_0.9,coco_SGR_log.txt, 30.651739304278287, 60.39984006397441
+1255, 19.692123150739704,sgraf,t2i_seed10,cutmix_0.8,coco_SAF_log.txt, 33.982407037185126, 62.654938024790084
+1256, 19.896041583366653,sgraf,t2i_seed10,cutmix_0.8,coco_SGR_log.txt, 34.234306277489004, 62.73890443822471
+1257, 16.573370651739303,sgraf,t2i_seed10,mixup_0.7,coco_SAF_log.txt, 35.57377049180328, 63.16673330667733
+1258, 16.53738504598161,sgraf,t2i_seed10,mixup_0.7,coco_SGR_log.txt, 35.593762495002, 63.390643742503
+1259, 22.870851659336264,sgraf,t2i_seed10,mixup_0.8,coco_SAF_log.txt, 33.3546581367453, 61.47940823670532
+1260, 22.566973210715712,sgraf,t2i_seed10,mixup_0.8,coco_SGR_log.txt, 33.398640543782484, 61.4954018392643
+1261, 23.782487005197922,sgraf,t2i_seed10,cutmix_0.9,coco_SAF_log.txt, 32.5389844062375, 61.395441823270694
+1262, 23.946421431427428,sgraf,t2i_seed10,cutmix_0.9,coco_SGR_log.txt, 32.38704518192723, 61.5953618552579
+1263, 15.241903238704518,sgraf,t2i_seed10,cutmix_0.6,coco_SAF_log.txt, 35.70171931227509, 64.09036385445822
+1264, 15.533786485405837,sgraf,t2i_seed10,cutmix_0.6,coco_SGR_log.txt, 35.87764894042383, 63.97041183526589
+1265, 16.809276289484206,sgraf,t2i_seed1,cutmix_0.7,coco_SAF_log.txt, 35.19392243102759, 63.5265893642543
+1266, 17.117153138744502,sgraf,t2i_seed1,cutmix_0.7,coco_SGR_log.txt, 35.265893642542984, 63.59856057576969
+1267, 12.319072371051579,sgraf,t2i_seed1,mixup_0.6,coco_SAF_log.txt, 36.92522990803678, 64.52219112355058
+1268, 11.963214714114354,sgraf,t2i_seed1,mixup_0.6,coco_SGR_log.txt, 37.197121151539385, 64.79808076769292
+1269, 27.83686525389844,sgraf,t2i_seed1,mixup_0.9,coco_SAF_log.txt, 30.891643342662935, 60.30387844862055
+1270, 28.076769292283085,sgraf,t2i_seed1,mixup_0.9,coco_SGR_log.txt, 30.651739304278287, 60.39984006397441
+1271, 19.692123150739704,sgraf,t2i_seed1,cutmix_0.8,coco_SAF_log.txt, 33.982407037185126, 62.654938024790084
+1272, 19.896041583366653,sgraf,t2i_seed1,cutmix_0.8,coco_SGR_log.txt, 34.234306277489004, 62.73890443822471
+1273, 16.573370651739303,sgraf,t2i_seed1,mixup_0.7,coco_SAF_log.txt, 35.57377049180328, 63.16673330667733
+1274, 16.53738504598161,sgraf,t2i_seed1,mixup_0.7,coco_SGR_log.txt, 35.593762495002, 63.390643742503
+1275, 22.870851659336264,sgraf,t2i_seed1,mixup_0.8,coco_SAF_log.txt, 33.3546581367453, 61.47940823670532
+1276, 22.566973210715712,sgraf,t2i_seed1,mixup_0.8,coco_SGR_log.txt, 33.398640543782484, 61.4954018392643
+1277, 23.782487005197922,sgraf,t2i_seed1,cutmix_0.9,coco_SAF_log.txt, 32.5389844062375, 61.395441823270694
+1278, 23.946421431427428,sgraf,t2i_seed1,cutmix_0.9,coco_SGR_log.txt, 32.38704518192723, 61.5953618552579
+1279, 15.241903238704518,sgraf,t2i_seed1,cutmix_0.6,coco_SAF_log.txt, 35.70171931227509, 64.09036385445822
+1280, 15.533786485405837,sgraf,t2i_seed1,cutmix_0.6,coco_SGR_log.txt, 35.87764894042383, 63.97041183526589
+1281, 16.809276289484206,sgraf,t2i_seed100,cutmix_0.7,coco_SAF_log.txt, 35.19392243102759, 63.5265893642543
+1282, 17.117153138744502,sgraf,t2i_seed100,cutmix_0.7,coco_SGR_log.txt, 35.265893642542984, 63.59856057576969
+1283, 12.319072371051579,sgraf,t2i_seed100,mixup_0.6,coco_SAF_log.txt, 36.92522990803678, 64.52219112355058
+1284, 11.963214714114354,sgraf,t2i_seed100,mixup_0.6,coco_SGR_log.txt, 37.197121151539385, 64.79808076769292
+1285, 27.83686525389844,sgraf,t2i_seed100,mixup_0.9,coco_SAF_log.txt, 30.891643342662935, 60.30387844862055
+1286, 28.076769292283085,sgraf,t2i_seed100,mixup_0.9,coco_SGR_log.txt, 30.651739304278287, 60.39984006397441
+1287, 19.692123150739704,sgraf,t2i_seed100,cutmix_0.8,coco_SAF_log.txt, 33.982407037185126, 62.654938024790084
+1288, 19.896041583366653,sgraf,t2i_seed100,cutmix_0.8,coco_SGR_log.txt, 34.234306277489004, 62.73890443822471
+1289, 16.573370651739303,sgraf,t2i_seed100,mixup_0.7,coco_SAF_log.txt, 35.57377049180328, 63.16673330667733
+1290, 16.53738504598161,sgraf,t2i_seed100,mixup_0.7,coco_SGR_log.txt, 35.593762495002, 63.390643742503
+1291, 22.870851659336264,sgraf,t2i_seed100,mixup_0.8,coco_SAF_log.txt, 33.3546581367453, 61.47940823670532
+1292, 22.566973210715712,sgraf,t2i_seed100,mixup_0.8,coco_SGR_log.txt, 33.398640543782484, 61.4954018392643
+1293, 23.782487005197922,sgraf,t2i_seed100,cutmix_0.9,coco_SAF_log.txt, 32.5389844062375, 61.395441823270694
+1294, 23.946421431427428,sgraf,t2i_seed100,cutmix_0.9,coco_SGR_log.txt, 32.38704518192723, 61.5953618552579
+1295, 15.241903238704518,sgraf,t2i_seed100,cutmix_0.6,coco_SAF_log.txt, 35.70171931227509, 64.09036385445822
+1296, 15.533786485405837,sgraf,t2i_seed100,cutmix_0.6,coco_SGR_log.txt, 35.87764894042383, 63.97041183526589
+1297, 17.56,sgraf,03_i2t,four_seed100,coco_SGR_log.txt, 49.76, 78.2
+1298, 28.1,sgraf,03_i2t,new_blip_same_new_0301_1,coco_SAF_log.txt, 42.34, 76.38
+1299, 27.74,sgraf,03_i2t,new_blip_same_new_0301_1,coco_SGR_log.txt, 44.06, 76.76
+1300, 14.84,sgraf,03_i2t,four_seed10,coco_SAF_log.txt, 50.26, 79.08
+1301, 17.12,sgraf,03_i2t,four_seed10,coco_SGR_log.txt, 50.0, 78.38
+1302, 31.78,sgraf,03_i2t,new_blip_bert_new_0301_4,coco_SAF_log.txt, 38.86, 76.02
+1303, 29.8,sgraf,03_i2t,new_blip_bert_new_0301_4,coco_SGR_log.txt, 42.14, 75.88
+1304, 21.58,sgraf,03_i2t,new_blip_diff_new_0301_2,coco_SAF_log.txt, 45.56, 78.1
+1305, 21.74,sgraf,03_i2t,new_blip_diff_new_0301_2,coco_SGR_log.txt, 46.72, 77.72
+1306, 30.8,sgraf,03_i2t,new_blip_danger_new_0301_0,coco_SAF_log.txt, 40.54, 75.54
+1307, 29.12,sgraf,03_i2t,new_blip_danger_new_0301_0,coco_SGR_log.txt, 42.7, 75.48
+1308, 22.74,sgraf,03_i2t,new_blip_diff_new_0301_3,coco_SAF_log.txt, 44.86, 77.92
+1309, 22.64,sgraf,03_i2t,new_blip_diff_new_0301_3,coco_SGR_log.txt, 46.06, 77.86
+1310, 22.58,sgraf,03_i2t,new_blip_diff_new_0301_0,coco_SAF_log.txt, 44.9, 77.82
+1311, 22.0,sgraf,03_i2t,new_blip_diff_new_0301_0,coco_SGR_log.txt, 46.64, 77.74
+1312, 20.94,sgraf,03_i2t,three_seed10,coco_SAF_log.txt, 46.94, 77.16
+1313, 22.56,sgraf,03_i2t,three_seed10,coco_SGR_log.txt, 46.72, 77.06
+1314, 22.32,sgraf,03_i2t,new_blip_diff_new_0301_1,coco_SAF_log.txt, 44.82, 77.8
+1315, 21.76,sgraf,03_i2t,new_blip_diff_new_0301_1,coco_SGR_log.txt, 46.86, 77.46
+1316, 28.56,sgraf,03_i2t,new_blip_same_new_0301_3,coco_SAF_log.txt, 41.86, 76.42
+1317, 27.68,sgraf,03_i2t,new_blip_same_new_0301_3,coco_SGR_log.txt, 43.74, 76.1
+1318, 12.42,sgraf,03_i2t,five_seed100,coco_SGR_log.txt, 52.26, 79.38
+1319, 31.18,sgraf,03_i2t,new_blip_bert_new_0301_3,coco_SAF_log.txt, 39.44, 75.52
+1320, 30.16,sgraf,03_i2t,new_blip_bert_new_0301_3,coco_SGR_log.txt, 41.62, 75.74
+1321, 31.92,sgraf,03_i2t,new_blip_bert_new_0301_1,coco_SAF_log.txt, 39.12, 75.9
+1322, 30.72,sgraf,03_i2t,new_blip_bert_new_0301_1,coco_SGR_log.txt, 41.94, 76.02
+1323, 28.3,sgraf,03_i2t,two_seed100,coco_SGR_log.txt, 43.62, 76.14
+1324, 19.64,sgraf,03_i2t,three_seed1,coco_SAF_log.txt, 47.5, 77.42
+1325, 23.4,sgraf,03_i2t,three_seed1,coco_SGR_log.txt, 46.78, 76.76
+1326, 22.42,sgraf,03_i2t,three_seed100,coco_SGR_log.txt, 47.44, 77.08
+1327, 26.46,sgraf,03_i2t,two_seed10,coco_SAF_log.txt, 44.06, 76.22
+1328, 28.98,sgraf,03_i2t,two_seed10,coco_SGR_log.txt, 43.3, 75.62
+1329, 10.94,sgraf,03_i2t,five_seed10,coco_SAF_log.txt, 51.64, 80.02
+1330, 13.62,sgraf,03_i2t,five_seed10,coco_SGR_log.txt, 51.78, 79.44
+1331, 28.68,sgraf,03_i2t,new_blip_same_new_0301_2,coco_SAF_log.txt, 42.14, 76.52
+1332, 28.38,sgraf,03_i2t,new_blip_same_new_0301_2,coco_SGR_log.txt, 43.6, 76.5
+1333, 22.0,sgraf,03_i2t,new_blip_diff_new_0301_4,coco_SAF_log.txt, 44.88, 77.68
+1334, 22.22,sgraf,03_i2t,new_blip_diff_new_0301_4,coco_SGR_log.txt, 46.52, 77.66
+1335, 10.76,sgraf,03_i2t,five_seed1,coco_SAF_log.txt, 51.78, 80.22
+1336, 13.22,sgraf,03_i2t,five_seed1,coco_SGR_log.txt, 51.7, 79.18
+1337, 31.6,sgraf,03_i2t,new_blip_bert_new_0301_2,coco_SAF_log.txt, 39.26, 75.6
+1338, 30.74,sgraf,03_i2t,new_blip_bert_new_0301_2,coco_SGR_log.txt, 41.4, 76.0
+1339, 24.6,sgraf,03_i2t,new_blip_danger_new_0301_2,coco_SAF_log.txt, 43.88, 76.26
+1340, 27.5,sgraf,03_i2t,new_blip_danger_new_0301_2,coco_SGR_log.txt, 43.16, 75.58
+1341, 31.2,sgraf,03_i2t,new_blip_bert_new_0301_0,coco_SAF_log.txt, 39.82, 75.76
+1342, 30.74,sgraf,03_i2t,new_blip_bert_new_0301_0,coco_SGR_log.txt, 41.36, 75.68
+1343, 26.96,sgraf,03_i2t,two_seed1,coco_SAF_log.txt, 44.06, 75.86
+1344, 28.3,sgraf,03_i2t,two_seed1,coco_SGR_log.txt, 43.78, 75.38
+1345, 27.7,sgraf,03_i2t,new_blip_same_new_0301_0,coco_SAF_log.txt, 42.32, 76.56
+1346, 27.54,sgraf,03_i2t,new_blip_same_new_0301_0,coco_SGR_log.txt, 43.56, 76.6
+1347, 28.7,sgraf,03_i2t,new_blip_same_new_0301_4,coco_SAF_log.txt, 41.56, 76.18
+1348, 28.76,sgraf,03_i2t,new_blip_same_new_0301_4,coco_SGR_log.txt, 43.08, 76.54
+1349, 23.64,sgraf,03_i2t,new_blip_danger_new_0301_1,coco_SAF_log.txt, 43.9, 77.2
+1350, 17.54,sgraf,03_i2t,new_blip_danger_new_0301_1,coco_SGR_log.txt, 48.84, 78.04
+1351, 15.4,sgraf,03_i2t,four_seed1,coco_SAF_log.txt, 49.78, 78.9
+1352, 17.78,sgraf,03_i2t,four_seed1,coco_SGR_log.txt, 49.68, 77.88
+1353,x,sgraf,i2t,saf_youtube,coco_SAF_log.txt, 33.54, 73.74
+1354,x,sgraf,i2t,sgr_question,coco_SGR_log.txt, 50.14, 79.76
+1355,x,sgraf,i2t,saf_samecate2,coco_SAF_log.txt, 41.32, 75.76
+1356,x,sgraf,i2t,saf_bertup,coco_SAF_log.txt, 39.26, 75.34
+1357,x,sgraf,i2t,saf_occurrand,coco_SAF_log.txt, 46.02, 78.54
+1358,x,sgraf,i2t,sgr_bertrandom,coco_SGR_log.txt, 40.72, 75.74
+1359,x,sgraf,i2t,sgr_youtube,coco_SGR_log.txt, 36.78, 74.18
+1360,x,sgraf,i2t,sgr_samecateseed2,coco_SGR_log.txt, 43.1, 76.36
+1361,x,sgraf,i2t,saf_leastbertup,coco_SAF_log.txt, 46.88, 78.02
+1362,x,sgraf,i2t,saf_bertdown,coco_SAF_log.txt, 39.3, 76.14
+1363,x,sgraf,i2t,sgr_leastsimrandom,coco_SGR_log.txt, 51.54, 79.44
+1364,x,sgraf,i2t,saf_criminal,coco_SAF_log.txt, 33.54, 73.74
+1365,x,sgraf,i2t,sgr_diffcateseed2,coco_SGR_log.txt, 44.9, 77.24
+1366,x,sgraf,i2t,sgr_random_bertup,coco_SGR_log.txt, 45.38, 76.1
+1367,x,sgraf,i2t,sgr_bertup,coco_SGR_log.txt, 41.78, 75.52
+1368,x,sgraf,i2t,saf_table,coco_SAF_log.txt, 49.46, 80.26
+1369,x,sgraf,i2t,sgr_table,coco_SGR_log.txt, 52.5, 80.22
+1370,x,sgraf,i2t,saf_coneletterdown,coco_SAF_log.txt, 34.9, 73.9
+1371,x,sgraf,i2t,sgr_oneletterdown,coco_SGR_log.txt, 36.76, 73.98
+1372,x,sgraf,i2t,sgr_bertdown,coco_SGR_log.txt, 43.22, 76.16
+1373,x,sgraf,i2t,saf_bertrandom,coco_SAF_log.txt, 38.12, 75.58
+1374,x,sgraf,i2t,saf_diffcate2,coco_SAF_log.txt, 42.52, 77.14
+1375,x,sgraf,i2t,sgr_least_bertup,coco_SGR_log.txt, 49.0, 77.34
+1376,x,sgraf,i2t,sgr_occuredrandom,coco_SGR_log.txt, 47.9, 78.58
+1377,x,sgraf,i2t,sgr_criminal,coco_SGR_log.txt, 36.78, 74.18
+1378,x,vsrn,t2i_seed10,cutmix_0.7,log.txt, 34.1343462614954, 63.39464214314274
+1379,x,vsrn,t2i_seed10,mixup_0.6,log.txt, 36.97321071571371, 65.67373050779688
+1380,x,vsrn,t2i_seed10,mixup_0.9,log.txt, 27.15713714514194, 59.43622550979608
+1381,x,vsrn,t2i_seed10,cutmix_0.8,log.txt, 32.303078768492604, 62.295081967213115
+1382,x,vsrn,t2i_seed10,mixup_0.7,log.txt, 34.818072770891646, 64.05437824870052
+1383,x,vsrn,t2i_seed10,mixup_0.8,log.txt, 31.503398640543782, 61.52738904438225
+1384,x,vsrn,t2i_seed10,cutmix_0.9,log.txt, 29.67612954818073, 60.79168332666933
+1385,x,vsrn,t2i_seed10,cutmix_0.6,log.txt, 34.99800079968013, 64.2063174730108
+1386, 21.311475409836067,vsrn,t2i_seed1,cutmix_0.7,log.txt, 33.94242303078769, 63.78248700519792
+1387, 12.686925229908036,vsrn,t2i_seed1,mixup_0.6,log.txt, 36.97321071571371, 65.88164734106357
+1388, 39.048380647740906,vsrn,t2i_seed1,mixup_0.9,log.txt, 26.81327469012395, 59.51219512195122
+1389, 24.802079168332668,vsrn,t2i_seed1,cutmix_0.8,log.txt, 32.75889644142343, 62.638944422231106
+1390, 19.236305477808877,vsrn,t2i_seed1,mixup_0.7,log.txt, 34.65813674530188, 63.89444222311076
+1391, 28.868452618952418,vsrn,t2i_seed1,mixup_0.8,log.txt, 31.343462614954017, 61.59936025589764
+1392, 31.107556977209118,vsrn,t2i_seed1,cutmix_0.9,log.txt, 30.395841663334664, 61.263494602159135
+1393,x,vsrn,t2i_seed1,cutmix_0.6,log.txt, 34.95401839264294, 64.36625349860056
+1394, 21.311475409836067,vsrn,t2i_seed100,cutmix_0.7,log.txt, 33.94242303078769, 63.78248700519792
+1395, 12.686925229908036,vsrn,t2i_seed100,mixup_0.6,log.txt, 36.97321071571371, 65.88164734106357
+1396, 39.048380647740906,vsrn,t2i_seed100,mixup_0.9,log.txt, 26.81327469012395, 59.51219512195122
+1397, 24.802079168332668,vsrn,t2i_seed100,cutmix_0.8,log.txt, 32.75889644142343, 62.638944422231106
+1398, 19.236305477808877,vsrn,t2i_seed100,mixup_0.7,log.txt, 34.65813674530188, 63.89444222311076
+1399, 28.868452618952418,vsrn,t2i_seed100,mixup_0.8,log.txt, 31.343462614954017, 61.59936025589764
+1400, 31.107556977209118,vsrn,t2i_seed100,cutmix_0.9,log.txt, 30.395841663334664, 61.263494602159135
+1401, 18.58856457417033,vsrn,t2i_seed100,cutmix_0.6,log.txt, 35.02598960415833, 64.26629348260695
+1402, 6.62,vsrn,03_i2t,four_seed100,log.txt, 50.08, 78.88
+1403, 18.08,vsrn,03_i2t,new_blip_same_new_0301_1,log.txt, 44.3, 75.86
+1404, 6.94,vsrn,03_i2t,four_seed10,log.txt, 50.08, 78.74
+1405, 22.5,vsrn,03_i2t,new_blip_bert_new_0301_4,log.txt, 41.96, 75.08
+1406, 2.96,vsrn,03_i2t,testall_final_least_sim_question,log.txt, 51.4, 79.6
+1407, 14.04,vsrn,03_i2t,new_blip_diff_new_0301_2,log.txt, 46.52, 76.96
+1408, 16.08,vsrn,03_i2t,new_blip_danger_new_0301_0,log.txt, 45.24, 76.1
+1409, 18.02,vsrn,03_i2t,testall_final_random_delete,log.txt, 44.7, 75.52
+1410, 13.82,vsrn,03_i2t,new_blip_diff_new_0301_3,log.txt, 46.38, 76.98
+1411, 14.94,vsrn,03_i2t,new_blip_diff_new_0301_0,log.txt, 45.98, 76.76
+1412, 11.74,vsrn,03_i2t,three_seed10,log.txt, 47.8, 77.34
+1413, 14.5,vsrn,03_i2t,new_blip_diff_new_0301_1,log.txt, 45.76, 76.96
+1414, 17.68,vsrn,03_i2t,new_blip_same_new_0301_3,log.txt, 44.94, 75.68
+1415, 4.32,vsrn,03_i2t,five_seed100,log.txt, 51.04, 79.62
+1416, 22.0,vsrn,03_i2t,new_blip_bert_new_0301_3,log.txt, 42.18, 75.12
+1417, 22.16,vsrn,03_i2t,new_blip_bert_new_0301_1,log.txt, 42.3, 75.04
+1418, 17.74,vsrn,03_i2t,two_seed100,log.txt, 45.02, 75.7
+1419, 10.86,vsrn,03_i2t,three_seed1,log.txt, 48.1, 77.74
+1420, 29.36,vsrn,03_i2t,testall_final_big_sim_delete,log.txt, 38.56, 73.16
+1421, 22.56,vsrn,03_i2t,testall_final_least_sim_delete,log.txt, 43.46, 74.62
+1422, 11.4,vsrn,03_i2t,three_seed100,log.txt, 47.76, 77.72
+1423, 17.72,vsrn,03_i2t,two_seed10,log.txt, 45.06, 76.1
+1424, 4.18,vsrn,03_i2t,five_seed10,log.txt, 51.02, 79.96
+1425, 18.34,vsrn,03_i2t,new_blip_same_new_0301_2,log.txt, 44.4, 75.96
+1426, 15.04,vsrn,03_i2t,new_blip_diff_new_0301_4,log.txt, 45.98, 76.82
+1427, 4.38,vsrn,03_i2t,five_seed1,log.txt, 50.9, 79.96
+1428, 22.08,vsrn,03_i2t,new_blip_bert_new_0301_2,log.txt, 42.32, 74.98
+1429, 12.64,vsrn,03_i2t,new_blip_danger_new_0301_2,log.txt, 46.66, 76.66
+1430, 21.98,vsrn,03_i2t,new_blip_bert_new_0301_0,log.txt, 42.36, 75.16
+1431, 17.92,vsrn,03_i2t,two_seed1,log.txt, 45.12, 75.9
+1432, 4.16,vsrn,03_i2t,testall_final_big_sim_question,log.txt, 50.74, 78.98
+1433, 18.02,vsrn,03_i2t,new_blip_same_new_0301_0,log.txt, 44.72, 75.78
+1434, 18.18,vsrn,03_i2t,new_blip_same_new_0301_4,log.txt, 44.42, 75.98
+1435, 9.6,vsrn,03_i2t,new_blip_danger_new_0301_1,log.txt, 48.44, 77.6
+1436, 7.68,vsrn,03_i2t,four_seed1,log.txt, 49.52, 78.92
+1437,x,vsrn,i2t,new_noun_least_sim_bert_up,log.txt, 44.44, 75.58
+1438,x,vsrn,i2t,new_noun_big_sim_criminal,log.txt, 35.86, 72.28
+1439,x,vsrn,i2t,new_max_noun_big_sim_bert_random_seed1000,log.txt, 39.52, 73.98
+1440,x,vsrn,i2t,new_max_noun_big_sim_bert_random,log.txt, 41.46, 75.0
+1441,x,vsrn,i2t,new_clip_noun_big_sim_bert_down,log.txt, 42.78, 75.42
+1442,x,vsrn,i2t,new_wsl_noun_big_sim_criminal,log.txt, 36.44, 72.84
+1443,x,vsrn,i2t,new_max_noun_big_sim_criminal,log.txt, 36.26, 72.52
+1444,x,vsrn,i2t,new_clip_noun_big_sim_criminal,log.txt, 37.22, 72.48
+1445,x,vsrn,i2t,new_noun_big_sim_occured_random,log.txt, 46.1, 77.0
+1446,x,vsrn,i2t,new_region_noun_big_sim_bert_random,log.txt, 41.76, 75.3
+1447,x,vsrn,i2t,new_noun_least_sim_occured_random_noun,log.txt, 48.14, 77.36
+1448,x,vsrn,i2t,new_wsl_noun_big_sim_bert_down,log.txt, 43.02, 74.92
+1449,x,vsrn,i2t,new_noun_big_sim_bert_down,log.txt, 43.58, 75.12
+1450,x,vsrn,i2t,new_noun_big_sim_oneletter_down,log.txt, 38.42, 73.6
+1451,x,vsrn,i2t,new_region_noun_big_sim_criminal,log.txt, 36.68, 72.9
+1452,x,vsrn,i2t,new_noun_big_sim_same_cate_seed_2,log.txt, 44.06, 75.36
+1453,x,vsrn,i2t,testall_random_noun_bert_up,log.txt, 43.42, 75.12
+1454,x,vsrn,i2t,new_noun_big_sim_table,log.txt, 46.78, 76.22
+1455,x,vsrn,i2t,new_noun_big_sim_question,log.txt, 51.96, 80.38
+1456,x,vsrn,i2t,new_max_noun_big_sim_bert_down,log.txt, 42.58, 74.68
+1457,x,vsrn,i2t,new_noun_big_sim_diff_cate_seed_2,log.txt, 44.44, 75.88
+1458,x,vsrn,i2t,new_region_noun_big_sim_bert_down,log.txt, 43.04, 75.06
+1459,x,vsrn,i2t,new_wsl_noun_big_sim_bert_random,log.txt, 41.56, 75.22
+1460,x,vsrn,i2t,new_noun_big_sim_bert_up,log.txt, 41.42, 74.72
+1461,x,vsrn,i2t,new_noun_big_sim_bert_random,log.txt, 40.98, 74.92
+1462,x,vsrn,i2t,new_clip_noun_big_sim_bert_random,log.txt, 41.96, 75.28
+1463,x,vsrn,i2t,new_noun_big_sim_youtube,log.txt, 35.86, 72.28
