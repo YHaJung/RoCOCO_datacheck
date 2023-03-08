@@ -27,7 +27,7 @@ def make_csv(glob_list, final_line_list):
             final_line[f'path_{i}']=path_one
         df = df.append(final_line, ignore_index=True)
             
-    df.to_csv(f'./result3.csv')
+    df.to_csv(f'./result.csv')
 
 if __name__ == '__main__':
     file_path = "/disk2/pseulki/coco_retrieval_results/*/*/*/*.txt"
