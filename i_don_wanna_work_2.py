@@ -2,12 +2,22 @@ from glob import glob
 import pandas as pd
 import os
 
+'''
+경로 : file_path(default : "/disk2/pseulki/coco_retrieval_results/*/*/*/*.txt")
+내용물 : 오른 쪽 형태의 txt. {"txt_r1": 44.62, "txt_r5": 80.78, "txt_r10": 89.52, "txt_r_mean": 71.64, "false_rate": 37.88}
+
+위 형태로 저장된 모든 결과물을 csv로 출력한다.
+경로 폴더에 따라 coloumn을 구분하여 표시한다.
+
+출력할 정보 : values(default : {'r1':'x', 'r5':'x', 'false_rate':'x'})
+'''
+
 def read_txt(file_path):
     glob_list = glob(file_path, recursive=True)
     final_line_list = []
     for file in glob_list:
         with open(file, 'r') as f:
-            for line in f:
+            for line in f:   # 결과물이 여러줄일 경우, 마지막 줄만 읽는다.
                 pass
             values = {'r1':'x', 'r5':'x', 'false_rate':'x'}
             for score_key in values.keys():
