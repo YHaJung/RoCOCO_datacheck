@@ -55,6 +55,9 @@ def fix_lines_length(origin_data, new_data):
                 keep_idxes.append(line_idx)
             else:
                 return fixed_origin_lines, fixed_new_lines
+
+    if len(keep_idxes) !=0:
+        print(f'strange length keep idxes : {keep_idxes}')
             
     return fixed_origin_lines, fixed_new_lines
                 
@@ -85,10 +88,7 @@ if __name__=='__main__':
     new_data = read_txt_file(new_filename)
     # print(new_data)
 
-    fixed_origin_lines, fixed_new_lines, keep_idxes = fix_lines_length(origin_data, new_data)
-    if len(keep_idxes) !=0:
-        print(f'strange length keep idxes : {keep_idxes}')
-
+    fixed_origin_lines, fixed_new_lines= fix_lines_length(origin_data, new_data)
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
