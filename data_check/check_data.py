@@ -12,6 +12,22 @@ def read_txt_file(filepath):
     lines = [ line.rstrip('\n').rstrip(' \.') for line in lines]
     return lines
 
+def fix_sentence_by_user(first_line, second_line):
+    print(f'[1] {first_line}')
+    print(f'[2] {second_line}')
+    key = input("While sentence will you fix? first(1), second(2), break(0) ")
+    while key != '1' and key != '2' and key != '0':
+        key = input("While sentence will you fix? first(1), second(2), break(0) ")
+    if key == '1':
+        fixed_line = input("Enter fixed sentence: ")
+        return 1, fixed_line
+    elif key == '2':
+        fixed_line = input("Enter fixed sentence: ")
+        return 2, fixed_line
+    else:
+        print('quit working...')
+        return 0, 0
+
 def fix_lines_length(origin_data, new_data):
 
     fixed_origin_lines = origin_data
@@ -20,30 +36,18 @@ def fix_lines_length(origin_data, new_data):
     for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
         origin_words = origin_line.split(' ')
         new_words = new_line.split(' ')
-        fixed_new_line = new_line
-
-        diff_flag_list = [0]*len(origin_words)
 
         # make sentence length same
         while len(origin_words) != len(new_words):
-            print(f'<line {line_idx+1}>')
-            print(f'sentence length is differenct({len(origin_words)}, {len(new_words)})')
-            print(f'origin sentence : {origin_line}')
-            print(f'new sentence : {new_line}')
-            key = input("While sentence will you fix? origin(1), new(2), break(0) ")
-            while key != '1' and key != '2' and key != '0':
-                print('please press 1 or 2')
-                key = input("While sentence will you fix? origin(1), new(2), break(0) ")
-            if key == '1':
-                fixed_origin_line = input("Enter fixed sentence: ")
-                fixed_origin_lines[line_idx] = fixed_origin_line
-                origin_words = fixed_origin_line.split(' ')
-            elif key == '2':
-                fixed_new_line = input("Enter fixed sentence: ")
-                fixed_new_lines[line_idx] = fixed_new_line
-                new_words = fixed_new_line.split(' ')
+            print(f'\n[line {line_idx+1}] sentence length is differenct({len(origin_words)}, {len(new_words)})')
+            fix_key, fixed_line = fix_sentence_by_user(origin_line, new_line)
+            if fix_key == 1:
+                fixed_origin_lines[line_idx] = fixed_line
+                origin_words = fixed_line.split(' ')
+            elif fix_key == 2:
+                fixed_new_lines[line_idx] = fixed_line
+                new_words = fixed_line.split(' ')
             else:
-                print('quit working...')
                 return fixed_origin_lines, fixed_new_lines
             
     return fixed_origin_lines, fixed_new_lines
@@ -65,21 +69,20 @@ def fix_lines_length(origin_data, new_data):
             
 
 if __name__=='__main__':
+    # origin_filename, new_filename = 'origin_caps/original_caps_fixed.txt', 'new_caps/same_caps_mod_fixed.txt'
     origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
     new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
 
     origin_data = read_txt_file(origin_filename)
     new_data = read_txt_file(new_filename)
     # print(new_data)
+
     fixed_origin_lines, fixed_new_lines = fix_lines_length(origin_data, new_data)
 
+    # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
 
     save_file(fixed_origin_lines, save_origin_filename)
     save_file(fixed_new_lines, save_new_filename)
     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
-
-
-    # dog slice , cord and simple red digital camera
-    # A flip up cellphone with keypad on top of a book
