@@ -57,9 +57,9 @@ def fix_lines_length(origin_data, new_data):
                 return fixed_origin_lines, fixed_new_lines
 
     if len(keep_idxes) !=0:
-        print(f'strange length keep idxes : {keep_idxes}')
+        print(f'\nstrange length keep idxes : {keep_idxes}')
             
-    return fixed_origin_lines, fixed_new_lines
+    return fixed_origin_lines, fixed_new_lines, keep_idxes
 
 def find_diff_flags(origin_words, new_words):
     diff_flag_list = [0]*len(origin_words)
@@ -68,7 +68,7 @@ def find_diff_flags(origin_words, new_words):
             diff_flag_list[word_idx] = 1
     return diff_flag_list
             
-def fix_multiple_or_no_change(origin_data, new_data):  # fix multiple diff word and find not change sentence
+def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix multiple diff word and find not change sentence
     fixed_origin_lines = origin_data
     fixed_new_lines = new_data
 
@@ -76,6 +76,9 @@ def fix_multiple_or_no_change(origin_data, new_data):  # fix multiple diff word 
     keep_idxes = []
     
     for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
+        if line_idx in strange_idxes:
+            continue
+
         line_flag = 1 # {0: finish, 1: again, 2: keep(strange)}
 
         fixed_origin_line = origin_line
@@ -134,11 +137,12 @@ def fix_multiple_or_no_change(origin_data, new_data):  # fix multiple diff word 
                     fixed_new_lines[line_idx] = fixed_new_line
                     
     if len(not_change_idxes) !=0:
-        print(f'not changed idxes : {not_change_idxes}')
+        print(f'\nnot changed idxes : {not_change_idxes}')
     if len(keep_idxes) !=0:
         print(f'multiple words keep idxes : {keep_idxes}')
+    strange_idxes = strange_idxes + not_change_idxes + keep_idxes
 
-    return fixed_new_lines, fixed_new_lines
+    return fixed_new_lines, fixed_new_lines, strange_idxes
 
 
 if __name__=='__main__':
@@ -152,8 +156,8 @@ if __name__=='__main__':
     new_data = read_txt_file(new_filename)
     # print(new_data)
 
-    fixed_origin_lines, fixed_new_lines= fix_lines_length(origin_data, new_data)
-    fixed_origin_lines, fixed_new_lines= fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines)
+    fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data)
+    fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
