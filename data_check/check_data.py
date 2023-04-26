@@ -1,7 +1,9 @@
 import pandas as pd
 
-import sys
-sys.path.append('/home/hajung/psg-iccv')
+import sys, os
+root_path = os.getcwd()
+sys.path.append(os.path.join(root_path, '..'))
+
 from utils.file_processing import increment_filename, save_file
 
 def read_txt_file(filepath):
@@ -10,13 +12,7 @@ def read_txt_file(filepath):
     lines = [ line.rstrip('\n').rstrip(' \.') for line in lines]
     return lines
 
-def find_diff_words(origin_data, new_data):
-    if len(origin_data) != len(new_data):
-        print('The files\' lengths are different. Please check them.')
-        return 0
-    df = pd.DataFrame()
-    strange_idxes = []
-    null_idxes = []
+def fix_lines_length(origin_data, new_data):
 
     fixed_origin_lines = origin_data
     fixed_new_lines = new_data
@@ -47,42 +43,43 @@ def find_diff_words(origin_data, new_data):
                 fixed_new_lines[line_idx] = fixed_new_line
                 new_words = fixed_new_line.split(' ')
             else:
-                print('quit and saving working...')
+                print('quit working...')
                 return fixed_origin_lines, fixed_new_lines
+            
+    return fixed_origin_lines, fixed_new_lines
                 
+# def find_diff_lines():
+#     for word_idx in range(len(origin_words)):
+#         if origin_words[word_idx] != new_words[word_idx]:
+#             diff_flag_list[word_idx] = 1
+    
+#     if diff_flag_list.count(1) != 1:
+#         print(diff_flag_list.count(1))
 
-        for word_idx in range(len(origin_words)):
-            if origin_words[word_idx] != new_words[word_idx]:
-                diff_flag_list[word_idx] = 1
-        
-        if diff_flag_list.count(1) != 1:
-            print(diff_flag_list.count(1))
 
+#     # if diff_word_origin not in origin_word and origin_word not in diff_word_origin:
+#     #     strange_idxes.append(idx+1)
 
-                        # if diff_word_origin not in origin_word and origin_word not in diff_word_origin:
-                        #     strange_idxes.append(idx+1)
-
-        # df.append({'origin word':diff_word_origin, 'new word':diff_word_new, 'origin_data':origin_line, 'new_data':new_line}, ignore_index=True)
-    print(f'strange idxes : {sorted(set(strange_idxes))}')
-    print(f'null idxes : {null_idxes}')
-
-    return 0, 0
-    # df = pd.DataFrame({'origin word':origin_word_types, 'new word':new_word_types, 'origin data':origin_data, 'new data':new_data})
+#     return 0, 0
+#     # df = pd.DataFrame({'origin word':origin_word_types, 'new word':new_word_types, 'origin data':origin_data, 'new data':new_data})
             
 
 if __name__=='__main__':
-    origin_filename = 'origin_caps/original_caps_fixed_2.txt'
-    new_filename = 'new_caps/same_caps_mod_fixed_2.txt'
+    origin_filename = 'origin_caps/original_caps_fixed.txt'
+    new_filename = 'new_caps/same_caps_mod_fixed.txt'
 
     origin_data = read_txt_file(origin_filename)
     new_data = read_txt_file(new_filename)
     # print(new_data)
-    fixed_origin_lines, fixed_new_lines = find_diff_words(origin_data, new_data)
+    fixed_origin_lines, fixed_new_lines = fix_lines_length(origin_data, new_data)
 
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-    save_file(fixed_origin_lines, increment_filename(origin_filename))
-    save_file(fixed_new_lines, increment_filename(new_filename))
+    save_origin_filename = increment_filename(origin_filename)
+    save_new_filename = increment_filename(new_filename)
+    save_file(fixed_origin_lines, save_origin_filename)
+    save_file(fixed_new_lines, save_new_filename)
+    print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
 
 
     # dog slice , cord and simple red digital camera
