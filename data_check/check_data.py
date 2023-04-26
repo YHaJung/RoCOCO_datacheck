@@ -4,7 +4,7 @@ import sys, os
 root_path = os.getcwd()
 sys.path.append(os.path.join(root_path, '..'))
 
-from utils.file_processing import increment_filename, save_file
+from utils.file_processing import increment_filename, save_file, load_file
 
 def read_txt_file(filepath):
     with open(filepath, 'r') as file:
@@ -144,6 +144,73 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
 
     return fixed_origin_lines, fixed_new_lines, strange_idxes
 
+def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs):
+    origin_diff_word, new_diff_word = origin_words[diff_key_idx], new_words[diff_key_idx]
+    if origin_diff_word in diff_pairs.keys() and new_diff_word in diff_pairs[origin_diff_word]:
+        return "different", similar_pairs, diff_pairs
+    elif origin_diff_word in similar_pairs.keys() and new_diff_word in similar_pairs[origin_diff_word]:
+        return "similar", similar_pairs, diff_pairs
+    else:
+        print_origin_line = ''
+        print_new_line = ''
+        for word_idx in range(len(origin_words)):
+            if origin_words[word_idx] == origin_diff_word:
+                print_origin_line += f'({origin_words[word_idx]}) '
+                print_new_line += f'({new_words[word_idx]}) '
+            else:
+                print_origin_line += f'{origin_words[word_idx]} '
+                print_new_line += f'{new_words[word_idx]} '
+        print('\n', print_origin_line)
+        print(print_new_line)
+        key = input("Are they different? Yes(1), No(2), Check(3), exit(0)")
+        while key not in ['0', '1', '2', '3']:
+            key = input("Are they different? Yes(1), No(2), Check(3), exit(0)")
+        if key == '1':
+            if origin_diff_word in diff_pairs.keys():
+                diff_pairs[origin_diff_word].append(new_diff_word)
+            else:
+                diff_pairs[origin_diff_word] = [new_diff_word]
+            return "different", similar_pairs, diff_pairs
+        elif key == '2':
+            if origin_diff_word in similar_pairs.keys():
+                similar_pairs[origin_diff_word].append(new_diff_word)
+            else:
+                similar_pairs[origin_diff_word] = [new_diff_word]
+            return "similar", similar_pairs, diff_pairs
+        elif key == '3':
+            return "check", similar_pairs, diff_pairs
+        else:
+            return "exit", similar_pairs, diff_pairs
+
+def check_similar_words(origin_data, new_data, strange_idxes):
+    keep_idxes = []
+
+    checked_lines = []
+    fixed_new_lines = new_data
+
+    similar_pairs = load_file('similar_pairs.json')
+    diff_pairs = load_file('different_pairs.json')
+    
+    for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
+        if line_idx in strange_idxes:
+            continue
+        origin_words = origin_line.split(' ')
+        new_words = new_line.split(' ')
+
+        diff_key_idx = find_diff_flags(origin_words, new_words).index(1)
+
+        key = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs)
+        if key == "check":
+            print(f'[line {line_idx}] check')
+
+        if key == "different":
+            continue
+        elif key == "similar":
+            # change_keyword()
+            print(f'[line {line_idx}] similar')
+        # else:
+
+    return fixed_new_lines, similar_pairs, diff_pairs, strange_idxes
 
 if __name__=='__main__':
     # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
@@ -158,11 +225,11 @@ if __name__=='__main__':
 
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
+    fixed_new_lines, similar_pairs, diff_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-
     save_file(fixed_origin_lines, save_origin_filename)
     save_file(fixed_new_lines, save_new_filename)
     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')

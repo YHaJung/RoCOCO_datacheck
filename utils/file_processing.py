@@ -38,3 +38,11 @@ def save_file(data, filepath):
     elif extension == 'txt':
         with open(filepath, 'w') as f:
             f.writelines(data)
+
+def load_file(filepath):
+    extension = filepath.split('.')[-1]
+    extensions = {'json':json, 'pickle':pickle, 'pkl':pickle}
+    with open(filepath, 'rb') as file:
+        results = extensions[extension].load(file)
+    
+    return results
