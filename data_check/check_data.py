@@ -142,7 +142,7 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
         print(f'multiple words keep idxes : {keep_idxes}')
     strange_idxes = strange_idxes + not_change_idxes + keep_idxes
 
-    return fixed_new_lines, fixed_new_lines, strange_idxes
+    return fixed_origin_lines, fixed_new_lines, strange_idxes
 
 
 if __name__=='__main__':
