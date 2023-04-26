@@ -13,10 +13,10 @@ def read_txt_file(filepath):
     return lines
 
 def fix_sentence_by_user(first_line, second_line):
-    print(f'[1] {first_line}')
-    print(f'[2] {second_line}')
-    key = input("While sentence will you fix? first(1), second(2), break(0) ")
-    while key != '1' and key != '2' and key != '0':
+    print(f'[1] [{first_line}]')
+    print(f'[2] [{second_line}]')
+    key = input("While sentence will you fix? first(1), second(2), keep(3), break(0) ")
+    while key not in ['0', '1', '2', '3']:
         key = input("While sentence will you fix? first(1), second(2), break(0) ")
     if key == '1':
         fixed_line = input("Enter fixed sentence: ")
@@ -24,14 +24,18 @@ def fix_sentence_by_user(first_line, second_line):
     elif key == '2':
         fixed_line = input("Enter fixed sentence: ")
         return 2, fixed_line
+    elif key == '3':
+        return 3, None
     else:
         print('quit working...')
-        return 0, 0
+        return 0, None
 
 def fix_lines_length(origin_data, new_data):
 
     fixed_origin_lines = origin_data
     fixed_new_lines = new_data
+
+    keep_idxes = []
     
     for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
         origin_words = origin_line.split(' ')
@@ -47,6 +51,8 @@ def fix_lines_length(origin_data, new_data):
             elif fix_key == 2:
                 fixed_new_lines[line_idx] = fixed_line
                 new_words = fixed_line.split(' ')
+            elif fix_key == 3:
+                keep_idxes.append(line_idx)
             else:
                 return fixed_origin_lines, fixed_new_lines
             
@@ -70,6 +76,8 @@ def fix_lines_length(origin_data, new_data):
 
 if __name__=='__main__':
     # origin_filename, new_filename = 'origin_caps/original_caps_fixed.txt', 'new_caps/same_caps_mod_fixed.txt'
+    # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
+    # _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
     origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
     new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
 
