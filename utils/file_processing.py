@@ -4,12 +4,16 @@ import json, pickle
 def increment_filename(filename):
     pure_filename = filename.split('.')[0]
     file_type = filename.split('.')[-1]
-    last_idx = 0
-    while os.path.exists(filename):
-        last_idx +=1
-        filename = pure_filename+'_'+str(last_idx)+'.'+file_type
+    
+    next_idx = 1
+    next_file_name = pure_filename+'_'+str(next_idx)+'.'+file_type
+    while os.path.exists(next_file_name):
+        next_idx +=1
+        next_file_name = pure_filename+'_'+str(next_idx)+'.'+file_type
 
-    return filename
+    last_file_name = pure_filename+'_'+str(next_idx-1)+'.'+file_type
+
+    return last_file_name, next_file_name
 
 
 def make_path(filepath):

@@ -65,8 +65,8 @@ def fix_lines_length(origin_data, new_data):
             
 
 if __name__=='__main__':
-    origin_filename = 'origin_caps/original_caps_fixed.txt'
-    new_filename = 'new_caps/same_caps_mod_fixed.txt'
+    origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
+    new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
 
     origin_data = read_txt_file(origin_filename)
     new_data = read_txt_file(new_filename)
@@ -75,8 +75,7 @@ if __name__=='__main__':
 
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-    save_origin_filename = increment_filename(origin_filename)
-    save_new_filename = increment_filename(new_filename)
+
     save_file(fixed_origin_lines, save_origin_filename)
     save_file(fixed_new_lines, save_new_filename)
     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
