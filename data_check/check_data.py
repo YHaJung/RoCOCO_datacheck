@@ -9,7 +9,7 @@ from utils.file_processing import increment_filename, save_file
 def read_txt_file(filepath):
     with open(filepath, 'r') as file:
         lines = file.readlines()
-    lines = [ line.rstrip('\n').rstrip(' \.') for line in lines]
+    lines = [ line.rstrip('\n').rstrip(' \.').lower() for line in lines]
     return lines
 
 def fix_sentence_by_user(first_line, second_line):
@@ -85,7 +85,9 @@ if __name__=='__main__':
     new_data = read_txt_file(new_filename)
     # print(new_data)
 
-    fixed_origin_lines, fixed_new_lines = fix_lines_length(origin_data, new_data)
+    fixed_origin_lines, fixed_new_lines, keep_idxes = fix_lines_length(origin_data, new_data)
+    if len(keep_idxes) !=0:
+        print(f'strange length keep idxes : {keep_idxes}')
 
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
