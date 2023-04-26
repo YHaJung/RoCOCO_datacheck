@@ -60,25 +60,89 @@ def fix_lines_length(origin_data, new_data):
         print(f'strange length keep idxes : {keep_idxes}')
             
     return fixed_origin_lines, fixed_new_lines
-                
-# def find_diff_lines():
-#     for word_idx in range(len(origin_words)):
-#         if origin_words[word_idx] != new_words[word_idx]:
-#             diff_flag_list[word_idx] = 1
-    
-#     if diff_flag_list.count(1) != 1:
-#         print(diff_flag_list.count(1))
 
-
-#     # if diff_word_origin not in origin_word and origin_word not in diff_word_origin:
-#     #     strange_idxes.append(idx+1)
-
-#     return 0, 0
-#     # df = pd.DataFrame({'origin word':origin_word_types, 'new word':new_word_types, 'origin data':origin_data, 'new data':new_data})
+def find_diff_flags(origin_words, new_words):
+    diff_flag_list = [0]*len(origin_words)
+    for word_idx in range(len(origin_words)):
+        if origin_words[word_idx] != new_words[word_idx]:
+            diff_flag_list[word_idx] = 1
+    return diff_flag_list
             
+def fix_multiple_or_no_change(origin_data, new_data):  # fix multiple diff word and find not change sentence
+    fixed_origin_lines = origin_data
+    fixed_new_lines = new_data
+
+    not_change_idxes = []
+    keep_idxes = []
+    
+    for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
+        line_flag = 1 # {0: finish, 1: again, 2: keep(strange)}
+
+        fixed_origin_line = origin_line
+        fixed_new_line = new_line
+
+        while line_flag == 1:
+            line_flag = 0
+            origin_words = fixed_origin_line.split(' ')
+            new_words = fixed_new_line.split(' ')
+
+            diff_flag_list = find_diff_flags(origin_words, new_words)
+
+            if diff_flag_list.count(1) == 0:
+                not_change_idxes.append(line_idx)
+            elif diff_flag_list.count(1) == 1:
+                continue
+            else:  # multiple changed words
+                diff_key_idx = diff_flag_list.index(1)
+                for diff_idx, diff_flag in enumerate(diff_flag_list):   # find diff key word
+                    if diff_flag == 1:
+                        if origin_words[diff_key_idx] in origin_words[diff_idx] and new_words[diff_key_idx] in new_words[diff_idx]:
+                            continue
+                        elif origin_words[diff_idx] in origin_words[diff_key_idx] and new_words[diff_idx] in new_words[diff_key_idx]:
+                            diff_key_idx = diff_idx
+
+                for diff_idx, diff_flag in enumerate(diff_flag_list):    # deal with strange cases
+                    if diff_flag == 1:
+                        if origin_words[diff_key_idx] not in origin_words[diff_idx] and origin_words[diff_idx] not in origin_words[diff_key_idx]:
+                            print(f'\n[line {line_idx}, Word {diff_idx}] Strange! More then two is different. Please check & fix.')
+                            fix_key, fixed_line = fix_sentence_by_user(fixed_origin_line, fixed_new_line)
+                            if fix_key == 1:
+                                fixed_origin_line = fixed_line
+                                fixed_origin_lines[line_idx] = fixed_origin_line
+                                line_flag = 1
+                            elif fix_key == 2:
+                                fixed_new_line = fixed_line
+                                fixed_new_lines[line_idx] = fixed_new_line
+                                line_flag = 1
+                            elif fix_key == 3:
+                                keep_idxes.append(line_idx)
+                                line_flag = 3
+                            else:
+                                return fixed_origin_lines, fixed_new_lines
+                            break
+                
+                if line_flag == 1:
+                    continue
+                elif line_flag == 2:
+                    break
+                else:
+                    diff_key = origin_words[diff_key_idx]
+                    for diff_idx, diff_flag in enumerate(diff_flag_list):
+                        if diff_flag == 1 and diff_key != origin_words[diff_idx]:
+                            new_words[diff_idx] = origin_words[diff_idx]
+                    fixed_new_line = " ".join(new_words)
+                    fixed_new_lines[line_idx] = fixed_new_line
+                    
+    if len(not_change_idxes) !=0:
+        print(f'not changed idxes : {not_change_idxes}')
+    if len(keep_idxes) !=0:
+        print(f'multiple words keep idxes : {keep_idxes}')
+
+    return fixed_new_lines, fixed_new_lines
+
 
 if __name__=='__main__':
-    # origin_filename, new_filename = 'origin_caps/original_caps_fixed.txt', 'new_caps/same_caps_mod_fixed.txt'
+    # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
     # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
     # _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
     origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
@@ -89,6 +153,8 @@ if __name__=='__main__':
     # print(new_data)
 
     fixed_origin_lines, fixed_new_lines= fix_lines_length(origin_data, new_data)
+    fixed_origin_lines, fixed_new_lines= fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines)
+
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
