@@ -1,11 +1,44 @@
 import pandas as pd
 import cv2
+import random
 
 import sys, os
 root_path = os.getcwd()
 sys.path.append(os.path.join(root_path, '..'))
 
 from utils.file_processing import increment_filename, save_file, load_file
+from data_check.downloaded.category import cate
+
+# origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
+# _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
+# _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
+origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
+new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
+diff_pairs_path = 'different_pairs.json'
+sim_pairs_path = 'similar_pairs.json'
+
+
+# def save_works_and_exit(line_idx, fixed_origin_lines, fixed_new_lines, keep_idxes, diff_pairs=None, sim_pairs=None):
+#     print(f'[line {line_idx}] quit working...')
+
+#     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
+#     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
+#     save_file(fixed_origin_lines, save_origin_filename)
+#     save_file(fixed_new_lines, save_new_filename)
+#     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
+
+    
+#     if diff_pairs != None:
+#         save_file(diff_pairs, diff_pairs_path)
+#         print('saved diff pairs')
+#     if sim_pairs != None:
+#         save_file(sim_pairs, sim_pairs_path)
+#         print('saved_sim_pairs')
+
+#     if len(keep_idxes) !=0:
+#         print(f'\nstrange length keep idxes : {keep_idxes}')
+
+#     sys.exit()
 
 def read_txt_file(filepath):
     with open(filepath, 'r') as file:
@@ -28,10 +61,9 @@ def fix_sentence_by_user(first_line, second_line):
     elif key == '3':
         return 3, None
     else:
-        print('quit working...')
         return 0, None
 
-def fix_lines_length(origin_data, new_data):
+def fix_lines_length(origin_data, new_data, strange_idxes):
 
     fixed_origin_lines = origin_data
     fixed_new_lines = new_data
@@ -55,12 +87,15 @@ def fix_lines_length(origin_data, new_data):
             elif fix_key == 3:
                 keep_idxes.append(line_idx)
             else:
+                print(f'[line {line_idx}] stop working...')
                 return fixed_origin_lines, fixed_new_lines
 
     if len(keep_idxes) !=0:
         print(f'\nstrange length keep idxes : {keep_idxes}')
+
+    strange_idxes += keep_idxes
             
-    return fixed_origin_lines, fixed_new_lines, keep_idxes
+    return fixed_origin_lines, fixed_new_lines, strange_idxes
 
 def find_diff_flags(origin_words, new_words):
     diff_flag_list = [0]*len(origin_words)
@@ -122,6 +157,7 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
                                 keep_idxes.append(line_idx)
                                 line_flag = 3
                             else:
+                                print(f'[line {line_idx}] stop working...')
                                 return fixed_origin_lines, fixed_new_lines
                             break
                 
@@ -157,12 +193,19 @@ def show_image(origin_words):
             cv2.waitKey(0)
             cv2.destroyAllWindows()
 
-def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs):
+def add_in_pair(origin_word, new_word, pair):
+    if origin_word in pair.keys():
+        pair[origin_word].append(new_word)
+    else:
+        pair[origin_word] = [new_word]
+    return pair
+
+def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs):
     origin_diff_word, new_diff_word = origin_words[diff_key_idx], new_words[diff_key_idx]
     if origin_diff_word in diff_pairs.keys() and new_diff_word in diff_pairs[origin_diff_word]:
-        return "different", similar_pairs, diff_pairs
-    elif origin_diff_word in similar_pairs.keys() and new_diff_word in similar_pairs[origin_diff_word]:
-        return "similar", similar_pairs, diff_pairs
+        return "different", diff_pairs, sim_pairs
+    elif origin_diff_word in sim_pairs.keys() and new_diff_word in sim_pairs[origin_diff_word]:
+        return "similar", diff_pairs, sim_pairs
     else:
         print_origin_line = ''
         print_new_line = ''
@@ -190,72 +233,95 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_
 
         if key == '1':
             if judgeability == '1':
-                if origin_diff_word in diff_pairs.keys():
-                    diff_pairs[origin_diff_word].append(new_diff_word)
-                else:
-                    diff_pairs[origin_diff_word] = [new_diff_word]
-            return "different", similar_pairs, diff_pairs
+                diff_pairs = add_in_pair(origin_diff_word, new_diff_word, diff_pairs)
+            return "different", diff_pairs, sim_pairs
         elif key == '2':
             if judgeability == '1':
-                if origin_diff_word in similar_pairs.keys():
-                    similar_pairs[origin_diff_word].append(new_diff_word)
-                else:
-                    similar_pairs[origin_diff_word] = [new_diff_word]
-            return "similar", similar_pairs, diff_pairs
+                sim_pairs = add_in_pair(origin_diff_word, new_diff_word, sim_pairs)
+            return "similar", diff_pairs, sim_pairs
         elif key == '3':
-            return "keep", similar_pairs, diff_pairs
+            return "keep", diff_pairs, sim_pairs
         else:
-            return "exit", similar_pairs, diff_pairs
+            return "exit", diff_pairs, sim_pairs
 
-def check_similar_words(origin_data, new_data, strange_idxes):
-    keep_idxes = []
+def call_new_keyword(origin_word, diff_pairs):
+    categories = cate()
+    for category in categories.keys():
+        if origin_word in categories[category]:
+            user_ok = '2'
+            print(f'origin word : {origin_word}')
+            print(f'{category} category : {categories[category]}')
+            fixed_new_word = input('fixed new word(exit(0)) : ')
+            while fixed_new_word not in fixed_new_word and fixed_new_word != '0':
+                fixed_new_word = input('fixed new word(exit(0)) : ')
+            if fixed_new_word == '0':
+                return '0', diff_pairs
+            else:
+                diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
+                return fixed_new_word, diff_pairs
 
-    checked_lines = []
+
+def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
     fixed_new_lines = new_data
 
-    similar_pairs = load_file('similar_pairs.json')
-    diff_pairs = load_file('different_pairs.json')
+    sim_pairs = load_file(sim_pairs_path)
+    diff_pairs = load_file(diff_pairs_path)
     
     for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
-        if line_idx in strange_idxes:
+        if line_idx < start_idx or line_idx in strange_idxes:
             continue
         origin_words = origin_line.split(' ')
         new_words = new_line.split(' ')
 
         diff_key_idx = find_diff_flags(origin_words, new_words).index(1)
 
-        key, similar_pairs, diff_pairs = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs)
+        key, diff_pairs, sim_pairs = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs)
+        print(key)
 
         if key == "different":
             continue
         elif key == "similar":
-            # change_keyword(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs)
+            # change_keyword(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs)
             print(f'[line {line_idx}] similar')
+            fixed_new_word, diff_pairs = call_new_keyword(origin_words[diff_key_idx], diff_pairs)
+            if fixed_new_word == '0': # exit
+                print(f'[line {line_idx}] stop working...')
+                return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
+            new_words[diff_key_idx] = fixed_new_word
+            fixed_new_lines[line_idx] = " ".join(new_words)
+            print(f'[line {line_idx}] changed the sentences!')
         elif key == "keep":
-            keep_idxes.append(line_idx)
+            strange_idxes.append(line_idx)
         else: # exit
-            return fixed_new_lines, similar_pairs, diff_pairs, strange_idxes
+            print(f'[line {line_idx}] stop working...')
+            return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
 
-    return fixed_new_lines, similar_pairs, diff_pairs, strange_idxes
+    return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
 
-if __name__=='__main__':
-    # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
-    # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
-    # _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
-    origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
-    new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
-
+if __name__== '__main__':
     origin_data = read_txt_file(origin_filename)
     new_data = read_txt_file(new_filename)
+    strange_idxes = load_file('strange_idxes.txt')
     # print(new_data)
 
-    fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data)
+    fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
-    fixed_new_lines, similar_pairs, diff_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes)
+    
+    start_idx = 14
+    fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
 
     # save results
-    # fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
-    # fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-    # save_file(fixed_origin_lines, save_origin_filename)
-    # save_file(fixed_new_lines, save_new_filename)
+    fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
+    fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
+    save_file(fixed_origin_lines, save_origin_filename)
+    save_file(fixed_new_lines, save_new_filename)
     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
+
+    strange_idxes_string = "\n".join(map(str, strange_idxes))
+    save_file(strange_idxes_string, 'strange_idxes.txt')
+    print('saved strange idxes')
+
+    save_file(diff_pairs, diff_pairs_path)
+    save_file(sim_pairs, sim_pairs_path)
+    print('saved diff & sim pairs')
+
