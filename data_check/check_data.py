@@ -1,4 +1,5 @@
 import pandas as pd
+import cv2
 
 import sys, os
 root_path = os.getcwd()
@@ -162,9 +163,21 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_
                 print_new_line += f'{new_words[word_idx]} '
         print('\n', print_origin_line)
         print(print_new_line)
-        key = input("Are they different? Yes(1), No(2), Check(3), exit(0)")
+        key = input("Are they different? Yes(1), No(2), Keep(3), Show Image(4), exit(0) ")
         while key not in ['0', '1', '2', '3']:
-            key = input("Are they different? Yes(1), No(2), Check(3), exit(0)")
+            if key == '4': # show image
+                img_info_list = load_file('./downloaded/coco_karpathy_test.json')
+                origin_line = " ".join(origin_words)
+                for img_info in img_info_list:
+                    img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower() for img_cap in img_info['caption']]
+                    if origin_line in img_captions:
+                        img_path = os.path.join('/home/hajung/workspace/RoCOCO_help', img_info['image'])
+                        img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
+                        cv2.imshow("image", img)
+                        cv2.waitKey(0)
+                        cv2.destroyAllWindows() # destroy all windows
+            key = input("Are they different? Yes(1), No(2), Show Image(3), Keep(4), exit(0) ")
+
         if key == '1':
             if origin_diff_word in diff_pairs.keys():
                 diff_pairs[origin_diff_word].append(new_diff_word)
@@ -178,7 +191,7 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_
                 similar_pairs[origin_diff_word] = [new_diff_word]
             return "similar", similar_pairs, diff_pairs
         elif key == '3':
-            return "check", similar_pairs, diff_pairs
+            return "keep", similar_pairs, diff_pairs
         else:
             return "exit", similar_pairs, diff_pairs
 
@@ -199,16 +212,17 @@ def check_similar_words(origin_data, new_data, strange_idxes):
 
         diff_key_idx = find_diff_flags(origin_words, new_words).index(1)
 
-        key = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs)
-        if key == "check":
-            print(f'[line {line_idx}] check')
+        key, similar_pairs, diff_pairs = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs)
 
         if key == "different":
             continue
         elif key == "similar":
             # change_keyword()
             print(f'[line {line_idx}] similar')
-        # else:
+        elif key == "keep":
+            keep_idxes.append(line_idx)
+        else: # exit
+            return fixed_new_lines, similar_pairs, diff_pairs, strange_idxes
 
     return fixed_new_lines, similar_pairs, diff_pairs, strange_idxes
 
@@ -228,8 +242,8 @@ if __name__=='__main__':
     fixed_new_lines, similar_pairs, diff_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
     # save results
-    fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
-    fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-    save_file(fixed_origin_lines, save_origin_filename)
-    save_file(fixed_new_lines, save_new_filename)
+    # fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
+    # fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
+    # save_file(fixed_origin_lines, save_origin_filename)
+    # save_file(fixed_new_lines, save_new_filename)
     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
