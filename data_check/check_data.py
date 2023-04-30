@@ -138,12 +138,24 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
                     fixed_new_lines[line_idx] = fixed_new_line
                     
     if len(not_change_idxes) !=0:
-        print(f'\nnot changed idxes : {not_change_idxes}')
+        print(f'\nnot changed idxes : {not_change_idxes}\n')
     if len(keep_idxes) !=0:
-        print(f'multiple words keep idxes : {keep_idxes}')
+        print(f'multiple words keep idxes : {keep_idxes}\n')
     strange_idxes = strange_idxes + not_change_idxes + keep_idxes
 
     return fixed_origin_lines, fixed_new_lines, strange_idxes
+
+def show_image(origin_words):
+    img_info_list = load_file('./downloaded/coco_karpathy_test.json')
+    origin_line = " ".join(origin_words)
+    for img_info in img_info_list:
+        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower() for img_cap in img_info['caption']]
+        if origin_line in img_captions:
+            img_path = os.path.join('..', img_info['image'])
+            img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
+            cv2.imshow("image", img)
+            cv2.waitKey(0)
+            cv2.destroyAllWindows()
 
 def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs):
     origin_diff_word, new_diff_word = origin_words[diff_key_idx], new_words[diff_key_idx]
@@ -161,34 +173,34 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, similar_
             else:
                 print_origin_line += f'{origin_words[word_idx]} '
                 print_new_line += f'{new_words[word_idx]} '
-        print('\n', print_origin_line)
+        print(print_origin_line)
         print(print_new_line)
-        key = input("Are they different? Yes(1), No(2), Keep(3), Show Image(4), exit(0) ")
+
+        # ask judgeability (can judge only with the words)
+        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2) ")
+        while judgeability not in ['1', '2']:
+            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2) ")
+        if judgeability == '2':
+            show_image(origin_words)
+
+        # ask differency
+        key = input("Are they different? Yes(1), No(2), Keep(3), exit(0) ")
         while key not in ['0', '1', '2', '3']:
-            if key == '4': # show image
-                img_info_list = load_file('./downloaded/coco_karpathy_test.json')
-                origin_line = " ".join(origin_words)
-                for img_info in img_info_list:
-                    img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower() for img_cap in img_info['caption']]
-                    if origin_line in img_captions:
-                        img_path = os.path.join('/home/hajung/workspace/RoCOCO_help', img_info['image'])
-                        img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
-                        cv2.imshow("image", img)
-                        cv2.waitKey(0)
-                        cv2.destroyAllWindows() # destroy all windows
-            key = input("Are they different? Yes(1), No(2), Show Image(3), Keep(4), exit(0) ")
+            key = input("Are they different? Yes(1), No(2), Keep(3), Show Image(4), exit(0) ")
 
         if key == '1':
-            if origin_diff_word in diff_pairs.keys():
-                diff_pairs[origin_diff_word].append(new_diff_word)
-            else:
-                diff_pairs[origin_diff_word] = [new_diff_word]
+            if judgeability == '1':
+                if origin_diff_word in diff_pairs.keys():
+                    diff_pairs[origin_diff_word].append(new_diff_word)
+                else:
+                    diff_pairs[origin_diff_word] = [new_diff_word]
             return "different", similar_pairs, diff_pairs
         elif key == '2':
-            if origin_diff_word in similar_pairs.keys():
-                similar_pairs[origin_diff_word].append(new_diff_word)
-            else:
-                similar_pairs[origin_diff_word] = [new_diff_word]
+            if judgeability == '1':
+                if origin_diff_word in similar_pairs.keys():
+                    similar_pairs[origin_diff_word].append(new_diff_word)
+                else:
+                    similar_pairs[origin_diff_word] = [new_diff_word]
             return "similar", similar_pairs, diff_pairs
         elif key == '3':
             return "keep", similar_pairs, diff_pairs
@@ -217,7 +229,7 @@ def check_similar_words(origin_data, new_data, strange_idxes):
         if key == "different":
             continue
         elif key == "similar":
-            # change_keyword()
+            # change_keyword(diff_key_idx, origin_words, new_words, diff_pairs, similar_pairs)
             print(f'[line {line_idx}] similar')
         elif key == "keep":
             keep_idxes.append(line_idx)
