@@ -23,7 +23,8 @@ def make_path(filepath):
     for dir in file_dirs:
         file_dir = os.path.join(file_dir, dir)
 
-    os.makedirs(file_dir, exist_ok=True)
+    if file_dir not in ['', '/']:
+        os.makedirs(file_dir, exist_ok=True)
 
 def save_file(data, filepath):
     make_path(filepath)
@@ -42,7 +43,11 @@ def save_file(data, filepath):
 def load_file(filepath):
     extension = filepath.split('.')[-1]
     extensions = {'json':json, 'pickle':pickle, 'pkl':pickle}
-    with open(filepath, 'rb') as file:
-        results = extensions[extension].load(file)
+    if extension in extensions.keys():
+        with open(filepath, 'rb') as file:
+            results = extensions[extension].load(file)
+    else: # txt
+        with open(filepath, 'r') as file:
+            results = file.readlines()
     
     return results
