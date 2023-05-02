@@ -263,16 +263,16 @@ def call_new_keyword(origin_word, diff_pairs):
             user_ok = '2'
             fixed_new_word = random.choice(categories[category])
             kor_new_word = translator.translate(fixed_new_word, dest='ko').text
-            user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')
+            user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
                     fixed_new_word = random.choice(categories[category])
                     kor_new_word = translator.translate(fixed_new_word, dest='ko').text
-                user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
+                user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
+                diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
                 return fixed_new_word, diff_pairs
             elif user_ok == '2':
-                diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
                 return fixed_new_word, diff_pairs
             elif user_ok == '4':
                 print(f'origin word : {origin_word}')
@@ -327,13 +327,14 @@ if __name__== '__main__':
     origin_data = read_txt_file(origin_filename)
     new_data = read_txt_file(new_filename)
     strange_idxes = set([int(line) for line in load_file('strange_idxes.txt')])
-    print(f'start strange idxes : {strange_idxes}\n')
+    print(f'start strange idxes : {sorted(list(strange_idxes))}\n')
     # print(new_data)
 
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
-    start_idx = 140
+    start_idx = 181
+    print(f'start with line {start_idx}')
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
 
