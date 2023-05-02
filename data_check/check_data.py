@@ -9,6 +9,10 @@ sys.path.append(os.path.join(root_path, '..'))
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.downloaded.category import cate
 
+import googletrans
+
+translator = googletrans.Translator()
+
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
 # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
 # _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
@@ -208,11 +212,17 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
     print_new_line = ''
     for word_idx in range(len(origin_words)):
         if origin_words[word_idx] == origin_diff_word:
-            print_origin_line += f'({origin_words[word_idx]}) '
-            print_new_line += f'({new_words[word_idx]}) '
+            print_origin_line += f'[{origin_words[word_idx]}] '
+            print_new_line += f'[{new_words[word_idx]}] '
         else:
             print_origin_line += f'{origin_words[word_idx]} '
             print_new_line += f'{new_words[word_idx]} '
+    
+    kor_origin_word = translator.translate(origin_diff_word, dest='ko').text
+    kor_new_word = translator.translate(new_diff_word, dest='ko').text
+    print_origin_line += f' ({kor_origin_word})'
+    print_new_line += f' ({kor_new_word})'
+
     print(f'\n{print_origin_line}')
     print(print_new_line)
     
@@ -252,11 +262,13 @@ def call_new_keyword(origin_word, diff_pairs):
         if origin_word in categories[category]:
             user_ok = '2'
             fixed_new_word = random.choice(categories[category])
-            user_ok = input(f'{origin_word}->{fixed_new_word} : Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')
+            kor_new_word = translator.translate(fixed_new_word, dest='ko').text
+            user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
                     fixed_new_word = random.choice(categories[category])
-                user_ok = input(f'{origin_word}->{fixed_new_word} : Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
+                    kor_new_word = translator.translate(fixed_new_word, dest='ko').text
+                user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
                 return fixed_new_word, diff_pairs
             elif user_ok == '2':
@@ -321,7 +333,7 @@ if __name__== '__main__':
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
-    start_idx = 76
+    start_idx = 140
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
 
