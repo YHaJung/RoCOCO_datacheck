@@ -185,7 +185,7 @@ def show_image(origin_words):
     img_info_list = load_file('./downloaded/coco_karpathy_test.json')
     origin_line = " ".join(origin_words)
     for img_info in img_info_list:
-        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower() for img_cap in img_info['caption']]
+        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,') for img_cap in img_info['caption']]
         if origin_line in img_captions:
             img_path = os.path.join('..', img_info['image'])
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
@@ -216,7 +216,7 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
             else:
                 print_origin_line += f'{origin_words[word_idx]} '
                 print_new_line += f'{new_words[word_idx]} '
-        print(print_origin_line)
+        print(f'\n{print_origin_line}')
         print(print_new_line)
 
         # ask judgeability (can judge only with the words)
@@ -249,16 +249,30 @@ def call_new_keyword(origin_word, diff_pairs):
     for category in categories.keys():
         if origin_word in categories[category]:
             user_ok = '2'
-            print(f'origin word : {origin_word}')
-            print(f'{category} category : {categories[category]}')
-            fixed_new_word = input('fixed new word(exit(0)) : ')
-            while fixed_new_word not in fixed_new_word and fixed_new_word != '0':
-                fixed_new_word = input('fixed new word(exit(0)) : ')
-            if fixed_new_word == '0':
-                return '0', diff_pairs
-            else:
+            fixed_new_word = random.choice(categories[category])
+            user_ok = input(f'{origin_word}->{fixed_new_word} : Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')
+            while user_ok not in ['0', '1', '2', '4']:
+                if user_ok == '3':
+                    fixed_new_word = random.choice(categories[category])
+                user_ok = input(f'{origin_word}->{fixed_new_word} : Only for this sentence(1), Add in Pair(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
+            if user_ok == '1':
+                return fixed_new_word, diff_pairs
+            elif user_ok == '2':
                 diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
                 return fixed_new_word, diff_pairs
+            elif user_ok == '4':
+                print(f'origin word : {origin_word}')
+                print(f'{category} category : {categories[category]}')
+                fixed_new_word = input('fixed new word(exit(0)) : ')
+                while fixed_new_word not in fixed_new_word and fixed_new_word != '0':
+                    fixed_new_word = input('fixed new word(exit(0)) : ')
+                if fixed_new_word == '0':
+                    return '0', diff_pairs
+                else:
+                    diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
+                    return fixed_new_word, diff_pairs
+            else:
+                return '0', diff_pairs
 
 
 def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
@@ -276,20 +290,17 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
         diff_key_idx = find_diff_flags(origin_words, new_words).index(1)
 
         key, diff_pairs, sim_pairs = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs)
-        print(key)
+        print(f'[line {line_idx}] {origin_line} ({key})')
 
         if key == "different":
             continue
         elif key == "similar":
-            # change_keyword(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs)
-            print(f'[line {line_idx}] similar')
             fixed_new_word, diff_pairs = call_new_keyword(origin_words[diff_key_idx], diff_pairs)
             if fixed_new_word == '0': # exit
                 print(f'[line {line_idx}] stop working...')
                 return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
             new_words[diff_key_idx] = fixed_new_word
             fixed_new_lines[line_idx] = " ".join(new_words)
-            print(f'[line {line_idx}] changed the sentences!')
         elif key == "keep":
             strange_idxes.append(line_idx)
         else: # exit
@@ -307,7 +318,7 @@ if __name__== '__main__':
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
     
-    start_idx = 14
+    start_idx = 64 # 51
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
 
     # save results
