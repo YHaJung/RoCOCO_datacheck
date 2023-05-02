@@ -1,1 +1,34 @@
-{}
+{
+	"man": [
+		"gentlemen",
+		"guys"
+	],
+	"street": [
+		"ground"
+	],
+	"bicyclists": [
+		"humans"
+	],
+	"bathroom": [
+		"shower"
+	],
+	"items": [
+		"sticks"
+	],
+	"black": [
+		"dark"
+	],
+	"building": [
+		"places"
+	],
+	"side": [
+		"region",
+		"streets"
+	],
+	"plantains": [
+		"meal"
+	],
+	"table": [
+		"desk"
+	]
+}
