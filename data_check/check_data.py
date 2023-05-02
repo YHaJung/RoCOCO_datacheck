@@ -93,7 +93,7 @@ def fix_lines_length(origin_data, new_data, strange_idxes):
     if len(keep_idxes) !=0:
         print(f'\nstrange length keep idxes : {keep_idxes}')
 
-    strange_idxes += keep_idxes
+    strange_idxes.update(keep_idxes)
             
     return fixed_origin_lines, fixed_new_lines, strange_idxes
 
@@ -177,7 +177,8 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
         print(f'\nnot changed idxes : {not_change_idxes}\n')
     if len(keep_idxes) !=0:
         print(f'multiple words keep idxes : {keep_idxes}\n')
-    strange_idxes = strange_idxes + not_change_idxes + keep_idxes
+
+    strange_idxes.update(not_change_idxes + keep_idxes)
 
     return fixed_origin_lines, fixed_new_lines, strange_idxes
 
@@ -202,23 +203,24 @@ def add_in_pair(origin_word, new_word, pair):
 
 def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs):
     origin_diff_word, new_diff_word = origin_words[diff_key_idx], new_words[diff_key_idx]
+
+    print_origin_line = ''
+    print_new_line = ''
+    for word_idx in range(len(origin_words)):
+        if origin_words[word_idx] == origin_diff_word:
+            print_origin_line += f'({origin_words[word_idx]}) '
+            print_new_line += f'({new_words[word_idx]}) '
+        else:
+            print_origin_line += f'{origin_words[word_idx]} '
+            print_new_line += f'{new_words[word_idx]} '
+    print(f'\n{print_origin_line}')
+    print(print_new_line)
+    
     if origin_diff_word in diff_pairs.keys() and new_diff_word in diff_pairs[origin_diff_word]:
         return "different", diff_pairs, sim_pairs
     elif origin_diff_word in sim_pairs.keys() and new_diff_word in sim_pairs[origin_diff_word]:
         return "similar", diff_pairs, sim_pairs
     else:
-        print_origin_line = ''
-        print_new_line = ''
-        for word_idx in range(len(origin_words)):
-            if origin_words[word_idx] == origin_diff_word:
-                print_origin_line += f'({origin_words[word_idx]}) '
-                print_new_line += f'({new_words[word_idx]}) '
-            else:
-                print_origin_line += f'{origin_words[word_idx]} '
-                print_new_line += f'{new_words[word_idx]} '
-        print(f'\n{print_origin_line}')
-        print(print_new_line)
-
         # ask judgeability (can judge only with the words)
         judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2) ")
         while judgeability not in ['1', '2']:
@@ -290,7 +292,7 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
         diff_key_idx = find_diff_flags(origin_words, new_words).index(1)
 
         key, diff_pairs, sim_pairs = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs)
-        print(f'[line {line_idx}] {origin_line} ({key})')
+        print(f'[line {line_idx}] ({key})')
 
         if key == "different":
             continue
@@ -302,7 +304,7 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
             new_words[diff_key_idx] = fixed_new_word
             fixed_new_lines[line_idx] = " ".join(new_words)
         elif key == "keep":
-            strange_idxes.append(line_idx)
+            strange_idxes.update([line_idx])
         else: # exit
             print(f'[line {line_idx}] stop working...')
             return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
@@ -312,14 +314,16 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
 if __name__== '__main__':
     origin_data = read_txt_file(origin_filename)
     new_data = read_txt_file(new_filename)
-    strange_idxes = load_file('strange_idxes.txt')
+    strange_idxes = set([int(line) for line in load_file('strange_idxes.txt')])
+    print(f'start strange idxes : {strange_idxes}\n')
     # print(new_data)
 
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
-    
-    start_idx = 64 # 51
+
+    start_idx = 76
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
+    print(f'last strange idxes : {strange_idxes}')
 
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
@@ -328,7 +332,7 @@ if __name__== '__main__':
     save_file(fixed_new_lines, save_new_filename)
     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
 
-    strange_idxes_string = "\n".join(map(str, strange_idxes))
+    strange_idxes_string = "\n".join(map(str, sorted(strange_idxes)))
     save_file(strange_idxes_string, 'strange_idxes.txt')
     print('saved strange idxes')
 

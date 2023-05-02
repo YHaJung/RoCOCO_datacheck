@@ -49,5 +49,6 @@ def load_file(filepath):
     else: # txt
         with open(filepath, 'r') as file:
             results = file.readlines()
+        results = [line.rstrip('\n') for line in results]
     
     return results
