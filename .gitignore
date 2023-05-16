@@ -6,5 +6,10 @@ __pycache__
 downloaded/
 
 # data
-*.txt
 *.jpg
+
+
+# cache
+cache/
+original_caps_fixed_*.txt
+same_caps_mod_fixed_*.txt
