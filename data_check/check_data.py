@@ -8,10 +8,7 @@ sys.path.append(os.path.join(root_path, '..'))
 
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.downloaded.category import cate
-
-import googletrans
-
-translator = googletrans.Translator()
+from utils.translate import translate_to_korean
 
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
 # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
@@ -190,7 +187,7 @@ def show_image(origin_words):
     img_info_list = load_file('./downloaded/coco_karpathy_test.json')
     origin_line = " ".join(origin_words)
     for img_info in img_info_list:
-        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,') for img_cap in img_info['caption']]
+        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ') for img_cap in img_info['caption']]
         if origin_line in img_captions:
             img_path = os.path.join('..', img_info['image'])
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
@@ -265,12 +262,12 @@ def call_new_keyword(origin_word, diff_pairs):
         if origin_word in categories[category]:
             user_ok = '2'
             fixed_new_word = random.choice(categories[category])
-            kor_new_word = translator.translate(fixed_new_word, dest='ko').text
+            kor_new_word = translate_to_korean(fixed_new_word)
             user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
                     fixed_new_word = random.choice(categories[category])
-                    kor_new_word = translator.translate(fixed_new_word, dest='ko').text
+                    kor_new_word = translate_to_korean(fixed_new_word)
                 user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
                 diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
