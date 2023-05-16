@@ -194,7 +194,9 @@ def show_image(origin_words):
         if origin_line in img_captions:
             img_path = os.path.join('..', img_info['image'])
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
-            cv2.imshow("image", img)
+            cv2.namedWindow("window1")   # create a named window
+            cv2.moveWindow("window1", 800, 200)   # Move it to (40, 30)
+            cv2.imshow("window1", img)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
 
@@ -218,8 +220,9 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
             print_origin_line += f'{origin_words[word_idx]} '
             print_new_line += f'{new_words[word_idx]} '
     
-    kor_origin_word = translator.translate(origin_diff_word, dest='ko').text
-    kor_new_word = translator.translate(new_diff_word, dest='ko').text
+
+    kor_origin_word = translate_to_korean(origin_diff_word)
+    kor_new_word = translate_to_korean(new_diff_word)
     print_origin_line += f' ({kor_origin_word})'
     print_new_line += f' ({kor_new_word})'
 
@@ -333,7 +336,7 @@ if __name__== '__main__':
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
-    start_idx = 181
+    start_idx = 830
     print(f'start with line {start_idx}')
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
