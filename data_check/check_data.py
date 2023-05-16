@@ -333,7 +333,7 @@ if __name__== '__main__':
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
-    start_idx = 830
+    start_idx = 859
     print(f'start with line {start_idx}')
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
