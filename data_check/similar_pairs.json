@@ -1,7 +1,8 @@
 {
 	"man": [
 		"gentlemen",
-		"guys"
+		"guys",
+		"guy"
 	],
 	"street": [
 		"ground"
@@ -29,6 +30,74 @@
 		"meal"
 	],
 	"table": [
-		"desk"
+		"desk",
+		"desks"
+	],
+	"woman": [
+		"female",
+		"humans"
+	],
+	"lady": [
+		"adult"
+	],
+	"figurines": [
+		"decor"
+	],
+	"front": [
+		"forth"
+	],
+	"outfit": [
+		"costume"
+	],
+	"boy": [
+		"teenage",
+		"guy"
+	],
+	"friends": [
+		"humans"
+	],
+	"pizza": [
+		"meals"
+	],
+	"tennis": [
+		"sports"
+	],
+	"girl": [
+		"youths",
+		"youngster"
+	],
+	"person": [
+		"individual"
+	],
+	"center": [
+		"midst"
+	],
+	"baseball": [
+		"sport"
+	],
+	"uniform": [
+		"dresses"
+	],
+	"flowers": [
+		"plants"
+	],
+	"people": [
+		"individual",
+		"members"
+	],
+	"room": [
+		"structure"
+	],
+	"stuff": [
+		"tool"
+	],
+	"motorcyclists": [
+		"rider"
+	],
+	"field": [
+		"land"
+	],
+	"basket": [
+		"cases"
 	]
 }
