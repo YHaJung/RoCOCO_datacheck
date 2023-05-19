@@ -8,7 +8,7 @@ sys.path.append(os.path.join(root_path, '..'))
 
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.downloaded.category import cate
-from utils.translate import translate_to_korean
+from utils.translate import translate_to_korean_local
 from utils.compare import find_diff_flags
 
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
@@ -186,8 +186,8 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
             print_new_line += f'{new_words[word_idx]} '
     
 
-    kor_origin_word = translate_to_korean(origin_diff_word)
-    kor_new_word = translate_to_korean(new_diff_word)
+    kor_origin_word = translate_to_korean_local(local_dict, origin_diff_word)
+    kor_new_word = translate_to_korean_local(local_dict, new_diff_word)
     print_origin_line += f' ({kor_origin_word})'
     print_new_line += f' ({kor_new_word})'
 
@@ -230,12 +230,12 @@ def call_new_keyword(origin_word, diff_pairs):
         if origin_word in categories[category]:
             user_ok = '2'
             fixed_new_word = random.choice(categories[category])
-            kor_new_word = translate_to_korean(fixed_new_word)
+            kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
             user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
                     fixed_new_word = random.choice(categories[category])
-                    kor_new_word = translate_to_korean(fixed_new_word)
+                    kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
                 user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
                 diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
