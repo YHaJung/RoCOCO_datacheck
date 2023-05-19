@@ -219,7 +219,8 @@
 		"moon",
 		"waves",
 		"banks",
-		"moon"
+		"moon",
+		"skies"
 	],
 	"plane": [
 		"bicycle"
@@ -246,7 +247,9 @@
 	],
 	"sheep": [
 		"huskie",
-		"cow"
+		"cow",
+		"panda",
+		"dogs"
 	],
 	"giraffes": [
 		"sheeps",
@@ -255,7 +258,8 @@
 	"fire": [
 		"meters",
 		"arrival",
-		"bridge"
+		"bridge",
+		"guards"
 	],
 	"reflections": [
 		"downhill"
@@ -341,7 +345,8 @@
 		"wave"
 	],
 	"body": [
-		"lettuce"
+		"lettuce",
+		"notebooks"
 	],
 	"shore": [
 		"apartment"
@@ -356,7 +361,8 @@
 		"six"
 	],
 	"water": [
-		"mountain"
+		"mountain",
+		"lawn"
 	],
 	"arms": [
 		"ears"
@@ -661,7 +667,8 @@
 	],
 	"wood": [
 		"haze",
-		"wire"
+		"wire",
+		"brick"
 	],
 	"stove": [
 		"apron",
@@ -726,9 +733,31 @@
 		"tunnel"
 	],
 	"giraffe": [
-		"cows"
+		"cows",
+		"cow"
 	],
 	"basket": [
 		"carriage"
+	],
+	"set": [
+		"farmer"
+	],
+	"park": [
+		"inn"
+	],
+	"bay": [
+		"pub"
+	],
+	"tree": [
+		"rainbow"
+	],
+	"mallards": [
+		"seagulls"
+	],
+	"grounds": [
+		"moon"
+	],
+	"time": [
+		"alcohol"
 	]
 }

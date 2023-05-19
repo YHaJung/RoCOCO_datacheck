@@ -7,7 +7,9 @@ root_path = os.getcwd()
 sys.path.append(os.path.join(root_path, '..'))
 
 from utils.file_processing import increment_filename, save_file, load_file
-from utils.translate import translate_to_korean
+from data_check.downloaded.category import cate
+from utils.translate import translate_to_korean_local
+from utils.compare import find_diff_flags
 
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
 # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
@@ -17,34 +19,8 @@ new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fix
 diff_pairs_path = 'different_pairs.json'
 sim_pairs_path = 'similar_pairs.json'
 
+local_dict = load_file('translator.json')
 
-# def save_works_and_exit(line_idx, fixed_origin_lines, fixed_new_lines, keep_idxes, diff_pairs=None, sim_pairs=None):
-#     print(f'[line {line_idx}] quit working...')
-
-#     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
-#     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-#     save_file(fixed_origin_lines, save_origin_filename)
-#     save_file(fixed_new_lines, save_new_filename)
-#     print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
-
-    
-#     if diff_pairs != None:
-#         save_file(diff_pairs, diff_pairs_path)
-#         print('saved diff pairs')
-#     if sim_pairs != None:
-#         save_file(sim_pairs, sim_pairs_path)
-#         print('saved_sim_pairs')
-
-#     if len(keep_idxes) !=0:
-#         print(f'\nstrange length keep idxes : {keep_idxes}')
-
-#     sys.exit()
-
-def read_txt_file(filepath):
-    with open(filepath, 'r') as file:
-        lines = file.readlines()
-    lines = [ line.rstrip('\n').rstrip(' \.').lower() for line in lines]
-    return lines
 
 def fix_sentence_by_user(first_line, second_line):
     print(f'[1] [{first_line}]')
@@ -96,13 +72,6 @@ def fix_lines_length(origin_data, new_data, strange_idxes):
     strange_idxes.update(keep_idxes)
             
     return fixed_origin_lines, fixed_new_lines, strange_idxes
-
-def find_diff_flags(origin_words, new_words):
-    diff_flag_list = [0]*len(origin_words)
-    for word_idx in range(len(origin_words)):
-        if origin_words[word_idx] != new_words[word_idx]:
-            diff_flag_list[word_idx] = 1
-    return diff_flag_list
             
 def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix multiple diff word and find not change sentence
     fixed_origin_lines = origin_data
@@ -217,8 +186,8 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
             print_new_line += f'{new_words[word_idx]} '
     
 
-    kor_origin_word = translate_to_korean(origin_diff_word)
-    kor_new_word = translate_to_korean(new_diff_word)
+    kor_origin_word = translate_to_korean_local(local_dict, origin_diff_word)
+    kor_new_word = translate_to_korean_local(local_dict, new_diff_word)
     print_origin_line += f' ({kor_origin_word})'
     print_new_line += f' ({kor_new_word})'
 
@@ -261,12 +230,12 @@ def call_new_keyword(origin_word, diff_pairs):
         if origin_word in categories[category]:
             user_ok = '2'
             fixed_new_word = random.choice(categories[category])
-            kor_new_word = translate_to_korean(fixed_new_word)
+            kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
             user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
                     fixed_new_word = random.choice(categories[category])
-                    kor_new_word = translate_to_korean(fixed_new_word)
+                    kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
                 user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
                 diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
@@ -323,8 +292,8 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
     return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
 
 if __name__== '__main__':
-    origin_data = read_txt_file(origin_filename)
-    new_data = read_txt_file(new_filename)
+    origin_data = load_file(origin_filename)
+    new_data = load_file(new_filename)
     strange_idxes = set([int(line) for line in load_file('strange_idxes.txt')])
     print(f'start strange idxes : {sorted(list(strange_idxes))}\n')
     # print(new_data)
@@ -332,7 +301,7 @@ if __name__== '__main__':
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
-    start_idx = 830
+    start_idx = 860
     print(f'start with line {start_idx}')
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
