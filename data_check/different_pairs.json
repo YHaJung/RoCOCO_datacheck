@@ -1,0 +1,734 @@
+{
+	"man": [
+		"girls",
+		"momma",
+		"kids",
+		"mother",
+		"mom",
+		"child",
+		"women"
+	],
+	"back": [
+		"left"
+	],
+	"mountains": [
+		"rainbow"
+	],
+	"side": [
+		"bakery",
+		"pond"
+	],
+	"intent": [
+		"mattress"
+	],
+	"goodness": [
+		"desk"
+	],
+	"girl": [
+		"boy",
+		"guy",
+		"gentlemen",
+		"para-sailers"
+	],
+	"guy": [
+		"batter",
+		"women"
+	],
+	"tracks": [
+		"pool"
+	],
+	"counters": [
+		"bedding"
+	],
+	"tops": [
+		"front"
+	],
+	"glasses": [
+		"cabinets"
+	],
+	"top": [
+		"below",
+		"downs",
+		"downs",
+		"south",
+		"directions",
+		"rear",
+		"sideways",
+		"behind",
+		"sideways",
+		"underside",
+		"backwards"
+	],
+	"assortment": [
+		"caution"
+	],
+	"selection": [
+		"grass"
+	],
+	"table": [
+		"drawers",
+		"bed",
+		"seat",
+		"stool",
+		"couch",
+		"beds",
+		"stool",
+		"chairs",
+		"stool",
+		"bedding"
+	],
+	"multiple": [
+		"monitors"
+	],
+	"cooking": [
+		"roaming"
+	],
+	"forks": [
+		"apron"
+	],
+	"bathroom": [
+		"stage",
+		"vanity",
+		"brush",
+		"supplies",
+		"spray",
+		"stalls",
+		"stall",
+		"desert",
+		"sewage",
+		"garden",
+		"tooth",
+		"stalls",
+		"tubes",
+		"shop"
+	],
+	"stall": [
+		"rug",
+		"harbour"
+	],
+	"rest": [
+		"rain"
+	],
+	"street": [
+		"kitchen",
+		"grave"
+	],
+	"burger": [
+		"candy"
+	],
+	"bicyclists": [
+		"skiier",
+		"farmers"
+	],
+	"toilet": [
+		"cabinet"
+	],
+	"doorway": [
+		"market"
+	],
+	"sink": [
+		"glasses"
+	],
+	"products": [
+		"gate"
+	],
+	"black": [
+		"mint",
+		"mint",
+		"blue"
+	],
+	"men": [
+		"women",
+		"daughters",
+		"parent",
+		"woman",
+		"girls"
+	],
+	"building": [
+		"marina",
+		"airport",
+		"savanna"
+	],
+	"motorbikes": [
+		"subway",
+		"trains"
+	],
+	"television": [
+		"smartphone",
+		"nintendo"
+	],
+	"attire": [
+		"purse"
+	],
+	"room": [
+		"tracks",
+		"runway",
+		"mural",
+		"rails",
+		"way",
+		"station"
+	],
+	"bowl": [
+		"hooks"
+	],
+	"vase": [
+		"scissors"
+	],
+	"holder": [
+		"clocks"
+	],
+	"gold": [
+		"cloth"
+	],
+	"plantains": [
+		"sugar"
+	],
+	"ripe": [
+		"liquid"
+	],
+	"containers": [
+		"knives"
+	],
+	"case": [
+		"umbrellas",
+		"wagon"
+	],
+	"bottles": [
+		"sink"
+	],
+	"airport": [
+		"seaside",
+		"home",
+		"habitat"
+	],
+	"airline": [
+		"ship"
+	],
+	"board": [
+		"roller-skates",
+		"tennis",
+		"soccer",
+		"racket"
+	],
+	"planes": [
+		"boat"
+	],
+	"field": [
+		"ocean",
+		"bank",
+		"moon",
+		"waves",
+		"banks",
+		"moon"
+	],
+	"plane": [
+		"bicycle"
+	],
+	"model": [
+		"height"
+	],
+	"bench": [
+		"table"
+	],
+	"sky": [
+		"grounds",
+		"banks",
+		"jungle",
+		"lawn",
+		"mountains"
+	],
+	"lights": [
+		"route",
+		"meters"
+	],
+	"dining": [
+		"roaming"
+	],
+	"sheep": [
+		"huskie",
+		"cow"
+	],
+	"giraffes": [
+		"sheeps",
+		"ducks"
+	],
+	"fire": [
+		"meters",
+		"arrival",
+		"bridge"
+	],
+	"reflections": [
+		"downhill"
+	],
+	"flower": [
+		"limb",
+		"brush"
+	],
+	"towering": [
+		"floating"
+	],
+	"pennsylvania": [
+		"troll"
+	],
+	"pond": [
+		"church",
+		"indoor"
+	],
+	"names": [
+		"neck"
+	],
+	"gladys": [
+		"drinks"
+	],
+	"costume": [
+		"tank"
+	],
+	"post": [
+		"corral"
+	],
+	"cow": [
+		"dog",
+		"dogs"
+	],
+	"front": [
+		"background",
+		"underside",
+		"rear",
+		"downs",
+		"underside"
+	],
+	"brown": [
+		"violet"
+	],
+	"banana": [
+		"cherry"
+	],
+	"chair": [
+		"beds",
+		"bed",
+		"counters",
+		"counter"
+	],
+	"tibetan": [
+		"france"
+	],
+	"stands": [
+		"drive"
+	],
+	"cows": [
+		"crows"
+	],
+	"face": [
+		"elbow"
+	],
+	"woman": [
+		"males",
+		"father",
+		"kids",
+		"guys",
+		"gentleman"
+	],
+	"foreground": [
+		"expanse"
+	],
+	"exhibit": [
+		"court"
+	],
+	"enclosure": [
+		"cubicle"
+	],
+	"rocks": [
+		"wave"
+	],
+	"body": [
+		"lettuce"
+	],
+	"shore": [
+		"apartment"
+	],
+	"river": [
+		"rainbow"
+	],
+	"boats": [
+		"tow"
+	],
+	"one": [
+		"six"
+	],
+	"water": [
+		"mountain"
+	],
+	"arms": [
+		"ears"
+	],
+	"women": [
+		"father"
+	],
+	"eyes": [
+		"rump"
+	],
+	"suitcase": [
+		"clothes"
+	],
+	"dog": [
+		"steer",
+		"iguana"
+	],
+	"edge": [
+		"downs"
+	],
+	"hands": [
+		"knees",
+		"beaks"
+	],
+	"plate": [
+		"hood",
+		"tap"
+	],
+	"beach": [
+		"meadow"
+	],
+	"patch": [
+		"doors"
+	],
+	"grass": [
+		"bank"
+	],
+	"zebra": [
+		"kitten"
+	],
+	"legs": [
+		"beaks"
+	],
+	"horse": [
+		"kitten",
+		"crows"
+	],
+	"children": [
+		"driver",
+		"crew"
+	],
+	"kids": [
+		"parents"
+	],
+	"outfit": [
+		"shades"
+	],
+	"shoulders": [
+		"paw"
+	],
+	"plastic": [
+		"leather",
+		"steel"
+	],
+	"pitch": [
+		"hoop"
+	],
+	"player": [
+		"pedestrians",
+		"nerds"
+	],
+	"rays": [
+		"bmw"
+	],
+	"skis": [
+		"gym"
+	],
+	"boy": [
+		"queens"
+	],
+	"child": [
+		"police"
+	],
+	"cream": [
+		"cherry"
+	],
+	"hollywood": [
+		"motorola",
+		"apple"
+	],
+	"tricks": [
+		"peppers"
+	],
+	"skateboarders": [
+		"santa"
+	],
+	"incline": [
+		"bird"
+	],
+	"boarders": [
+		"reading"
+	],
+	"boarding": [
+		"smiling"
+	],
+	"donuts": [
+		"veggies",
+		"turkey",
+		"smorgasbord"
+	],
+	"bakery": [
+		"land"
+	],
+	"hand": [
+		"necks",
+		"ear",
+		"rump"
+	],
+	"sandwich": [
+		"fixings"
+	],
+	"doughnuts": [
+		"cake"
+	],
+	"ball": [
+		"pitch",
+		"gloves",
+		"surferboard",
+		"swing"
+	],
+	"hoop": [
+		"surferboard"
+	],
+	"surfboarder": [
+		"pitcher"
+	],
+	"surfer": [
+		"farmers",
+		"pedestrians"
+	],
+	"ocean": [
+		"forest",
+		"grassland"
+	],
+	"wave": [
+		"hay"
+	],
+	"game": [
+		"nose",
+		"camera"
+	],
+	"players": [
+		"photographer"
+	],
+	"shirt": [
+		"wallet",
+		"wetsuit"
+	],
+	"cake": [
+		"muffins",
+		"tots"
+	],
+	"sheets": [
+		"guards"
+	],
+	"bed": [
+		"desk"
+	],
+	"lying": [
+		"roaming"
+	],
+	"pizza": [
+		"eggs",
+		"chives",
+		"bun",
+		"carrot",
+		"corn",
+		"cone"
+	],
+	"tennis": [
+		"ball",
+		"hockey",
+		"ski",
+		"stance",
+		"boarder",
+		"disk",
+		"swing"
+	],
+	"pillows": [
+		"box",
+		"decor",
+		"curtains",
+		"lamp"
+	],
+	"remotes": [
+		"nintendo"
+	],
+	"teeth": [
+		"knees",
+		"ears"
+	],
+	"desks": [
+		"chairs"
+	],
+	"desk": [
+		"chairs"
+	],
+	"middle": [
+		"overhead"
+	],
+	"tail": [
+		"head"
+	],
+	"kite": [
+		"hoop"
+	],
+	"center": [
+		"end"
+	],
+	"baseball": [
+		"stunts",
+		"surf",
+		"racquet",
+		"racquets",
+		"surfs",
+		"ski",
+		"golf",
+		"kick",
+		"tennis",
+		"discs",
+		"skates",
+		"pole"
+	],
+	"catcher": [
+		"climbers"
+	],
+	"bat": [
+		"disk"
+	],
+	"fans": [
+		"farmers"
+	],
+	"home": [
+		"school"
+	],
+	"battle": [
+		"jump"
+	],
+	"racket": [
+		"skate"
+	],
+	"cage": [
+		"harbor"
+	],
+	"tower": [
+		"railroad"
+	],
+	"trees": [
+		"hay"
+	],
+	"bears": [
+		"bee",
+		"cattle"
+	],
+	"teddy": [
+		"darth"
+	],
+	"way": [
+		"room"
+	],
+	"flowers": [
+		"waves",
+		"sun",
+		"moon",
+		"waves"
+	],
+	"glass": [
+		"hood"
+	],
+	"scissors": [
+		"forks",
+		"pot"
+	],
+	"distance": [
+		"silver"
+	],
+	"peice": [
+		"olympic"
+	],
+	"bag": [
+		"uniform"
+	],
+	"area": [
+		"post"
+	],
+	"train": [
+		"horseback"
+	],
+	"counter": [
+		"couch",
+		"posters"
+	],
+	"wood": [
+		"haze",
+		"wire"
+	],
+	"stove": [
+		"apron",
+		"glassware"
+	],
+	"stool": [
+		"couch"
+	],
+	"pans": [
+		"hood",
+		"stove"
+	],
+	"mirror": [
+		"bookshelf"
+	],
+	"motorcycle": [
+		"dump"
+	],
+	"ramp": [
+		"library"
+	],
+	"debris": [
+		"jetairfly"
+	],
+	"motorcyclists": [
+		"climbers"
+	],
+	"air": [
+		"wood"
+	],
+	"blue": [
+		"black-and-white",
+		"gray",
+		"beige"
+	],
+	"trail": [
+		"cage"
+	],
+	"jet": [
+		"truck"
+	],
+	"airplane": [
+		"bus",
+		"tractor",
+		"decker",
+		"cars"
+	],
+	"white": [
+		"red/yellow"
+	],
+	"savannah": [
+		"ghetto"
+	],
+	"head": [
+		"wings",
+		"heel"
+	],
+	"exposure": [
+		"advice"
+	],
+	"fence": [
+		"tunnel"
+	],
+	"giraffe": [
+		"cows"
+	],
+	"basket": [
+		"carriage"
+	]
+}
