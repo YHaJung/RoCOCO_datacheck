@@ -11,7 +11,7 @@ def increment_filename(filename):
         next_idx +=1
         next_file_name = pure_filename+'_'+str(next_idx)+'.'+file_type
 
-    last_file_name = pure_filename+'_'+str(next_idx-1)+'.'+file_type
+    last_file_name = pure_filename+'_'+str(next_idx-1)+'.'+file_type if next_idx-1 > 0 else filename
 
     return last_file_name, next_file_name
 
