@@ -7,7 +7,6 @@ root_path = os.getcwd()
 sys.path.append(os.path.join(root_path, '..'))
 
 from utils.file_processing import increment_filename, save_file, load_file
-from data_check.downloaded.category import cate
 from utils.translate import translate_to_korean
 
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
