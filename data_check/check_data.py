@@ -18,6 +18,7 @@ origin_filename, save_origin_filename = increment_filename('origin_caps/original
 new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
 diff_pairs_path = 'different_pairs.json'
 sim_pairs_path = 'similar_pairs.json'
+start_idx_path = 'last_idx.txt'
 
 local_dict = load_file('translator.json')
 
@@ -280,16 +281,16 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
             fixed_new_word, diff_pairs = call_new_keyword(origin_words[diff_key_idx], diff_pairs)
             if fixed_new_word == '0': # exit
                 print(f'[line {line_idx}] stop working...')
-                return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
+                return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
             new_words[diff_key_idx] = fixed_new_word
             fixed_new_lines[line_idx] = " ".join(new_words)
         elif key == "keep":
             strange_idxes.update([line_idx])
         else: # exit
             print(f'[line {line_idx}] stop working...')
-            return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
+            return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
 
-    return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes
+    return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
 
 if __name__== '__main__':
     origin_data = load_file(origin_filename)
@@ -301,9 +302,9 @@ if __name__== '__main__':
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
 
-    start_idx = 860
+    start_idx = int(load_file(start_idx_path)[0])
     print(f'start with line {start_idx}')
-    fixed_new_lines, diff_pairs, sim_pairs, strange_idxes = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
+    fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
 
     # save results
@@ -320,4 +321,7 @@ if __name__== '__main__':
     save_file(diff_pairs, diff_pairs_path)
     save_file(sim_pairs, sim_pairs_path)
     print('saved diff & sim pairs')
+
+    save_file([str(line_idx)], start_idx_path)
+    print(f'saved last idx {line_idx} at {start_idx_path}')
 
