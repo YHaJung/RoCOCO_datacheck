@@ -102,5 +102,11 @@
 	],
 	"sheep": [
 		"animal"
+	],
+	"fence": [
+		"facility"
+	],
+	"tracks": [
+		"structure"
 	]
 }

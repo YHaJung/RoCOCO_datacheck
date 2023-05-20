@@ -35,7 +35,10 @@
 		"women"
 	],
 	"tracks": [
-		"pool"
+		"pool",
+		"tower",
+		"window",
+		"tower"
 	],
 	"counters": [
 		"bedding"
@@ -220,7 +223,8 @@
 		"waves",
 		"banks",
 		"moon",
-		"skies"
+		"skies",
+		"beach"
 	],
 	"plane": [
 		"bicycle"
@@ -249,11 +253,13 @@
 		"huskie",
 		"cow",
 		"panda",
-		"dogs"
+		"dogs",
+		"tabby"
 	],
 	"giraffes": [
 		"sheeps",
-		"ducks"
+		"ducks",
+		"steers"
 	],
 	"fire": [
 		"meters",
@@ -320,7 +326,8 @@
 		"drive"
 	],
 	"cows": [
-		"crows"
+		"crows",
+		"wildlife"
 	],
 	"face": [
 		"elbow"
@@ -398,10 +405,14 @@
 		"doors"
 	],
 	"grass": [
-		"bank"
+		"bank",
+		"dusty",
+		"stone",
+		"rocks"
 	],
 	"zebra": [
-		"kitten"
+		"kitten",
+		"cows"
 	],
 	"legs": [
 		"beaks"
@@ -730,14 +741,18 @@
 		"advice"
 	],
 	"fence": [
-		"tunnel"
+		"tunnel",
+		"mural"
 	],
 	"giraffe": [
 		"cows",
-		"cow"
+		"cow",
+		"bear"
 	],
 	"basket": [
-		"carriage"
+		"carriage",
+		"carriage",
+		"glasses"
 	],
 	"set": [
 		"farmer"
@@ -759,5 +774,26 @@
 	],
 	"time": [
 		"alcohol"
+	],
+	"signs": [
+		"detour"
+	],
+	"detour": [
+		"traffic"
+	],
+	"bending": [
+		"jumping"
+	],
+	"goats": [
+		"zebra"
+	],
+	"ground": [
+		"pub"
+	],
+	"cars": [
+		"trains"
+	],
+	"engine": [
+		"stations"
 	]
 }
