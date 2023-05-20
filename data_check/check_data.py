@@ -8,7 +8,7 @@ sys.path.append(os.path.join(root_path, '..'))
 
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.downloaded.category import cate
-from utils.translate import translate_to_korean_local
+from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_diff_flags
 
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
@@ -202,9 +202,14 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         return "similar", diff_pairs, sim_pairs
     else:
         # ask judgeability (can judge only with the words)
-        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2) ")
+        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3) ")
+        if judgeability == '3':
+            origin_sentence = " ".join(origin_words)
+            new_sentence = " ".join(new_words)
+            print(f'{origin_sentence} -> {translate_to_korean(origin_sentence)}')
+            print(f'{new_sentence} -> {translate_to_korean(new_sentence)}')
         while judgeability not in ['1', '2']:
-            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2) ")
+            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3) ")
         if judgeability == '2':
             show_image(origin_words)
 
