@@ -160,9 +160,10 @@ def show_image(origin_words):
         if origin_line in img_captions:
             img_path = os.path.join('..', img_info['image'])
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
+            img = cv2.resize(img, (900, 600)) 
             cv2.namedWindow("window1")   # create a named window
+            cv2.imshow("window1", img)            
             cv2.moveWindow("window1", 800, 200)   # Move it to (40, 30)
-            cv2.imshow("window1", img)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
 
