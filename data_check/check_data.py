@@ -216,7 +216,7 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         # ask differency
         key = input("Are they different? Yes(1), No(2), Keep(3), exit(0) ")
         while key not in ['0', '1', '2', '3']:
-            key = input("Are they different? Yes(1), No(2), Keep(3), Show Image(4), exit(0) ")
+            key = input("Are they different? Yes(1), No(2), Keep(3), exit(0) ")
 
         if key == '1':
             if judgeability == '1':
