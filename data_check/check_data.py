@@ -231,17 +231,26 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         else:
             return "exit", diff_pairs, sim_pairs
 
-def call_new_keyword(origin_word, diff_pairs):
+def call_new_keyword(origin_word, diff_pairs, sim_pairs):
+    if origin_word in diff_pairs.keys() and len(diff_pairs[origin_word]) > 4:
+        fixed_new_word = random.choice(diff_pairs[origin_word])
+        print(f'[fixed] {origin_word} -> {fixed_new_word}')
+        return fixed_new_word, diff_pairs
+
     categories = cate()
     for category in categories.keys():
         if origin_word in categories[category]:
             user_ok = '2'
             fixed_new_word = random.choice(categories[category])
+            while origin_word in diff_pairs.keys() and fixed_new_word in diff_pairs[origin_word]:
+                fixed_new_word = random.choice(categories[category])            
             kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
             user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
                     fixed_new_word = random.choice(categories[category])
+                    while origin_word in sim_pairs.keys() and fixed_new_word in sim_pairs[origin_word]:
+                        fixed_new_word = random.choice(categories[category])      
                     kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
                 user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
@@ -284,7 +293,7 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
         if key == "different":
             continue
         elif key == "similar":
-            fixed_new_word, diff_pairs = call_new_keyword(origin_words[diff_key_idx], diff_pairs)
+            fixed_new_word, diff_pairs = call_new_keyword(origin_words[diff_key_idx], diff_pairs, sim_pairs)
             if fixed_new_word == '0': # exit
                 print(f'[line {line_idx}] stop working...')
                 return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
