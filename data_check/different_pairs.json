@@ -1,6 +1,8 @@
 {
 	"man": [
+		"baby",
 		"child",
+		"daughters",
 		"girl",
 		"girls",
 		"kids",
@@ -144,6 +146,7 @@
 		"kitchen",
 		"lake",
 		"office",
+		"restaurants",
 		"school"
 	],
 	"burger": [
@@ -384,6 +387,7 @@
 	"front": [
 		"background",
 		"backwards",
+		"behind",
 		"contours",
 		"downs",
 		"rear",
@@ -449,7 +453,8 @@
 		"heads",
 		"lettuce",
 		"notebooks",
-		"settee"
+		"settee",
+		"tire"
 	],
 	"shore": [
 		"apartment",
@@ -469,6 +474,7 @@
 		"six"
 	],
 	"water": [
+		"banks",
 		"lawn",
 		"ledge",
 		"mountain",
@@ -1066,7 +1072,9 @@
 	"window": [
 		"fountain",
 		"kiosks",
-		"signs"
+		"signs",
+		"statues",
+		"storage"
 	],
 	"tiger": [
 		"sheeps"
@@ -1360,7 +1368,8 @@
 		"bird"
 	],
 	"boat": [
-		"liner"
+		"liner",
+		"motorcycles"
 	],
 	"dirt": [
 		"wave"
@@ -1394,7 +1403,12 @@
 		"ducks",
 		"elephants",
 		"holstein",
-		"monkey"
+		"horse",
+		"monkey",
+		"mouse",
+		"steer",
+		"tiger",
+		"zebra"
 	],
 	"paw": [
 		"chin"
@@ -1626,5 +1640,24 @@
 	],
 	"buildings": [
 		"grave"
+	],
+	"language": [
+		"lid",
+		"rain"
+	],
+	"graffiti": [
+		"wintery"
+	],
+	"parking": [
+		"arrow"
+	],
+	"coin": [
+		"lights"
+	],
+	"truck": [
+		"motorcycle"
+	],
+	"trucks": [
+		"airliner"
 	]
 }
