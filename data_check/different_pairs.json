@@ -12,7 +12,8 @@
 		"queens"
 	],
 	"back": [
-		"left"
+		"left",
+		"front"
 	],
 	"mountains": [
 		"rainbow"
@@ -283,7 +284,8 @@
 	"airport": [
 		"seaside",
 		"home",
-		"habitat"
+		"habitat",
+		"savannah"
 	],
 	"airline": [
 		"ship"
@@ -315,7 +317,8 @@
 		"sea",
 		"ocean",
 		"waters",
-		"moon"
+		"moon",
+		"reserve"
 	],
 	"plane": [
 		"bicycle",
@@ -367,7 +370,6 @@
 		"meters",
 		"arrival",
 		"bridge",
-		"guards",
 		"lane"
 	],
 	"reflections": [
@@ -561,7 +563,8 @@
 		"stone",
 		"rocks",
 		"waters",
-		"rainbow"
+		"rainbow",
+		"rose"
 	],
 	"zebra": [
 		"kitten",
@@ -896,7 +899,8 @@
 	],
 	"area": [
 		"post",
-		"statues"
+		"statues",
+		"source"
 	],
 	"train": [
 		"horseback",
@@ -1010,7 +1014,9 @@
 		"cow",
 		"bear",
 		"zebras",
-		"sheep"
+		"sheep",
+		"elephants",
+		"sheeps"
 	],
 	"basket": [
 		"carriage",
@@ -1053,7 +1059,8 @@
 	],
 	"ground": [
 		"pub",
-		"hallway"
+		"hallway",
+		"buildings"
 	],
 	"cars": [
 		"trains"
@@ -1379,7 +1386,8 @@
 		"usa"
 	],
 	"track": [
-		"buildings"
+		"buildings",
+		"sidewalk"
 	],
 	"smoke": [
 		"bird"
@@ -1631,5 +1639,25 @@
 	],
 	"flight": [
 		"train"
+	],
+	"tarmac": [
+		"rays",
+		"teddy",
+		"dominoes"
+	],
+	"pavement": [
+		"church"
+	],
+	"passengers": [
+		"audience"
+	],
+	"safety": [
+		"foreground"
+	],
+	"path": [
+		"tree"
+	],
+	"buildings": [
+		"grave"
 	]
 }

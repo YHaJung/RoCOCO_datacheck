@@ -269,6 +269,10 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
 
     sim_pairs = load_file(sim_pairs_path)
     diff_pairs = load_file(diff_pairs_path)
+    for sim_key in sim_pairs.keys():
+        sim_pairs[sim_key] = set(sim_pairs[sim_key])
+    for diff_key in diff_pairs.keys():
+        diff_pairs[diff_key] = set(diff_pairs[diff_key])
     
     for line_idx, (origin_line, new_line) in enumerate(zip(origin_data, new_data)):
         if line_idx < start_idx or line_idx in strange_idxes:
