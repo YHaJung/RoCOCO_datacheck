@@ -2,7 +2,9 @@
 	"man": [
 		"gentlemen",
 		"guys",
-		"guy"
+		"guy",
+		"someone",
+		"men"
 	],
 	"street": [
 		"ground"
@@ -31,7 +33,9 @@
 	],
 	"table": [
 		"desk",
-		"desks"
+		"desks",
+		"furnishing",
+		"furniture"
 	],
 	"woman": [
 		"female",
@@ -47,11 +51,13 @@
 		"forth"
 	],
 	"outfit": [
-		"costume"
+		"costume",
+		"clothes"
 	],
 	"boy": [
 		"teenage",
-		"guy"
+		"guy",
+		"people"
 	],
 	"friends": [
 		"humans"
@@ -64,7 +70,9 @@
 	],
 	"girl": [
 		"youths",
-		"youngster"
+		"youngster",
+		"children",
+		"individuals"
 	],
 	"person": [
 		"individual"
@@ -83,7 +91,9 @@
 	],
 	"people": [
 		"individual",
-		"members"
+		"members",
+		"human",
+		"someone"
 	],
 	"room": [
 		"structure"
@@ -95,7 +105,8 @@
 		"rider"
 	],
 	"field": [
-		"land"
+		"land",
+		"vegetation"
 	],
 	"basket": [
 		"cases"
@@ -108,5 +119,87 @@
 	],
 	"tracks": [
 		"structure"
+	],
+	"train": [
+		"vehicle",
+		"transportation"
+	],
+	"top": [
+		"besides",
+		"above",
+		"overhead"
+	],
+	"fire": [
+		"signal.street"
+	],
+	"bushes": [
+		"plants"
+	],
+	"middle": [
+		"amidst"
+	],
+	"parents": [
+		"folks"
+	],
+	"cheese": [
+		"leftovers"
+	],
+	"dog": [
+		"pet"
+	],
+	"cell": [
+		"mobile",
+		"remote",
+		"machinery"
+	],
+	"wine": [
+		"liquor"
+	],
+	"airplane": [
+		"airline",
+		"vehicles"
+	],
+	"plane": [
+		"airliner",
+		"ride"
+	],
+	"chair": [
+		"furnishing"
+	],
+	"water": [
+		"ocean"
+	],
+	"beach": [
+		"coast"
+	],
+	"area": [
+		"place"
+	],
+	"sand": [
+		"soil"
+	],
+	"cake": [
+		"dessert"
+	],
+	"icing": [
+		"cake"
+	],
+	"hand": [
+		"finger"
+	],
+	"computer": [
+		"device"
+	],
+	"monitor": [
+		"machinery"
+	],
+	"silver": [
+		"metal"
+	],
+	"food": [
+		"meal"
+	],
+	"motorcycles": [
+		"motorbikes"
 	]
 }
