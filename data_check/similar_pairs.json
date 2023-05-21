@@ -1,10 +1,10 @@
 {
 	"man": [
 		"gentlemen",
-		"guys",
 		"guy",
-		"someone",
-		"men"
+		"guys",
+		"men",
+		"someone"
 	],
 	"street": [
 		"ground"
@@ -51,13 +51,13 @@
 		"forth"
 	],
 	"outfit": [
-		"costume",
-		"clothes"
+		"clothes",
+		"costume"
 	],
 	"boy": [
-		"teenage",
 		"guy",
-		"people"
+		"people",
+		"teenage"
 	],
 	"friends": [
 		"humans"
@@ -69,10 +69,10 @@
 		"sports"
 	],
 	"girl": [
-		"youths",
-		"youngster",
 		"children",
-		"individuals"
+		"individuals",
+		"youngster",
+		"youths"
 	],
 	"person": [
 		"individual"
@@ -90,9 +90,9 @@
 		"plants"
 	],
 	"people": [
+		"human",
 		"individual",
 		"members",
-		"human",
 		"someone"
 	],
 	"room": [
@@ -121,12 +121,12 @@
 		"structure"
 	],
 	"train": [
-		"vehicle",
-		"transportation"
+		"transportation",
+		"vehicle"
 	],
 	"top": [
-		"besides",
 		"above",
+		"besides",
 		"overhead"
 	],
 	"fire": [
@@ -148,9 +148,9 @@
 		"pet"
 	],
 	"cell": [
+		"machinery",
 		"mobile",
-		"remote",
-		"machinery"
+		"remote"
 	],
 	"wine": [
 		"liquor"
