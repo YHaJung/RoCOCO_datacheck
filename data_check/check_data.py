@@ -156,7 +156,8 @@ def show_image(origin_words):
     img_info_list = load_file('./downloaded/coco_karpathy_test.json')
     origin_line = " ".join(origin_words)
     for img_info in img_info_list:
-        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ') for img_cap in img_info['caption']]
+        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ').replace("\"", "") for img_cap in img_info['caption']]
+        origin_line = origin_line.replace("`` ", "").replace("'' ", "")
         if origin_line in img_captions:
             img_path = os.path.join('..', img_info['image'])
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
