@@ -633,6 +633,7 @@ def cate():
 'coat',
 'pants',
 'dress',
+'dresses',
 'gear',
 'suitcases',
 'umbrella',

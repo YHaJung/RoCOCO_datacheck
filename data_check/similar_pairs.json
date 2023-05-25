@@ -7,6 +7,7 @@
 		"someone"
 	],
 	"street": [
+		"areas",
 		"ground"
 	],
 	"bicyclists": [
@@ -75,6 +76,7 @@
 		"youths"
 	],
 	"person": [
+		"human",
 		"individual"
 	],
 	"center": [
@@ -127,6 +129,7 @@
 	"top": [
 		"above",
 		"besides",
+		"over",
 		"overhead"
 	],
 	"fire": [
@@ -148,6 +151,7 @@
 		"pet"
 	],
 	"cell": [
+		"electric",
 		"machinery",
 		"mobile",
 		"remote"
@@ -179,7 +183,8 @@
 		"soil"
 	],
 	"cake": [
-		"dessert"
+		"dessert",
+		"treats"
 	],
 	"icing": [
 		"cake"
@@ -188,7 +193,8 @@
 		"finger"
 	],
 	"computer": [
-		"device"
+		"device",
+		"laptops"
 	],
 	"monitor": [
 		"machinery"
@@ -204,5 +210,55 @@
 	],
 	"sky": [
 		"air"
+	],
+	"umbrellas": [
+		"items"
+	],
+	"bear": [
+		"animal"
+	],
+	"frisbees": [
+		"sports"
+	],
+	"camera": [
+		"device"
+	],
+	"leaves": [
+		"leafs"
+	],
+	"tray": [
+		"plat"
+	],
+	"shop": [
+		"place"
+	],
+	"bowl": [
+		"supplies"
+	],
+	"alcohol": [
+		"drink"
+	],
+	"wii": [
+		"game"
+	],
+	"desk": [
+		"furnishing",
+		"tables"
+	],
+	"collection": [
+		"dressed"
+	],
+	"steeple": [
+		"facility"
+	],
+	"plant": [
+		"grasses"
+	],
+	"cat": [
+		"kitten",
+		"tabby"
+	],
+	"paper": [
+		"object"
 	]
 }
