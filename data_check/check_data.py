@@ -4,7 +4,7 @@ import random
 
 import sys, os
 root_path = os.getcwd()
-sys.path.append(os.path.join(root_path, '..'))
+sys.path.append(root_path)
 
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.downloaded.category import cate
@@ -14,14 +14,12 @@ from utils.compare import find_diff_flags
 # origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
 # _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
 # _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
-origin_filename, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
-new_filename, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
-diff_pairs_path = 'different_pairs.json'
-sim_pairs_path = 'similar_pairs.json'
-start_idx_path = 'last_idx.txt'
-
-local_dict = load_file('translator.json')
-
+origin_filename, save_origin_filename = increment_filename('data_check/origin_caps/original_caps_fixed.txt')
+new_filename, save_new_filename = increment_filename('data_check/new_caps/same_caps_mod_fixed.txt')
+diff_pairs_path = 'data_check/different_pairs.json'
+sim_pairs_path = 'data_check/similar_pairs.json'
+start_idx_path = 'data_check/last_idx.txt'
+local_dict_path = 'utils/translator.json'
 
 def fix_sentence_by_user(first_line, second_line):
     print(f'[1] [{first_line}]')
@@ -153,18 +151,18 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
     return fixed_origin_lines, fixed_new_lines, strange_idxes
 
 def show_image(origin_words):
-    img_info_list = load_file('./downloaded/coco_karpathy_test.json')
+    img_info_list = load_file('data_check/downloaded/coco_karpathy_test.json')
     origin_line = " ".join(origin_words)
     for img_info in img_info_list:
         img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ').replace("\"", "") for img_cap in img_info['caption']]
         origin_line = origin_line.replace("`` ", "").replace("'' ", "")
         if origin_line in img_captions:
-            img_path = os.path.join('..', img_info['image'])
+            img_path = img_info['image']
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
-            img = cv2.resize(img, (900, 600)) 
+            img = cv2.resize(img, (400, 300)) 
             cv2.namedWindow("window1")   # create a named window
             cv2.imshow("window1", img)            
-            cv2.moveWindow("window1", 800, 200)   # Move it to (40, 30)
+            cv2.moveWindow("window1", 400, 50)   # Move it to (40, 30)
             cv2.waitKey(0)
             cv2.destroyAllWindows()
 
@@ -175,7 +173,7 @@ def add_in_pair(origin_word, new_word, pair):
         pair[origin_word] = [new_word]
     return pair
 
-def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs):
+def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs, local_dict):
     origin_diff_word, new_diff_word = origin_words[diff_key_idx], new_words[diff_key_idx]
 
     print_origin_line = ''
@@ -189,8 +187,8 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
             print_new_line += f'{new_words[word_idx]} '
     
 
-    kor_origin_word = translate_to_korean_local(local_dict, origin_diff_word)
-    kor_new_word = translate_to_korean_local(local_dict, new_diff_word)
+    local_dict, kor_origin_word = translate_to_korean_local(local_dict, origin_diff_word)
+    local_dict, kor_new_word = translate_to_korean_local(local_dict, new_diff_word)
     print_origin_line += f' ({kor_origin_word})'
     print_new_line += f' ({kor_new_word})'
 
@@ -198,19 +196,25 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
     print(print_new_line)
     
     if origin_diff_word in diff_pairs.keys() and new_diff_word in diff_pairs[origin_diff_word]:
-        return "different", diff_pairs, sim_pairs
+        return "different", diff_pairs, sim_pairs, local_dict
     elif origin_diff_word in sim_pairs.keys() and new_diff_word in sim_pairs[origin_diff_word]:
-        return "similar", diff_pairs, sim_pairs
+        return "similar", diff_pairs, sim_pairs, local_dict
     else:
         # ask judgeability (can judge only with the words)
-        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3) ")
-        if judgeability == '3':
-            origin_sentence = " ".join(origin_words)
-            new_sentence = " ".join(new_words)
-            print(f'{origin_sentence} -> {translate_to_korean(origin_sentence)}')
-            print(f'{new_sentence} -> {translate_to_korean(new_sentence)}')
+        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5) ")
+
         while judgeability not in ['1', '2']:
-            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3) ")
+            if judgeability == '3':
+                origin_sentence = " ".join(origin_words)
+                new_sentence = " ".join(new_words)
+                print(f'{origin_sentence} -> {translate_to_korean(origin_sentence)}')
+                print(f'{new_sentence} -> {translate_to_korean(new_sentence)}')
+            elif judgeability == '4':
+                local_dict[origin_diff_word] = input(f'[{origin_diff_word}] : ')
+            elif judgeability == '5':
+                local_dict[new_diff_word] = input(f'[{new_diff_word}] : ')
+            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5) ")
+        
         if judgeability == '2':
             show_image(origin_words)
 
@@ -222,43 +226,47 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         if key == '1':
             if judgeability == '1':
                 diff_pairs = add_in_pair(origin_diff_word, new_diff_word, diff_pairs)
-            return "different", diff_pairs, sim_pairs
+            return "different", diff_pairs, sim_pairs, local_dict
         elif key == '2':
             if judgeability == '1':
                 sim_pairs = add_in_pair(origin_diff_word, new_diff_word, sim_pairs)
-            return "similar", diff_pairs, sim_pairs
+            return "similar", diff_pairs, sim_pairs, local_dict
         elif key == '3':
-            return "keep", diff_pairs, sim_pairs
+            return "keep", diff_pairs, sim_pairs, local_dict
         else:
-            return "exit", diff_pairs, sim_pairs
+            return "exit", diff_pairs, sim_pairs, local_dict
 
-def call_new_keyword(origin_word, diff_pairs, sim_pairs):
+def call_new_keyword(origin_word, diff_pairs, sim_pairs, local_dict):
     if origin_word in diff_pairs.keys() and len(diff_pairs[origin_word]) > 4:
         fixed_new_word = random.choice(diff_pairs[origin_word])
         print(f'[fixed] {origin_word} -> {fixed_new_word}')
-        return fixed_new_word, diff_pairs
+        return fixed_new_word, diff_pairs, local_dict
 
     categories = cate()
     for category in categories.keys():
         if origin_word in categories[category]:
             user_ok = '2'
+            checked_words = [origin_word]
             fixed_new_word = random.choice(categories[category])
-            while origin_word in diff_pairs.keys() and fixed_new_word in diff_pairs[origin_word]:
+            while (fixed_new_word in checked_words) or (origin_word in sim_pairs.keys() and fixed_new_word in sim_pairs[origin_word]):
+                checked_words.append(fixed_new_word)
                 fixed_new_word = random.choice(categories[category])            
-            kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
+            local_dict, kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
             user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')
             while user_ok not in ['0', '1', '2', '4']:
                 if user_ok == '3':
+                    checked_words.append(fixed_new_word)
                     fixed_new_word = random.choice(categories[category])
-                    while origin_word in sim_pairs.keys() and fixed_new_word in sim_pairs[origin_word]:
+                    while (fixed_new_word in checked_words) or (origin_word in sim_pairs.keys() and fixed_new_word in sim_pairs[origin_word]):
+                        checked_words.append(fixed_new_word)
                         fixed_new_word = random.choice(categories[category])      
-                    kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
+                    local_dict, kor_new_word = translate_to_korean_local(local_dict, fixed_new_word)
                 user_ok = input(f'{origin_word} -> {fixed_new_word} ({kor_new_word}): Add in Pair(1), Only for this sentence(2), Other Word(3), Pick myself(4), exit(0) ')                                                        
             if user_ok == '1':
                 diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
-                return fixed_new_word, diff_pairs
+                return fixed_new_word, diff_pairs, local_dict
             elif user_ok == '2':
-                return fixed_new_word, diff_pairs
+                return fixed_new_word, diff_pairs, local_dict
             elif user_ok == '4':
                 print(f'origin word : {origin_word}')
                 print(f'{category} category : {categories[category]}')
@@ -266,15 +274,15 @@ def call_new_keyword(origin_word, diff_pairs, sim_pairs):
                 while fixed_new_word not in fixed_new_word and fixed_new_word != '0':
                     fixed_new_word = input('fixed new word(exit(0)) : ')
                 if fixed_new_word == '0':
-                    return '0', diff_pairs
+                    return '0', diff_pairs, local_dict
                 else:
                     diff_pairs = add_in_pair(origin_word, fixed_new_word, diff_pairs)
-                    return fixed_new_word, diff_pairs
+                    return fixed_new_word, diff_pairs, local_dict
             else:
-                return '0', diff_pairs
+                return '0', diff_pairs, local_dict
 
 
-def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
+def check_similar_words(origin_data, new_data, local_dict, strange_idxes, start_idx=0):
     fixed_new_lines = new_data
 
     sim_pairs = load_file(sim_pairs_path)
@@ -288,29 +296,30 @@ def check_similar_words(origin_data, new_data, strange_idxes, start_idx=0):
 
         diff_key_idx = find_diff_flags(origin_words, new_words).index(1)
 
-        key, diff_pairs, sim_pairs = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs)
+        key, diff_pairs, sim_pairs, local_dict = check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pairs, local_dict)
         print(f'[line {line_idx}] ({key})')
 
         if key == "different":
             continue
         elif key == "similar":
-            fixed_new_word, diff_pairs = call_new_keyword(origin_words[diff_key_idx], diff_pairs, sim_pairs)
+            fixed_new_word, diff_pairs, local_dict = call_new_keyword(origin_words[diff_key_idx], diff_pairs, sim_pairs, local_dict)
             if fixed_new_word == '0': # exit
                 print(f'[line {line_idx}] stop working...')
-                return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
+                return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx, local_dict
             new_words[diff_key_idx] = fixed_new_word
             fixed_new_lines[line_idx] = " ".join(new_words)
         elif key == "keep":
             strange_idxes.update([line_idx])
         else: # exit
             print(f'[line {line_idx}] stop working...')
-            return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
+            return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx, local_dict
 
-    return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx
+    return fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx, local_dict
 
 if __name__== '__main__':
     origin_data = load_file(origin_filename)
     new_data = load_file(new_filename)
+    local_dict = load_file(local_dict_path)
     strange_idxes = set([int(line) for line in load_file('strange_idxes.txt')])
     print(f'start strange idxes : {sorted(list(strange_idxes))}\n')
     # print(new_data)
@@ -320,7 +329,7 @@ if __name__== '__main__':
 
     start_idx = int(load_file(start_idx_path)[0])
     print(f'start with line {start_idx}')
-    fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx = check_similar_words(fixed_origin_lines, fixed_new_lines, strange_idxes, start_idx)
+    fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx, local_dict = check_similar_words(fixed_origin_lines, fixed_new_lines, local_dict, strange_idxes, start_idx)
     print(f'last strange idxes : {strange_idxes}')
 
     # save results
@@ -345,4 +354,7 @@ if __name__== '__main__':
 
     save_file([str(line_idx)], start_idx_path)
     print(f'saved last idx {line_idx} at {start_idx_path}')
+
+    save_file(local_dict, local_dict_path)
+    print(f'saved local dict at {local_dict_path}')
 
