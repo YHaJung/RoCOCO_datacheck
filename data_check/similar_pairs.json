@@ -40,7 +40,8 @@
 	],
 	"woman": [
 		"female",
-		"humans"
+		"humans",
+		"ladies"
 	],
 	"lady": [
 		"adult"
@@ -260,5 +261,20 @@
 	],
 	"paper": [
 		"object"
+	],
+	"wire": [
+		"steel"
+	],
+	"giraffe": [
+		"wildlife"
+	],
+	"coast": [
+		"sea"
+	],
+	"onlooker": [
+		"spectators"
+	],
+	"ground": [
+		"place"
 	]
 }

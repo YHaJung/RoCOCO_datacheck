@@ -1,6 +1,12 @@
 
 import googletrans
 
+# import sys, os
+# root_path = os.getcwd()
+# sys.path.append(root_path)
+
+from utils.file_processing import save_file, load_file
+
 def translate_to_korean(word):
     translator = googletrans.Translator()
     again_flag = True
@@ -14,10 +20,11 @@ def translate_to_korean(word):
 
 def translate_to_korean_local(myDict, word):
     if word in myDict.keys():
-        return myDict[word]
+        return myDict, myDict[word]
     else:
-        print(f'The word [{word}] is not in local dict. Lets use google translater.')
-        return translate_to_korean(word)
+        print(f'\nThe word [{word}] is not in local dict. Lets update it with google translater.')
+        myDict[word] = translate_to_korean(word)
+        return myDict, myDict[word]
     
 def translate_all_to_korean(list):
     myDict = {}

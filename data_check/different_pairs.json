@@ -17,13 +17,15 @@
 	],
 	"back": [
 		"front",
-		"left"
+		"left",
+		"north"
 	],
 	"mountains": [
 		"rainbow"
 	],
 	"side": [
 		"bakery",
+		"country",
 		"pond"
 	],
 	"intent": [
@@ -38,22 +40,22 @@
 		"guy",
 		"male",
 		"men",
-		"para-sailers"
+		"para-sailers",
+		"parents"
 	],
 	"guy": [
 		"batter",
 		"women"
 	],
 	"tracks": [
+		"architecture",
+		"kiosks",
 		"pool",
 		"tower",
 		"window"
 	],
 	"counters": [
 		"bedding"
-	],
-	"tops": [
-		"front"
 	],
 	"glasses": [
 		"cabinets",
@@ -287,7 +289,8 @@
 		"habitat",
 		"home",
 		"savannah",
-		"seaside"
+		"seaside",
+		"shore"
 	],
 	"airline": [
 		"ship"
@@ -369,10 +372,12 @@
 		"steers"
 	],
 	"fire": [
+		"airstrip",
 		"arrival",
 		"bridge",
 		"lane",
-		"meters"
+		"meters",
+		"thruway"
 	],
 	"reflections": [
 		"downhill"
@@ -405,16 +410,15 @@
 	],
 	"cow": [
 		"dog",
-		"dogs"
+		"dogs",
+		"elephants"
 	],
 	"front": [
 		"background",
 		"backwards",
 		"behind",
 		"contours",
-		"downs",
-		"rear",
-		"underside"
+		"rear"
 	],
 	"brown": [
 		"blue",
@@ -442,7 +446,9 @@
 	],
 	"cows": [
 		"crows",
+		"giraffes",
 		"hedgehog",
+		"horses",
 		"wildlife"
 	],
 	"face": [
@@ -482,6 +488,7 @@
 	],
 	"shore": [
 		"apartment",
+		"bedroom",
 		"country",
 		"restaurant"
 	],
@@ -627,6 +634,7 @@
 	"boy": [
 		"bride",
 		"female",
+		"girls",
 		"ladies",
 		"mother",
 		"queens"
@@ -746,6 +754,7 @@
 	],
 	"bed": [
 		"chair",
+		"counter",
 		"counters",
 		"desk",
 		"stool",
@@ -885,9 +894,11 @@
 	"bears": [
 		"bee",
 		"cattle",
+		"duck",
 		"elephant",
 		"giraffes",
 		"holstein",
+		"kitty",
 		"llamas"
 	],
 	"teddy": [
@@ -935,8 +946,10 @@
 		"boats",
 		"horseback",
 		"jet",
+		"motorbike",
 		"motorcycle",
 		"sailboats",
+		"suv",
 		"suvs"
 	],
 	"counter": [
@@ -1035,6 +1048,7 @@
 		"advice"
 	],
 	"fence": [
+		"buliding",
 		"containers",
 		"mural",
 		"tunnel"
@@ -1050,7 +1064,8 @@
 	],
 	"basket": [
 		"carriage",
-		"glasses"
+		"glasses",
+		"wheel"
 	],
 	"set": [
 		"farmer"
@@ -1144,6 +1159,7 @@
 		"thanksgiving"
 	],
 	"neck": [
+		"elbow",
 		"knees",
 		"lap"
 	],
@@ -1160,12 +1176,14 @@
 		"fit"
 	],
 	"cat": [
+		"bull",
 		"cow",
 		"deer",
 		"duck",
 		"ducks",
 		"elephant",
 		"elephants",
+		"hedgehog",
 		"horse",
 		"steer",
 		"zebra"
@@ -1202,8 +1220,10 @@
 	"mouth": [
 		"arm",
 		"backs",
+		"finger",
 		"heel",
 		"hooves",
+		"knee",
 		"lap",
 		"shoulders"
 	],
@@ -1256,6 +1276,7 @@
 	],
 	"country": [
 		"bathroom",
+		"deck",
 		"zoo"
 	],
 	"spectators": [
@@ -1446,6 +1467,7 @@
 		"motorcycles"
 	],
 	"dirt": [
+		"rainbow",
 		"wave"
 	],
 	"walks": [
@@ -1453,6 +1475,7 @@
 	],
 	"elephant": [
 		"duck",
+		"giraffe",
 		"zebra"
 	],
 	"forest": [
@@ -1474,6 +1497,7 @@
 	],
 	"bear": [
 		"bee",
+		"cattle",
 		"dog",
 		"ducks",
 		"elephants",
@@ -1489,7 +1513,8 @@
 		"mouse",
 		"steer",
 		"tiger",
-		"zebra"
+		"zebra",
+		"zebras"
 	],
 	"paw": [
 		"chin"
@@ -1540,6 +1565,7 @@
 		"tap"
 	],
 	"metal": [
+		"plastic",
 		"wood"
 	],
 	"fruit": [
@@ -1743,13 +1769,20 @@
 		"wintery"
 	],
 	"parking": [
-		"arrow"
+		"arrow",
+		"guards"
 	],
 	"coin": [
 		"lights"
 	],
 	"truck": [
-		"motorcycle"
+		"bicycle",
+		"boat",
+		"buses",
+		"dump",
+		"metro",
+		"motorcycle",
+		"suv"
 	],
 	"trucks": [
 		"airliner"
@@ -1876,5 +1909,47 @@
 	],
 	"remnants": [
 		"skis"
+	],
+	"wire": [
+		"fluffy"
+	],
+	"coast": [
+		"pasture"
+	],
+	"tons": [
+		"beaks"
+	],
+	"suv": [
+		"liner"
+	],
+	"night": [
+		"cloth"
+	],
+	"ornament": [
+		"barn"
+	],
+	"bull": [
+		"tabby"
+	],
+	"dump": [
+		"airways"
+	],
+	"blanket": [
+		"mirror"
+	],
+	"cattle": [
+		"tiger"
+	],
+	"hay": [
+		"rock"
+	],
+	"ears": [
+		"feet"
+	],
+	"road": [
+		"rooms"
+	],
+	"onlooker": [
+		"pitcher"
 	]
 }
