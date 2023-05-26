@@ -73,6 +73,7 @@
 	"girl": [
 		"children",
 		"individuals",
+		"teenage",
 		"youngster",
 		"youths"
 	],
@@ -276,5 +277,8 @@
 	],
 	"ground": [
 		"place"
+	],
+	"book": [
+		"objects"
 	]
 }

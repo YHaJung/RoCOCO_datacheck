@@ -299,6 +299,7 @@
 		"ball",
 		"basketball",
 		"battle",
+		"frisbees",
 		"kite",
 		"maneuver",
 		"racket",
@@ -553,6 +554,7 @@
 	"plate": [
 		"bins",
 		"blades",
+		"butcher",
 		"countertop",
 		"cup",
 		"hood",
@@ -629,6 +631,7 @@
 	],
 	"skis": [
 		"gym",
+		"skate",
 		"surfboard"
 	],
 	"boy": [
@@ -850,6 +853,7 @@
 		"roller-skates",
 		"skates",
 		"ski",
+		"snowboards",
 		"stunt",
 		"stunts",
 		"surf",
@@ -869,6 +873,7 @@
 	],
 	"home": [
 		"grave",
+		"plaza",
 		"school"
 	],
 	"battle": [
@@ -1087,7 +1092,8 @@
 		"moon"
 	],
 	"time": [
-		"alcohol"
+		"alcohol",
+		"object"
 	],
 	"signs": [
 		"detour"
@@ -1142,6 +1148,7 @@
 		"lane"
 	],
 	"window": [
+		"canopy",
 		"fountain",
 		"kiosks",
 		"signs",
@@ -1208,6 +1215,7 @@
 		"actors"
 	],
 	"frisbee": [
+		"fastball",
 		"golf",
 		"kick",
 		"kite",
@@ -1264,6 +1272,7 @@
 	"fruits": [
 		"blooms",
 		"creamy",
+		"grasses",
 		"log",
 		"stems"
 	],
@@ -1283,7 +1292,8 @@
 		"seamen"
 	],
 	"slope": [
-		"hallway"
+		"hallway",
+		"library"
 	],
 	"food": [
 		"dog",
@@ -1542,7 +1552,8 @@
 	],
 	"broccoli": [
 		"glaze",
-		"pie"
+		"pie",
+		"platter"
 	],
 	"dish": [
 		"bun"
@@ -1570,7 +1581,8 @@
 	],
 	"fruit": [
 		"condiment",
-		"grasses"
+		"grasses",
+		"log"
 	],
 	"sand": [
 		"clouds"
@@ -1961,5 +1973,38 @@
 	"couch": [
 		"desk",
 		"tables"
+	],
+	"book": [
+		"ribbon"
+	],
+	"drop": [
+		"height"
+	],
+	"bananas": [
+		"burgers"
+	],
+	"apples": [
+		"icing"
+	],
+	"aspect": [
+		"steeple"
+	],
+	"images": [
+		"paste"
+	],
+	"bunches": [
+		"tower"
+	],
+	"farmers": [
+		"army"
+	],
+	"market": [
+		"hotel"
+	],
+	"bushels": [
+		"doors"
+	],
+	"members": [
+		"umpires"
 	]
 }
