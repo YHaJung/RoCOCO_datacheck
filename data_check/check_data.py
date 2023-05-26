@@ -11,11 +11,7 @@ from data_check.downloaded.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_diff_flags
 
-# origin_filename, new_filename = 'origin_caps/original_caps_fixed_1.txt', 'new_caps/same_caps_mod_fixed_1.txt'
-# _, save_origin_filename = increment_filename('origin_caps/original_caps_fixed.txt')
-# _, save_new_filename = increment_filename('new_caps/same_caps_mod_fixed.txt')
-origin_filename, save_origin_filename = increment_filename('data_check/origin_caps/original_caps_fixed.txt')
-new_filename, save_new_filename = increment_filename('data_check/new_caps/same_caps_mod_fixed.txt')
+origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/same_caps_mod_fixed.txt'
 diff_pairs_path = 'data_check/different_pairs.json'
 sim_pairs_path = 'data_check/similar_pairs.json'
 start_idx_path = 'data_check/last_idx.txt'
@@ -335,9 +331,9 @@ if __name__== '__main__':
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]
     fixed_new_lines = [line + ' .\n' for line in fixed_new_lines]
-    save_file(fixed_origin_lines, save_origin_filename)
-    save_file(fixed_new_lines, save_new_filename)
-    print(f'saved results in \n{save_origin_filename}, \n{save_new_filename}')
+    save_file(fixed_origin_lines, origin_filename)
+    save_file(fixed_new_lines, new_filename)
+    print(f'saved results in \n{origin_filename}, \n{new_filename}')
 
     strange_idxes_string = "\n".join(map(str, sorted(strange_idxes)))
     save_file(strange_idxes_string, 'strange_idxes.txt')
