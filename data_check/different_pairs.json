@@ -1649,7 +1649,13 @@
 		"soil"
 	],
 	"two": [
-		"airliner"
+		"airliner",
+		"dozen",
+		"one",
+		"seven",
+		"single",
+		"six",
+		"three"
 	],
 	"computer": [
 		"analog",
@@ -1951,5 +1957,9 @@
 	],
 	"onlooker": [
 		"pitcher"
+	],
+	"couch": [
+		"desk",
+		"tables"
 	]
 }

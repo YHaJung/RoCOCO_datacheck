@@ -1373,7 +1373,7 @@
 	"display": "표시하다",
 	"gourmet": "식도락가",
 	"chelsea": "첼시",
-	"couch": "침상",
+	"couch": "쇼파",
 	"benches": "벤치",
 	"containing": "포함",
 	"burton": "버튼",
@@ -2327,7 +2327,7 @@
 	"snout": "주둥이",
 	"cow": "암소",
 	"children": "어린이들",
-	"guys": "얘들아",
+	"guys": "사내들",
 	"blender": "블렌더",
 	"covering": "피복",
 	"fork.a": "포크",
@@ -2386,5 +2386,6 @@
 	"traintrack": "기찻길",
 	"bone": "뼈",
 	"streets": "시가",
-	"rooms": "방"
+	"rooms": "방",
+	"three": "삼"
 }
