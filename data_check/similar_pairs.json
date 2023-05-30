@@ -4,6 +4,7 @@
 		"guy",
 		"guys",
 		"men",
+		"persons",
 		"someone"
 	],
 	"street": [
@@ -97,6 +98,7 @@
 		"human",
 		"individual",
 		"members",
+		"persons",
 		"someone"
 	],
 	"room": [
@@ -125,6 +127,7 @@
 		"structure"
 	],
 	"train": [
+		"transit",
 		"transportation",
 		"vehicle"
 	],
@@ -217,7 +220,8 @@
 		"items"
 	],
 	"bear": [
-		"animal"
+		"animal",
+		"animals"
 	],
 	"frisbees": [
 		"sports"
@@ -280,5 +284,26 @@
 	],
 	"book": [
 		"objects"
+	],
+	"skier": [
+		"skiiers"
+	],
+	"jacket": [
+		"outfit"
+	],
+	"boys": [
+		"youngster"
+	],
+	"video": [
+		"game"
+	],
+	"mirror": [
+		"goods"
+	],
+	"tower": [
+		"structure"
+	],
+	"t.v": [
+		"machine"
 	]
 }

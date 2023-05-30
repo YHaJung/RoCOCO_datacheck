@@ -4,6 +4,7 @@ import random
 
 import sys, os
 root_path = os.getcwd()
+print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from utils.file_processing import increment_filename, save_file, load_file
@@ -16,6 +17,7 @@ diff_pairs_path = 'data_check/different_pairs.json'
 sim_pairs_path = 'data_check/similar_pairs.json'
 start_idx_path = 'data_check/last_idx.txt'
 local_dict_path = 'utils/translator.json'
+strange_idxes_path = 'data_check/strange_idxes.txt'
 
 def fix_sentence_by_user(first_line, second_line):
     print(f'[1] [{first_line}]')
@@ -316,7 +318,7 @@ if __name__== '__main__':
     origin_data = load_file(origin_filename)
     new_data = load_file(new_filename)
     local_dict = load_file(local_dict_path)
-    strange_idxes = set([int(line) for line in load_file('strange_idxes.txt')])
+    strange_idxes = set([int(line) for line in load_file(strange_idxes_path)])
     print(f'start strange idxes : {sorted(list(strange_idxes))}\n')
     # print(new_data)
 
@@ -336,7 +338,7 @@ if __name__== '__main__':
     print(f'saved results in \n{origin_filename}, \n{new_filename}')
 
     strange_idxes_string = "\n".join(map(str, sorted(strange_idxes)))
-    save_file(strange_idxes_string, 'strange_idxes.txt')
+    save_file(strange_idxes_string, strange_idxes_path)
     print('saved strange idxes')
 
     
