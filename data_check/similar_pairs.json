@@ -3,6 +3,7 @@
 		"gentlemen",
 		"guy",
 		"guys",
+		"individual",
 		"men",
 		"persons",
 		"someone"
@@ -15,7 +16,8 @@
 		"humans"
 	],
 	"bathroom": [
-		"shower"
+		"shower",
+		"toilet"
 	],
 	"items": [
 		"sticks"
@@ -34,6 +36,8 @@
 		"meal"
 	],
 	"table": [
+		"counter",
+		"counters",
 		"desk",
 		"desks",
 		"furnishing",
@@ -59,6 +63,7 @@
 	],
 	"boy": [
 		"guy",
+		"kid",
 		"people",
 		"teenage"
 	],
@@ -111,6 +116,7 @@
 		"rider"
 	],
 	"field": [
+		"grounds",
 		"land",
 		"vegetation"
 	],
@@ -150,6 +156,7 @@
 		"folks"
 	],
 	"cheese": [
+		"cream",
 		"leftovers"
 	],
 	"dog": [
@@ -170,7 +177,8 @@
 	],
 	"plane": [
 		"airliner",
-		"ride"
+		"ride",
+		"trailer"
 	],
 	"chair": [
 		"furnishing"
@@ -188,6 +196,7 @@
 		"soil"
 	],
 	"cake": [
+		"cuisine",
 		"dessert",
 		"treats"
 	],
@@ -301,9 +310,53 @@
 		"goods"
 	],
 	"tower": [
+		"architecture",
 		"structure"
 	],
 	"t.v": [
 		"machine"
+	],
+	"dress": [
+		"outfits"
+	],
+	"banana": [
+		"fruits"
+	],
+	"mustard": [
+		"foods"
+	],
+	"bed": [
+		"furnishing"
+	],
+	"professionals": [
+		"person"
+	],
+	"airport": [
+		"places"
+	],
+	"blue": [
+		"navy"
+	],
+	"railroad": [
+		"rail"
+	],
+	"guys": [
+		"adult"
+	],
+	"grass": [
+		"greenery"
+	],
+	"women": [
+		"female"
+	],
+	"shirt": [
+		"dresses"
+	],
+	"iphone": [
+		"cell",
+		"phones"
+	],
+	"back": [
+		"rear"
 	]
 }

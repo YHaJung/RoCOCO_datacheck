@@ -157,7 +157,7 @@ def show_image(origin_words):
         if origin_line in img_captions:
             img_path = img_info['image']
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
-            img = cv2.resize(img, (400, 300)) 
+            img = cv2.resize(img, (600, 500)) 
             cv2.namedWindow("window1")   # create a named window
             cv2.imshow("window1", img)            
             cv2.moveWindow("window1", 400, 50)   # Move it to (40, 30)
