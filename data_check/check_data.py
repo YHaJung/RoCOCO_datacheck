@@ -150,11 +150,21 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
 
 def show_image(origin_words):
     img_info_list = load_file('data_check/downloaded/coco_karpathy_test.json')
-    origin_line = " ".join(origin_words)
+    origin_line = " ".join(origin_words).replace("`", "").replace('\'', '').replace('  ', ' ').strip(' ')
+
+    start_idx, end_idx = 0, len(origin_line)
+    # start_idx, end_idx = 0, 20
+    origin_line_check = origin_line[start_idx:end_idx]
+    
     for img_info in img_info_list:
-        img_captions = [ img_cap.rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ').replace("\"", "") for img_cap in img_info['caption']]
-        origin_line = origin_line.replace("`` ", "").replace("'' ", "")
-        if origin_line in img_captions:
+        img_captions = [img_cap.strip(' ').rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ').replace("\"", "").replace('\'', '') for img_cap in img_info['caption']]
+        
+        img_captions_check = [img_caption[start_idx:end_idx] for img_caption in img_captions]
+        if origin_line_check in img_captions_check:
+            if start_idx != 0 or end_idx != len(origin_line):
+                print([origin_line])
+                print(img_captions)
+        # if origin_line in img_captions:
             img_path = img_info['image']
             img = cv2.imread(img_path, cv2.IMREAD_ANYCOLOR)
             img = cv2.resize(img, (600, 500)) 
