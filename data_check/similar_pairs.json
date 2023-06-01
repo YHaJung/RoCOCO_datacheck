@@ -5,27 +5,33 @@
 		"guys",
 		"individual",
 		"men",
+		"person",
 		"persons",
 		"someone"
 	],
 	"street": [
 		"areas",
-		"ground"
+		"ground",
+		"roadside"
 	],
 	"bicyclists": [
 		"humans"
 	],
 	"bathroom": [
+		"restroom",
 		"shower",
 		"toilet"
 	],
 	"items": [
-		"sticks"
+		"kit",
+		"sticks",
+		"stuff"
 	],
 	"black": [
 		"dark"
 	],
 	"building": [
+		"buliding",
 		"places"
 	],
 	"side": [
@@ -46,7 +52,10 @@
 	"woman": [
 		"female",
 		"humans",
-		"ladies"
+		"ladies",
+		"person",
+		"persons",
+		"women"
 	],
 	"lady": [
 		"adult"
@@ -79,12 +88,15 @@
 	"girl": [
 		"children",
 		"individuals",
+		"person",
 		"teenage",
 		"youngster",
 		"youths"
 	],
 	"person": [
+		"fellow",
 		"human",
+		"humans",
 		"individual"
 	],
 	"center": [
@@ -101,7 +113,9 @@
 	],
 	"people": [
 		"human",
+		"humans",
 		"individual",
+		"individuals",
 		"members",
 		"persons",
 		"someone"
@@ -118,18 +132,21 @@
 	"field": [
 		"grounds",
 		"land",
+		"plain",
 		"vegetation"
 	],
 	"basket": [
 		"cases"
 	],
 	"sheep": [
-		"animal"
+		"animal",
+		"cattle"
 	],
 	"fence": [
 		"facility"
 	],
 	"tracks": [
+		"path",
 		"structure"
 	],
 	"train": [
@@ -150,7 +167,8 @@
 		"plants"
 	],
 	"middle": [
-		"amidst"
+		"amidst",
+		"centre"
 	],
 	"parents": [
 		"folks"
@@ -166,9 +184,13 @@
 		"electric",
 		"machinery",
 		"mobile",
-		"remote"
+		"phones",
+		"remote",
+		"remotes",
+		"telephone"
 	],
 	"wine": [
+		"drinks",
 		"liquor"
 	],
 	"airplane": [
@@ -190,7 +212,8 @@
 		"coast"
 	],
 	"area": [
-		"place"
+		"place",
+		"space"
 	],
 	"sand": [
 		"soil"
@@ -270,6 +293,8 @@
 		"grasses"
 	],
 	"cat": [
+		"animal",
+		"animals",
 		"kitten",
 		"tabby"
 	],
@@ -326,7 +351,8 @@
 		"foods"
 	],
 	"bed": [
-		"furnishing"
+		"furnishing",
+		"mattress"
 	],
 	"professionals": [
 		"person"
@@ -358,5 +384,84 @@
 	],
 	"back": [
 		"rear"
+	],
+	"party": [
+		"celebration"
+	],
+	"tomatoes": [
+		"tomato"
+	],
+	"tv": [
+		"device"
+	],
+	"panda": [
+		"animal"
+	],
+	"mattress": [
+		"furnishing"
+	],
+	"wave": [
+		"sea"
+	],
+	"bread": [
+		"foodstuffs"
+	],
+	"counters": [
+		"tables"
+	],
+	"car": [
+		"transportation"
+	],
+	"case": [
+		"box"
+	],
+	"underneath": [
+		"beneath"
+	],
+	"giraffes": [
+		"animal"
+	],
+	"telephone": [
+		"phones"
+	],
+	"equipment": [
+		"item"
+	],
+	"mother": [
+		"someone"
+	],
+	"kit": [
+		"toys"
+	],
+	"players": [
+		"human"
+	],
+	"passengers": [
+		"individuals"
+	],
+	"shore": [
+		"areas",
+		"seaside"
+	],
+	"elephants": [
+		"cattle"
+	],
+	"bananas": [
+		"staple"
+	],
+	"string": [
+		"tool"
+	],
+	"phone": [
+		"machinery"
+	],
+	"road": [
+		"runway"
+	],
+	"track": [
+		"rails"
+	],
+	"bull": [
+		"cows"
 	]
 }
