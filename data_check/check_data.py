@@ -150,14 +150,14 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
 
 def show_image(origin_words):
     img_info_list = load_file('data_check/downloaded/coco_karpathy_test.json')
-    origin_line = " ".join(origin_words).replace("`", "").replace('\'', '').replace('  ', ' ').strip(' ')
+    origin_line = " ".join(origin_words).replace("`", "").replace('\'', ' ').replace('  ', ' ').strip(' ')
 
     start_idx, end_idx = 0, len(origin_line)
-    # start_idx, end_idx = 0, 20
+    # start_idx, end_idx = 0, 15
     origin_line_check = origin_line[start_idx:end_idx]
     
     for img_info in img_info_list:
-        img_captions = [img_cap.strip(' ').rstrip('\n').rstrip(' \.').lower().replace(',', ' ,').replace('\'', ' \'').replace('  ', ' ').replace("\"", "").replace('\'', '') for img_cap in img_info['caption']]
+        img_captions = [img_cap.strip(' ').rstrip('\n').rstrip(' \.').lower().replace(',', ' , ').replace(';', ' ; ').replace('\'', ' ').replace("\"", " ").replace('  ', ' ') for img_cap in img_info['caption']]
         
         img_captions_check = [img_caption[start_idx:end_idx] for img_caption in img_captions]
         if origin_line_check in img_captions_check:
