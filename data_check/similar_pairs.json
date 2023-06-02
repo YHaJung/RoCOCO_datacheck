@@ -18,6 +18,7 @@
 		"humans"
 	],
 	"bathroom": [
+		"indoor",
 		"restroom",
 		"shower",
 		"toilet"
@@ -25,7 +26,8 @@
 	"items": [
 		"kit",
 		"sticks",
-		"stuff"
+		"stuff",
+		"utility"
 	],
 	"black": [
 		"dark"
@@ -50,8 +52,10 @@
 		"furniture"
 	],
 	"woman": [
+		"fellow",
 		"female",
 		"humans",
+		"individuals",
 		"ladies",
 		"person",
 		"persons",
@@ -73,6 +77,7 @@
 	"boy": [
 		"guy",
 		"kid",
+		"kiddie",
 		"people",
 		"teenage"
 	],
@@ -80,16 +85,21 @@
 		"humans"
 	],
 	"pizza": [
+		"meal",
 		"meals"
 	],
 	"tennis": [
+		"rackets",
+		"sport",
 		"sports"
 	],
 	"girl": [
 		"children",
 		"individuals",
+		"lady",
 		"person",
 		"teenage",
+		"women",
 		"youngster",
 		"youths"
 	],
@@ -103,15 +113,18 @@
 		"midst"
 	],
 	"baseball": [
+		"fastball",
 		"sport"
 	],
 	"uniform": [
 		"dresses"
 	],
 	"flowers": [
+		"blooms",
 		"plants"
 	],
 	"people": [
+		"folks",
 		"human",
 		"humans",
 		"individual",
@@ -121,6 +134,7 @@
 		"someone"
 	],
 	"room": [
+		"construction",
 		"structure"
 	],
 	"stuff": [
@@ -130,6 +144,7 @@
 		"rider"
 	],
 	"field": [
+		"forest",
 		"grounds",
 		"land",
 		"plain",
@@ -168,7 +183,8 @@
 	],
 	"middle": [
 		"amidst",
-		"centre"
+		"centre",
+		"midst"
 	],
 	"parents": [
 		"folks"
@@ -209,7 +225,8 @@
 		"ocean"
 	],
 	"beach": [
-		"coast"
+		"coast",
+		"site"
 	],
 	"area": [
 		"place",
@@ -221,6 +238,7 @@
 	"cake": [
 		"cuisine",
 		"dessert",
+		"sweet",
 		"treats"
 	],
 	"icing": [
@@ -231,6 +249,7 @@
 	],
 	"computer": [
 		"device",
+		"devices",
 		"laptops"
 	],
 	"monitor": [
@@ -240,20 +259,25 @@
 		"metal"
 	],
 	"food": [
+		"breakfast",
+		"cuisine",
+		"dinner",
 		"meal"
 	],
 	"motorcycles": [
 		"motorbikes"
 	],
 	"sky": [
-		"air"
+		"air",
+		"landscape"
 	],
 	"umbrellas": [
 		"items"
 	],
 	"bear": [
 		"animal",
-		"animals"
+		"animals",
+		"pet"
 	],
 	"frisbees": [
 		"sports"
@@ -336,6 +360,7 @@
 	],
 	"tower": [
 		"architecture",
+		"buliding",
 		"structure"
 	],
 	"t.v": [
@@ -376,6 +401,8 @@
 		"female"
 	],
 	"shirt": [
+		"attire",
+		"costume",
 		"dresses"
 	],
 	"iphone": [
@@ -383,6 +410,7 @@
 		"phones"
 	],
 	"back": [
+		"behind",
 		"rear"
 	],
 	"party": [
@@ -441,9 +469,11 @@
 	],
 	"shore": [
 		"areas",
+		"beach",
 		"seaside"
 	],
 	"elephants": [
+		"animals",
 		"cattle"
 	],
 	"bananas": [
@@ -453,6 +483,7 @@
 		"tool"
 	],
 	"phone": [
+		"device",
 		"machinery"
 	],
 	"road": [
@@ -463,5 +494,123 @@
 	],
 	"bull": [
 		"cows"
+	],
+	"child": [
+		"kids"
+	],
+	"counter": [
+		"furnishing",
+		"furniture"
+	],
+	"calf": [
+		"animals"
+	],
+	"veggies": [
+		"plantains"
+	],
+	"carrots": [
+		"vegetables"
+	],
+	"snowboarder": [
+		"individual"
+	],
+	"racket": [
+		"racquets"
+	],
+	"female": [
+		"human",
+		"woman"
+	],
+	"place": [
+		"location"
+	],
+	"house": [
+		"indoor"
+	],
+	"vases": [
+		"holder"
+	],
+	"enclosure": [
+		"outfield"
+	],
+	"metal": [
+		"brass",
+		"materials"
+	],
+	"baby": [
+		"individuals"
+	],
+	"farm": [
+		"countryside"
+	],
+	"truck": [
+		"ride",
+		"vehicle"
+	],
+	"umbrella": [
+		"equipment"
+	],
+	"bee": [
+		"animals"
+	],
+	"zebras": [
+		"wildlife"
+	],
+	"frisbee": [
+		"sport"
+	],
+	"dogs": [
+		"animal"
+	],
+	"ball": [
+		"kick"
+	],
+	"birthday": [
+		"celebration",
+		"party"
+	],
+	"darth": [
+		"vader"
+	],
+	"kites": [
+		"sports"
+	],
+	"cellphone": [
+		"devices"
+	],
+	"bouquet": [
+		"plants"
+	],
+	"kitchen": [
+		"buildings"
+	],
+	"bath": [
+		"tank"
+	],
+	"seat": [
+		"chairs"
+	],
+	"sidewalk": [
+		"curb",
+		"runway"
+	],
+	"jungle": [
+		"region"
+	],
+	"men": [
+		"guys",
+		"human"
+	],
+	"arms": [
+		"shoulders"
+	],
+	"butter": [
+		"treats"
+	],
+	"fans": [
+		"humans"
+	],
+	"ocean": [
+		"sea"
 	]
 }
