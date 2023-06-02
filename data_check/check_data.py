@@ -157,7 +157,7 @@ def show_image(origin_words):
     origin_line_check = origin_line[start_idx:end_idx]
     
     for img_info in img_info_list:
-        img_captions = [img_cap.strip(' ').rstrip('\n').rstrip(' \.').lower().replace(',', ' , ').replace(';', ' ; ').replace('\'', ' ').replace("\"", " ").replace('  ', ' ') for img_cap in img_info['caption']]
+        img_captions = [img_cap.strip(' ').rstrip('\n').rstrip(' \.').lower().replace(',', ' , ').replace(';', ' ; ').replace('?', ' ? ').replace('\'', ' ').replace("\"", " ").replace('  ', ' ') for img_cap in img_info['caption']]
         
         img_captions_check = [img_caption[start_idx:end_idx] for img_caption in img_captions]
         if origin_line_check in img_captions_check:
@@ -288,6 +288,8 @@ def call_new_keyword(origin_word, diff_pairs, sim_pairs, local_dict):
                     return fixed_new_word, diff_pairs, local_dict
             else:
                 return '0', diff_pairs, local_dict
+    print('the keyword is not in the categories')
+    return "0", diff_pairs, local_dict
 
 
 def check_similar_words(origin_data, new_data, local_dict, strange_idxes, start_idx=0):
