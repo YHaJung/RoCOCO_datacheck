@@ -153,6 +153,7 @@
 		"isle",
 		"jungle",
 		"kitchen",
+		"oceans",
 		"outdoors",
 		"passageway",
 		"paste",
@@ -408,7 +409,6 @@
 		"frisbees",
 		"hockey",
 		"kite",
-		"maneuver",
 		"racket",
 		"racquet",
 		"racquets",
@@ -562,6 +562,8 @@
 	"brown": [
 		"blue",
 		"green",
+		"mint",
+		"navy",
 		"pink",
 		"pinkish",
 		"violet"
@@ -614,6 +616,7 @@
 		"kids",
 		"male",
 		"males",
+		"mans",
 		"men"
 	],
 	"foreground": [
@@ -653,7 +656,9 @@
 	],
 	"boats": [
 		"airways",
+		"atv",
 		"motorcycle",
+		"planes",
 		"tow"
 	],
 	"one": [
@@ -699,16 +704,19 @@
 		"bee",
 		"cats",
 		"cattle",
+		"clydesdales",
 		"cow",
 		"deer",
 		"ducks",
 		"elephant",
+		"giraffes",
 		"holstein",
 		"iguana",
 		"kitty",
 		"llamas",
 		"monkey",
 		"mouse",
+		"sheep",
 		"sheeps",
 		"steer",
 		"zebra"
@@ -790,7 +798,8 @@
 		"giraffe",
 		"giraffes",
 		"kitten",
-		"llamas"
+		"llamas",
+		"tabby"
 	],
 	"children": [
 		"crew",
@@ -834,9 +843,11 @@
 		"motorcyclists",
 		"nerds",
 		"officer",
+		"officers",
 		"passenger",
 		"patrons",
 		"pedestrians",
+		"seamen",
 		"spectators",
 		"traveler"
 	],
@@ -868,6 +879,7 @@
 		"fair-goers",
 		"instructor",
 		"king",
+		"lifeguard",
 		"mom",
 		"parent",
 		"police",
@@ -882,6 +894,7 @@
 	],
 	"tricks": [
 		"apple",
+		"dentures",
 		"figurines",
 		"peppers",
 		"shower"
@@ -976,7 +989,8 @@
 		"grassland"
 	],
 	"wave": [
-		"hay"
+		"hay",
+		"tree"
 	],
 	"game": [
 		"camera",
@@ -984,7 +998,8 @@
 		"nose",
 		"post",
 		"restaurants",
-		"steer"
+		"steer",
+		"transit"
 	],
 	"players": [
 		"baker",
@@ -1065,6 +1080,7 @@
 		"disc",
 		"discs",
 		"disk",
+		"fastball",
 		"golf",
 		"hockey",
 		"kayaks",
@@ -1177,9 +1193,11 @@
 		"boarder",
 		"disk",
 		"hoop",
+		"parasails",
 		"skate",
 		"skates",
-		"skis"
+		"skis",
+		"soccer"
 	],
 	"fans": [
 		"farmers"
@@ -1375,6 +1393,7 @@
 	"air": [
 		"jungle",
 		"moon",
+		"rocks",
 		"waters",
 		"wood"
 	],
@@ -1446,10 +1465,12 @@
 		"tunnel"
 	],
 	"giraffe": [
+		"beagle",
 		"bear",
 		"clydesdales",
 		"cow",
 		"cows",
+		"dogs",
 		"duck",
 		"elephants",
 		"holstein",
@@ -1567,7 +1588,8 @@
 	],
 	"sill": [
 		"benches",
-		"lane"
+		"lane",
+		"traintrack"
 	],
 	"window": [
 		"bench",
@@ -1575,6 +1597,8 @@
 		"fountain",
 		"kiosks",
 		"lane",
+		"pool",
+		"rail",
 		"rails",
 		"roof",
 		"signs",
@@ -1601,6 +1625,7 @@
 		"atm",
 		"engine",
 		"fit",
+		"motes",
 		"power",
 		"remotes"
 	],
@@ -1675,8 +1700,10 @@
 		"gloves",
 		"golf",
 		"hockey",
+		"kayaks",
 		"kick",
 		"kite",
+		"parasails",
 		"postures",
 		"racket",
 		"rackets",
@@ -1694,6 +1721,7 @@
 		"heel",
 		"hooves",
 		"knee",
+		"knees",
 		"lap",
 		"shoulders"
 	],
@@ -1777,6 +1805,7 @@
 		"guitar",
 		"handle",
 		"pillows",
+		"poster",
 		"umbrellas"
 	],
 	"vegetables": [
@@ -1794,11 +1823,13 @@
 		"lettuce",
 		"pasta",
 		"pineapple",
-		"plantains"
+		"plantains",
+		"stew"
 	],
 	"cup": [
 		"bin",
 		"jar",
+		"magnet",
 		"microwaves",
 		"pot",
 		"stove",
@@ -1925,6 +1956,7 @@
 		"passageway",
 		"seaside",
 		"shelter",
+		"shore",
 		"stalls",
 		"yard"
 	],
@@ -1945,6 +1977,7 @@
 	],
 	"car": [
 		"bike",
+		"boat",
 		"boats",
 		"decker",
 		"horseback",
@@ -2025,12 +2058,14 @@
 		"bird"
 	],
 	"boat": [
+		"cabs",
 		"cycle",
 		"flatbed",
 		"forklift",
 		"liner",
 		"motorcycle",
 		"motorcycles",
+		"plane",
 		"truck",
 		"trucks"
 	],
@@ -2045,6 +2080,7 @@
 		"duck",
 		"ducks",
 		"giraffe",
+		"sheeps",
 		"zebra"
 	],
 	"forest": [
@@ -2054,6 +2090,7 @@
 		"rainbow"
 	],
 	"baby": [
+		"adults",
 		"guys",
 		"herder",
 		"motorcyclist",
@@ -2479,11 +2516,13 @@
 		"limb"
 	],
 	"trick": [
+		"analog",
 		"beverages",
 		"kitchenette",
 		"leafs",
 		"lilacs",
 		"papers",
+		"posters",
 		"sidewalk",
 		"wines"
 	],
@@ -2607,7 +2646,8 @@
 	],
 	"wire": [
 		"fluffy",
-		"leather"
+		"leather",
+		"marble"
 	],
 	"coast": [
 		"pasture"
@@ -2668,6 +2708,7 @@
 	"couch": [
 		"chairs",
 		"desk",
+		"stool",
 		"table",
 		"tables"
 	],
@@ -2905,6 +2946,7 @@
 		"candy"
 	],
 	"skateboarder": [
+		"cook",
 		"crew",
 		"passanger"
 	],
@@ -2927,6 +2969,7 @@
 		"sink"
 	],
 	"toy": [
+		"hook",
 		"timer"
 	],
 	"butter": [
@@ -2956,6 +2999,7 @@
 	],
 	"bike": [
 		"airplane",
+		"cars",
 		"truck"
 	],
 	"mat": [
@@ -2977,7 +3021,8 @@
 		"airplanes",
 		"bicycle",
 		"canoes",
-		"trailers"
+		"trailers",
+		"train"
 	],
 	"crosstown": [
 		"elbow"
@@ -2985,6 +3030,7 @@
 	"passenger": [
 		"baker",
 		"doctor",
+		"para-sailers",
 		"skiers"
 	],
 	"land": [
@@ -3060,6 +3106,7 @@
 		"north"
 	],
 	"officer": [
+		"children",
 		"diners",
 		"pitchers"
 	],
@@ -3227,7 +3274,8 @@
 		"box"
 	],
 	"uniform": [
-		"apron"
+		"apron",
+		"suitcase"
 	],
 	"mouse": [
 		"bear"
@@ -3336,6 +3384,7 @@
 	],
 	"snowboarder": [
 		"doctor",
+		"eater",
 		"pitcher"
 	],
 	"dollars": [
@@ -3409,7 +3458,8 @@
 		"hooks"
 	],
 	"dogs": [
-		"bears"
+		"bears",
+		"panda"
 	],
 	"container": [
 		"spoon"
@@ -3480,9 +3530,58 @@
 		"sandwich"
 	],
 	"pink": [
+		"blue",
 		"mint"
 	],
 	"pastry": [
 		"tomato"
+	],
+	"hooks": [
+		"bin"
+	],
+	"holstein": [
+		"giraffe"
+	],
+	"suvs": [
+		"boat"
+	],
+	"marina": [
+		"apartment"
+	],
+	"zoo": [
+		"town"
+	],
+	"harbor": [
+		"indoor"
+	],
+	"stickers": [
+		"book"
+	],
+	"manuever": [
+		"kitten"
+	],
+	"hoagie": [
+		"turkey"
+	],
+	"breast": [
+		"hooves"
+	],
+	"cover": [
+		"legs"
+	],
+	"cardboard": [
+		"fur"
+	],
+	"navy": [
+		"blonde"
+	],
+	"soldiers": [
+		"motorcyclist"
+	],
+	"ice": [
+		"turkey"
+	],
+	"homemade": [
+		"harbor"
 	]
 }
