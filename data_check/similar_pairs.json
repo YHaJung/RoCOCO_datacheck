@@ -30,6 +30,7 @@
 		"kit",
 		"sticks",
 		"stuff",
+		"tools",
 		"utility"
 	],
 	"black": [
@@ -66,7 +67,8 @@
 		"women"
 	],
 	"lady": [
-		"adult"
+		"adult",
+		"girl"
 	],
 	"figurines": [
 		"decor"
@@ -122,6 +124,7 @@
 		"sport"
 	],
 	"uniform": [
+		"attire",
 		"dresses"
 	],
 	"flowers": [
@@ -258,7 +261,8 @@
 	"computer": [
 		"device",
 		"devices",
-		"laptops"
+		"laptops",
+		"monitors"
 	],
 	"monitor": [
 		"machinery"
@@ -280,6 +284,7 @@
 		"landscape"
 	],
 	"umbrellas": [
+		"item",
 		"items"
 	],
 	"bear": [
@@ -402,7 +407,8 @@
 		"rail"
 	],
 	"guys": [
-		"adult"
+		"adult",
+		"individuals"
 	],
 	"grass": [
 		"greenery"
@@ -646,5 +652,26 @@
 	],
 	"skateboarder": [
 		"skater"
+	],
+	"cup": [
+		"supplies"
+	],
+	"blonde": [
+		"beige"
+	],
+	"window": [
+		"door"
+	],
+	"boxes": [
+		"items"
+	],
+	"station": [
+		"platform"
+	],
+	"cats": [
+		"cubs"
+	],
+	"dot": [
+		"patterns"
 	]
 }
