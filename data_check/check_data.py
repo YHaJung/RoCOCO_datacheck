@@ -331,8 +331,7 @@ if __name__== '__main__':
     new_data = load_file(new_filename)
     local_dict = load_file(local_dict_path)
     strange_idxes = set([int(line) for line in load_file(strange_idxes_path)])
-    print(f'start strange idxes : {sorted(list(strange_idxes))}\n')
-    # print(new_data)
+    # print(f'start strange idxes : {sorted(list(strange_idxes))}\n')
 
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_lines_length(origin_data, new_data, strange_idxes)
     fixed_origin_lines, fixed_new_lines, strange_idxes = fix_multiple_or_no_change(fixed_origin_lines, fixed_new_lines, strange_idxes)
@@ -340,7 +339,7 @@ if __name__== '__main__':
     start_idx = int(load_file(start_idx_path)[0])
     print(f'start with line {start_idx}')
     fixed_new_lines, diff_pairs, sim_pairs, strange_idxes, line_idx, local_dict = check_similar_words(fixed_origin_lines, fixed_new_lines, local_dict, strange_idxes, start_idx)
-    print(f'last strange idxes : {strange_idxes}')
+    # print(f'last strange idxes : {strange_idxes}')
 
     # save results
     fixed_origin_lines = [line + ' .\n' for line in fixed_origin_lines]

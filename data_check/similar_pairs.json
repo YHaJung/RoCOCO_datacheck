@@ -11,14 +11,17 @@
 		"someone"
 	],
 	"street": [
+		"area",
 		"areas",
 		"ground",
-		"roadside"
+		"roadside",
+		"space"
 	],
 	"bicyclists": [
 		"humans"
 	],
 	"bathroom": [
+		"area",
 		"hygiene",
 		"indoor",
 		"place",
@@ -41,6 +44,8 @@
 		"places"
 	],
 	"side": [
+		"areas",
+		"locations",
 		"region",
 		"streets"
 	],
@@ -132,6 +137,7 @@
 		"plants"
 	],
 	"people": [
+		"fellow",
 		"folks",
 		"human",
 		"humans",
@@ -142,7 +148,9 @@
 		"someone"
 	],
 	"room": [
+		"architecture",
 		"construction",
+		"floor",
 		"structure"
 	],
 	"stuff": [
@@ -174,6 +182,7 @@
 		"trail"
 	],
 	"train": [
+		"liner",
 		"transit",
 		"transportation",
 		"vehicle"
@@ -208,6 +217,7 @@
 	],
 	"cell": [
 		"electric",
+		"machine",
 		"machinery",
 		"mobile",
 		"phones",
@@ -225,6 +235,7 @@
 	],
 	"plane": [
 		"airliner",
+		"jets",
 		"ride",
 		"trailer"
 	],
@@ -262,6 +273,8 @@
 		"device",
 		"devices",
 		"laptops",
+		"machine",
+		"machinery",
 		"monitors"
 	],
 	"monitor": [
@@ -359,6 +372,7 @@
 		"objects"
 	],
 	"skier": [
+		"individuals",
 		"skiiers"
 	],
 	"jacket": [
@@ -376,6 +390,7 @@
 	"tower": [
 		"architecture",
 		"buliding",
+		"spire",
 		"structure"
 	],
 	"t.v": [
@@ -415,6 +430,7 @@
 	],
 	"women": [
 		"female",
+		"individual",
 		"individuals"
 	],
 	"shirt": [
@@ -507,6 +523,7 @@
 		"runway"
 	],
 	"track": [
+		"path",
 		"rail",
 		"railroad",
 		"rails"
@@ -518,6 +535,7 @@
 		"kids"
 	],
 	"counter": [
+		"desk",
 		"furnishing",
 		"furniture"
 	],
@@ -602,7 +620,8 @@
 		"plants"
 	],
 	"kitchen": [
-		"buildings"
+		"buildings",
+		"locations"
 	],
 	"bath": [
 		"tank"
@@ -620,7 +639,8 @@
 	],
 	"men": [
 		"guys",
-		"human"
+		"human",
+		"males"
 	],
 	"arms": [
 		"shoulders"
@@ -641,13 +661,15 @@
 		"transit"
 	],
 	"boats": [
-		"ride"
+		"ride",
+		"vehicle"
 	],
 	"attire": [
 		"outfit"
 	],
 	"board": [
 		"maneuver",
+		"skate",
 		"sport"
 	],
 	"skateboarder": [
@@ -673,5 +695,60 @@
 	],
 	"dot": [
 		"patterns"
+	],
+	"doughnut": [
+		"foods"
+	],
+	"bat": [
+		"sport"
+	],
+	"onlookers": [
+		"individual"
+	],
+	"flower": [
+		"blooms"
+	],
+	"vegetables": [
+		"ingredients"
+	],
+	"decoration": [
+		"decor"
+	],
+	"planes": [
+		"jetliner"
+	],
+	"runway": [
+		"floors"
+	],
+	"passenger": [
+		"human"
+	],
+	"seagulls": [
+		"bird",
+		"birds"
+	],
+	"chairs": [
+		"furnishing"
+	],
+	"country": [
+		"place"
+	],
+	"air": [
+		"wind"
+	],
+	"city": [
+		"area"
+	],
+	"vase": [
+		"supplies"
+	],
+	"clock": [
+		"goods"
+	],
+	"clocks": [
+		"figurines"
+	],
+	"rider": [
+		"drivers"
 	]
 }
