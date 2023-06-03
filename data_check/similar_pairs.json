@@ -1,11 +1,13 @@
 {
 	"man": [
 		"adult",
+		"folks",
 		"gentlemen",
 		"guy",
 		"guys",
 		"individual",
 		"men",
+		"people",
 		"person",
 		"persons",
 		"someone"
@@ -14,6 +16,7 @@
 		"area",
 		"areas",
 		"ground",
+		"places",
 		"roadside",
 		"space"
 	],
@@ -64,7 +67,9 @@
 		"fellow",
 		"female",
 		"folks",
+		"human",
 		"humans",
+		"individual",
 		"individuals",
 		"ladies",
 		"person",
@@ -96,6 +101,7 @@
 		"humans"
 	],
 	"pizza": [
+		"food",
 		"meal",
 		"meals"
 	],
@@ -110,6 +116,7 @@
 		"lady",
 		"person",
 		"teenage",
+		"woman",
 		"women",
 		"youngster",
 		"youths"
@@ -118,7 +125,8 @@
 		"fellow",
 		"human",
 		"humans",
-		"individual"
+		"individual",
+		"someone"
 	],
 	"center": [
 		"midst"
@@ -139,6 +147,8 @@
 	"people": [
 		"fellow",
 		"folks",
+		"group",
+		"groups",
 		"human",
 		"humans",
 		"individual",
@@ -151,7 +161,8 @@
 		"architecture",
 		"construction",
 		"floor",
-		"structure"
+		"structure",
+		"structures"
 	],
 	"stuff": [
 		"tool"
@@ -212,6 +223,7 @@
 		"leftovers"
 	],
 	"dog": [
+		"animal",
 		"cubs",
 		"pet"
 	],
@@ -244,9 +256,11 @@
 		"settee"
 	],
 	"water": [
-		"ocean"
+		"ocean",
+		"wave"
 	],
 	"beach": [
+		"areas",
 		"coast",
 		"site"
 	],
@@ -357,6 +371,7 @@
 		"steel"
 	],
 	"giraffe": [
+		"animal",
 		"wildlife"
 	],
 	"coast": [
@@ -407,6 +422,7 @@
 	],
 	"bed": [
 		"furnishing",
+		"furniture",
 		"mattress"
 	],
 	"professionals": [
@@ -471,7 +487,8 @@
 		"tables"
 	],
 	"car": [
-		"transportation"
+		"transportation",
+		"vehicles"
 	],
 	"case": [
 		"box"
@@ -489,6 +506,7 @@
 		"item"
 	],
 	"mother": [
+		"person",
 		"someone"
 	],
 	"kit": [
@@ -510,6 +528,7 @@
 		"cattle"
 	],
 	"bananas": [
+		"breakfast",
 		"staple"
 	],
 	"string": [
@@ -737,7 +756,9 @@
 		"wind"
 	],
 	"city": [
-		"area"
+		"area",
+		"countries",
+		"places"
 	],
 	"vase": [
 		"supplies"
@@ -750,5 +771,29 @@
 	],
 	"rider": [
 		"drivers"
+	],
+	"branch": [
+		"trees"
+	],
+	"toothbrush": [
+		"supplies"
+	],
+	"skiers": [
+		"player"
+	],
+	"surfer": [
+		"athlete"
+	],
+	"knife": [
+		"cutter"
+	],
+	"rackets": [
+		"racquets"
+	],
+	"brush": [
+		"supplies"
+	],
+	"box": [
+		"divisions"
 	]
 }
