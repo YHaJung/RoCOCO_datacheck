@@ -209,7 +209,7 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         return "similar", diff_pairs, sim_pairs, local_dict
     else:
         # ask judgeability (can judge only with the words)
-        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5) ")
+        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5), Fix typo(6, 7) ")
 
         while judgeability not in ['1', '2']:
             if judgeability == '3':
@@ -221,7 +221,11 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
                 local_dict[origin_diff_word] = input(f'[{origin_diff_word}] : ')
             elif judgeability == '5':
                 local_dict[new_diff_word] = input(f'[{new_diff_word}] : ')
-            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5) ")
+            elif judgeability == '6':
+                origin_words[diff_key_idx] = input(f'{origin_words[diff_key_idx]} -> ')
+            elif judgeability == '7':
+                new_words[diff_key_idx] = input(f'{origin_words[diff_key_idx]} -> ')
+            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5), Fix typo(6, 7) ")
         
         if judgeability == '2':
             show_image(origin_words)
