@@ -1,6 +1,7 @@
 {
 	"man": [
 		"adult",
+		"adults",
 		"folks",
 		"gentlemen",
 		"guy",
@@ -30,6 +31,7 @@
 		"place",
 		"restroom",
 		"shower",
+		"stalls",
 		"toilet"
 	],
 	"items": [
@@ -126,6 +128,7 @@
 		"human",
 		"humans",
 		"individual",
+		"individuals",
 		"someone"
 	],
 	"center": [
@@ -159,6 +162,7 @@
 	],
 	"room": [
 		"architecture",
+		"area",
 		"construction",
 		"floor",
 		"structure",
@@ -224,6 +228,7 @@
 	],
 	"dog": [
 		"animal",
+		"animals",
 		"cubs",
 		"pet"
 	],
@@ -243,10 +248,12 @@
 	],
 	"airplane": [
 		"airline",
+		"transportation",
 		"vehicles"
 	],
 	"plane": [
 		"airliner",
+		"flight",
 		"jets",
 		"ride",
 		"trailer"
@@ -286,6 +293,7 @@
 	"computer": [
 		"device",
 		"devices",
+		"electric",
 		"laptops",
 		"machine",
 		"machinery",
@@ -345,6 +353,7 @@
 	],
 	"desk": [
 		"furnishing",
+		"table",
 		"tables"
 	],
 	"collection": [
@@ -442,7 +451,11 @@
 		"individuals"
 	],
 	"grass": [
-		"greenery"
+		"greenery",
+		"land",
+		"meadow",
+		"sprout",
+		"weeds"
 	],
 	"women": [
 		"female",
@@ -456,7 +469,8 @@
 	],
 	"iphone": [
 		"cell",
-		"phones"
+		"phones",
+		"telephone"
 	],
 	"back": [
 		"behind",
@@ -545,7 +559,8 @@
 		"path",
 		"rail",
 		"railroad",
-		"rails"
+		"rails",
+		"way"
 	],
 	"bull": [
 		"cows"
@@ -591,6 +606,7 @@
 		"outfield"
 	],
 	"metal": [
+		"aluminum",
 		"brass",
 		"materials"
 	],
@@ -704,6 +720,8 @@
 		"door"
 	],
 	"boxes": [
+		"cases",
+		"crates",
 		"items"
 	],
 	"station": [
@@ -747,7 +765,8 @@
 		"birds"
 	],
 	"chairs": [
-		"furnishing"
+		"furnishing",
+		"settee"
 	],
 	"country": [
 		"place"
@@ -779,7 +798,8 @@
 		"supplies"
 	],
 	"skiers": [
-		"player"
+		"player",
+		"players"
 	],
 	"surfer": [
 		"athlete"
@@ -795,5 +815,59 @@
 	],
 	"box": [
 		"divisions"
+	],
+	"player": [
+		"people"
+	],
+	"control": [
+		"machine"
+	],
+	"greenery": [
+		"grass"
+	],
+	"home": [
+		"site"
+	],
+	"cars": [
+		"vehicle"
+	],
+	"roadside": [
+		"location"
+	],
+	"rain": [
+		"cloudy"
+	],
+	"tables": [
+		"desk"
+	],
+	"catchers": [
+		"athletes"
+	],
+	"surfboard": [
+		"surfs"
+	],
+	"steel": [
+		"metal"
+	],
+	"end": [
+		"border"
+	],
+	"barbed-wire": [
+		"metal"
+	],
+	"tree": [
+		"branch"
+	],
+	"branches": [
+		"tree"
+	],
+	"twigs": [
+		"shrubs"
+	],
+	"slope": [
+		"location"
+	],
+	"cases": [
+		"item"
 	]
 }
