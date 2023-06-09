@@ -7,6 +7,7 @@
 		"guy",
 		"guys",
 		"individual",
+		"individuals",
 		"men",
 		"people",
 		"person",
@@ -51,6 +52,7 @@
 	"side": [
 		"areas",
 		"locations",
+		"places",
 		"region",
 		"streets"
 	],
@@ -69,6 +71,7 @@
 		"fellow",
 		"female",
 		"folks",
+		"girls",
 		"human",
 		"humans",
 		"individual",
@@ -94,9 +97,11 @@
 	],
 	"boy": [
 		"guy",
+		"individual",
 		"kid",
 		"kiddie",
 		"people",
+		"person",
 		"teenage"
 	],
 	"friends": [
@@ -125,6 +130,7 @@
 	],
 	"person": [
 		"fellow",
+		"folks",
 		"human",
 		"humans",
 		"individual",
@@ -216,7 +222,9 @@
 	],
 	"middle": [
 		"amidst",
+		"center",
 		"centre",
+		"mid",
 		"midst"
 	],
 	"parents": [
@@ -252,6 +260,7 @@
 		"vehicles"
 	],
 	"plane": [
+		"airline",
 		"airliner",
 		"flight",
 		"jets",
@@ -273,6 +282,7 @@
 	],
 	"area": [
 		"place",
+		"site",
 		"space"
 	],
 	"sand": [
@@ -294,6 +304,7 @@
 		"device",
 		"devices",
 		"electric",
+		"laptop",
 		"laptops",
 		"machine",
 		"machinery",
@@ -415,7 +426,8 @@
 		"architecture",
 		"buliding",
 		"spire",
-		"structure"
+		"structure",
+		"structures"
 	],
 	"t.v": [
 		"machine"
@@ -656,7 +668,8 @@
 	],
 	"kitchen": [
 		"buildings",
-		"locations"
+		"locations",
+		"region"
 	],
 	"bath": [
 		"tank"
@@ -746,7 +759,8 @@
 		"blooms"
 	],
 	"vegetables": [
-		"ingredients"
+		"ingredients",
+		"veggie"
 	],
 	"decoration": [
 		"decor"
@@ -844,6 +858,7 @@
 		"athletes"
 	],
 	"surfboard": [
+		"surferboard",
 		"surfs"
 	],
 	"steel": [
@@ -869,5 +884,11 @@
 	],
 	"cases": [
 		"item"
+	],
+	"tractor": [
+		"transit"
+	],
+	"land": [
+		"area"
 	]
 }

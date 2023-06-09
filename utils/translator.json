@@ -951,7 +951,7 @@
 	"right": "오른쪽",
 	"billows": "큰 물결, 파도",
 	"portrait": "초상화",
-	"discs": "디스크",
+	"discs": "원반",
 	"oregon": "오레곤",
 	"steel": "강철",
 	"care": "케어",
@@ -1625,7 +1625,7 @@
 	"wit": "재치",
 	"close-up": "확대",
 	"screen": "화면",
-	"conductor": "지휘자",
+	"conductor": "지휘자, 안내자",
 	"coffee": "커피",
 	"environment": "환경",
 	"commerce": "상업",
@@ -1743,7 +1743,7 @@
 	"stunts": "묘기",
 	"surboard": "서핑 보드",
 	"holstein": "홀스타인 종의 소",
-	"tow": "끌고 가다",
+	"tow": "끌감,줄, 삼(천)",
 	"patch": "반점",
 	"wild": "야생의",
 	"chicken": "닭",
@@ -2508,5 +2508,9 @@
 	"hilsl": "언덕",
 	"monkeys": "원숭이",
 	"classroom": "교실",
-	"cameras": "카메라"
+	"cameras": "카메라",
+	"slide": "미끄러지 다",
+	"galley": "갤리",
+	"the": "그만큼",
+	"grandmother": "할머니"
 }
