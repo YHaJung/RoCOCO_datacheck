@@ -11,6 +11,7 @@ from utils.file_processing import increment_filename, save_file, load_file
 from data_check.downloaded.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_diff_flags
+from utils.user_io import ask_key_to_user
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/same_caps_mod_fixed.txt'
 diff_pairs_path = 'data_check/different_pairs.json'
@@ -224,29 +225,23 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
             elif judgeability == '6':
                 origin_words[diff_key_idx] = input(f'{origin_words[diff_key_idx]} -> ')
             elif judgeability == '7':
-                new_words[diff_key_idx] = input(f'{origin_words[diff_key_idx]} -> ')
+                new_words[diff_key_idx] = input(f'{new_words[diff_key_idx]} -> ')
             judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5), Fix typo(6, 7) ")
         
         if judgeability == '2':
             show_image(origin_words)
 
         # ask differency
-        key = input("Are they different? Yes(1), No(2), Keep(3), exit(0) ")
-        while key not in ['0', '1', '2', '3']:
-            key = input("Are they different? Yes(1), No(2), Keep(3), exit(0) ")
+        key_dict = {'0':'exit', '1':'different', '2':'similar', '3':'keep'}
+        key = ask_key_to_user("Are they different?", key_dict)
 
-        if key == '1':
-            if judgeability == '1':
+        if judgeability == '1':
+            if key == '1':
                 diff_pairs = add_in_pair(origin_diff_word, new_diff_word, diff_pairs)
-            return "different", diff_pairs, sim_pairs, local_dict
-        elif key == '2':
-            if judgeability == '1':
+            elif key == '2':
                 sim_pairs = add_in_pair(origin_diff_word, new_diff_word, sim_pairs)
-            return "similar", diff_pairs, sim_pairs, local_dict
-        elif key == '3':
-            return "keep", diff_pairs, sim_pairs, local_dict
-        else:
-            return "exit", diff_pairs, sim_pairs, local_dict
+        
+        return key_dict[key], diff_pairs, sim_pairs, local_dict
 
 def call_new_keyword(origin_word, diff_pairs, sim_pairs, local_dict):
     if origin_word in diff_pairs.keys() and len(diff_pairs[origin_word]) > 4:
