@@ -2,6 +2,7 @@
 	"man": [
 		"adult",
 		"adults",
+		"boys",
 		"folks",
 		"gentlemen",
 		"guy",
@@ -17,7 +18,10 @@
 	"street": [
 		"area",
 		"areas",
+		"cabana",
 		"ground",
+		"outside",
+		"place",
 		"places",
 		"roadside",
 		"space"
@@ -71,6 +75,7 @@
 		"fellow",
 		"female",
 		"folks",
+		"girl",
 		"girls",
 		"human",
 		"humans",
@@ -203,6 +208,7 @@
 		"trail"
 	],
 	"train": [
+		"jumbo",
 		"liner",
 		"transit",
 		"transportation",
@@ -212,7 +218,8 @@
 		"above",
 		"besides",
 		"over",
-		"overhead"
+		"overhead",
+		"trim"
 	],
 	"fire": [
 		"signal.street"
@@ -225,7 +232,8 @@
 		"center",
 		"centre",
 		"mid",
-		"midst"
+		"midst",
+		"over"
 	],
 	"parents": [
 		"folks"
@@ -256,12 +264,15 @@
 	],
 	"airplane": [
 		"airline",
+		"airliner",
 		"transportation",
+		"vehicle",
 		"vehicles"
 	],
 	"plane": [
 		"airline",
 		"airliner",
+		"airlines",
 		"flight",
 		"jets",
 		"ride",
@@ -281,6 +292,7 @@
 		"site"
 	],
 	"area": [
+		"location",
 		"place",
 		"site",
 		"space"
@@ -320,7 +332,8 @@
 		"breakfast",
 		"cuisine",
 		"dinner",
-		"meal"
+		"meal",
+		"staple"
 	],
 	"motorcycles": [
 		"motorbikes"
@@ -404,7 +417,8 @@
 		"place"
 	],
 	"book": [
-		"objects"
+		"objects",
+		"paper"
 	],
 	"skier": [
 		"individuals",
@@ -450,7 +464,8 @@
 		"person"
 	],
 	"airport": [
-		"places"
+		"places",
+		"port"
 	],
 	"blue": [
 		"navy"
@@ -485,6 +500,7 @@
 		"telephone"
 	],
 	"back": [
+		"adjacent",
 		"behind",
 		"rear"
 	],
@@ -507,12 +523,15 @@
 		"sea"
 	],
 	"bread": [
-		"foodstuffs"
+		"cuisine",
+		"foodstuffs",
+		"sweet"
 	],
 	"counters": [
 		"tables"
 	],
 	"car": [
+		"ride",
 		"transportation",
 		"vehicles"
 	],
@@ -539,7 +558,8 @@
 		"toys"
 	],
 	"players": [
-		"human"
+		"human",
+		"performer"
 	],
 	"passengers": [
 		"individuals"
@@ -565,7 +585,8 @@
 		"machinery"
 	],
 	"road": [
-		"runway"
+		"runway",
+		"statue"
 	],
 	"track": [
 		"path",
@@ -582,6 +603,7 @@
 	],
 	"counter": [
 		"desk",
+		"desks",
 		"furnishing",
 		"furniture"
 	],
@@ -589,7 +611,8 @@
 		"animals"
 	],
 	"veggies": [
-		"plantains"
+		"plantains",
+		"vegetable"
 	],
 	"carrots": [
 		"vegetables"
@@ -623,7 +646,8 @@
 		"materials"
 	],
 	"baby": [
-		"individuals"
+		"individuals",
+		"kids"
 	],
 	"farm": [
 		"countryside"
@@ -668,6 +692,7 @@
 	],
 	"kitchen": [
 		"buildings",
+		"location",
 		"locations",
 		"region"
 	],
@@ -679,6 +704,7 @@
 		"settee"
 	],
 	"sidewalk": [
+		"area",
 		"curb",
 		"runway"
 	],
@@ -686,9 +712,11 @@
 		"region"
 	],
 	"men": [
+		"adult",
 		"guys",
 		"human",
-		"males"
+		"males",
+		"persons"
 	],
 	"arms": [
 		"shoulders"
@@ -706,6 +734,7 @@
 		"bathroom"
 	],
 	"bus": [
+		"ride",
 		"transit"
 	],
 	"boats": [
@@ -806,6 +835,7 @@
 		"drivers"
 	],
 	"branch": [
+		"grove",
 		"trees"
 	],
 	"toothbrush": [
@@ -816,7 +846,8 @@
 		"players"
 	],
 	"surfer": [
-		"athlete"
+		"athlete",
+		"surfboarder"
 	],
 	"knife": [
 		"cutter"
@@ -831,7 +862,8 @@
 		"divisions"
 	],
 	"player": [
-		"people"
+		"people",
+		"performer"
 	],
 	"control": [
 		"machine"
@@ -871,7 +903,9 @@
 		"metal"
 	],
 	"tree": [
-		"branch"
+		"branch",
+		"branches",
+		"scrub"
 	],
 	"branches": [
 		"tree"
@@ -890,5 +924,53 @@
 	],
 	"land": [
 		"area"
+	],
+	"toothpaste": [
+		"paste"
+	],
+	"kids": [
+		"humans"
+	],
+	"airways": [
+		"plane"
+	],
+	"directions": [
+		"trim"
+	],
+	"neck": [
+		"body"
+	],
+	"trees": [
+		"shrubbery"
+	],
+	"wall": [
+		"area",
+		"block",
+		"facility"
+	],
+	"luggage": [
+		"trunk"
+	],
+	"mouth": [
+		"body",
+		"snout"
+	],
+	"fork": [
+		"sink"
+	],
+	"bottle": [
+		"appliances"
+	],
+	"surf": [
+		"sports"
+	],
+	"remotes": [
+		"wireless"
+	],
+	"scissors": [
+		"goods"
+	],
+	"jets": [
+		"aircraft"
 	]
 }
