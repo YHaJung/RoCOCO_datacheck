@@ -210,36 +210,39 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         return "similar", diff_pairs, sim_pairs, local_dict
     else:
         # ask judgeability (can judge only with the words)
-        judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5) ") #, Fix typo(6, 7) ")
+        key = input("Pass(1), Change(2), Keep(3), Diff-Pair(4), Sim-Pair(5), Image(6), Translate Sentence(7), Fix-Trans(8, 9) ") #, Fix typo(6, 7) ")
 
-        while judgeability not in ['1', '2']:
-            if judgeability == '3':
+        while key not in ['0', '1', '2', '3', '4', '5']:
+            if key == '6':
+                show_image(origin_words)
+            elif key == '7':
                 origin_sentence = " ".join(origin_words)
                 new_sentence = " ".join(new_words)
                 print(f'{origin_sentence} -> {translate_to_korean(origin_sentence)}')
                 print(f'{new_sentence} -> {translate_to_korean(new_sentence)}')
-            elif judgeability == '4':
+            elif key == '8':
                 local_dict[origin_diff_word] = input(f'[{origin_diff_word}] : ')
-            elif judgeability == '5':
+            elif key == '9':
                 local_dict[new_diff_word] = input(f'[{new_diff_word}] : ')
-            # elif judgeability == '6':
+            # elif key == '6':
             #     origin_words[diff_key_idx] = input(f'{origin_words[diff_key_idx]} -> ')
-            # elif judgeability == '7':
+            # elif key == '7':
             #     new_words[diff_key_idx] = input(f'{new_words[diff_key_idx]} -> ')
-            judgeability = input("Can you judge it only with the words? Yes(1), No-Show Image(2), Translate Sentence(3), Fix-Translatation(4, 5) ") #, Fix typo(6, 7) ")
+            key = input("Pass(1), Change(2), Keep(3), Diff-Pair(4), Sim-Pair(5), Image(6), Translate Sentence(7), Fix-Trans(8, 9) ") #, Fix typo(6, 7) ")
         
-        if judgeability == '2':
-            show_image(origin_words)
 
         # ask differency
         key_dict = {'0':'exit', '1':'different', '2':'similar', '3':'keep'}
-        key = ask_key_to_user("Are they different?", key_dict)
+        # key = ask_key_to_user("Are they different?", key_dict)
 
-        if judgeability == '1':
-            if key == '1':
-                diff_pairs = add_in_pair(origin_diff_word, new_diff_word, diff_pairs)
-            elif key == '2':
-                sim_pairs = add_in_pair(origin_diff_word, new_diff_word, sim_pairs)
+        if key == '4':
+            diff_pairs = add_in_pair(origin_diff_word, new_diff_word, diff_pairs)
+            print('Add in RIGHT pair')
+            key = '1'
+        elif key == '5':
+            sim_pairs = add_in_pair(origin_diff_word, new_diff_word, sim_pairs)
+            print('Add in WRONG pair')
+            key = '2'
         
         return key_dict[key], diff_pairs, sim_pairs, local_dict
 
