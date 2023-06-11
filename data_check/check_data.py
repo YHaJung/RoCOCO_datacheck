@@ -210,25 +210,25 @@ def check_similarity(diff_key_idx, origin_words, new_words, diff_pairs, sim_pair
         return "similar", diff_pairs, sim_pairs, local_dict
     else:
         # ask judgeability (can judge only with the words)
-        key = input("Pass(1), Change(2), Keep(3), Diff-Pair(4), Sim-Pair(5), Image(6), Translate Sentence(7), Fix-Trans(8, 9) ") #, Fix typo(6, 7) ")
+        key = input("Pass(1), Change(2), Keep(3), Diff-Pair(4), Sim-Pair(5), Image(r), Translate Sentence(e), Fix-Trans(q, w) ") #, Fix typo(6, 7) ")
 
         while key not in ['0', '1', '2', '3', '4', '5']:
-            if key == '6':
+            if key == 'r':
                 show_image(origin_words)
-            elif key == '7':
+            elif key == 'e':
                 origin_sentence = " ".join(origin_words)
                 new_sentence = " ".join(new_words)
                 print(f'{origin_sentence} -> {translate_to_korean(origin_sentence)}')
                 print(f'{new_sentence} -> {translate_to_korean(new_sentence)}')
-            elif key == '8':
+            elif key == 'q':
                 local_dict[origin_diff_word] = input(f'[{origin_diff_word}] : ')
-            elif key == '9':
+            elif key == 'w':
                 local_dict[new_diff_word] = input(f'[{new_diff_word}] : ')
             # elif key == '6':
             #     origin_words[diff_key_idx] = input(f'{origin_words[diff_key_idx]} -> ')
             # elif key == '7':
             #     new_words[diff_key_idx] = input(f'{new_words[diff_key_idx]} -> ')
-            key = input("Pass(1), Change(2), Keep(3), Diff-Pair(4), Sim-Pair(5), Image(6), Translate Sentence(7), Fix-Trans(8, 9) ") #, Fix typo(6, 7) ")
+            key = input("Pass(1), Change(2), Keep(3), Diff-Pair(4), Sim-Pair(5), Image(r), Translate Sentence(e), Fix-Trans(q, w) ") #, Fix typo(6, 7) ")
         
 
         # ask differency
