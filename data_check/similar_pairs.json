@@ -36,6 +36,7 @@
 		"place",
 		"restroom",
 		"shower",
+		"stall",
 		"stalls",
 		"toilet"
 	],
@@ -82,8 +83,10 @@
 		"individual",
 		"individuals",
 		"ladies",
+		"lady",
 		"person",
 		"persons",
+		"someone",
 		"women"
 	],
 	"lady": [
@@ -105,6 +108,7 @@
 		"individual",
 		"kid",
 		"kiddie",
+		"kids",
 		"people",
 		"person",
 		"teenage"
@@ -115,7 +119,8 @@
 	"pizza": [
 		"food",
 		"meal",
-		"meals"
+		"meals",
+		"staple"
 	],
 	"tennis": [
 		"rackets",
@@ -168,6 +173,8 @@
 		"individual",
 		"individuals",
 		"members",
+		"men",
+		"person",
 		"persons",
 		"someone"
 	],
@@ -265,6 +272,7 @@
 	"airplane": [
 		"airline",
 		"airliner",
+		"jet",
 		"transportation",
 		"vehicle",
 		"vehicles"
@@ -289,7 +297,8 @@
 	"beach": [
 		"areas",
 		"coast",
-		"site"
+		"site",
+		"terrain"
 	],
 	"area": [
 		"location",
@@ -310,7 +319,8 @@
 		"cake"
 	],
 	"hand": [
-		"finger"
+		"finger",
+		"head"
 	],
 	"computer": [
 		"device",
@@ -575,7 +585,8 @@
 	],
 	"bananas": [
 		"breakfast",
-		"staple"
+		"staple",
+		"sweet"
 	],
 	"string": [
 		"tool"
@@ -666,7 +677,8 @@
 		"wildlife"
 	],
 	"frisbee": [
-		"sport"
+		"sport",
+		"sports"
 	],
 	"dogs": [
 		"animal"
@@ -716,6 +728,7 @@
 		"guys",
 		"human",
 		"males",
+		"man",
 		"persons"
 	],
 	"arms": [
@@ -890,6 +903,7 @@
 		"athletes"
 	],
 	"surfboard": [
+		"board",
 		"surferboard",
 		"surfs"
 	],
@@ -914,7 +928,8 @@
 		"shrubs"
 	],
 	"slope": [
-		"location"
+		"location",
+		"place"
 	],
 	"cases": [
 		"item"
@@ -929,6 +944,7 @@
 		"paste"
 	],
 	"kids": [
+		"child",
 		"humans"
 	],
 	"airways": [
@@ -949,10 +965,12 @@
 		"facility"
 	],
 	"luggage": [
+		"goods",
 		"trunk"
 	],
 	"mouth": [
 		"body",
+		"cheek",
 		"snout"
 	],
 	"fork": [
@@ -962,15 +980,53 @@
 		"appliances"
 	],
 	"surf": [
+		"sport",
 		"sports"
 	],
 	"remotes": [
 		"wireless"
 	],
 	"scissors": [
-		"goods"
+		"goods",
+		"object"
 	],
 	"jets": [
 		"aircraft"
+	],
+	"pasture": [
+		"grass"
+	],
+	"peacocks": [
+		"birds"
+	],
+	"shops": [
+		"city"
+	],
+	"clothes": [
+		"costume"
+	],
+	"brown": [
+		"dark"
+	],
+	"hill": [
+		"land"
+	],
+	"hook": [
+		"utility"
+	],
+	"someone": [
+		"persons"
+	],
+	"surferboard": [
+		"surf"
+	],
+	"liquid": [
+		"liquor"
+	],
+	"run": [
+		"signal.street"
+	],
+	"bridge": [
+		"structures"
 	]
 }

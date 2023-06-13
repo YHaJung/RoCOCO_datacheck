@@ -130,7 +130,7 @@
 	"glove": "장갑",
 	"paint": "페인트",
 	"bowls": "그릇",
-	"finch": "핀치",
+	"finch": "핀치(새)",
 	"sauce": "소스",
 	"anther": "꽃밥",
 	"hold": "잡고 있다",
@@ -2133,7 +2133,7 @@
 	"landing": "착륙",
 	"addons": "애드온",
 	"cone": "원뿔",
-	"area": "영역",
+	"area": "0",
 	"eggs": "달걀",
 	"fur": "털",
 	"wool": "양모",
@@ -2518,5 +2518,14 @@
 	"cross-river": "크로스 스트라이버",
 	"competition": "경쟁",
 	"mikes": "마이크",
-	"urinels": "소아리넬"
+	"urinels": "소아리넬",
+	"fast": "빠른",
+	"tonight": "오늘 밤",
+	"catch": "잡다",
+	"eephants": "코끼리",
+	"poses": "포즈",
+	"wake": "일어나 다",
+	"toddlers": "유아",
+	"lemon": "레몬",
+	"coaches": "코치"
 }
