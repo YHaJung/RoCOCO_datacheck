@@ -8,7 +8,7 @@ print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from utils.file_processing import increment_filename, save_file, load_file
-from data_check.downloaded.category import cate
+from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_diff_flags
 from utils.user_io import ask_key_to_user
@@ -150,7 +150,7 @@ def fix_multiple_or_no_change(origin_data, new_data, strange_idxes):  # fix mult
     return fixed_origin_lines, fixed_new_lines, strange_idxes
 
 def show_image(origin_words):
-    img_info_list = load_file('data_check/downloaded/coco_karpathy_test.json')
+    img_info_list = load_file('data_check/sub_infos/coco_karpathy_test.json')
     origin_line = " ".join(origin_words).replace("`", "").replace('\'', ' ').replace('  ', ' ').strip(' ')
 
     start_idx, end_idx = 0, len(origin_line)
