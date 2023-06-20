@@ -11,7 +11,7 @@ def increment_filename(filename):
         next_idx +=1
         next_file_name = pure_filename+'_'+str(next_idx)+'.'+file_type
 
-    last_file_name = pure_filename+'_'+str(next_idx-1)+'.'+file_type
+    last_file_name = pure_filename+'_'+str(next_idx-1)+'.'+file_type if next_idx-1 > 0 else filename
 
     return last_file_name, next_file_name
 
@@ -32,7 +32,7 @@ def save_file(data, filepath):
     extension = filepath.split('.')[-1]
     if extension == 'json':
         with open(filepath, 'w', encoding='utf-8') as f:
-            json.dump(data, f, indent="\t")
+            json.dump(data, f, indent="\t", ensure_ascii=False)
     elif extension == 'pickle' or extension=='pkl':
         with open(filepath, 'wb') as f:
             pickle.dump(data, f, protocol=4)
@@ -49,6 +49,6 @@ def load_file(filepath):
     else: # txt
         with open(filepath, 'r') as file:
             results = file.readlines()
-        results = [line.rstrip('\n') for line in results]
+        results = [line.rstrip('\n').rstrip(' \.').lower() for line in results]
     
     return results
