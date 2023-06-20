@@ -23,6 +23,7 @@ start_idx_path = 'data_check/start_idx.txt'
 def save_results(checked_lines, next_idx):
     checked_data = "\n".join(checked_lines)
     save_file(checked_data, new_filename)
+    save_file([str(next_idx)], start_idx_path)
 
 def call_same_category_words(origin_capt, diff_word_idx):
     origin_words = origin_capt.split(' ')
