@@ -25,16 +25,13 @@ def save_results(checked_lines, next_idx):
     save_file(checked_data, new_filename)
     save_file([str(next_idx)], start_idx_path)
 
-def call_same_category_words(origin_capt, diff_word_idx):
-    origin_words = origin_capt.split(' ')
-    diff_word = origin_words[diff_word_idx]
-
+def call_same_category_words(word):
     new_words = []
     categories = cate()
     for category in categories.keys():
-        if diff_word in categories[category]:
+        if word in categories[category]:
             new_words += categories[category]
-            new_words.remove(diff_word)
+            new_words.remove(word)
 
     random.shuffle(new_words)
     return new_words
@@ -74,8 +71,8 @@ def check_lines(origin_data, new_data, start_idx=0):
         if work_key == 's': # save and quit
             return checked_data, line_idx
         elif work_key == 'w':  # call other new word
-            new_words = call_same_category_words(origin_capt, diff_word_idxes[0])
             diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
+            new_words = call_same_category_words(diff_word)
 
             choiced = '-1'
             while choiced not in ['1']:
