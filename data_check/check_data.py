@@ -24,6 +24,20 @@ def save_results(checked_lines, next_idx):
     checked_data = "\n".join(checked_lines)
     save_file(checked_data, new_filename)
 
+def call_same_category_words(origin_capt, diff_word_idx):
+    origin_words = origin_capt.split(' ')
+    diff_word = origin_words[diff_word_idx]
+
+    new_words = []
+    categories = cate()
+    for category in categories.keys():
+        if diff_word in categories[category]:
+            new_words += categories[category]
+            new_words.remove(diff_word)
+
+    random.shuffle(new_words)
+    return new_words
+
 def check_lines(origin_data, new_data, start_idx=0):
 
     if len(origin_data) != len(new_data):
@@ -52,11 +66,25 @@ def check_lines(origin_data, new_data, start_idx=0):
 
         # pick sentence
         work_key = '-1'
-        while (not work_key.isdigit() or int(work_key) not in range(len(new_capts)+1)) and work_key not in ['s']:
-            work_key = input('[save(s)]\nPick caption idx ')
-        if work_key == 's':
+        str_idxes = [str(i) for i in range(len(new_capts)+1)]
+        while work_key not in ['s', 'w'] + str_idxes:
+            work_key = input('Pick caption idx (save(s), other sim word(w)) ')
+
+        if work_key == 's': # save and quit
             return checked_data, line_idx
-        checked_data[line_idx] = new_capts[int(work_key)-1]
+        elif work_key == 'w':  # call other new word
+            new_words = call_same_category_words(origin_capt, diff_word_idxes[0])
+            diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
+
+            choiced = '-1'
+            while choiced not in ['1']:
+                if choiced == 's':
+                    return checked_data, line_idx
+                new_word = new_words.pop()
+                choiced = input(f'[{diff_word} -> {new_word}] choose(1), other(2), save(s) ')
+            checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
+        else:
+            checked_data[line_idx] = new_capts[int(work_key)-1]
 
     return checked_data, line_idx
         
