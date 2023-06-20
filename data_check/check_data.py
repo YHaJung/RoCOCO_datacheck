@@ -10,7 +10,7 @@ sys.path.append(root_path)
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
-from utils.compare import find_diff_flags, word_count
+from utils.compare import find_diff_flags, word_count, find_different_words
 from utils.user_io import ask_key_to_user
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
@@ -28,18 +28,19 @@ def check_lines(origin_data, new_data, start_idx=0):
         return origin_data, new_data, next_idx
     
     for line_idx, (origin_capt, new_line) in enumerate(zip(origin_data, new_data)):
+        
         if new_line[:5] == 'none,':
             result_key = 'none'
             new_capts = [new_line.lstrip('none, ')]
         else:
-            result_key = '+'
+            result_key = ' +  '
             new_capts = new_line.split('+')[:-1]
 
-        
-        print(f'\nline {line_idx}')
-        print(origin_capt)
-        for new_capt in new_capts:
-            print(f'[{result_key}] {new_capt}')
+        print(f'\n[line {line_idx}]')
+        diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)        
+        print(f'[origin] {origin_capt_print}')
+        for capt_idx, new_capt in enumerate(new_capts_print):
+            print(f'[{result_key} {capt_idx}] {new_capt}')
 
 
 if __name__=='__main__':
