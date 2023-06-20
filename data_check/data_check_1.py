@@ -13,7 +13,7 @@ from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_diff_flags
 from utils.user_io import ask_key_to_user
 
-origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/same_caps_mod_fixed.txt'
+origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/same_caps_mod_fixed_ver1.txt'
 diff_pairs_path = 'data_check/different_pairs.json'
 sim_pairs_path = 'data_check/similar_pairs.json'
 start_idx_path = 'data_check/last_idx.txt'
