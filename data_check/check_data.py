@@ -45,6 +45,7 @@ def check_lines(origin_data, new_data, start_idx=0):
     checked_data = new_data
     line_idx = start_idx
     while line_idx < len(new_data):
+        # read lines
         origin_capt = origin_data[line_idx]
         new_line = new_data[line_idx]
 
@@ -57,7 +58,7 @@ def check_lines(origin_data, new_data, start_idx=0):
 
         print(f'\n[line {line_idx}]')
 
-        # find and print different word
+        # find different word and print
         diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)        
         print(f'[origin] {origin_capt_print}')
         for capt_idx, new_capt in enumerate(new_capts_print):
@@ -83,9 +84,9 @@ def check_lines(origin_data, new_data, start_idx=0):
                     new_word = new_words.pop()
                 choiced = input(f'[{diff_word} -> {new_word}] choose(1), other(2), save(s) ')
             checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
-        else:
+        else: # pick 1 sentence & pass
             checked_data[line_idx] = new_capts[int(work_key)-1]
-        line_idx += 1
+            line_idx += 1
 
     return checked_data, line_idx
         
