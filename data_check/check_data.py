@@ -43,9 +43,10 @@ def check_lines(origin_data, new_data, start_idx=0):
         return new_data, start_idx
     
     checked_data = new_data
-    for line_idx, (origin_capt, new_line) in enumerate(zip(origin_data, new_data)):
-        if line_idx < start_idx:
-            continue
+    line_idx = start_idx
+    while line_idx < len(new_data):
+        origin_capt = origin_data[line_idx]
+        new_line = new_data[line_idx]
 
         if new_line[:5] == 'none,':
             result_key = 'none'
@@ -65,24 +66,26 @@ def check_lines(origin_data, new_data, start_idx=0):
         # pick sentence
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
-        while work_key not in ['s', 'w'] + str_idxes:
-            work_key = input('Pick caption idx (save(s), other sim word(w)) ')
+        while work_key not in ['s', 'e', 'w'] + str_idxes:
+            work_key = input('Pick caption idx (save(s), change origin word(w), change new word(e)) ')
 
         if work_key == 's': # save and quit
             return checked_data, line_idx
-        elif work_key == 'w':  # call other new word
+        elif work_key == 'e':  # call other new word
             diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
             new_words = call_same_category_words(diff_word)
 
-            choiced = '-1'
+            choiced = '2'
             while choiced not in ['1']:
                 if choiced == 's':
                     return checked_data, line_idx
-                new_word = new_words.pop()
+                elif choiced == '2':
+                    new_word = new_words.pop()
                 choiced = input(f'[{diff_word} -> {new_word}] choose(1), other(2), save(s) ')
             checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
         else:
             checked_data[line_idx] = new_capts[int(work_key)-1]
+        line_idx += 1
 
     return checked_data, line_idx
         
