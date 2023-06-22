@@ -16,13 +16,14 @@ origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt'
 start_idx_path = 'data_check/start_idx.txt'
 # diff_pairs_path = 'data_check/different_pairs.json'
 # sim_pairs_path = 'data_check/similar_pairs.json'
-# local_dict_path = 'utils/translator.json'
+local_dict_path = 'utils/translator.json'
 # strange_idxes_path = 'data_check/strange_idxes.txt'
 
 def save_results(checked_lines, next_idx):
     checked_data = "\n".join(checked_lines)
     save_file(checked_data, new_filename)
     save_file([str(next_idx)], start_idx_path)
+    save_file(myDict, local_dict_path)
 
 def call_same_category_words(word):
     new_words = []
@@ -54,11 +55,11 @@ def call_word_similarities(line_idx):
     return word_sims
 
 
-def check_lines(origin_data, new_data, start_idx=0):
+def check_lines(origin_data, new_data, start_idx, myDict):
 
     if len(origin_data) != len(new_data):
         print('[wrong inputs] different length')
-        return new_data, start_idx
+        return new_data, start_idx, myDict
     
     checked_data = new_data
     line_idx = start_idx
@@ -80,9 +81,11 @@ def check_lines(origin_data, new_data, start_idx=0):
 
         # find different word and print
         diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)        
-        print(f'[origin] {origin_capt_print}')
+        myDict, diff_word_trans = translate_to_korean_local(myDict, origin_capt.split(' ')[diff_word_idxes[0]])
+        print(f'[origin] {origin_capt_print} ({diff_word_trans})')
         for capt_idx, new_capt in enumerate(new_capts_print):
-            print(f'[{result_key} {capt_idx+1}] {new_capt}')
+            myDict, new_word_trans = translate_to_korean_local(myDict, new_capt.split(' ')[diff_word_idxes[0]].lstrip('{').rstrip('}'))
+            print(f'[{result_key} {capt_idx+1}] {new_capt} ({new_word_trans})')
 
         # pick sentence
         work_key = '-1'
@@ -93,7 +96,7 @@ def check_lines(origin_data, new_data, start_idx=0):
                 show_image(origin_capt)
 
         if work_key == 's': # save and quit
-            return checked_data, line_idx
+            return checked_data, line_idx, myDict
         elif work_key == 'e':  # call other new word
             diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
             new_words = call_same_category_words(diff_word)
@@ -101,10 +104,11 @@ def check_lines(origin_data, new_data, start_idx=0):
             choiced = '2'
             while choiced not in ['1']:
                 if choiced == 's':
-                    return checked_data, line_idx
-                elif choiced == '2':
+                    return checked_data, line_idx, myDict
+                elif choiced == 'e':
                     new_word = new_words.pop()
-                choiced = input(f'[{diff_word} -> {new_word}] choose(1), other(2), save(s) ')
+                myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
+                choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), other(e), save(s) ')
             checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
@@ -124,7 +128,7 @@ def check_lines(origin_data, new_data, start_idx=0):
             checked_data[line_idx] = new_capts[int(work_key)-1]
             line_idx += 1
 
-    return checked_data, line_idx
+    return checked_data, line_idx, myDict
         
 
         
@@ -135,6 +139,7 @@ if __name__=='__main__':
     new_data = load_file(new_filename)
 
     start_idx = int(load_file(start_idx_path)[0])
+    myDict = load_file(local_dict_path)
 
-    checked_data, next_idx = check_lines(origin_data, new_data, start_idx)
-    save_results(checked_data, next_idx)
+    checked_data, next_idx, myDict = check_lines(origin_data, new_data, start_idx, myDict)
+    save_results(checked_data, next_idx, myDict)
