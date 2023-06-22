@@ -129,17 +129,20 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
         if work_key == 'q': # save and quit
             return checked_data, line_idx, myDict, diff_pairs
         elif work_key == 'e':  # call other new word
-            new_words = call_same_category_words(diff_word)
-
-            choiced = '2'
-            while choiced not in ['1']:
-                if choiced == 'q':
-                    return checked_data, line_idx, myDict, diff_pairs
-                elif choiced == 'e':
-                    new_word = new_words.pop()
-                myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
-                choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), other(e), quit(q) ')
+            if diff_word in diff_pairs.keys() and len(diff_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
+                new_word = random.choice(diff_pairs[diff_word])
+            else: # ask user about new word
+                new_words = call_same_category_words(diff_word)
+                choiced = '2'
+                while choiced not in ['1']:
+                    if choiced == 'q':
+                        return checked_data, line_idx, myDict, diff_pairs
+                    elif choiced == 'e':
+                        new_word = new_words.pop()
+                    myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
+                    choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), other(e), quit(q) ')
             checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
+            print(f'(Fixed!) {checked_data[line_idx]}')
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
             word_sims = call_word_similarities(line_idx)
