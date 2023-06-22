@@ -1,5 +1,3 @@
-import pandas as pd
-import cv2
 import random
 
 import sys, os
@@ -12,6 +10,7 @@ from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_diff_flags, word_count, find_different_words, find_deleted_words
 from utils.user_io import ask_key_to_user
+from utils.show_image import show_image
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
 start_idx_path = 'data_check/start_idx.txt'
@@ -89,7 +88,9 @@ def check_lines(origin_data, new_data, start_idx=0):
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         while work_key not in ['s', 'e', 'w'] + str_idxes:
-            work_key = input('Pick caption idx (save(s), change origin word(w), change new word(e)) ')
+            work_key = input('Pick caption idx (save(s), change origin word(w), change new word(e), show_image(r)) ')
+            if work_key == 'r':
+                show_image(origin_capt)
 
         if work_key == 's': # save and quit
             return checked_data, line_idx
