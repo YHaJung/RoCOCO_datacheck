@@ -29,39 +29,23 @@
 	"mountains": [
 		"rainbow"
 	],
-	"side": [
-		"bakery",
-		"country",
-		"pond"
-	],
-	"intent": [
-		"mattress"
-	],
-	"goodness": [
-		"desk"
-	],
 	"girl": [
-		"biker",
 		"boy",
 		"father",
 		"gentlemen",
 		"grandma",
 		"guy",
-		"instructor",
 		"male",
 		"men",
-		"para-sailers",
 		"parent",
 		"parents"
 	],
 	"guy": [
-		"batter",
 		"daughters",
 		"grandma",
 		"women"
 	],
 	"tracks": [
-		"architecture",
 		"benches",
 		"bridge",
 		"buliding",
@@ -1657,7 +1641,8 @@
 		"necklaces",
 		"purse",
 		"scarf",
-		"uniform"
+		"uniform",
+		"shirt"
 	],
 	"area": [
 		"post",
