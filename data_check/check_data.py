@@ -10,7 +10,7 @@ sys.path.append(root_path)
 from utils.file_processing import increment_filename, save_file, load_file
 from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
-from utils.compare import find_diff_flags, word_count, find_different_words
+from utils.compare import find_diff_flags, word_count, find_different_words, find_deleted_words
 from utils.user_io import ask_key_to_user
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
@@ -36,6 +36,25 @@ def call_same_category_words(word):
     random.shuffle(new_words)
     return new_words
 
+def call_word_similarities(line_idx):
+    sim_list = load_file(os.path.join("data_check/sub_infos/analysis", f'{line_idx}.txt'))
+
+    origin_capt = sim_list[0].split(', ')[0]
+    origin_words = origin_capt.split(' ')
+    word_sims = {origin_word : -1 for origin_word in origin_words}
+
+    line_idx = 1
+    while -1 in word_sims.values() and line_idx < len(sim_list):
+        sim_info = sim_list[line_idx].split(', ')
+        sim_capt, euclidean, inner = sim_info
+        diff_word = find_deleted_words(origin_capt, sim_capt)
+        word_sims[diff_word] = float(inner)
+        line_idx += 1
+    
+    word_sims = {key: value for key, value in word_sims.items() if len(key) != 1}
+    return word_sims
+
+
 def check_lines(origin_data, new_data, start_idx=0):
 
     if len(origin_data) != len(new_data):
@@ -48,10 +67,12 @@ def check_lines(origin_data, new_data, start_idx=0):
         # read lines
         origin_capt = origin_data[line_idx]
         new_line = new_data[line_idx]
-
         if new_line[:5] == 'none,':
             result_key = 'none'
             new_capts = [new_line.lstrip('none, ')]
+        elif new_line[:4] == 'new,':
+            result_key = 'new '
+            new_capts = [new_line.lstrip('new, ')]
         else:
             result_key = ' +  '
             new_capts = new_line.split('+')[:-1]
@@ -84,6 +105,20 @@ def check_lines(origin_data, new_data, start_idx=0):
                     new_word = new_words.pop()
                 choiced = input(f'[{diff_word} -> {new_word}] choose(1), other(2), save(s) ')
             checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
+            line_idx += 1
+        elif work_key == 'w':  # pick new origin word to change
+            word_sims = call_word_similarities(line_idx)
+            word_sims = sorted(word_sims.items(), key = lambda item: item[1])
+            
+            diff_word = None
+            for word_idx, (word, sim) in enumerate(word_sims):
+                if diff_word == None:
+                    highlighted_capt = origin_capt.replace(word, '{'+word+'}')
+                    diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {sim}] {highlighted_capt} (choose(1), other(w)) ')
+                    if diff_word_key == '1':
+                        diff_word = word
+                        new_word = random.choice(call_same_category_words(diff_word))
+                        new_data[line_idx] = 'new, '+origin_capt.replace(diff_word, new_word)
         else: # pick 1 sentence & pass
             checked_data[line_idx] = new_capts[int(work_key)-1]
             line_idx += 1

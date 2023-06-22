@@ -31,6 +31,14 @@ def find_different_words(sentence, sentence_list):
 
     return different_words, highlighted_sentence, highlighted_sentences
 
+def find_deleted_words(first_sentence, second_sentence):
+    first_words = first_sentence.split()
+    second_words = second_sentence.split()
+
+    for i, word in enumerate(first_words):
+        if i >= len(second_words) or word != second_words[i]:
+            return word
+
 
 def word_count(line):
     words = line.split(' ')
