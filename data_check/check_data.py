@@ -76,7 +76,6 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
         print('[wrong inputs] different length')
         return new_data, start_idx, myDict, diff_pairs
     
-    checked_data = new_data
     line_idx = start_idx
     while line_idx < len(new_data):
         # read lines
@@ -107,8 +106,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
         new_words = [new_capt.split(' ')[diff_word_idxes[0]] for new_capt in new_capts]
         in_pair_idxes = check_in_pair(diff_word, new_words, diff_pairs)
         if len(in_pair_idxes) != 0:
-            checked_data[line_idx] = new_capts[random.choice(in_pair_idxes)]
-            print(f'(Pass) {checked_data[line_idx]}')
+            new_data[line_idx] = new_capts[random.choice(in_pair_idxes)]
+            print(f'(Pass) {new_data[line_idx]}')
             line_idx += 1
             continue
 
@@ -127,22 +126,25 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
 
 
         if work_key == 'q': # save and quit
-            return checked_data, line_idx, myDict, diff_pairs
+            return new_data, line_idx, myDict, diff_pairs
         elif work_key == 'e':  # call other new word
             if diff_word in diff_pairs.keys() and len(diff_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
                 new_word = random.choice(diff_pairs[diff_word])
             else: # ask user about new word
                 new_words = call_same_category_words(diff_word)
-                choiced = '2'
-                while choiced not in ['1']:
+                choiced = '0'
+                while choiced not in ['1', '2']:
                     if choiced == 'q':
-                        return checked_data, line_idx, myDict, diff_pairs
+                        return new_data, line_idx, myDict, diff_pairs
                     elif choiced == 'e':
                         new_word = new_words.pop()
                     myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
-                    choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), other(e), quit(q) ')
-            checked_data[line_idx] = origin_capt.replace(diff_word, new_word)
-            print(f'(Fixed!) {checked_data[line_idx]}')
+                    choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), add-in-pair(2), other(e), quit(q) ')
+                if choiced == '2': # add in pair
+                    diff_pairs = add_in_pair(diff_word, new_word, diff_pairs)
+
+            new_data[line_idx] = origin_capt.replace(diff_word, new_word)
+            print(f'(Fixed!) {new_data[line_idx]}')
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
             word_sims = call_word_similarities(line_idx)
@@ -154,7 +156,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                     highlighted_capt = origin_capt.replace(word, '{'+word+'}')
                     diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {sim}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
-                        return checked_data, line_idx, myDict, diff_pairs
+                        return new_data, line_idx, myDict, diff_pairs
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_same_category_words(diff_word))
@@ -164,10 +166,10 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                 work_key = work_key[1]
                 new_word = new_capts[int(work_key)-1].split(' ')[diff_word_idxes[0]]
                 diff_pairs = add_in_pair(diff_word, new_word, diff_pairs)
-            checked_data[line_idx] = new_capts[int(work_key)-1]
+            new_data[line_idx] = new_capts[int(work_key)-1]
             line_idx += 1
 
-    return checked_data, line_idx, myDict, diff_pairs
+    return new_data, line_idx, myDict, diff_pairs
         
 
         
