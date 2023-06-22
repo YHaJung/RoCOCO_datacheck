@@ -5,11 +5,10 @@ root_path = os.getcwd()
 print(f'root path : {root_path}')
 sys.path.append(root_path)
 
-from utils.file_processing import increment_filename, save_file, load_file
+from utils.file_processing import save_file, load_file
 from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
-from utils.compare import find_diff_flags, word_count, find_different_words, find_deleted_words
-from utils.user_io import ask_key_to_user
+from utils.compare import find_different_words, find_deleted_words
 from utils.show_image import show_image
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
