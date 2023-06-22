@@ -91,9 +91,14 @@ def check_lines(origin_data, new_data, start_idx, myDict):
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         while work_key not in ['s', 'e', 'w'] + str_idxes:
-            work_key = input('Pick caption idx (save(s), change origin word(w), change new word(e), show_image(r)) ')
+            work_key = input('Pick caption idx (save(s), change origin word(w), change new word(e), show_image(r), translate all(t)) ')
             if work_key == 'r':
                 show_image(origin_capt)
+            elif work_key == 't':
+                print(f'[origin] {translate_to_korean(origin_capt)}')
+                for new_capt_idx, new_capt in enumerate(new_capts):
+                    print(f'[{result_key} {capt_idx+1}] {translate_to_korean(new_capt)}')
+
 
         if work_key == 's': # save and quit
             return checked_data, line_idx, myDict

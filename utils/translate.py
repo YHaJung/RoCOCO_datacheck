@@ -7,16 +7,16 @@ import googletrans
 
 from utils.file_processing import save_file, load_file
 
-def translate_to_korean(word):
+def translate_to_korean(caption):
     translator = googletrans.Translator()
     again_flag = True
     while again_flag:
         try:
-            new_word = translator.translate(word, src='en', dest='ko').text
+            new_caption = translator.translate(caption, src='en', dest='ko').text
             again_flag = False
         except:
             again_flag = True
-    return new_word
+    return new_caption
 
 def translate_to_korean_local(myDict, word):
     if word in myDict.keys():
