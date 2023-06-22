@@ -115,8 +115,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         str_idxes += ['a'+i for i in str_idxes]
-        while work_key not in ['q', 'e', 'w'] + str_idxes:
-            work_key = input('Pick caption idx (add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t)), Fix Translation(f), quit(q) ')
+        while work_key not in ['q', 'e', 'w', 'd'] + str_idxes:
+            work_key = input('Pick caption idx (add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t)), fix translation(f), fix typo(d) quit(q) ')
             if work_key == 'r': # show image
                 show_image(origin_capt)
             elif work_key == 't': # translate all sentences
@@ -125,7 +125,6 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                     print(f'[{result_key} {capt_idx+1}] {translate_to_korean(new_capt)}')
             elif work_key == 'f': # fix local dictionary
                 capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
-                print(capt_idx_str)
                 new_trans_key = -1
                 while new_trans_key not in capt_idx_str:
                     new_trans_key = input("Which caption's word? (origin(0)) ")
@@ -168,6 +167,17 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                         diff_word = word
                         new_word = random.choice(call_same_category_words(diff_word))
                         new_data[line_idx] = 'new, '+origin_capt.replace(diff_word, new_word)
+        elif work_key == 'd': # fix typo
+            capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
+            fix_key = -1
+            while fix_key not in capt_idx_str:
+                fix_key = input("Which caption do you want to change? (origin(0), new(1)) ")
+            if fix_key == '0':
+                origin_data[line_idx] = input("Enter new : ")
+                continue
+            else:
+                new_data[line_idx] = 'none, ' + input("Enter new : ")
+                continue
         else: # pick 1 sentence & pass
             if work_key[0] == 'a':
                 work_key = work_key[1]
