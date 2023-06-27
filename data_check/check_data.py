@@ -5,8 +5,8 @@ root_path = os.getcwd()
 print(f'root path : {root_path}')
 sys.path.append(root_path)
 
+from call_words import call_words_by_category
 from utils.file_processing import save_file, load_file
-from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_different_words, find_deleted_words, highlight_given_word, replace_word
 from utils.show_image import show_image
@@ -16,7 +16,6 @@ start_idx_path = 'data_check/start_idx.txt'
 pass_pairs_path = 'data_check/different_pairs.json'
 local_dict_path = 'utils/translator.json'
 keep_idxes_path = 'data_check/keep_idxes.txt'
-categories_path = 'data_check/sub_infos/category.json'
 
 def save_results(checked_lines, next_idx, myDict, pass_pairs, keep_idxes):
     checked_data = "\n".join(checked_lines)
@@ -26,27 +25,7 @@ def save_results(checked_lines, next_idx, myDict, pass_pairs, keep_idxes):
     save_file(pass_pairs, pass_pairs_path)
     save_file("\n".join(map(str, sorted(keep_idxes))), keep_idxes_path)
 
-def call_words_by_category(word, category_type = 'same'):
-    new_words = []
-    categories = load_file(categories_path)
-    for category in categories.keys():
-        if (category_type == 'same' and word in categories[category]) \
-            or (category_type == 'diff' and word not in categories[category]):
-            new_words += categories[category]
 
-    if len(new_words) == 0:
-        print('(Warning!) This word does not contained in any category.')
-        print(f'[categories] {categories.keys()}')
-        category = input('choose category name : ')
-        new_words = categories[category]
-        categories[category].append(word)
-        save_file(categories, categories_path)
-    
-    if word in new_words:
-        new_words.remove(word)
-
-    random.shuffle(new_words)
-    return new_words
 
 def add_in_pair(origin_word, new_word, pair):
     if origin_word in pair.keys():
