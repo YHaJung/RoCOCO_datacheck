@@ -165,7 +165,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                         return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
-                        new_word = random.choice(call_same_category_words(diff_word))
+                        new_word = random.choice(call_words_by_category(diff_word, category_type = 'same'))
                         new_data[line_idx] = 'new, '+origin_capt.replace(diff_word, new_word)
         elif work_key == 'k': # keep
             print('(keep!)')
