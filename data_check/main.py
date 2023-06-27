@@ -81,6 +81,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             new_capts = new_line.split('+')[:-1]
 
         print(f'\n[line {line_idx}]')
+        print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), quit(q)')
+
 
         # find different word and print
         diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)        
@@ -104,23 +106,14 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         str_idxes += ['a'+i for i in str_idxes]
-        while work_key not in ['q', 'e', 'w', 'd', 'k'] + str_idxes:
-            work_key = input('Pick caption idx (add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), quit(q) ')
+        while work_key not in ['q', 'e', 'w', 'f', 'd', 'k'] + str_idxes:
+            work_key = input('Pick caption idx : ')
             if work_key == 'r': # show image
                 show_image(origin_capt)
             elif work_key == 't': # translate all sentences
                 print(f'[origin] {translate_to_korean(origin_capt)}')
                 for new_capt_idx, new_capt in enumerate(new_capts):
                     print(f'[{result_key} {capt_idx+1}] {translate_to_korean(new_capt)}')
-            elif work_key == 'f': # fix local dictionary
-                capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
-                new_trans_key = -1
-                while new_trans_key not in capt_idx_str:
-                    if new_trans_key == 'q':
-                        return new_data, line_idx, myDict, pass_pairs, keep_idxes
-                    new_trans_key = input("Which caption's word? (origin(0), new(idx), quit(q)) ")
-                trans_word = new_capts[int(new_trans_key)-1].split(" ")[diff_word_idxes[0]] if new_trans_key != '0' else diff_word
-                myDict[trans_word] = input(f"{trans_word} : ")
 
         if work_key == 'q': # save and quit
             return new_data, line_idx, myDict, pass_pairs, keep_idxes
@@ -161,6 +154,15 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             print('(keep!)')
             keep_idxes.update([line_idx])
             line_idx += 1
+        elif work_key == 'f': # fix local dictionary
+            capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
+            new_trans_key = -1
+            while new_trans_key not in capt_idx_str:
+                if new_trans_key == 'q':
+                    return new_data, line_idx, myDict, pass_pairs, keep_idxes
+                new_trans_key = input("Which caption's word? (origin(0), new(idx), quit(q)) ")
+            trans_word = new_capts[int(new_trans_key)-1].split(" ")[diff_word_idxes[0]] if new_trans_key != '0' else diff_word
+            myDict[trans_word] = input(f"{trans_word} : ")
         elif work_key == 'd': # fix typo
             capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
             fix_key = -1
