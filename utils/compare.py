@@ -1,4 +1,16 @@
+def highlight_given_word(sentence, given_word):
+    words = sentence.split(' ')
+    for word_idx, word in enumerate(words):
+        if word == given_word:
+            words[word_idx] = '{'+word+'}'
+    return " ".join(words)
 
+def replace_word(sentence, origin_word, new_word):
+    words = sentence.split(' ')
+    for word_idx, word in enumerate(words):
+        if word == origin_word:
+            words[word_idx] = new_word
+    return " ".join(words)
 
 def find_diff_flags(origin_words, new_words):
     diff_flag_list = [0]*len(origin_words)
@@ -27,7 +39,7 @@ def find_different_words(sentence, sentence_list):
     highlighted_sentence = sentence
     for j in range(len(words)):
         if j in different_words:
-            highlighted_sentence = highlighted_sentence.replace(words[j], '{' + words[j] + '}')
+            highlighted_sentence = highlight_given_word(highlighted_sentence, words[j])
 
     return different_words, highlighted_sentence, highlighted_sentences
 
@@ -39,19 +51,7 @@ def find_deleted_words(first_sentence, second_sentence):
         if i >= len(second_words) or word != second_words[i]:
             return word
 
-def highlight_given_word(sentence, given_word):
-    words = sentence.split(' ')
-    for word_idx, word in enumerate(words):
-        if word == given_word:
-            words[word_idx] = '{'+word+'}'
-    return " ".join(words)
 
-def replace_word(sentence, origin_word, new_word):
-    words = sentence.split(' ')
-    for word_idx, word in enumerate(words):
-        if word == origin_word:
-            words[word_idx] = new_word
-    return " ".join(words)
 
 
 def word_count(line):
