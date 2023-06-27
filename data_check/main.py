@@ -2,7 +2,6 @@ import random
 
 import sys, os
 root_path = os.getcwd()
-print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from call_words import call_words_by_category, call_word_by_bart
@@ -44,19 +43,20 @@ def check_in_pair(origin_word, new_words, pairs):
 def call_word_similarities(line_idx):
     sim_list = load_file(os.path.join("data_check/sub_infos/analysis", f'{line_idx}.txt'))
 
-    origin_capt = sim_list[0].split(', ')[0]
+    origin_capt = " ".join(sim_list[0].split(', ')[:-2])
     origin_words = origin_capt.split(' ')
     word_sims = {origin_word : -1 for origin_word in origin_words}
 
     line_idx = 1
     while -1 in word_sims.values() and line_idx < len(sim_list):
         sim_info = sim_list[line_idx].split(', ')
-        sim_capt, euclidean, inner = sim_info
+        sim_capt, euclidean, inner = " ".join(sim_info[:-2]), sim_info[-2], sim_info[-1]
         diff_word = find_deleted_words(origin_capt, sim_capt)
         word_sims[diff_word] = float(inner)
         line_idx += 1
     
-    word_sims = {key: value for key, value in word_sims.items() if len(key) != 1}
+    except_list = ['a', 'an', 'the', 'on', 'of', 'at', 'in']
+    word_sims = {key: value for key, value in word_sims.items() if len(key) != 1 and key not in except_list}
     return word_sims
 
 
@@ -79,9 +79,13 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             new_capts = [new_line.lstrip('new, ')]
         else:
             result_key = ' +  '
-            new_capts = new_line.split('+')[:-1]
+            new_capts = new_line.split('+')
+            if len(new_capts) > 1:
+                new_capts = new_capts[:-1]
 
         print(f'\n[line {line_idx}]')
+        print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), go line(g), quit(q)')
+
 
         # find different word and print
         diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)        
@@ -105,23 +109,14 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         str_idxes += ['a'+i for i in str_idxes]
-        while work_key not in ['q', 'e', 'w', 'd', 'k'] + str_idxes:
-            work_key = input('Pick caption idx (add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), quit(q) ')
+        while work_key not in ['q', 'e', 'w', 'f', 'd', 'k', 'g'] + str_idxes:
+            work_key = input('Pick caption idx : ')
             if work_key == 'r': # show image
                 show_image(origin_capt)
             elif work_key == 't': # translate all sentences
                 print(f'[origin] {translate_to_korean(origin_capt)}')
                 for new_capt_idx, new_capt in enumerate(new_capts):
                     print(f'[{result_key} {capt_idx+1}] {translate_to_korean(new_capt)}')
-            elif work_key == 'f': # fix local dictionary
-                capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
-                new_trans_key = -1
-                while new_trans_key not in capt_idx_str:
-                    if new_trans_key == 'q':
-                        return new_data, line_idx, myDict, pass_pairs, keep_idxes
-                    new_trans_key = input("Which caption's word? (origin(0), new(idx), quit(q)) ")
-                trans_word = new_capts[int(new_trans_key)-1].split(" ")[diff_word_idxes[0]] if new_trans_key != '0' else diff_word
-                myDict[trans_word] = input(f"{trans_word} : ")
 
         if work_key == 'q': # save and quit
             return new_data, line_idx, myDict, pass_pairs, keep_idxes
@@ -141,7 +136,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                     pass_pairs = add_in_pair(diff_word, new_word, pass_pairs)
 
             new_data[line_idx] = replace_word(origin_capt, diff_word, new_word)
-            print(f'(Fixed!) {new_data[line_idx]}')
+            _, _, new_capts_print = find_different_words(origin_capt, [new_data[line_idx]])
+            print(f'(Fixed!) {new_capts_print[0]}')
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
             word_sims = call_word_similarities(line_idx)
@@ -151,17 +147,30 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             for word_idx, (word, sim) in enumerate(word_sims):
                 if diff_word == None:
                     highlighted_capt = highlight_given_word(origin_capt, word)
-                    diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
+                    diff_word_key = -1
+                    while diff_word_key not in ['q', '1', 'w']:
+                        diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
                         return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_words_by_category(diff_word, category_type = 'same')) # random.choice(call_word_by_bart())
+                        if new_word == 'q':
+                            return new_data, line_idx, myDict, pass_pairs, keep_idxes
                         new_data[line_idx] = 'new, '+replace_word(origin_capt, diff_word, new_word)
         elif work_key == 'k': # keep
             print('(keep!)')
             keep_idxes.update([line_idx])
             line_idx += 1
+        elif work_key == 'f': # fix local dictionary
+            capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
+            new_trans_key = -1
+            while new_trans_key not in capt_idx_str:
+                if new_trans_key == 'q':
+                    return new_data, line_idx, myDict, pass_pairs, keep_idxes
+                new_trans_key = input("Which caption's word? (origin(0), new(idx), quit(q)) ")
+            trans_word = new_capts[int(new_trans_key)-1].split(" ")[diff_word_idxes[0]] if new_trans_key != '0' else diff_word
+            myDict[trans_word] = input(f"{trans_word} : ")
         elif work_key == 'd': # fix typo
             capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
             fix_key = -1
@@ -175,6 +184,11 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             else:
                 new_data[line_idx] = 'none, ' + input("Enter new : ")
                 continue
+        elif work_key =='g': # go to specific line
+            new_line_idx = '-1'
+            while new_line_idx not in [str(i) for i in range(len(origin_data))]:
+                new_line_idx = input('Which line do you want to go? ')
+            line_idx = int(new_line_idx)
         else: # pick 1 sentence & pass
             if work_key[0] == 'a':
                 work_key = work_key[1]

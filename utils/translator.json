@@ -1586,7 +1586,7 @@
 	"leaning": "경향",
 	"tank": "탱크",
 	"squares": "사각형",
-	"emo": "이모",
+	"emo": "이모(기타 장르)",
 	"painting": "그림",
 	"sale": "판매",
 	"french": "프랑스 국민",
@@ -1965,7 +1965,7 @@
 	"kind": "친절한",
 	"cute": "귀여운",
 	"huskie": "허 스키",
-	"hood": "후드",
+	"hood": "두건",
 	"edges": "가장자리",
 	"peeks": "엿보기",
 	"motorists": "자동차운전자",
@@ -2133,7 +2133,7 @@
 	"landing": "착륙",
 	"addons": "애드온",
 	"cone": "원뿔",
-	"area": "0",
+	"area": "공간",
 	"eggs": "달걀",
 	"fur": "털",
 	"wool": "양모",
@@ -2530,5 +2530,6 @@
 	"coaches": "코치",
 	"expresses": "표현",
 	"regarded": "고려",
-	"carmen": "카르멘"
+	"carmen": "카르멘",
+	"lectrician": "전공"
 }

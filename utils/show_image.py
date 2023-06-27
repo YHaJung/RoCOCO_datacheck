@@ -2,7 +2,6 @@ import cv2
 
 import sys, os
 root_path = os.getcwd()
-print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from utils.file_processing import load_file
@@ -10,13 +9,14 @@ from utils.file_processing import load_file
 def refine_string(line):
     import re
     line = line.strip(' ').rstrip('\n').rstrip(' \.').lower()
-    line = re.sub(r"[,\"\'.;?]", "", line)
+    line = re.sub(r"[,\"'.;?`]", "", line)
     line = line.replace("  ", " ")
     return line
 
 def show_image(origin_line):
-
+    origin_line = refine_string(origin_line)
     img_info_list = load_file('data_check/sub_infos/coco_karpathy_test.json')
+
     start_idx, end_idx = 0, len(origin_line)
     # start_idx, end_idx = 0, 15
     origin_line_check = origin_line[start_idx:end_idx]
