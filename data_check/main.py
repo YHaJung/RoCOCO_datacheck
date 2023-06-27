@@ -117,7 +117,9 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                 capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
                 new_trans_key = -1
                 while new_trans_key not in capt_idx_str:
-                    new_trans_key = input("Which caption's word? (origin(0)) ")
+                    if new_trans_key == 'q':
+                        return new_data, line_idx, myDict, pass_pairs, keep_idxes
+                    new_trans_key = input("Which caption's word? (origin(0), new(idx), quit(q)) ")
                 trans_word = new_capts[int(new_trans_key)-1].split(" ")[diff_word_idxes[0]] if new_trans_key != '0' else diff_word
                 myDict[trans_word] = input(f"{trans_word} : ")
 
@@ -164,8 +166,10 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
             fix_key = -1
             while fix_key not in capt_idx_str:
-                fix_key = input("Which caption do you want to change? (origin(0), new(1)) ")
-            if fix_key == '0':
+                fix_key = input("Which caption do you want to change? (origin(0), new(1), quit(q)) ")
+            if fix_key == 'q':
+                return new_data, line_idx, myDict, pass_pairs, keep_idxes
+            elif fix_key == '0':
                 origin_data[line_idx] = input("Enter new : ")
                 continue
             else:
