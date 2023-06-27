@@ -55,7 +55,8 @@ def call_word_similarities(line_idx):
         word_sims[diff_word] = float(inner)
         line_idx += 1
     
-    word_sims = {key: value for key, value in word_sims.items() if len(key) != 1}
+    except_list = ['a', 'an', 'the', 'on', 'of', 'at', 'in']
+    word_sims = {key: value for key, value in word_sims.items() if len(key) != 1 and key not in except_list}
     return word_sims
 
 
