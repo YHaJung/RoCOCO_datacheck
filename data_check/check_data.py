@@ -16,14 +16,15 @@ start_idx_path = 'data_check/start_idx.txt'
 diff_pairs_path = 'data_check/different_pairs.json'
 # sim_pairs_path = 'data_check/similar_pairs.json'
 local_dict_path = 'utils/translator.json'
-# strange_idxes_path = 'data_check/strange_idxes.txt'
+keep_idxes_path = 'data_check/keep_idxes.txt'
 
-def save_results(checked_lines, next_idx, myDict, diff_pairs):
+def save_results(checked_lines, next_idx, myDict, diff_pairs, keep_idxes):
     checked_data = "\n".join(checked_lines)
     save_file(checked_data, new_filename)
     save_file([str(next_idx)], start_idx_path)
     save_file(myDict, local_dict_path)
     save_file(diff_pairs, diff_pairs_path)
+    save_file("\n".join(map(str, sorted(keep_idxes))), keep_idxes_path)
 
 def call_same_category_words(word):
     new_words = []
@@ -69,11 +70,11 @@ def call_word_similarities(line_idx):
     return word_sims
 
 
-def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
+def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes):
 
     if len(origin_data) != len(new_data):
         print('[wrong inputs] different length')
-        return new_data, start_idx, myDict, diff_pairs
+        return new_data, start_idx, myDict, diff_pairs, keep_idxes
     
     line_idx = start_idx
     while line_idx < len(new_data):
@@ -114,8 +115,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         str_idxes += ['a'+i for i in str_idxes]
-        while work_key not in ['q', 'e', 'w', 'd'] + str_idxes:
-            work_key = input('Pick caption idx (add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t)), fix translation(f), fix typo(d) quit(q) ')
+        while work_key not in ['q', 'e', 'w', 'd', 'k'] + str_idxes:
+            work_key = input('Pick caption idx (add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), quit(q) ')
             if work_key == 'r': # show image
                 show_image(origin_capt)
             elif work_key == 't': # translate all sentences
@@ -131,7 +132,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                 myDict[trans_word] = input(f"{trans_word} : ")
 
         if work_key == 'q': # save and quit
-            return new_data, line_idx, myDict, diff_pairs
+            return new_data, line_idx, myDict, diff_pairs, keep_idxes
         elif work_key == 'e':  # call other new word
             if diff_word in diff_pairs.keys() and len(diff_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
                 new_word = random.choice(diff_pairs[diff_word])
@@ -140,7 +141,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                 choiced = 'e'
                 while choiced not in ['1', 'a']:
                     if choiced == 'q':
-                        return new_data, line_idx, myDict, diff_pairs
+                        return new_data, line_idx, myDict, diff_pairs, keep_idxes
                     new_word = new_words.pop()
                     myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
                     choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), add-in-pair(a), other(e), quit(q) ')
@@ -160,11 +161,15 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                     highlighted_capt = origin_capt.replace(word, '{'+word+'}')
                     diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
-                        return new_data, line_idx, myDict, diff_pairs
+                        return new_data, line_idx, myDict, diff_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_same_category_words(diff_word))
                         new_data[line_idx] = 'new, '+origin_capt.replace(diff_word, new_word)
+        elif work_key == 'k': # keep
+            print('(keep!)')
+            keep_idxes.update([line_idx])
+            line_idx += 1
         elif work_key == 'd': # fix typo
             capt_idx_str = ["0"] + [str(i+1) for i in range(len(new_capts))]
             fix_key = -1
@@ -184,7 +189,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
             new_data[line_idx] = new_capts[int(work_key)-1]
             line_idx += 1
 
-    return new_data, line_idx, myDict, diff_pairs
+    return new_data, line_idx, myDict, diff_pairs, keep_idxes
         
 
         
@@ -197,6 +202,7 @@ if __name__=='__main__':
     start_idx = int(load_file(start_idx_path)[0])
     myDict = load_file(local_dict_path)
     diff_pairs = load_file(diff_pairs_path)
+    keep_idxes = set([int(line) for line in load_file(keep_idxes_path)])
 
-    checked_data, next_idx, myDict, diff_pairs = check_lines(origin_data, new_data, start_idx, myDict, diff_pairs)
-    save_results(checked_data, next_idx, myDict, diff_pairs)
+    checked_data, next_idx, myDict, diff_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes)
+    save_results(checked_data, next_idx, myDict, diff_pairs, keep_idxes)
