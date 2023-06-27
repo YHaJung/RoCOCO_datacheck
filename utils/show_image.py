@@ -19,7 +19,7 @@ def show_image(origin_line):
     img_info_list = load_file('data_check/sub_infos/coco_karpathy_test.json')
     start_idx, end_idx = 0, len(origin_line)
     # start_idx, end_idx = 0, 15
-    origin_line_check = origin_line[start_idx:end_idx]
+    origin_line_check = refine_string(origin_line[start_idx:end_idx])
     
     for img_info in img_info_list:
         img_captions = [refine_string(img_cap) for img_cap in img_info['caption']]
