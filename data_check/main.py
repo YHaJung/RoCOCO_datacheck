@@ -136,7 +136,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                     pass_pairs = add_in_pair(diff_word, new_word, pass_pairs)
 
             new_data[line_idx] = replace_word(origin_capt, diff_word, new_word)
-            print(f'(Fixed!) {new_data[line_idx]}')
+            _, _, new_capts_print = find_different_words(origin_capt, [new_data[line_idx]])
+            print(f'(Fixed!) {new_capts_print[0]}')
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
             word_sims = call_word_similarities(line_idx)
