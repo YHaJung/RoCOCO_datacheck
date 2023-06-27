@@ -5,7 +5,7 @@ root_path = os.getcwd()
 print(f'root path : {root_path}')
 sys.path.append(root_path)
 
-from call_words import call_words_by_category
+from call_words import call_words_by_category, call_word_by_bart
 from utils.file_processing import save_file, load_file
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_different_words, find_deleted_words, highlight_given_word, replace_word
@@ -127,7 +127,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             if diff_word in pass_pairs.keys() and len(pass_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
                 new_word = random.choice(pass_pairs[diff_word])
             else: # ask user about new word
-                new_words = call_words_by_category(diff_word, category_type = 'same')
+                new_words = call_words_by_category(diff_word, category_type = 'same')  #call_word_by_bart()
                 choiced = 'e'
                 while choiced not in ['1', 'a']:
                     if choiced == 'q':
@@ -154,7 +154,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                         return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
-                        new_word = random.choice(call_words_by_category(diff_word, category_type = 'same'))
+                        new_word = random.choice(call_words_by_category(diff_word, category_type = 'same')) # random.choice(call_word_by_bart())
                         new_data[line_idx] = 'new, '+replace_word(origin_capt, diff_word, new_word)
         elif work_key == 'k': # keep
             print('(keep!)')

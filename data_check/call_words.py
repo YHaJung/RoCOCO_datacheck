@@ -30,3 +30,18 @@ def call_words_by_category(word, category_type = 'same'):
 
     random.shuffle(new_words)
     return new_words
+
+def call_word_by_bart():
+    bert_words_path = 'data_check/sub_infos/bert_words.json'
+    if os.path.exists(bert_words_path):
+        vocab = load_file(bert_words_path)
+    else:
+        from transformers import BertTokenizer
+        tokenizer = BertTokenizer.from_pretrained("bert-base-uncased")
+        vocab = list(tokenizer.get_vocab().keys())
+        vocab = [v for v in vocab if v[0] != '#' and 'unused' not in v]
+        random.shuffle(vocab)
+        save_file(vocab, bert_words_path)
+
+    random.shuffle(vocab)
+    return vocab
