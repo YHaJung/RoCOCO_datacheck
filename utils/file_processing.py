@@ -44,11 +44,18 @@ def load_file(filepath):
     extension = filepath.split('.')[-1]
     extensions = {'json':json, 'pickle':pickle, 'pkl':pickle}
     if extension in extensions.keys():
-        with open(filepath, 'rb') as file:
-            results = extensions[extension].load(file)
+        if os.path.exists(filepath):
+            with open(filepath, 'rb') as file:
+                results = extensions[extension].load(file)
+        else:
+            print(f'{filepath} is not exist. Make new dict.')
+            results = {}
     else: # txt
-        with open(filepath, 'r') as file:
-            results = file.readlines()
-        results = [line.rstrip('\n').rstrip(' \.').lower() for line in results]
-    
+        if os.path.exists(filepath):
+            with open(filepath, 'r') as file:
+                results = file.readlines()
+            results = [line.rstrip('\n').rstrip(' \.').lower() for line in results]
+        else:
+            print(f'{filepath} is not exist. Make new list.')
+            results = []
     return results
