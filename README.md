@@ -4,24 +4,28 @@
 - It is made for a RoCOCO
 
 ## Setting
-
-```
-pip install -r requirements.txt
-```
+- data
+  - put val2014 dataset in `data_check/val2014`
+  - put analysis txt files in `data_check/sub_infos/analysis`
+  
+- install requirements
+  ```
+  pip install -r requirements.txt
+  ```
 
 - you can change where do you call new words
   - change `call_words_by_category` in `data_check/main.py` with one of these if you want
-  ```python
-  call_words_by_category(diff_word, category_type = 'same') # call same category words
-  call_words_by_category(diff_word, category_type = 'diff') # call different category words
-  call_word_by_bart() # call bert words
-  ```
+    ```python
+    call_words_by_category(diff_word, category_type = 'same') # call same category words
+    call_words_by_category(diff_word, category_type = 'diff') # call different category words
+    call_word_by_bart() # call bert words
+    ```
 
 - you can change which type of words will you pass
   - change `pass_pairs_path` in `data_check/main.py` according to which pair do you want to pass
-  ```
-  pass_pairs_path = 'data_check/different_pairs.json'
-  ```
+    ```
+    pass_pairs_path = 'data_check/different_pairs.json'
+    ```
 
 ## Start
 
