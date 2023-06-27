@@ -19,7 +19,11 @@ def call_words_by_category(word, category_type = 'same'):
     if len(new_words) == 0:
         print('(Warning!) This word does not contained in any category.')
         print(f'[categories] {categories.keys()}')
-        category = input('choose category name : ')
+        category = -1
+        while category not in list(categories.keys())+['q']:
+            category = input('choose category name (quit(q)) : ')
+        if category == 'q':
+            return ['q']
         new_words = categories[category]
         categories[category].append(word)
         save_file(categories, categories_path)

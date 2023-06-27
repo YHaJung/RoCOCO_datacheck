@@ -147,12 +147,16 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             for word_idx, (word, sim) in enumerate(word_sims):
                 if diff_word == None:
                     highlighted_capt = highlight_given_word(origin_capt, word)
-                    diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
+                    diff_word_key = -1
+                    while diff_word_key not in ['q', '1', 'w']:
+                        diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
                         return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_words_by_category(diff_word, category_type = 'same')) # random.choice(call_word_by_bart())
+                        if new_word == 'q':
+                            return new_data, line_idx, myDict, pass_pairs, keep_idxes
                         new_data[line_idx] = 'new, '+replace_word(origin_capt, diff_word, new_word)
         elif work_key == 'k': # keep
             print('(keep!)')
