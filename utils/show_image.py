@@ -9,7 +9,7 @@ from utils.file_processing import load_file
 def refine_string(line):
     import re
     line = line.strip(' ').rstrip('\n').rstrip(' \.').lower()
-    line = re.sub(r"[,\"\'.;?]", "", line)
+    line = re.sub(r"[,\"'.;?`]", "", line)
     line = line.replace("  ", " ")
     return line
 
