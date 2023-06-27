@@ -153,13 +153,13 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
             word_sims = call_word_similarities(line_idx)
-            word_sims = sorted(word_sims.items(), key = lambda item: item[1])
+            word_sims = sorted(word_sims.items(), key = lambda item: item[1], reverse=True)
             
             diff_word = None
             for word_idx, (word, sim) in enumerate(word_sims):
                 if diff_word == None:
                     highlighted_capt = origin_capt.replace(word, '{'+word+'}')
-                    diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {sim}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
+                    diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
                         return new_data, line_idx, myDict, diff_pairs
                     elif diff_word_key == '1':
