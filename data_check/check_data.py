@@ -137,15 +137,14 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs):
                 new_word = random.choice(diff_pairs[diff_word])
             else: # ask user about new word
                 new_words = call_same_category_words(diff_word)
-                choiced = '0'
-                while choiced not in ['1', '2']:
+                choiced = 'e'
+                while choiced not in ['1', 'a']:
                     if choiced == 'q':
                         return new_data, line_idx, myDict, diff_pairs
-                    elif choiced == 'e':
-                        new_word = new_words.pop()
+                    new_word = new_words.pop()
                     myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
-                    choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), add-in-pair(2), other(e), quit(q) ')
-                if choiced == '2': # add in pair
+                    choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), add-in-pair(a), other(e), quit(q) ')
+                if choiced == 'a': # add in pair
                     diff_pairs = add_in_pair(diff_word, new_word, diff_pairs)
 
             new_data[line_idx] = origin_capt.replace(diff_word, new_word)
