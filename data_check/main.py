@@ -78,7 +78,9 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             new_capts = [new_line.lstrip('new, ')]
         else:
             result_key = ' +  '
-            new_capts = new_line.split('+')[:-1]
+            new_capts = new_line.split('+')
+            if len(new_capts) > 1:
+                new_capts = new_capts[:-1]
 
         print(f'\n[line {line_idx}]')
         print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), quit(q)')
