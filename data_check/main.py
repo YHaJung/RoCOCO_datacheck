@@ -84,7 +84,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                 new_capts = new_capts[:-1]
 
         print(f'\n[line {line_idx}]')
-        print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), quit(q)')
+        print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), go line(g), quit(q)')
 
 
         # find different word and print
@@ -109,7 +109,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
         work_key = '-1'
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         str_idxes += ['a'+i for i in str_idxes]
-        while work_key not in ['q', 'e', 'w', 'f', 'd', 'k'] + str_idxes:
+        while work_key not in ['q', 'e', 'w', 'f', 'd', 'k', 'g'] + str_idxes:
             work_key = input('Pick caption idx : ')
             if work_key == 'r': # show image
                 show_image(origin_capt)
@@ -184,6 +184,11 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             else:
                 new_data[line_idx] = 'none, ' + input("Enter new : ")
                 continue
+        elif work_key =='g': # go to specific line
+            new_line_idx = '-1'
+            while new_line_idx not in [str(i) for i in range(len(origin_data))]:
+                new_line_idx = input('Which line do you want to go? ')
+            line_idx = int(new_line_idx)
         else: # pick 1 sentence & pass
             if work_key[0] == 'a':
                 work_key = work_key[1]

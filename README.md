@@ -37,7 +37,7 @@ python datacheck/main.py
 
 ## Caution
 - Periodically enter `q` and save results. If not, you can lose all works.
-- If you want to go back to previous captions, set `data_check/start_idx.txt`
+- If you want to go back to previous captions, set `data_check/start_idx.txt` or enter key `g`
 - If some input does not work and show you the same question, this means your input is not in the right key list. Check what can be input or not again.
 
 
