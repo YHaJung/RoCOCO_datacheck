@@ -39,6 +39,20 @@ def find_deleted_words(first_sentence, second_sentence):
         if i >= len(second_words) or word != second_words[i]:
             return word
 
+def highlight_given_word(sentence, given_word):
+    words = sentence.split(' ')
+    for word_idx, word in enumerate(words):
+        if word == given_word:
+            words[word_idx] = '{'+word+'}'
+    return " ".join(words)
+
+def replace_word(sentence, origin_word, new_word):
+    words = sentence.split(' ')
+    for word_idx, word in enumerate(words):
+        if word == origin_word:
+            words[word_idx] = new_word
+    return " ".join(words)
+
 
 def word_count(line):
     words = line.split(' ')

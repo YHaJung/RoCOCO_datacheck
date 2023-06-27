@@ -8,7 +8,7 @@ sys.path.append(root_path)
 from utils.file_processing import save_file, load_file
 from data_check.sub_infos.category import cate
 from utils.translate import translate_to_korean_local, translate_to_korean
-from utils.compare import find_different_words, find_deleted_words
+from utils.compare import find_different_words, find_deleted_words, highlight_given_word, replace_word
 from utils.show_image import show_image
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
@@ -149,7 +149,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
                 if choiced == 'a': # add in pair
                     pass_pairs = add_in_pair(diff_word, new_word, pass_pairs)
 
-            new_data[line_idx] = origin_capt.replace(diff_word, new_word)
+            new_data[line_idx] = replace_word(origin_capt, diff_word, new_word)
             print(f'(Fixed!) {new_data[line_idx]}')
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
@@ -159,14 +159,14 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
             diff_word = None
             for word_idx, (word, sim) in enumerate(word_sims):
                 if diff_word == None:
-                    highlighted_capt = origin_capt.replace(word, '{'+word+'}')
+                    highlighted_capt = highlight_given_word(origin_capt, word)
                     diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
                         return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_words_by_category(diff_word, category_type = 'same'))
-                        new_data[line_idx] = 'new, '+origin_capt.replace(diff_word, new_word)
+                        new_data[line_idx] = 'new, '+replace_word(origin_capt, diff_word, new_word)
         elif work_key == 'k': # keep
             print('(keep!)')
             keep_idxes.update([line_idx])
