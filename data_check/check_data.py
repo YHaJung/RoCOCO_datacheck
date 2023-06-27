@@ -13,26 +13,27 @@ from utils.show_image import show_image
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
 start_idx_path = 'data_check/start_idx.txt'
-diff_pairs_path = 'data_check/different_pairs.json'
-# sim_pairs_path = 'data_check/similar_pairs.json'
+pass_pairs_path = 'data_check/different_pairs.json'
 local_dict_path = 'utils/translator.json'
 keep_idxes_path = 'data_check/keep_idxes.txt'
 
-def save_results(checked_lines, next_idx, myDict, diff_pairs, keep_idxes):
+def save_results(checked_lines, next_idx, myDict, pass_pairs, keep_idxes):
     checked_data = "\n".join(checked_lines)
     save_file(checked_data, new_filename)
     save_file([str(next_idx)], start_idx_path)
     save_file(myDict, local_dict_path)
-    save_file(diff_pairs, diff_pairs_path)
+    save_file(pass_pairs, pass_pairs_path)
     save_file("\n".join(map(str, sorted(keep_idxes))), keep_idxes_path)
 
-def call_same_category_words(word):
+def call_words_by_category(word, category_type = 'same'):
     new_words = []
     categories = cate()
     for category in categories.keys():
-        if word in categories[category]:
+        if (category_type == 'same' and word in categories[category]) \
+            or (category_type == 'diff' and word not in categories[category]):
             new_words += categories[category]
-            new_words.remove(word)
+    if word in new_words:
+        new_words.remove(word)
 
     random.shuffle(new_words)
     return new_words
@@ -70,11 +71,11 @@ def call_word_similarities(line_idx):
     return word_sims
 
 
-def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes):
+def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes):
 
     if len(origin_data) != len(new_data):
         print('[wrong inputs] different length')
-        return new_data, start_idx, myDict, diff_pairs, keep_idxes
+        return new_data, start_idx, myDict, pass_pairs, keep_idxes
     
     line_idx = start_idx
     while line_idx < len(new_data):
@@ -104,7 +105,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes
         
         # pass if there is a new word which is in diff pair
         new_words = [new_capt.split(' ')[diff_word_idxes[0]] for new_capt in new_capts]
-        in_pair_idxes = check_in_pair(diff_word, new_words, diff_pairs)
+        in_pair_idxes = check_in_pair(diff_word, new_words, pass_pairs)
         if len(in_pair_idxes) != 0:
             new_data[line_idx] = new_capts[random.choice(in_pair_idxes)]
             print(f'(Pass) {new_data[line_idx]}')
@@ -132,21 +133,21 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes
                 myDict[trans_word] = input(f"{trans_word} : ")
 
         if work_key == 'q': # save and quit
-            return new_data, line_idx, myDict, diff_pairs, keep_idxes
+            return new_data, line_idx, myDict, pass_pairs, keep_idxes
         elif work_key == 'e':  # call other new word
-            if diff_word in diff_pairs.keys() and len(diff_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
-                new_word = random.choice(diff_pairs[diff_word])
+            if diff_word in pass_pairs.keys() and len(pass_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
+                new_word = random.choice(pass_pairs[diff_word])
             else: # ask user about new word
-                new_words = call_same_category_words(diff_word)
+                new_words = call_words_by_category(diff_word, category_type = 'same')
                 choiced = 'e'
                 while choiced not in ['1', 'a']:
                     if choiced == 'q':
-                        return new_data, line_idx, myDict, diff_pairs, keep_idxes
+                        return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     new_word = new_words.pop()
                     myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
                     choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), add-in-pair(a), other(e), quit(q) ')
                 if choiced == 'a': # add in pair
-                    diff_pairs = add_in_pair(diff_word, new_word, diff_pairs)
+                    pass_pairs = add_in_pair(diff_word, new_word, pass_pairs)
 
             new_data[line_idx] = origin_capt.replace(diff_word, new_word)
             print(f'(Fixed!) {new_data[line_idx]}')
@@ -161,7 +162,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes
                     highlighted_capt = origin_capt.replace(word, '{'+word+'}')
                     diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
-                        return new_data, line_idx, myDict, diff_pairs, keep_idxes
+                        return new_data, line_idx, myDict, pass_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_same_category_words(diff_word))
@@ -185,11 +186,11 @@ def check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes
             if work_key[0] == 'a':
                 work_key = work_key[1]
                 new_word = new_capts[int(work_key)-1].split(' ')[diff_word_idxes[0]]
-                diff_pairs = add_in_pair(diff_word, new_word, diff_pairs)
+                pass_pairs = add_in_pair(diff_word, new_word, pass_pairs)
             new_data[line_idx] = new_capts[int(work_key)-1]
             line_idx += 1
 
-    return new_data, line_idx, myDict, diff_pairs, keep_idxes
+    return new_data, line_idx, myDict, pass_pairs, keep_idxes
         
 
         
@@ -201,8 +202,8 @@ if __name__=='__main__':
 
     start_idx = int(load_file(start_idx_path)[0])
     myDict = load_file(local_dict_path)
-    diff_pairs = load_file(diff_pairs_path)
+    pass_pairs = load_file(pass_pairs_path)
     keep_idxes = set([int(line) for line in load_file(keep_idxes_path)])
 
-    checked_data, next_idx, myDict, diff_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, diff_pairs, keep_idxes)
-    save_results(checked_data, next_idx, myDict, diff_pairs, keep_idxes)
+    checked_data, next_idx, myDict, pass_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes)
+    save_results(checked_data, next_idx, myDict, pass_pairs, keep_idxes)
