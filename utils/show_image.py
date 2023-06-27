@@ -2,7 +2,6 @@ import cv2
 
 import sys, os
 root_path = os.getcwd()
-print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from utils.file_processing import load_file

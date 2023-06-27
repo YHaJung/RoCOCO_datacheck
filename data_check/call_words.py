@@ -2,7 +2,6 @@ import random
 
 import sys, os
 root_path = os.getcwd()
-print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from utils.file_processing import save_file, load_file

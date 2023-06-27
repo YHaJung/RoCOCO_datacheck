@@ -2,7 +2,6 @@ import random
 
 import sys, os
 root_path = os.getcwd()
-print(f'root path : {root_path}')
 sys.path.append(root_path)
 
 from call_words import call_words_by_category, call_word_by_bart
