@@ -1,9 +1,7 @@
 # python
 __pycache__
 
-
-# downloaded
-# downloaded/
-
 # data
 *.jpg
+*analysis/
+data_check/sub_infos/bert_words.json
