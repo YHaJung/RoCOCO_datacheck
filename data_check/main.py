@@ -43,14 +43,14 @@ def check_in_pair(origin_word, new_words, pairs):
 def call_word_similarities(line_idx):
     sim_list = load_file(os.path.join("data_check/sub_infos/analysis", f'{line_idx}.txt'))
 
-    origin_capt = sim_list[0].split(', ')[0]
+    origin_capt = " ".join(sim_list[0].split(', ')[:-2])
     origin_words = origin_capt.split(' ')
     word_sims = {origin_word : -1 for origin_word in origin_words}
 
     line_idx = 1
     while -1 in word_sims.values() and line_idx < len(sim_list):
         sim_info = sim_list[line_idx].split(', ')
-        sim_capt, euclidean, inner = sim_info
+        sim_capt, euclidean, inner = " ".join(sim_info[:-2]), sim_info[-2], sim_info[-1]
         diff_word = find_deleted_words(origin_capt, sim_capt)
         word_sims[diff_word] = float(inner)
         line_idx += 1
