@@ -199,7 +199,16 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
 
     return new_data, line_idx, myDict, pass_pairs, keep_idxes
         
-
+def save_keep_csv(keep_idxes, origin_data, new_data):
+    import csv
+    f = open('data_check/keep.csv', 'w', newline='')
+    data = []
+    keep_idxes = sorted(keep_idxes)
+    for idx in keep_idxes:
+        data.append([idx, origin_data[idx], new_data[idx].lstrip("none, ")])
+    writer = csv.writer(f)
+    writer.writerows(data)
+    f.close()
         
 
 
@@ -214,3 +223,4 @@ if __name__=='__main__':
 
     checked_data, next_idx, myDict, pass_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes)
     save_results(checked_data, next_idx, myDict, pass_pairs, keep_idxes)
+    save_keep_csv(keep_idxes, origin_data, new_data)
