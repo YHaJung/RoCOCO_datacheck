@@ -70,7 +70,8 @@
 	"counters": [
 		"bedding",
 		"chairs",
-		"posters"
+		"posters",
+		"mattress"
 	],
 	"glasses": [
 		"bin",
@@ -249,7 +250,8 @@
 	"bicyclists": [
 		"farmers",
 		"lifeguard",
-		"skiier"
+		"skiier",
+		"snowboarder"
 	],
 	"toilet": [
 		"cabinet",
@@ -378,7 +380,8 @@
 		"trail",
 		"tunnel",
 		"university",
-		"way"
+		"way",
+		"enclosure"
 	],
 	"bowl": [
 		"blades",
@@ -1304,7 +1307,8 @@
 		"pumpkins",
 		"toast",
 		"tots",
-		"veg"
+		"veg",
+		"fish"
 	],
 	"sheets": [
 		"baskets",
@@ -3474,7 +3478,8 @@
 	],
 	"cattle": [
 		"tabby",
-		"tiger"
+		"tiger",
+		"seal"
 	],
 	"hay": [
 		"rock"
@@ -3938,7 +3943,8 @@
 		"cables",
 		"pen",
 		"sticks",
-		"wheel"
+		"wheel",
+		"case"
 	],
 	"heads": [
 		"bone",
@@ -4635,7 +4641,8 @@
 	],
 	"suit": [
 		"toppers",
-		"purse"
+		"purse",
+		"apron"
 	],
 	"surface": [
 		"midwestern",

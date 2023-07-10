@@ -610,7 +610,8 @@
 		"key",
 		"rocking",
 		"posters",
-		"dryer"
+		"dryer",
+		"goodness"
 	],
 	"stationery": [
 		"paper",
@@ -1261,7 +1262,8 @@
 		"oceans",
 		"stall",
 		"complex",
-		"spot"
+		"spot",
+		"inlet"
 	],
 	"structure": [
 		"pedestal",

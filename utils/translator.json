@@ -982,7 +982,7 @@
 	"th": "th",
 	"clothes": "옷",
 	"motion": "운동",
-	"diners": "식당",
+	"diners": "식당손님",
 	"mouths": "입",
 	"pretty": "예쁜",
 	"oman": "오만(아라비아 남동부 독립국, 수도)",
@@ -2531,5 +2531,6 @@
 	"expresses": "표현",
 	"regarded": "고려",
 	"carmen": "카르멘",
-	"lectrician": "전공"
+	"lectrician": "전공",
+	"fficer": "장교"
 }
