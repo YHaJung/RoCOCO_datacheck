@@ -133,7 +133,7 @@
 	"finch": "핀치(새)",
 	"sauce": "소스",
 	"anther": "꽃밥",
-	"hold": "잡고 있다",
+	"hold": "잡음, 장악력",
 	"cats": "고양이",
 	"mingle": "섞다",
 	"furniture": "가구",
@@ -396,7 +396,7 @@
 	"mom": "엄마",
 	"chrome": "크롬",
 	"veg": "채식",
-	"drivers": "드라이버",
+	"drivers": "운전자, 마부, 감독",
 	"gather": "모으다",
 	"burger": "버거",
 	"meet": "만나다",
@@ -2532,5 +2532,8 @@
 	"regarded": "고려",
 	"carmen": "카르멘",
 	"lectrician": "전공",
-	"fficer": "장교"
+	"fficer": "장교",
+	"vege{settee}s": "vege {settee} s",
+	"her": "그녀의",
+	"down{savanna": "아래로 {사바나"
 }

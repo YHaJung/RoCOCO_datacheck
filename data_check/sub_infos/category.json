@@ -177,7 +177,8 @@
 		"para-sailers",
 		"pitchers",
 		"tibetan",
-		"momma"
+		"momma",
+		"her"
 	],
 	"body_parts": [
 		"breast",
@@ -785,7 +786,8 @@
 		"cliff",
 		"woods",
 		"moon",
-		"haze"
+		"haze",
+		"weather"
 	],
 	"plants": [
 		"leaves",
@@ -1612,7 +1614,8 @@
 		"dot",
 		"striped",
 		"dots",
-		"curve"
+		"curve",
+		"antique"
 	],
 	"shape": [
 		"round",

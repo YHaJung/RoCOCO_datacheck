@@ -844,7 +844,8 @@
 		"beaks",
 		"ears",
 		"hooves",
-		"lap"
+		"lap",
+		"legs"
 	],
 	"women": [
 		"boy",
@@ -968,7 +969,8 @@
 		"sea",
 		"stone",
 		"waters",
-		"wave"
+		"wave",
+		"marine"
 	],
 	"zebra": [
 		"bears",
@@ -997,7 +999,8 @@
 		"kitten",
 		"llamas",
 		"sheep",
-		"tabby"
+		"tabby",
+		"sheeps"
 	],
 	"children": [
 		"crew",
@@ -1176,7 +1179,8 @@
 		"skeleton",
 		"tail",
 		"waterfront",
-		"wings"
+		"wings",
+		"feet"
 	],
 	"sandwich": [
 		"candy",
@@ -1780,7 +1784,8 @@
 		"cage",
 		"pedestal",
 		"roofs",
-		"statues"
+		"statues",
+		"college"
 	],
 	"jet": [
 		"cabs",
@@ -2733,7 +2738,8 @@
 		"skier",
 		"surfer",
 		"umpires",
-		"vendors"
+		"vendors",
+		"drivers"
 	],
 	"trunk": [
 		"curtains",
@@ -3586,7 +3592,9 @@
 	"hill": [
 		"garage",
 		"kitchenette",
-		"pond"
+		"pond",
+		"stall",
+		"stalls"
 	],
 	"jacket": [
 		"apron",
@@ -5193,7 +5201,8 @@
 		"airport"
 	],
 	"mid-air": [
-		"midwestern"
+		"midwestern",
+		"north"
 	],
 	"poles": [
 		"surferboard"
@@ -5438,5 +5447,14 @@
 	],
 	"forklift": [
 		"airplanes"
+	],
+	"hillside": [
+		"port"
+	],
+	"inside": [
+		"alongside"
+	],
+	"drawing": [
+		"dining"
 	]
 }
