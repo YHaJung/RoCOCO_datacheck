@@ -199,7 +199,19 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes
 
     return new_data, line_idx, myDict, pass_pairs, keep_idxes
         
-
+def save_keep_csv(keep_idxes, origin_data, new_data):
+    import csv
+    f = open('data_check/keep.csv', 'w', newline='')
+    data = [['idx', 'origin caption', 'new caption']]
+    keep_idxes = sorted(keep_idxes)
+    for idx in keep_idxes:
+        _, origin_capt_print, new_capts_print = find_different_words(origin_data[idx], [new_data[idx].lstrip('none, ')])
+        _, trans_origin_word = translate_to_korean_local(myDict, origin_capt_print.split('{')[1].split('}')[0])
+        _, trans_new_word = translate_to_korean_local(myDict, new_capts_print[0].split('{')[1].split('}')[0])
+        data.append([idx, origin_capt_print+f' ({trans_origin_word})', new_capts_print[0]+f' ({trans_new_word})'])
+    writer = csv.writer(f)
+    writer.writerows(data)
+    f.close()
         
 
 
@@ -214,3 +226,4 @@ if __name__=='__main__':
 
     checked_data, next_idx, myDict, pass_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, keep_idxes)
     save_results(checked_data, next_idx, myDict, pass_pairs, keep_idxes)
+    save_keep_csv(keep_idxes, origin_data, new_data)
