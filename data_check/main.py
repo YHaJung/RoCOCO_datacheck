@@ -17,7 +17,7 @@ change_pairs_path = 'data_check/similar_pairs.json'
 local_dict_path = 'utils/translator.json'
 keep_idxes_path = 'data_check/keep_idxes.txt'
 
-def save_results(checked_lines, next_idx, myDict, pass_pairs, keep_idxes):
+def save_results(checked_lines, next_idx, myDict, pass_pairs, change_pairs, keep_idxes):
     checked_data = "\n".join(checked_lines)
     save_file(checked_data, new_filename)
     save_file([str(next_idx)], start_idx_path)
@@ -141,8 +141,9 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
                 while choiced not in ['1', 'a']:
                     if choiced == 'q':
                         return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
-                    new_word = new_words.pop()
-                    myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
+                    elif choiced == 'e':
+                        new_word = new_words.pop()
+                        myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
                     choiced = input(f'[{diff_word} -> {new_word} ({new_word_trans})] choose(1), add-in-pair(a), other(e), quit(q) ')
                 if choiced == 'a': # add in pair
                     pass_pairs = add_in_pair(diff_word, new_word, pass_pairs)
