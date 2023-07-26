@@ -1991,7 +1991,7 @@
 	"b": "비",
 	"muffins": "머핀",
 	"panda": "팬더",
-	"basins": "분지",
+	"basins": "대야, 세면기, 웅덩이",
 	"bun": "빵",
 	"corn": "옥수수",
 	"loading": "로딩",
@@ -2131,7 +2131,7 @@
 	"strung": "팽팽한(과거분사)",
 	"usa": "미국",
 	"landing": "착륙",
-	"addons": "애드온",
+	"addons": "첨가물",
 	"cone": "원뿔",
 	"area": "공간",
 	"eggs": "달걀",
@@ -2535,5 +2535,14 @@
 	"fficer": "장교",
 	"vege{settee}s": "vege {settee} s",
 	"her": "그녀의",
-	"down{savanna": "아래로 {사바나"
+	"down{savanna": "아래로 {사바나",
+	"skewer": "꼬챙이",
+	"salsa": "살사",
+	"bed{signs": "침대 {표지판",
+	"f": "에프",
+	"logs}s": "로그} s",
+	"tiles}room": "타일} 방",
+	"seat}s": "좌석} s",
+	"q": "큐",
+	"peopel": "사람들"
 }

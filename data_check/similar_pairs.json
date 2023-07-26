@@ -1028,5 +1028,8 @@
 	],
 	"bridge": [
 		"structures"
+	],
+	"horse": [
+		"cattle"
 	]
 }
