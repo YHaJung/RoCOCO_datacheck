@@ -184,7 +184,8 @@
 		"construction",
 		"floor",
 		"structure",
-		"structures"
+		"structures",
+		"buliding"
 	],
 	"stuff": [
 		"tool"
@@ -658,14 +659,16 @@
 	],
 	"baby": [
 		"individuals",
-		"kids"
+		"kids",
+		"toddler"
 	],
 	"farm": [
 		"countryside"
 	],
 	"truck": [
 		"ride",
-		"vehicle"
+		"vehicle",
+		"transit"
 	],
 	"umbrella": [
 		"equipment"
@@ -1031,5 +1034,14 @@
 	],
 	"horse": [
 		"cattle"
+	],
+	"bicycle": [
+		"bikes"
+	],
+	"kitten": [
+		"animals"
+	],
+	"keyboard": [
+		"controller"
 	]
 }

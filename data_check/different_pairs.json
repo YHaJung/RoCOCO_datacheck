@@ -383,7 +383,8 @@
 		"university",
 		"way",
 		"enclosure",
-		"traintrack"
+		"traintrack",
+		"bridge"
 	],
 	"bowl": [
 		"blades",
@@ -467,7 +468,8 @@
 		"seaside",
 		"shore",
 		"stall",
-		"stalls"
+		"stalls",
+		"bank"
 	],
 	"airline": [
 		"ship"
@@ -492,7 +494,9 @@
 		"slalom",
 		"soccer",
 		"stunts",
-		"tennis"
+		"tennis",
+		"kites",
+		"pole"
 	],
 	"planes": [
 		"boat",
@@ -601,7 +605,8 @@
 		"sheeps",
 		"steer",
 		"steers",
-		"zebras"
+		"zebras",
+		"clydesdales"
 	],
 	"fire": [
 		"airstrip",
@@ -729,7 +734,8 @@
 		"sheeps",
 		"steers",
 		"tabby",
-		"wildlife"
+		"wildlife",
+		"bear"
 	],
 	"face": [
 		"backs",
@@ -841,7 +847,9 @@
 		"rock",
 		"stone",
 		"wood",
-		"woods"
+		"woods",
+		"mountainside",
+		"pasture"
 	],
 	"arms": [
 		"beaks",
@@ -895,7 +903,8 @@
 		"sheeps",
 		"steer",
 		"tiger",
-		"zebra"
+		"zebra",
+		"horses"
 	],
 	"edge": [
 		"downhill",
@@ -1222,8 +1231,7 @@
 		"surf",
 		"surfboard",
 		"surferboard",
-		"surfs",
-		"swing"
+		"surfs"
 	],
 	"hoop": [
 		"kites",
@@ -1357,7 +1365,6 @@
 		"onion",
 		"oranges",
 		"pears",
-		"pie",
 		"pumpkins",
 		"shell",
 		"smorgasbord",
@@ -1402,7 +1409,6 @@
 		"surfboards",
 		"surferboard",
 		"surfs",
-		"swing",
 		"frisbee"
 	],
 	"pillows": [
@@ -1435,7 +1441,8 @@
 		"chairs",
 		"posters",
 		"settee",
-		"stool"
+		"stool",
+		"bedding"
 	],
 	"middle": [
 		"edge",
@@ -1500,7 +1507,6 @@
 		"surf",
 		"surferboard",
 		"surfs",
-		"swing",
 		"tennis"
 	],
 	"catcher": [
@@ -1598,7 +1604,8 @@
 		"seal",
 		"steers",
 		"zebra",
-		"zebras"
+		"zebras",
+		"monkey"
 	],
 	"teddy": [
 		"cgi",
@@ -1717,7 +1724,8 @@
 		"snow",
 		"steel",
 		"waters",
-		"wire"
+		"wire",
+		"barbed-wire"
 	],
 	"stove": [
 		"apron",
@@ -1885,7 +1893,8 @@
 		"sheeps",
 		"tabby",
 		"tiger",
-		"zebras"
+		"zebras",
+		"dog"
 	],
 	"basket": [
 		"carriage",
@@ -2127,7 +2136,8 @@
 		"tiger",
 		"zebra",
 		"giraffes",
-		"mouse"
+		"mouse",
+		"clydesdales"
 	],
 	"fur": [
 		"brick"
@@ -2403,7 +2413,8 @@
 		"poles",
 		"roadwork",
 		"skis",
-		"slalom"
+		"slalom",
+		"fastball"
 	],
 	"parents": [
 		"kids"
@@ -2418,7 +2429,8 @@
 		"rackets",
 		"racquet",
 		"skate",
-		"skis"
+		"skis",
+		"kites"
 	],
 	"court": [
 		"barn",
@@ -2657,6 +2669,7 @@
 		"tongue"
 	],
 	"bird": [
+		"insect",
 		"insect"
 	],
 	"ny": [
@@ -2713,7 +2726,8 @@
 		"plane",
 		"suv",
 		"truck",
-		"trucks"
+		"trucks",
+		"suvs"
 	],
 	"dirt": [
 		"bank",
@@ -2731,7 +2745,9 @@
 		"horses",
 		"mouse",
 		"sheeps",
-		"zebra"
+		"zebra",
+		"huskie",
+		"cats"
 	],
 	"forest": [
 		"coast",
@@ -2960,7 +2976,9 @@
 		"ocean",
 		"pasture",
 		"shoreline",
-		"slopes"
+		"slopes",
+		"airfield",
+		"streets"
 	],
 	"clothes": [
 		"toppers"
@@ -3250,7 +3268,9 @@
 		"subway",
 		"suv",
 		"trains",
-		"airliner"
+		"airliner",
+		"boats",
+		"airways"
 	],
 	"trucks": [
 		"airliner",
@@ -3462,7 +3482,8 @@
 		"fabric",
 		"fluffy",
 		"leather",
-		"marble"
+		"marble",
+		"bricks"
 	],
 	"coast": [
 		"pasture"
@@ -3488,7 +3509,8 @@
 	],
 	"dump": [
 		"airline",
-		"airways"
+		"airways",
+		"bicycles"
 	],
 	"blanket": [
 		"appliques",
@@ -3833,7 +3855,9 @@
 		"cook",
 		"crew",
 		"passanger",
-		"skiier"
+		"skiier",
+		"para-surfers",
+		"seamen"
 	],
 	"ski-lift": [
 		"airliner"
@@ -3852,9 +3876,6 @@
 		"ghetto",
 		"museum",
 		"savanna"
-	],
-	"swing": [
-		"bats"
 	],
 	"caption": [
 		"mattress",
@@ -4649,7 +4670,8 @@
 	],
 	"kitten": [
 		"holstein",
-		"monkey"
+		"monkey",
+		"giraffe"
 	],
 	"faucets": [
 		"tooth"
@@ -4702,7 +4724,8 @@
 	],
 	"skate": [
 		"ball",
-		"soccer"
+		"soccer",
+		"frisbee"
 	],
 	"snowboards": [
 		"kite",
@@ -4717,7 +4740,8 @@
 	],
 	"catchers": [
 		"conductor",
-		"diner"
+		"diner",
+		"skiers"
 	],
 	"ceiling": [
 		"railroad"
@@ -4774,9 +4798,6 @@
 	],
 	"look": [
 		"thruway"
-	],
-	"swings": [
-		"rides"
 	],
 	"fridge": [
 		"apron"
@@ -5094,7 +5115,8 @@
 		"honda"
 	],
 	"gear": [
-		"purse"
+		"purse",
+		"bag"
 	],
 	"asphalt": [
 		"fur"
@@ -5244,7 +5266,8 @@
 		"toast"
 	],
 	"below": [
-		"midwestern"
+		"midwestern",
+		"south"
 	],
 	"riding": [
 		"advertising"
@@ -5471,7 +5494,8 @@
 		"coin"
 	],
 	"reflection": [
-		"blooms"
+		"blooms",
+		"grid"
 	],
 	"cross": [
 		"arch"
@@ -5512,5 +5536,20 @@
 	],
 	"patients": [
 		"skater"
+	],
+	"cieling": [
+		"fog"
+	],
+	"paws": [
+		"beaks"
+	],
+	"canopy": [
+		"mirror"
+	],
+	"linen": [
+		"wire"
+	],
+	"ledge": [
+		"mountain"
 	]
 }

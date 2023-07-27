@@ -179,7 +179,8 @@
 		"tibetan",
 		"momma",
 		"her",
-		"peopel"
+		"peopel",
+		"peers"
 	],
 	"body_parts": [
 		"breast",
@@ -493,7 +494,8 @@
 		"stick",
 		"sticks",
 		"leash",
-		"skewer"
+		"skewer",
+		"spools"
 	],
 	"sports_equipment": [
 		"fastball",
@@ -829,7 +831,8 @@
 		"grasses",
 		"grove",
 		"sprout",
-		"sprouts"
+		"sprouts",
+		"shrubs"
 	],
 	"transport_infrastructure": [
 		"route",
@@ -1134,7 +1137,8 @@
 		"cheesy",
 		"peanut",
 		"chives",
-		"salsa"
+		"salsa",
+		"jelly"
 	],
 	"places": [
 		"side",
@@ -1618,7 +1622,11 @@
 		"striped",
 		"dots",
 		"curve",
-		"antique"
+		"antique",
+		"reflection",
+		"procession",
+		"stack",
+		"balance"
 	],
 	"shape": [
 		"round",
@@ -1905,7 +1913,8 @@
 		"herself",
 		"me",
 		"anything",
-		"hers"
+		"hers",
+		"his"
 	],
 	"amount": [
 		"variety",
