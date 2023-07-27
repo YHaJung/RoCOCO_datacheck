@@ -75,10 +75,10 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
         new_line = new_data[line_idx]
         if new_line[:5] == 'none,':
             result_key = 'none'
-            new_capts = [new_line.lstrip('none, ')]
+            new_capts = [new_line[5:].lstrip(' ')]
         elif new_line[:4] == 'new,':
             result_key = 'new '
-            new_capts = [new_line.lstrip('new, ')]
+            new_capts = [new_line[4:].lstrip(' ')]
         else:
             result_key = ' +  '
             new_capts = new_line.split('+')
