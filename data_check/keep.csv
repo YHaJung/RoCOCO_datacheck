@@ -29,3 +29,6 @@ idx,origin caption,new caption
 16941,a {lady} wearing a purple shirt holding a cake (숙녀),a {workers} wearing a purple shirt holding a cake (노동자)
 16969,a man and a {girl} in a bikini are putting wax on a surfboard (소녀),a man and a {actors} in a bikini are putting wax on a surfboard (배우)
 16995,a {man} sitting on the beach behind his surfboard (남성),a {nerds} sitting on the beach behind his surfboard (얼간이)
+17165,a large fount sitting in the {middle} of a city (가운데),"a large fount sitting in the {overhead} of a city (머리위, 고가의, 총비용)"
+17617,this workstation features three desktop monitors with a single keyboard as well as a laptop {computer} (컴퓨터),this workstation features three desktop monitors with a single keyboard as well as a laptop {keyboards} .+ (키보드)
+17807,"{metro} bus driving past the green lake branch of seattle , wa library (지하철)","{bus} {bus} driving past the green lake branch of seattle , wa library (버스)"

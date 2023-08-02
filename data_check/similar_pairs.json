@@ -111,7 +111,8 @@
 		"kids",
 		"people",
 		"person",
-		"teenage"
+		"teenage",
+		"youngster"
 	],
 	"friends": [
 		"humans"
@@ -276,7 +277,8 @@
 		"jet",
 		"transportation",
 		"vehicle",
-		"vehicles"
+		"vehicles",
+		"planes"
 	],
 	"plane": [
 		"airline",
@@ -305,7 +307,8 @@
 		"location",
 		"place",
 		"site",
-		"space"
+		"space",
+		"region"
 	],
 	"sand": [
 		"soil"
@@ -405,7 +408,8 @@
 		"animals",
 		"kitten",
 		"kitty",
-		"tabby"
+		"tabby",
+		"pet"
 	],
 	"paper": [
 		"object"
@@ -747,7 +751,8 @@
 		"sea"
 	],
 	"toilet": [
-		"bathroom"
+		"bathroom",
+		"restroom"
 	],
 	"bus": [
 		"ride",
@@ -1043,5 +1048,11 @@
 	],
 	"keyboard": [
 		"controller"
+	],
+	"pen": [
+		"objects"
+	],
+	"duck": [
+		"animal"
 	]
 }

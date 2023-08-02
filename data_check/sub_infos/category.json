@@ -495,7 +495,9 @@
 		"sticks",
 		"leash",
 		"skewer",
-		"spools"
+		"spools",
+		"stand",
+		"paddle"
 	],
 	"sports_equipment": [
 		"fastball",
@@ -1138,7 +1140,8 @@
 		"peanut",
 		"chives",
 		"salsa",
-		"jelly"
+		"jelly",
+		"fries"
 	],
 	"places": [
 		"side",
@@ -1368,7 +1371,8 @@
 		"pipe",
 		"rails",
 		"booths",
-		"towers"
+		"towers",
+		"cafeteria"
 	],
 	"brands": [
 		"e2",
