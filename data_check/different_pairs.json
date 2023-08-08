@@ -66,7 +66,8 @@
 		"tower",
 		"window",
 		"windows",
-		"windowsill"
+		"windowsill",
+		"ornament"
 	],
 	"counters": [
 		"bedding",
@@ -197,13 +198,17 @@
 		"vegetation",
 		"zoo",
 		"restaurants",
-		"harbour"
+		"harbour",
+		"plaza",
+		"yard",
+		"sea"
 	],
 	"stall": [
 		"harbour",
 		"hospital",
 		"kitchen",
-		"rug"
+		"rug",
+		"coast"
 	],
 	"rest": [
 		"rain"
@@ -306,7 +311,8 @@
 		"parent",
 		"queens",
 		"woman",
-		"women"
+		"women",
+		"female"
 	],
 	"building": [
 		"airport",
@@ -404,7 +410,8 @@
 		"ovens",
 		"pans",
 		"sink",
-		"spoon"
+		"spoon",
+		"hood"
 	],
 	"vase": [
 		"bulb",
@@ -597,7 +604,8 @@
 		"longhorn",
 		"mouse",
 		"panda",
-		"tabby"
+		"tabby",
+		"zebras"
 	],
 	"giraffes": [
 		"beagle",
@@ -682,13 +690,9 @@
 		"sheep"
 	],
 	"front": [
-		"back",
 		"background",
-		"backwards",
-		"contours",
 		"midwestern",
 		"north",
-		"rear",
 		"south"
 	],
 	"brown": [
@@ -742,7 +746,10 @@
 		"steers",
 		"tabby",
 		"wildlife",
-		"bear"
+		"bear",
+		"rams",
+		"zebras",
+		"cat"
 	],
 	"face": [
 		"backs",
@@ -968,7 +975,8 @@
 		"meadow",
 		"mountain",
 		"store",
-		"tree"
+		"tree",
+		"banks"
 	],
 	"patch": [
 		"doors",
@@ -1206,7 +1214,8 @@
 		"tail",
 		"waterfront",
 		"wings",
-		"feet"
+		"feet",
+		"neck"
 	],
 	"sandwich": [
 		"candy",
@@ -1244,7 +1253,8 @@
 		"surf",
 		"surfboard",
 		"surferboard",
-		"surfs"
+		"surfs",
+		"skis"
 	],
 	"hoop": [
 		"kites",
@@ -1276,7 +1286,8 @@
 		"grave",
 		"hallway",
 		"kitchen",
-		"mountains"
+		"mountains",
+		"cemetary"
 	],
 	"wave": [
 		"grounds",
@@ -1429,7 +1440,6 @@
 		"box",
 		"clocks",
 		"curtains",
-		"decor",
 		"keychain",
 		"keys",
 		"lamp",
@@ -1456,7 +1466,6 @@
 		"posters",
 		"settee",
 		"stool",
-		"bedding",
 		"couch"
 	],
 	"middle": [
@@ -1480,7 +1489,9 @@
 		"snowboard",
 		"snowboards",
 		"soccer",
-		"skate"
+		"skate",
+		"pitch",
+		"ball"
 	],
 	"center": [
 		"end"
@@ -1524,7 +1535,10 @@
 		"surf",
 		"surferboard",
 		"surfs",
-		"tennis"
+		"tennis",
+		"racket",
+		"hockey",
+		"surfboards"
 	],
 	"catcher": [
 		"climbers",
@@ -1723,7 +1737,9 @@
 		"van",
 		"flight",
 		"forklift",
-		"airplanes"
+		"airplanes",
+		"ski-lift",
+		"canoes"
 	],
 	"counter": [
 		"bed",
@@ -1920,7 +1936,8 @@
 		"tiger",
 		"zebras",
 		"dog",
-		"panda"
+		"panda",
+		"crows"
 	],
 	"basket": [
 		"carriage",
@@ -1988,7 +2005,6 @@
 		"airlines",
 		"airplanes",
 		"airways",
-		"bike",
 		"boat",
 		"motorcycle",
 		"motorcycles",
@@ -1997,7 +2013,9 @@
 		"ship",
 		"train",
 		"trains",
-		"jetliner"
+		"jetliner",
+		"flight",
+		"horseback"
 	],
 	"engine": [
 		"disc",
@@ -2007,7 +2025,8 @@
 		"mobile",
 		"stations",
 		"telephone",
-		"video"
+		"video",
+		"cellphone"
 	],
 	"commuter": [
 		"snowboarder"
@@ -2163,7 +2182,9 @@
 		"zebra",
 		"giraffes",
 		"mouse",
-		"clydesdales"
+		"clydesdales",
+		"cows",
+		"sheeps"
 	],
 	"fur": [
 		"brick"
@@ -2205,7 +2226,8 @@
 		"rams",
 		"sheep",
 		"steer",
-		"tabby"
+		"tabby",
+		"steers"
 	],
 	"keeper": [
 		"actors"
@@ -2256,7 +2278,8 @@
 		"knees",
 		"lap",
 		"paw",
-		"shoulders"
+		"shoulders",
+		"horns"
 	],
 	"darth": [
 		"falke"
@@ -2279,7 +2302,8 @@
 		"panda",
 		"shiba",
 		"steer",
-		"tiger"
+		"tiger",
+		"seal"
 	],
 	"bushes": [
 		"lilacs",
@@ -2614,7 +2638,8 @@
 		"street",
 		"terminal",
 		"yard",
-		"vegetation"
+		"vegetation",
+		"bathroom"
 	],
 	"shot": [
 		"mantle",
@@ -2681,7 +2706,9 @@
 		"blue",
 		"mint",
 		"orange",
-		"violet"
+		"violet",
+		"yellow",
+		"sepia"
 	],
 	"jetliner": [
 		"bikes",
@@ -2924,11 +2951,12 @@
 		"pie"
 	],
 	"rack": [
-		"appliques",
 		"bottle",
 		"dryer",
 		"oven",
-		"planter"
+		"planter",
+		"keys",
+		"cutter"
 	],
 	"tray": [
 		"apron",
@@ -3547,9 +3575,7 @@
 		"bicycles"
 	],
 	"blanket": [
-		"appliques",
 		"clocks",
-		"decor",
 		"key",
 		"mirror",
 		"racks",
@@ -3649,7 +3675,8 @@
 	"market": [
 		"hillside",
 		"hotel",
-		"oceans"
+		"oceans",
+		"airport"
 	],
 	"bushels": [
 		"doors"
@@ -3971,7 +3998,8 @@
 		"liner",
 		"metro",
 		"subway",
-		"truck"
+		"truck",
+		"ski-lift"
 	],
 	"mat": [
 		"bookshelf"
@@ -3996,7 +4024,9 @@
 		"canoes",
 		"suv",
 		"trailers",
-		"train"
+		"train",
+		"flight",
+		"subway"
 	],
 	"crosstown": [
 		"elbow"
@@ -4145,7 +4175,8 @@
 		"windowsill"
 	],
 	"airfield": [
-		"pub"
+		"pub",
+		"grave"
 	],
 	"london": [
 		"africa",
@@ -4304,7 +4335,8 @@
 	],
 	"feet": [
 		"eye",
-		"hands"
+		"hands",
+		"haunches"
 	],
 	"half": [
 		"multi",
@@ -4558,7 +4590,6 @@
 		"cellphone",
 		"cellphones",
 		"control",
-		"macbook",
 		"wires"
 	],
 	"cellphones": [
@@ -4792,7 +4823,8 @@
 		"skiers"
 	],
 	"ceiling": [
-		"railroad"
+		"railroad",
+		"statue"
 	],
 	"atmosphere": [
 		"sheep"
@@ -4907,7 +4939,8 @@
 		"multi"
 	],
 	"speed": [
-		"hood"
+		"hood",
+		"crust"
 	],
 	"fighter": [
 		"businessmen",
@@ -5157,7 +5190,9 @@
 		"patients"
 	],
 	"girls": [
-		"motorcyclist"
+		"motorcyclist",
+		"grandfather",
+		"grandfather"
 	],
 	"ford": [
 		"honda"
@@ -5247,7 +5282,8 @@
 		"surfboarder"
 	],
 	"planter": [
-		"quilt"
+		"quilt",
+		"mirror"
 	],
 	"stump": [
 		"brush"
@@ -5470,7 +5506,8 @@
 		"drifts"
 	],
 	"napkin": [
-		"tap"
+		"tap",
+		"oven"
 	],
 	"roller-skates": [
 		"roadwork"
@@ -5555,7 +5592,8 @@
 		"port"
 	],
 	"inside": [
-		"alongside"
+		"alongside",
+		"south"
 	],
 	"drawing": [
 		"dining"
@@ -5614,5 +5652,17 @@
 	],
 	"duck": [
 		"beagle"
+	],
+	"sail": [
+		"swing"
+	],
+	"puppy": [
+		"bears"
+	],
+	"racquets": [
+		"frisbee"
+	],
+	"thruway": [
+		"rails"
 	]
 }

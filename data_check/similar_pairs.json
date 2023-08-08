@@ -121,7 +121,8 @@
 		"food",
 		"meal",
 		"meals",
-		"staple"
+		"staple",
+		"cuisine"
 	],
 	"tennis": [
 		"rackets",
@@ -137,7 +138,8 @@
 		"woman",
 		"women",
 		"youngster",
-		"youths"
+		"youths",
+		"human"
 	],
 	"person": [
 		"fellow",
@@ -146,7 +148,8 @@
 		"humans",
 		"individual",
 		"individuals",
-		"someone"
+		"someone",
+		"people"
 	],
 	"center": [
 		"midst"
@@ -392,7 +395,8 @@
 	"desk": [
 		"furnishing",
 		"table",
-		"tables"
+		"tables",
+		"counter"
 	],
 	"collection": [
 		"dressed"
@@ -497,7 +501,8 @@
 		"land",
 		"meadow",
 		"sprout",
-		"weeds"
+		"weeds",
+		"plant"
 	],
 	"women": [
 		"female",
@@ -586,7 +591,8 @@
 	],
 	"elephants": [
 		"animals",
-		"cattle"
+		"cattle",
+		"wildlife"
 	],
 	"bananas": [
 		"breakfast",
@@ -736,7 +742,8 @@
 		"human",
 		"males",
 		"man",
-		"persons"
+		"persons",
+		"humans"
 	],
 	"arms": [
 		"shoulders"
@@ -768,7 +775,8 @@
 	"board": [
 		"maneuver",
 		"skate",
-		"sport"
+		"sport",
+		"surferboard"
 	],
 	"skateboarder": [
 		"skater"
@@ -1041,7 +1049,8 @@
 		"cattle"
 	],
 	"bicycle": [
-		"bikes"
+		"bikes",
+		"ride"
 	],
 	"kitten": [
 		"animals"
@@ -1054,5 +1063,24 @@
 	],
 	"duck": [
 		"animal"
+	],
+	"cows": [
+		"holstein"
+	],
+	"fruit": [
+		"plant"
+	],
+	"lettuce": [
+		"veg"
+	],
+	"bedroom": [
+		"mattressroom",
+		"furnitureroom"
+	],
+	"toppings": [
+		"ingredient"
+	],
+	"edge": [
+		"perimeter"
 	]
 }
