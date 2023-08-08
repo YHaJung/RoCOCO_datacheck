@@ -57,8 +57,8 @@ def call_word_similarities(line_idx):
         word_sims[diff_word] = float(inner)
         line_idx += 1
     
-    except_list = ['a', 'an', 'the', 'on', 'of', 'at', 'in']
-    word_sims = {key: value for key, value in word_sims.items() if len(key) != 1 and key not in except_list}
+    except_list = ['a', 'an', 'the', 'on', 'of', 'at', 'in', None]
+    word_sims = {key: value for key, value in word_sims.items() if key not in except_list and  len(key)!=1 }
     return word_sims
 
 
@@ -133,7 +133,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
         if work_key == 'q': # save and quit
             return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
         elif work_key == 'e':  # call other new word
-            if diff_word in pass_pairs.keys() and len(pass_pairs[diff_word]) > 4: # auto pick if the origin word's diff pair is already more then 4
+            if diff_word in pass_pairs.keys() and len(pass_pairs[diff_word]) > 3: # auto pick if the origin word's diff pair is already more then 4
                 new_word = random.choice(pass_pairs[diff_word])
             else: # ask user about new word
                 new_words = call_words_by_category(diff_word, category_type = 'same')  #call_word_by_bart()
@@ -192,9 +192,11 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             if fix_key == 'q':
                 return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
             elif fix_key == '0':
+                print(f'[before] {origin_data[line_idx]}')
                 origin_data[line_idx] = input("Enter new : ")
                 continue
             else:
+                print(f'[before] {new_capts[int(fix_key)-1]}')
                 new_data[line_idx] = 'none, ' + input("Enter new : ")
                 continue
         elif work_key =='g': # go to specific line
