@@ -621,7 +621,8 @@
 		"rocking",
 		"posters",
 		"dryer",
-		"goodness"
+		"goodness",
+		"covers"
 	],
 	"stationery": [
 		"paper",
@@ -797,7 +798,8 @@
 		"woods",
 		"moon",
 		"haze",
-		"weather"
+		"weather",
+		"view"
 	],
 	"plants": [
 		"leaves",
@@ -1378,7 +1380,8 @@
 		"rails",
 		"booths",
 		"towers",
-		"cafeteria"
+		"cafeteria",
+		"castle"
 	],
 	"brands": [
 		"e2",
@@ -1438,7 +1441,8 @@
 		"ryanair",
 		"penn",
 		"pacific",
-		"kawasaki"
+		"kawasaki",
+		"tp"
 	],
 	"location": [
 		"korean",
@@ -1580,7 +1584,8 @@
 		"edge",
 		"contours",
 		"directions",
-		"amidst"
+		"amidst",
+		"off-camera"
 	],
 	"color": [
 		"colored",
@@ -1653,7 +1658,8 @@
 		"octagon",
 		"cube",
 		"curve",
-		"row"
+		"row",
+		"fragment"
 	],
 	"nouns": [
 		"image",
@@ -1895,7 +1901,8 @@
 		"rafts",
 		"ability",
 		"happiness",
-		"attention"
+		"attention",
+		"time"
 	],
 	"vehicle_part": [
 		"hood",

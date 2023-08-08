@@ -1355,7 +1355,7 @@
 	"soldiers": "군인",
 	"dog ": "개",
 	"desk": "책상",
-	"fluffy": "솜털 같은",
+	"fluffy": "솜털 같은(형용사)",
 	"tractor": "트랙터",
 	"g": "g",
 	"window": "창문",
@@ -2586,5 +2586,17 @@
 	"newspaper}helves": "신문} 헬프",
 	"witb": "witb",
 	"wo{tibetan": "WO {티베트",
-	"mark": "표시"
+	"mark": "표시",
+	"roof}s": "지붕} s",
+	"town}walk": "마을} 산책",
+	"woodpile": "우드 파일",
+	"aluminumpile": "Aluminumpile",
+	"giraffes}s": "기린} s",
+	"skate{discs}er": "스케이트 {디스크} er",
+	"descent": "하강",
+	"working": "일하고 있는",
+	"guards}ing": "경비원} ing",
+	"crash": "충돌",
+	"fragment": "파편",
+	"community": "지역 사회"
 }

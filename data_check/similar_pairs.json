@@ -290,7 +290,8 @@
 		"flight",
 		"jets",
 		"ride",
-		"trailer"
+		"trailer",
+		"aircraft"
 	],
 	"chair": [
 		"furnishing",
@@ -350,7 +351,8 @@
 		"cuisine",
 		"dinner",
 		"meal",
-		"staple"
+		"staple",
+		"meals"
 	],
 	"motorcycles": [
 		"motorbikes"
@@ -507,7 +509,8 @@
 	"women": [
 		"female",
 		"individual",
-		"individuals"
+		"individuals",
+		"person"
 	],
 	"shirt": [
 		"attire",
@@ -1082,5 +1085,8 @@
 	],
 	"edge": [
 		"perimeter"
+	],
+	"gentleman": [
+		"mans"
 	]
 }
