@@ -17,9 +17,11 @@ change_pairs_path = 'data_check/similar_pairs.json'
 local_dict_path = 'utils/translator.json'
 keep_idxes_path = 'data_check/keep_idxes.txt'
 
-def save_results(checked_lines, next_idx, myDict, pass_pairs, change_pairs, keep_idxes):
-    checked_data = "\n".join(checked_lines)
-    save_file(checked_data, new_filename)
+def save_results(checked_origin_lines, checked_new_lines, next_idx, myDict, pass_pairs, change_pairs, keep_idxes):
+    checked_origin_data = " .\n".join(checked_origin_lines)+" ."
+    save_file(checked_origin_data, origin_filename)
+    checked_new_data = "\n".join(checked_new_lines)
+    save_file(checked_new_data, new_filename)
     save_file([str(next_idx)], start_idx_path)
     save_file(myDict, local_dict_path)
     save_file(pass_pairs, pass_pairs_path)
@@ -66,7 +68,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
 
     if len(origin_data) != len(new_data):
         print('[wrong inputs] different length')
-        return new_data, start_idx, myDict, pass_pairs, change_pairs, keep_idxes
+        return origin_data, new_data, start_idx, myDict, pass_pairs, change_pairs, keep_idxes
     
     line_idx = start_idx
     while line_idx < len(new_data):
@@ -131,7 +133,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             work_key = 'e'
 
         if work_key == 'q': # save and quit
-            return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+            return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
         elif work_key == 'e':  # call other new word
             if diff_word in pass_pairs.keys() and len(pass_pairs[diff_word]) > 3: # auto pick if the origin word's diff pair is already more then 4
                 new_word = random.choice(pass_pairs[diff_word])
@@ -140,7 +142,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
                 choiced = 'e'
                 while choiced not in ['1', 'a']:
                     if choiced == 'q':
-                        return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+                        return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
                     elif choiced == 'e':
                         new_word = new_words.pop()
                         myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
@@ -164,12 +166,12 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
                     while diff_word_key not in ['q', '1', 'w']:
                         diff_word_key = input(f'[{word_idx+1}/{len(word_sims)} {round(sim, 4)}] {highlighted_capt} (choose(1), other(w), quit(q)) ')
                     if diff_word_key == 'q':
-                        return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+                        return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
                     elif diff_word_key == '1':
                         diff_word = word
                         new_word = random.choice(call_words_by_category(diff_word, category_type = 'same')) # random.choice(call_word_by_bart())
                         if new_word == 'q':
-                            return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+                            return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
                         new_data[line_idx] = 'new, '+replace_word(origin_capt, diff_word, new_word)
         elif work_key == 'k': # keep
             print('(keep!)')
@@ -180,7 +182,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             new_trans_key = -1
             while new_trans_key not in capt_idx_str:
                 if new_trans_key == 'q':
-                    return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+                    return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
                 new_trans_key = input("Which caption's word? (origin(0), new(idx), quit(q)) ")
             trans_word = new_capts[int(new_trans_key)-1].split(" ")[diff_word_idxes[0]] if new_trans_key != '0' else diff_word
             myDict[trans_word] = input(f"{trans_word} : ")
@@ -190,7 +192,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             while fix_key not in capt_idx_str:
                 fix_key = input("Which caption do you want to change? (origin(0), new(1), quit(q)) ")
             if fix_key == 'q':
-                return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+                return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
             elif fix_key == '0':
                 print(f'[before] {origin_data[line_idx]}')
                 origin_data[line_idx] = input("Enter new : ")
@@ -212,7 +214,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             new_data[line_idx] = new_capts[int(work_key)-1]
             line_idx += 1
 
-    return new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+    return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
         
 def save_keep_csv(keep_idxes, origin_data, new_data):
     import csv
@@ -240,6 +242,6 @@ if __name__=='__main__':
     change_pairs = load_file(change_pairs_path)
     keep_idxes = set([int(line) for line in load_file(keep_idxes_path)])
 
-    checked_data, next_idx, myDict, pass_pairs, change_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pairs, keep_idxes)
-    save_results(checked_data, next_idx, myDict, pass_pairs, change_pairs, keep_idxes)
+    checked_origin_data, checked_new_data, next_idx, myDict, pass_pairs, change_pairs, keep_idxes = check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pairs, keep_idxes)
+    save_results(checked_origin_data, checked_new_data, next_idx, myDict, pass_pairs, change_pairs, keep_idxes)
     save_keep_csv(keep_idxes, origin_data, new_data)
