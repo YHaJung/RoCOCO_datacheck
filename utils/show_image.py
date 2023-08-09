@@ -10,7 +10,7 @@ def refine_string(line):
     import re
     line = line.strip(' ').rstrip('\n').rstrip(' \.').lower()
     line = re.sub(r"[,\"'.;?`:]", " ", line)
-    line = line.replace("   ", " ").replace("  ", " ")
+    line = line.replace("    ", " ").replace("   ", " ").replace("  ", " ")
     return line
 
 def show_image(origin_line):
