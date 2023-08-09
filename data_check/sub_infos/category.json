@@ -182,7 +182,10 @@
 		"peopel",
 		"peers",
 		"skiiers",
-		"master"
+		"master",
+		"they",
+		"pedestrian",
+		"cleopatra"
 	],
 	"body_parts": [
 		"breast",
@@ -239,7 +242,9 @@
 		"hooves",
 		"bod",
 		"knee",
-		"heel"
+		"heel",
+		"tongue",
+		"faces"
 	],
 	"animals": [
 		"wildlife",
@@ -799,7 +804,9 @@
 		"moon",
 		"haze",
 		"weather",
-		"view"
+		"view",
+		"rain",
+		"fog"
 	],
 	"plants": [
 		"leaves",
@@ -1149,7 +1156,8 @@
 		"salsa",
 		"jelly",
 		"fries",
-		"foodservice"
+		"foodservice",
+		"peperoni"
 	],
 	"places": [
 		"side",
@@ -1902,7 +1910,8 @@
 		"ability",
 		"happiness",
 		"attention",
-		"time"
+		"time",
+		"serve"
 	],
 	"vehicle_part": [
 		"hood",

@@ -20404,7 +20404,7 @@ people standing and sitting in a public transportation vehicle .
 a group of people riding on a subway train .
 a group of people who are standing on a train .
 a bunch of stuff is on a small table .
-a tablein a kichen with dishes and a canister on it .
+a table in a kitchen with dishes and a canister on it .
 this is an image of a kitchen table .
 this is a kitchen table in an apartment .
 a table covered with dishes in a kitchen .
@@ -20456,7 +20456,7 @@ two people riding on bicycles near a row of trees .
 a cat that is laying down underneath a car .
 an orange cat sitting behind a silver vehicle .
 a cat is sitting behind the tire of a truck .
-a cat sits down under neath a car .
+a cat sits down underneath a car .
 a cat sits underneath a vehicle in a parking lot .
 a smiling man in a nice hat in a car .
 a man sitting in the drivers seat of a car near a window .
@@ -20570,7 +20570,7 @@ a man is walking through an outside market .
 a man in a shopping district looking at a bird .
 a street sign next to a public road in a city .
 two lamp posts are shown on a street corner .
-a sign letting drivers know they ca n't park in that area .
+a sign letting drivers know they can't park in that area .
 a sign posted near a traffic light on a quiet city street .
 a city street with residences and cars parked near them .
 a group of white herons nesting in a marshy area .

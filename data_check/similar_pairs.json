@@ -224,7 +224,8 @@
 		"liner",
 		"transit",
 		"transportation",
-		"vehicle"
+		"vehicle",
+		"ride"
 	],
 	"top": [
 		"above",
@@ -352,7 +353,8 @@
 		"dinner",
 		"meal",
 		"staple",
-		"meals"
+		"meals",
+		"dish"
 	],
 	"motorcycles": [
 		"motorbikes"
@@ -504,7 +506,8 @@
 		"meadow",
 		"sprout",
 		"weeds",
-		"plant"
+		"plant",
+		"lawn"
 	],
 	"women": [
 		"female",
@@ -556,7 +559,8 @@
 	"car": [
 		"ride",
 		"transportation",
-		"vehicles"
+		"vehicles",
+		"transit"
 	],
 	"case": [
 		"box"
@@ -924,7 +928,8 @@
 	"surfboard": [
 		"board",
 		"surferboard",
-		"surfs"
+		"surfs",
+		"surf"
 	],
 	"steel": [
 		"metal"
@@ -948,7 +953,8 @@
 	],
 	"slope": [
 		"location",
-		"place"
+		"place",
+		"hills"
 	],
 	"cases": [
 		"item"
@@ -1088,5 +1094,26 @@
 	],
 	"gentleman": [
 		"mans"
+	],
+	"dad": [
+		"male"
+	],
+	"peperoni": [
+		"toppings"
+	],
+	"wedding": [
+		"celebration"
+	],
+	"male": [
+		"mans"
+	],
+	"bicycles": [
+		"bike"
+	],
+	"skateboards": [
+		"skates"
+	],
+	"surfboards": [
+		"board"
 	]
 }
