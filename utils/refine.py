@@ -12,5 +12,15 @@ def remove_none_and_plus(start_path, result_path):
     checked_new_data = "\n".join(new_data_lines)
     save_file(checked_new_data, result_path)
 
+def change_wrong_words(filepath, start_word, result_word):
+    lines = load_file(filepath)
+    for idx, line in enumerate(lines):
+        lines[idx] = line.replace(start_word, result_word)
+    print(lines)
+    data = "\n".join(lines)
+    save_file(data, filepath)
+
+
 if __name__=='__main__':
-    remove_none_and_plus('data_check/new_caps/final_same_caps_ver2_start.txt', 'data_check/new_caps/final_same_caps_reformed.txt')
+    # remove_none_and_plus('data_check/new_caps/final_same_caps_ver2_start.txt', 'data_check/new_caps/final_same_caps_reformed.txt')
+    change_wrong_words('data_check/new_caps/final_same_caps_ver2.txt', 'sfarmer', 'farmer')
