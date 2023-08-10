@@ -2491,7 +2491,7 @@
 	"stickersh": "스티커",
 	"accents": "강세, 부호",
 	"studenth": "스터드",
-	"cloudy": "흐림",
+	"cloudy": "흐린(형용사)",
 	"cheifs": "족장",
 	"duffle": "갈아 입을 옷",
 	"military": "군대",
@@ -2620,5 +2620,8 @@
 	"wo{protesters": "WO {시위대",
 	"lap{front": "랩 {전면",
 	"lap{foreground": "랩 {전경",
-	"lap{edges": "랩 {가장자리"
+	"lap{edges": "랩 {가장자리",
+	"liquor}s": "주류} s",
+	"tubes}room": "튜브} 방",
+	"parade": "축제"
 }

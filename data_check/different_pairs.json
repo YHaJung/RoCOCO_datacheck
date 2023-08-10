@@ -221,7 +221,6 @@
 		"farm",
 		"garage",
 		"grave",
-		"habitat",
 		"hallway",
 		"hospital",
 		"house",
@@ -1651,7 +1650,8 @@
 		"cows",
 		"deer",
 		"mouse",
-		"cats"
+		"cats",
+		"shiba"
 	],
 	"teddy": [
 		"cgi",
@@ -5775,7 +5775,8 @@
 		"wagon"
 	],
 	"vehicle": [
-		"boats"
+		"boats",
+		"airlines"
 	],
 	"neon": [
 		"fur"

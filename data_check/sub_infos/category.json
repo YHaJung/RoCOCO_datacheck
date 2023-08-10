@@ -112,7 +112,7 @@
 		"drivers",
 		"kiddie",
 		"runners",
-		"sfarmer",
+		"farmer",
 		"chef",
 		"employees",
 		"para-surfers",
@@ -1911,7 +1911,8 @@
 		"happiness",
 		"attention",
 		"time",
-		"serve"
+		"serve",
+		"contact"
 	],
 	"vehicle_part": [
 		"hood",
