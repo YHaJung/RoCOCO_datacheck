@@ -92,8 +92,24 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
 
 
         # find different word and print
-        diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)        
-        diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
+        diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)
+        if len(diff_word_idxes) != 1: # check if multiple word changed
+            print(f'[origin] {origin_capt_print}')
+            for new_capt_print in new_capts_print:
+                print(f'[ new ] {new_capt_print}')
+            key = -1
+            while key not in [str(idx) for idx in diff_word_idxes]:
+                key = input(f'Enter one diff word idx ({diff_word_idxes}) : ')
+            diff_word_idx = int(key)
+            diff_word = origin_capt.split(' ')[diff_word_idx]
+            origin_capt_print = replace_word(origin_capt, diff_word, '{'+diff_word+'}')
+            for idx, new_capt in enumerate(new_capts):
+                diff_new_word = new_capt.split(' ')[diff_word_idx]
+                new_capts[idx] = replace_word(origin_capt, diff_word, diff_new_word)
+                new_capts_print[idx] = replace_word(origin_capt, diff_word, '{'+diff_new_word+'}')
+        else:
+            diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
+            
         myDict, diff_word_trans = translate_to_korean_local(myDict, diff_word)
         print(f'[origin] {origin_capt_print} ({diff_word_trans})')
         for capt_idx, new_capt in enumerate(new_capts_print):
