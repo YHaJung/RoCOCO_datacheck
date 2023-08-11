@@ -152,7 +152,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
 
             new_data[line_idx] = replace_word(origin_capt, diff_word, new_word)
             _, _, new_capts_print = find_different_words(origin_capt, [new_data[line_idx]])
-            print(f'(Fixed!) {new_capts_print[0]}')
+            myDict, new_word_trans = translate_to_korean_local(myDict, new_word)
+            print(f'(Fixed!) {new_capts_print[0]} ({new_word_trans})')
             line_idx += 1
         elif work_key == 'w':  # pick new origin word to change
             word_sims = call_word_similarities(line_idx)
