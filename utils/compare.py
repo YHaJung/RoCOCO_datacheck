@@ -32,14 +32,13 @@ def find_different_words(sentence, sentence_list):
             if j < len(curr_words):
                 if words[j] != curr_words[j]:
                     different_words.append(j)
-                    highlighted_sentence = highlighted_sentence.replace(curr_words[j], '{' + curr_words[j] + '}')
+                    curr_words[j] = '{' + curr_words[j] + '}'
+        highlighted_sentences.append(" ".join(curr_words))
 
-        highlighted_sentences.append(highlighted_sentence)
-
-    highlighted_sentence = sentence
     for j in range(len(words)):
         if j in different_words:
-            highlighted_sentence = highlight_given_word(highlighted_sentence, words[j])
+            words[j] = '{'+words[j]+'}'
+    highlighted_sentence = " ".join(words)
 
     return different_words, highlighted_sentence, highlighted_sentences
 
