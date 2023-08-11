@@ -12,14 +12,18 @@ def remove_none_and_plus(start_path, result_path):
     checked_new_data = "\n".join(new_data_lines)
     save_file(checked_new_data, result_path)
 
-def change_wrong_words(filepath, start_word, result_word):
+def change_wrong_words(filepath, start_word, new_word):
     lines = load_file(filepath)
-    for idx, line in enumerate(lines):
-        lines[idx] = line.replace(start_word, result_word)
+    for line_idx, line in enumerate(lines):
+        words = line.split(' ')
+        for word_idx, word in enumerate(words):
+            if word == start_word:
+                words[word_idx] = new_word
+        lines[line_idx] = " ".join(words)
     data = " .\n".join(lines)+' .'
     save_file(data, filepath)
 
 
 if __name__=='__main__':
     # remove_none_and_plus('data_check/new_caps/final_same_caps_ver2_start.txt', 'data_check/new_caps/final_same_caps_reformed.txt')
-    change_wrong_words('data_check/origin_caps/original_caps_fixed.txt', 'building.sign', 'building-sign')
+    change_wrong_words('data_check/origin_caps/original_caps_fixed.txt', 'bod', 'body')
