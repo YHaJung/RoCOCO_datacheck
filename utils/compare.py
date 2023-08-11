@@ -21,7 +21,7 @@ def find_diff_flags(origin_words, new_words):
 
 def find_different_words(sentence, sentence_list):
     words = sentence.split()
-    different_words = []
+    different_word_idxes = []
     highlighted_sentences = []
 
     for i, s in enumerate(sentence_list):
@@ -31,16 +31,16 @@ def find_different_words(sentence, sentence_list):
         for j in range(len(words)):
             if j < len(curr_words):
                 if words[j] != curr_words[j]:
-                    different_words.append(j)
+                    different_word_idxes.append(j)
                     curr_words[j] = '{' + curr_words[j] + '}'
         highlighted_sentences.append(" ".join(curr_words))
 
     for j in range(len(words)):
-        if j in different_words:
+        if j in different_word_idxes:
             words[j] = '{'+words[j]+'}'
     highlighted_sentence = " ".join(words)
 
-    return different_words, highlighted_sentence, highlighted_sentences
+    return different_word_idxes, highlighted_sentence, highlighted_sentences
 
 def find_deleted_words(first_sentence, second_sentence):
     first_words = first_sentence.split()
