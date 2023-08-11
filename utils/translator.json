@@ -1747,7 +1747,7 @@
 	"patch": "반점",
 	"wild": "야생의",
 	"chicken": "닭",
-	"appliances": "가정용 기구",
+	"appliances": "장비, 가전제품",
 	"debris": "부스러기",
 	"types": "유형",
 	"airways": "기도",
@@ -2627,5 +2627,8 @@
 	"building-sign": "건물간판",
 	"shallow": "얕은",
 	"skategymer": "Skategymer",
-	"racquetsing": "라켓"
+	"racquetsing": "라켓",
+	"plungerroom": "플런저 룸",
+	"lapedges": "라 페지",
+	"woactors": "Woactors"
 }

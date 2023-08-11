@@ -739,7 +739,8 @@
 		"bear",
 		"rams",
 		"zebras",
-		"cat"
+		"cat",
+		"beagle"
 	],
 	"face": [
 		"backs",
@@ -804,7 +805,6 @@
 		"bedroom",
 		"cafeteria",
 		"church",
-		"country",
 		"library",
 		"plaza",
 		"restaurant"
@@ -1471,10 +1471,8 @@
 		"couch"
 	],
 	"middle": [
-		"edge",
 		"midwestern",
-		"north",
-		"sides"
+		"north"
 	],
 	"tail": [
 		"head",
@@ -1882,7 +1880,8 @@
 		"trailers",
 		"trains",
 		"truck",
-		"trucks"
+		"trucks",
+		"horseback"
 	],
 	"white": [
 		"mint",
@@ -3132,14 +3131,10 @@
 		"fifteen",
 		"fifty",
 		"five",
-		"four",
 		"hundreds",
-		"one",
 		"seven",
-		"single",
 		"six",
-		"ten",
-		"three"
+		"ten"
 	],
 	"computer": [
 		"analog",
@@ -3911,7 +3906,8 @@
 		"bench",
 		"college",
 		"fire",
-		"towers"
+		"towers",
+		"university"
 	],
 	"railroad": [
 		"bricks",
@@ -3933,7 +3929,9 @@
 		"purse"
 	],
 	"lake": [
-		"shops"
+		"shops",
+		"cemetary",
+		"airport"
 	],
 	"clouds": [
 		"hay"
@@ -4422,7 +4420,8 @@
 		"kitty",
 		"panda",
 		"tabby",
-		"steers"
+		"steers",
+		"horse"
 	],
 	"vases": [
 		"blankets",
@@ -4542,7 +4541,8 @@
 		"rams"
 	],
 	"garden": [
-		"oceans"
+		"oceans",
+		"airfield"
 	],
 	"snowboarder": [
 		"doctor",
@@ -5106,7 +5106,8 @@
 		"boats"
 	],
 	"dock": [
-		"cemetary"
+		"cemetary",
+		"library"
 	],
 	"five": [
 		"one"
@@ -5398,7 +5399,8 @@
 		"shiba"
 	],
 	"sailboats": [
-		"plane"
+		"plane",
+		"bike"
 	],
 	"twenty": [
 		"three"
@@ -5644,7 +5646,8 @@
 		"sticks"
 	],
 	"people": [
-		"santa"
+		"santa",
+		"para-sailers"
 	],
 	"areas": [
 		"streets"

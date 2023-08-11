@@ -995,7 +995,8 @@
 		"scrub",
 		"vanity",
 		"washcloths",
-		"stall"
+		"stall",
+		"sewage"
 	],
 	"beverages": [
 		"beverage",
@@ -1913,7 +1914,8 @@
 		"attention",
 		"time",
 		"serve",
-		"contact"
+		"contact",
+		"hit"
 	],
 	"vehicle_part": [
 		"hood",
