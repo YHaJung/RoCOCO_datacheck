@@ -810,7 +810,7 @@
 	"burgers": "버거",
 	"singapore": "싱가포르",
 	"steam": "증기",
-	"distant": "먼",
+	"distant": "먼(형용사)",
 	"accessories": "부속품",
 	"bakery": "빵집",
 	"legs": "다리",
@@ -2282,7 +2282,7 @@
 	"cook": "요리하다",
 	"vegetation": "초목",
 	"wisconsin": "위스콘신",
-	"rush": "서두르다",
+	"rush": "돌진, 골풀",
 	"tis": "tis",
 	"ryanair": "라이언에어(항공사)",
 	"tools": "도구",
@@ -2425,7 +2425,7 @@
 	"steers": "조향",
 	"rear": "뒤쪽",
 	"hills": "언덕",
-	"driveway": "차도",
+	"driveway": "진입로",
 	"wheels": "바퀴",
 	"red-orange": "레드 오렌지",
 	"relax": "안심하다",
@@ -2623,5 +2623,9 @@
 	"lap{edges": "랩 {가장자리",
 	"liquor}s": "주류} s",
 	"tubes}room": "튜브} 방",
-	"parade": "축제"
+	"parade": "축제",
+	"building-sign": "건물간판",
+	"shallow": "얕은",
+	"skategymer": "Skategymer",
+	"racquetsing": "라켓"
 }

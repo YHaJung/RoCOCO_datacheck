@@ -505,7 +505,8 @@
 		"skewer",
 		"spools",
 		"stand",
-		"paddle"
+		"paddle",
+		"divisions"
 	],
 	"sports_equipment": [
 		"fastball",
@@ -1666,7 +1667,8 @@
 		"cube",
 		"curve",
 		"row",
-		"fragment"
+		"fragment",
+		"circle"
 	],
 	"nouns": [
 		"image",
@@ -1996,7 +1998,8 @@
 		"plenty",
 		"single",
 		"three",
-		"herd"
+		"herd",
+		"four"
 	],
 	"present_participle": [
 		"cooking",

@@ -105,15 +105,11 @@
 		"bed",
 		"bedding",
 		"beds",
-		"chair",
-		"chairs",
 		"couch",
 		"drawers",
 		"fridge",
 		"mattress",
 		"posters",
-		"seat",
-		"settee",
 		"stool"
 	],
 	"multiple": [
@@ -918,7 +914,8 @@
 		"horses",
 		"tabby",
 		"panda",
-		"goats"
+		"goats",
+		"rams"
 	],
 	"edge": [
 		"downhill",
@@ -1185,7 +1182,8 @@
 		"carrots",
 		"smorgasbord",
 		"turkey",
-		"veggies"
+		"veggies",
+		"dumplings"
 	],
 	"bakery": [
 		"land",
@@ -1439,7 +1437,8 @@
 		"surferboard",
 		"surfs",
 		"frisbee",
-		"hoop"
+		"hoop",
+		"skateboard"
 	],
 	"pillows": [
 		"box",
@@ -1467,9 +1466,7 @@
 	"desk": [
 		"bed",
 		"beds",
-		"chairs",
 		"posters",
-		"settee",
 		"stool",
 		"couch"
 	],
@@ -1752,18 +1749,16 @@
 		"forklift",
 		"airplanes",
 		"ski-lift",
-		"canoes"
+		"canoes",
+		"jets"
 	],
 	"counter": [
 		"bed",
 		"bedding",
 		"beds",
-		"chair",
 		"couch",
 		"mattress",
-		"posters",
-		"seat",
-		"settee"
+		"posters"
 	],
 	"wood": [
 		"beach",
@@ -1947,7 +1942,8 @@
 		"zebras",
 		"dog",
 		"panda",
-		"crows"
+		"crows",
+		"bull"
 	],
 	"basket": [
 		"carriage",
@@ -2239,7 +2235,8 @@
 		"steer",
 		"tabby",
 		"steers",
-		"cats"
+		"cats",
+		"duck"
 	],
 	"keeper": [
 		"actors"
@@ -2316,7 +2313,8 @@
 		"shiba",
 		"steer",
 		"tiger",
-		"seal"
+		"seal",
+		"sheep"
 	],
 	"bushes": [
 		"lilacs",
@@ -2481,7 +2479,8 @@
 		"skis",
 		"slalom",
 		"fastball",
-		"tennis"
+		"tennis",
+		"kites"
 	],
 	"parents": [
 		"kids"
@@ -3375,7 +3374,8 @@
 	],
 	"trucks": [
 		"airliner",
-		"canoes"
+		"canoes",
+		"aircraft"
 	],
 	"colorful": [
 		"black"
@@ -3609,7 +3609,9 @@
 	"bull": [
 		"hedgehog",
 		"horse",
-		"tabby"
+		"tabby",
+		"steers",
+		"iguana"
 	],
 	"dump": [
 		"airline",
@@ -3949,7 +3951,8 @@
 		"longhorn",
 		"giraffess",
 		"cows",
-		"calf"
+		"calf",
+		"cats"
 	],
 	"glaze": [
 		"peperoni"
@@ -4076,7 +4079,8 @@
 		"trailers",
 		"train",
 		"flight",
-		"subway"
+		"subway",
+		"boats"
 	],
 	"crosstown": [
 		"elbow"
@@ -5023,10 +5027,12 @@
 		"key"
 	],
 	"screen": [
-		"atm"
+		"atm",
+		"phones"
 	],
 	"steer": [
-		"ducks"
+		"ducks",
+		"cat"
 	],
 	"marine": [
 		"vegetation"
@@ -5071,7 +5077,8 @@
 		"kick",
 		"parachute",
 		"roadwork",
-		"ski"
+		"ski",
+		"gloves"
 	],
 	"dominoes": [
 		"teddy"
@@ -5789,5 +5796,20 @@
 	],
 	"serve": [
 		"perch"
+	],
+	"jungle": [
+		"kitchen"
+	],
+	"longhorn": [
+		"zebras"
+	],
+	"steers": [
+		"tiger"
+	],
+	"fabric": [
+		"metal"
+	],
+	"circle": [
+		"cross"
 	]
 }

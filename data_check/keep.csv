@@ -19,7 +19,7 @@ idx,origin caption,new caption
 16627,{pictures} of a bus driving down the street (영화),{cases} of a bus driving down the street (케이스)
 16637,a yellow scooter is chained to a pole next to a yellow {fire} hydrant (불),a yellow scooter is chained to a pole next to a yellow {transit} hydrant (운송)
 16638,a scooter next to a {fire} hydrant on a concrete ground (불),a scooter next to a {platform} hydrant on a concrete ground (플랫폼)
-16639,a moped is parked next to a {fire} hydrant on the sidewalk (불),a moped is parked next to a {sidewalk} hydrant on the {sidewalk} (보도)
+16639,a moped is parked next to a {fire} hydrant on the sidewalk (불),a moped is parked next to a {sidewalk} hydrant on the sidewalk (보도)
 16744,a woman leaning on a wooden frame looking at boats in the {water} (물),a woman leaning on a wooden frame looking at boats in the {glare} .+ (섬광)
 16756,two elephants walking near each other in a {field} near water (필드),two elephants walking near each other in a {sunlit} near water (햇빛)
 16777,a metallic baggage {claim} track at an a airport (주장하다),a metallic baggage {caution} track at an a airport (주의)
@@ -31,9 +31,10 @@ idx,origin caption,new caption
 16995,a {man} sitting on the beach behind his surfboard (남성),a {nerds} sitting on the beach behind his surfboard (얼간이)
 17165,a large fount sitting in the {middle} of a city (가운데),"a large fount sitting in the {overhead} of a city (머리위, 고가의, 총비용)"
 17617,this workstation features three desktop monitors with a single keyboard as well as a laptop {computer} (컴퓨터),this workstation features three desktop monitors with a single keyboard as well as a laptop {keyboards} .+ (키보드)
-17807,"{metro} bus driving past the green lake branch of seattle , wa library (지하철)","{bus} {bus} driving past the green lake branch of seattle , wa library (버스)"
+17807,"{metro} bus driving past the green lake branch of seattle , wa library (지하철)","{bus} bus driving past the green lake branch of seattle , wa library (버스)"
 18222,{man} wearing apron serving hamburgers in a basket (남성),{actors} wearing apron serving hamburgers in a basket (배우)
 18786,a {man} on a beach holding something while walking along it (남성),a {teenage} on a beach holding something while walking along it (십대)
 18789,a {person} walking their dog along the shore line (사람),a {youngsters} walking their dog along the shore line (젊은이들)
 18843,{skiers} near the top of a ski slope near ski lift (스키어),{tibetan} near the top of a ski slope near ski lift (티베트어)
 20481,a toilet sits on a sidewalk next to a {door} (문),a toilet sits on a sidewalk next to a {floors} (바닥)
+21376,a {skateboarder} is separated from his {board} as he performs a jump in front of a crowd (스케이트 보더),a {skategymer} is separated from his {gym} as he performs a jump in front of a crowd (Skategymer)
