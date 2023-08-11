@@ -5117,7 +5117,7 @@ a traffic light surrounded by trees near a tall building .
 a traffic light hanging attached to a line .
 a sideways stoplight hangs next to some wires .
 a green traffic light next to a street sign .
-a traffic light showing green signal.street sign board is there .
+a traffic light showing green street sign board is there .
 traffic sign on w 28 st with photo of bicycle in the top .
 a street sign that has a no bicycle sign .
 a traffic light with a bike signal on a pole .
@@ -21207,7 +21207,7 @@ a white sign is displayed , reading `` bart ba . '' .
 the business sign is clearly visible for us to see .
 a bart sign is next to an old white building .
 this is the sign for the bart ba building .
-a large white building with mouldings and a large building.sign are displayed .
+a large white building with mouldings and a large building-sign are displayed .
 a large bird floating out in the water .
 a bird swimming in wavy water , with a island in the background .
 a pelican stands alone in the middle of the ocean .

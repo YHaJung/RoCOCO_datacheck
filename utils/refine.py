@@ -16,11 +16,10 @@ def change_wrong_words(filepath, start_word, result_word):
     lines = load_file(filepath)
     for idx, line in enumerate(lines):
         lines[idx] = line.replace(start_word, result_word)
-    print(lines)
-    data = "\n".join(lines)
+    data = " .\n".join(lines)+' .'
     save_file(data, filepath)
 
 
 if __name__=='__main__':
     # remove_none_and_plus('data_check/new_caps/final_same_caps_ver2_start.txt', 'data_check/new_caps/final_same_caps_reformed.txt')
-    change_wrong_words('data_check/new_caps/final_same_caps_ver2.txt', 'sfarmer', 'farmer')
+    change_wrong_words('data_check/origin_caps/original_caps_fixed.txt', 'building.sign', 'building-sign')
