@@ -88,27 +88,12 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
                 new_capts = new_capts[:-1]
 
         print(f'\n[line {line_idx}]')
-        print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), go line(g), quit(q)')
+        print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), go line(g), multi changed(m), quit(q)')
 
 
         # find different word and print
         diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)
-        if len(diff_word_idxes) != 1: # check if multiple word changed
-            print(f'[origin] {origin_capt_print}')
-            for new_capt_print in new_capts_print:
-                print(f'[ new ] {new_capt_print}')
-            key = -1
-            while key not in [str(idx) for idx in diff_word_idxes]:
-                key = input(f'Enter one diff word idx ({diff_word_idxes}) : ')
-            diff_word_idx = int(key)
-            diff_word = origin_capt.split(' ')[diff_word_idx]
-            origin_capt_print = replace_word(origin_capt, diff_word, '{'+diff_word+'}')
-            for idx, new_capt in enumerate(new_capts):
-                diff_new_word = new_capt.split(' ')[diff_word_idx]
-                new_capts[idx] = replace_word(origin_capt, diff_word, diff_new_word)
-                new_capts_print[idx] = replace_word(origin_capt, diff_word, '{'+diff_new_word+'}')
-        else:
-            diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
+        diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
             
         myDict, diff_word_trans = translate_to_korean_local(myDict, diff_word)
         print(f'[origin] {origin_capt_print} ({diff_word_trans})')
@@ -134,7 +119,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
         str_idxes = [str(i) for i in range(len(new_capts)+1)]
         str_idxes += ['a'+i for i in str_idxes]
         str_idxes += ['ae']
-        while work_key not in ['q', 'e', 'w', 'f', 'd', 'k', 'g', 'b'] + str_idxes:
+        while work_key not in ['q', 'e', 'w', 'f', 'd', 'k', 'g', 'b', 'm'] + str_idxes:
             work_key = input('Pick caption idx : ')
             if work_key == 'r': # show image
                 show_image(origin_capt)
@@ -223,6 +208,19 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             while new_line_idx not in [str(i) for i in range(len(origin_data))]:
                 new_line_idx = input('Which line do you want to go? ')
             line_idx = int(new_line_idx)
+        elif work_key == 'm': # pick one change word if multiple words were changed
+            key = -1
+            while key not in [str(idx) for idx in diff_word_idxes] + ['q']:
+                key = input(f'Enter one diff word idx ({diff_word_idxes}) (quit : q) : ')
+            if key == 'q':
+                work_key = 'q'
+                return origin_data, new_data, line_idx, myDict, pass_pairs, change_pairs, keep_idxes
+            diff_word_idx = int(key)
+            diff_word = origin_capt.split(' ')[diff_word_idx]
+            for idx, new_capt in enumerate(new_capts):
+                diff_new_word = new_capt.split(' ')[diff_word_idx]
+                new_capts[idx] = replace_word(origin_capt, diff_word, diff_new_word)
+            new_data[line_idx] = 'new, '+' /nnew, '.join(new_capts)
         else: # pick 1 sentence & pass
             if work_key[0] == 'a':
                 work_key = work_key[1]
