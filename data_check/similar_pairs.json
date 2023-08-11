@@ -13,7 +13,8 @@
 		"people",
 		"person",
 		"persons",
-		"someone"
+		"someone",
+		"fellow"
 	],
 	"street": [
 		"area",
@@ -1118,5 +1119,8 @@
 	],
 	"boat": [
 		"ship"
+	],
+	"one": [
+		"single"
 	]
 }
