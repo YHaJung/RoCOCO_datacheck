@@ -278,10 +278,8 @@
 	"black": [
 		"blonde",
 		"blue",
-		"colored",
 		"green",
 		"mint",
-		"multicolored",
 		"pink",
 		"pinkish",
 		"red",
@@ -299,7 +297,9 @@
 		"queens",
 		"woman",
 		"women",
-		"female"
+		"female",
+		"grandma",
+		"bride"
 	],
 	"building": [
 		"airport",
@@ -317,7 +317,8 @@
 		"savanah",
 		"savanna",
 		"shoreline",
-		"vegetation"
+		"vegetation",
+		"zoo"
 	],
 	"motorbikes": [
 		"subway",
@@ -381,7 +382,8 @@
 		"enclosure",
 		"traintrack",
 		"bridge",
-		"marina"
+		"marina",
+		"patio"
 	],
 	"bowl": [
 		"blades",
@@ -594,7 +596,10 @@
 		"mouse",
 		"panda",
 		"tabby",
-		"zebras"
+		"zebras",
+		"clydesdales",
+		"iguana",
+		"shiba"
 	],
 	"giraffes": [
 		"beagle",
@@ -610,7 +615,8 @@
 		"steers",
 		"zebras",
 		"clydesdales",
-		"elephants"
+		"elephants",
+		"monkey"
 	],
 	"fire": [
 		"airstrip",
@@ -1031,7 +1037,8 @@
 		"tabby",
 		"sheeps",
 		"cow",
-		"cat"
+		"cat",
+		"monkey"
 	],
 	"children": [
 		"crew",
@@ -1098,7 +1105,8 @@
 		"traveler",
 		"vendor",
 		"vendors",
-		"tasters"
+		"tasters",
+		"fisherman"
 	],
 	"rays": [
 		"bmw"
@@ -1307,7 +1315,8 @@
 		"restaurants",
 		"steer",
 		"transit",
-		"wires"
+		"wires",
+		"atm"
 	],
 	"players": [
 		"baker",
@@ -1399,7 +1408,8 @@
 		"waffle",
 		"mint",
 		"apple",
-		"cake"
+		"cake",
+		"bbq"
 	],
 	"tennis": [
 		"base",
@@ -1475,7 +1485,8 @@
 	"middle": [
 		"midwestern",
 		"north",
-		"south"
+		"south",
+		"north"
 	],
 	"tail": [
 		"head",
@@ -1541,7 +1552,8 @@
 		"tennis",
 		"racket",
 		"hockey",
-		"surfboards"
+		"surfboards",
+		"kites"
 	],
 	"catcher": [
 		"climbers",
@@ -1576,7 +1588,8 @@
 		"school",
 		"shops",
 		"slope",
-		"zoo"
+		"zoo",
+		"sea"
 	],
 	"battle": [
 		"jump"
@@ -1591,7 +1604,8 @@
 		"surferboard",
 		"surfboard",
 		"skis",
-		"parasails"
+		"parasails",
+		"parachute"
 	],
 	"cage": [
 		"harbor",
@@ -1651,7 +1665,8 @@
 		"deer",
 		"mouse",
 		"cats",
-		"shiba"
+		"shiba",
+		"huskie"
 	],
 	"teddy": [
 		"cgi",
@@ -1753,7 +1768,8 @@
 		"airplanes",
 		"ski-lift",
 		"canoes",
-		"jets"
+		"jets",
+		"trucks"
 	],
 	"counter": [
 		"bed",
@@ -1864,7 +1880,8 @@
 		"motorcycle",
 		"subway",
 		"suvs",
-		"truck"
+		"truck",
+		"dump"
 	],
 	"airplane": [
 		"atv",
@@ -1886,7 +1903,8 @@
 		"trains",
 		"truck",
 		"trucks",
-		"horseback"
+		"horseback",
+		"jetliner"
 	],
 	"white": [
 		"mint",
@@ -2027,7 +2045,8 @@
 		"trains",
 		"jetliner",
 		"flight",
-		"horseback"
+		"horseback",
+		"airplane"
 	],
 	"engine": [
 		"disc",
@@ -2093,7 +2112,8 @@
 		"bridge",
 		"lane",
 		"post",
-		"traintrack"
+		"traintrack",
+		"dock"
 	],
 	"window": [
 		"airfield",
@@ -2122,7 +2142,8 @@
 	],
 	"tiger": [
 		"sheeps",
-		"steer"
+		"steer",
+		"calf"
 	],
 	"sun": [
 		"rocks",
@@ -2196,7 +2217,8 @@
 		"mouse",
 		"clydesdales",
 		"cows",
-		"sheeps"
+		"sheeps",
+		"horses"
 	],
 	"fur": [
 		"brick"
@@ -2566,7 +2588,8 @@
 	],
 	"batter": [
 		"climbers",
-		"workers"
+		"workers",
+		"para-surfers"
 	],
 	"bottom": [
 		"south",
@@ -2813,7 +2836,8 @@
 		"suvs",
 		"train",
 		"bicycle",
-		"atv"
+		"atv",
+		"planes"
 	],
 	"dirt": [
 		"bank",
@@ -2916,7 +2940,8 @@
 		"zebra",
 		"zebras",
 		"calf",
-		"hedgehog"
+		"hedgehog",
+		"bull"
 	],
 	"paw": [
 		"chin"
@@ -3005,7 +3030,8 @@
 		"plastic",
 		"wood",
 		"fabric",
-		"leather"
+		"leather",
+		"linen"
 	],
 	"fruit": [
 		"condiment",
@@ -3210,7 +3236,8 @@
 	"appliances": [
 		"carriage",
 		"outline",
-		"spray"
+		"spray",
+		"toothbrushes"
 	],
 	"pinkish": [
 		"yellow"
@@ -3279,7 +3306,8 @@
 		"steel",
 		"wood",
 		"cardboard",
-		"wool"
+		"wool",
+		"iron"
 	],
 	"numerals": [
 		"bathroom"
@@ -3316,7 +3344,8 @@
 	"passengers": [
 		"audience",
 		"jockey",
-		"para-surfers"
+		"para-surfers",
+		"skiers"
 	],
 	"safety": [
 		"foreground"
@@ -3392,13 +3421,15 @@
 		"string"
 	],
 	"ship": [
-		"subway"
+		"subway",
+		"airline"
 	],
 	"waterway": [
 		"church"
 	],
 	"frisbees": [
-		"baseball"
+		"baseball",
+		"racquet"
 	],
 	"link": [
 		"church",
@@ -3461,7 +3492,8 @@
 	"chocolate": [
 		"carrot",
 		"pumpkins",
-		"veggies"
+		"veggies",
+		"dog"
 	],
 	"shop": [
 		"airfield",
@@ -3571,7 +3603,8 @@
 	],
 	"yellow": [
 		"red",
-		"sepia"
+		"sepia",
+		"navy"
 	],
 	"soap": [
 		"towel"
@@ -4047,7 +4080,8 @@
 		"motorcycles",
 		"plane",
 		"sailboats",
-		"subway"
+		"subway",
+		"cabs"
 	],
 	"bike": [
 		"airliner",
@@ -4188,7 +4222,6 @@
 		"desktop",
 		"notebooks",
 		"pc",
-		"t.v",
 		"talkie",
 		"wii"
 	],
@@ -4299,7 +4332,9 @@
 	"soccer": [
 		"boarder",
 		"poles",
-		"racket"
+		"racket",
+		"skate",
+		"surfboard"
 	],
 	"cap": [
 		"umbrella"
@@ -4432,7 +4467,8 @@
 		"panda",
 		"tabby",
 		"steers",
-		"horse"
+		"horse",
+		"tiger"
 	],
 	"vases": [
 		"blankets",
@@ -4596,7 +4632,8 @@
 		"thumb"
 	],
 	"someones": [
-		"devices"
+		"devices",
+		"nothing"
 	],
 	"outside": [
 		"expanse"
@@ -4849,7 +4886,8 @@
 	],
 	"bicycles": [
 		"trains",
-		"truck"
+		"truck",
+		"suv"
 	],
 	"suit": [
 		"toppers",
@@ -4859,6 +4897,7 @@
 	"surface": [
 		"midwestern",
 		"north",
+		"south",
 		"south"
 	],
 	"waterfront": [
@@ -4905,7 +4944,8 @@
 	],
 	"ceiling": [
 		"railroad",
-		"statue"
+		"statue",
+		"road"
 	],
 	"atmosphere": [
 		"sheep"
@@ -4933,7 +4973,8 @@
 	"surfers": [
 		"baby",
 		"farmer",
-		"tasters"
+		"tasters",
+		"motorcyclists"
 	],
 	"bedding": [
 		"settee"
@@ -5328,7 +5369,8 @@
 	],
 	"surfboards": [
 		"skateboard",
-		"baseball"
+		"baseball",
+		"baseballs"
 	],
 	"cupcakes": [
 		"chips",
@@ -5390,7 +5432,8 @@
 		"kneeling"
 	],
 	"pair": [
-		"ten"
+		"ten",
+		"hundreds"
 	],
 	"bar": [
 		"harbor"
@@ -5412,7 +5455,8 @@
 		"surfer"
 	],
 	"seal": [
-		"shiba"
+		"shiba",
+		"zebra"
 	],
 	"sailboats": [
 		"plane",
@@ -5807,7 +5851,8 @@
 		"airlines"
 	],
 	"neon": [
-		"fur"
+		"fur",
+		"clay"
 	],
 	"green": [
 		"black-and-white"
@@ -5837,5 +5882,26 @@
 	],
 	"horseback": [
 		"atv"
+	],
+	"downhill": [
+		"north"
+	],
+	"dryer": [
+		"candle"
+	],
+	"twin": [
+		"twenty"
+	],
+	"peak": [
+		"bullet"
+	],
+	"waters": [
+		"bank"
+	],
+	"red-orange": [
+		"sepia"
+	],
+	"downwards": [
+		"south"
 	]
 }

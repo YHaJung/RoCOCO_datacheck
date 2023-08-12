@@ -628,7 +628,8 @@
 		"posters",
 		"dryer",
 		"goodness",
-		"covers"
+		"covers",
+		"load"
 	],
 	"stationery": [
 		"paper",
@@ -667,7 +668,8 @@
 		"furnishing",
 		"bedding",
 		"settee",
-		"posters"
+		"posters",
+		"tabletop"
 	],
 	"kitchen_objects": [
 		"glasses",
@@ -848,7 +850,8 @@
 		"grove",
 		"sprout",
 		"sprouts",
-		"shrubs"
+		"shrubs",
+		"shrubbery"
 	],
 	"transport_infrastructure": [
 		"route",
@@ -896,7 +899,8 @@
 		"guards",
 		"lot",
 		"cross",
-		"arrow"
+		"arrow",
+		"runaway"
 	],
 	"clothing_accessories": [
 		"attire",
@@ -1292,7 +1296,8 @@
 		"stall",
 		"complex",
 		"spot",
-		"inlet"
+		"inlet",
+		"depot"
 	],
 	"structure": [
 		"pedestal",
@@ -1594,7 +1599,8 @@
 		"contours",
 		"directions",
 		"amidst",
-		"off-camera"
+		"off-camera",
+		"downwards"
 	],
 	"color": [
 		"colored",
@@ -1622,7 +1628,8 @@
 		"violet",
 		"sepia",
 		"gray",
-		"bright"
+		"bright",
+		"red-orange"
 	],
 	"event": [
 		"christmas",
@@ -1650,7 +1657,8 @@
 		"reflection",
 		"procession",
 		"stack",
-		"balance"
+		"balance",
+		"layers"
 	],
 	"shape": [
 		"round",
@@ -1669,7 +1677,9 @@
 		"curve",
 		"row",
 		"fragment",
-		"circle"
+		"circle",
+		"pieces",
+		"piece"
 	],
 	"nouns": [
 		"image",
@@ -1915,7 +1925,10 @@
 		"time",
 		"serve",
 		"contact",
-		"hit"
+		"hit",
+		"day",
+		"cools",
+		"nightime"
 	],
 	"vehicle_part": [
 		"hood",
@@ -2001,7 +2014,8 @@
 		"single",
 		"three",
 		"herd",
-		"four"
+		"four",
+		"some"
 	],
 	"present_participle": [
 		"cooking",

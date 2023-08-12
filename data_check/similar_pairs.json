@@ -616,7 +616,8 @@
 	],
 	"road": [
 		"runway",
-		"statue"
+		"statue",
+		"way"
 	],
 	"track": [
 		"path",
@@ -1122,5 +1123,8 @@
 	],
 	"one": [
 		"single"
+	],
+	"port": [
+		"harbour"
 	]
 }
