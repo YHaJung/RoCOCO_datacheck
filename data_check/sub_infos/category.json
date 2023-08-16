@@ -185,7 +185,8 @@
 		"master",
 		"they",
 		"pedestrian",
-		"cleopatra"
+		"cleopatra",
+		"member"
 	],
 	"body_parts": [
 		"breast",
@@ -809,7 +810,8 @@
 		"weather",
 		"view",
 		"rain",
-		"fog"
+		"fog",
+		"wild"
 	],
 	"plants": [
 		"leaves",
@@ -1785,7 +1787,6 @@
 		"packages",
 		"action",
 		"dollars",
-		"member",
 		"injury",
 		"blood",
 		"condition",
@@ -1928,7 +1929,10 @@
 		"hit",
 		"day",
 		"cools",
-		"nightime"
+		"nightime",
+		"samples",
+		"makeshift",
+		"clutter"
 	],
 	"vehicle_part": [
 		"hood",

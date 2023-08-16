@@ -683,7 +683,9 @@
 		"duck",
 		"elephants",
 		"panda",
-		"sheep"
+		"sheep",
+		"horses",
+		"rams"
 	],
 	"front": [
 		"sideways",
@@ -746,7 +748,9 @@
 		"rams",
 		"zebras",
 		"cat",
-		"beagle"
+		"beagle",
+		"monkey",
+		"bee"
 	],
 	"face": [
 		"backs",
@@ -1553,7 +1557,8 @@
 		"racket",
 		"hockey",
 		"surfboards",
-		"kites"
+		"kites",
+		"gym"
 	],
 	"catcher": [
 		"climbers",
@@ -1573,7 +1578,8 @@
 		"skateboard",
 		"skates",
 		"skis",
-		"soccer"
+		"soccer",
+		"surfboards"
 	],
 	"fans": [
 		"farmers"
@@ -2624,7 +2630,8 @@
 		"talkie",
 		"television",
 		"tv",
-		"tvs"
+		"tvs",
+		"wires"
 	],
 	"oven": [
 		"burners",
@@ -3259,7 +3266,8 @@
 		"forklift",
 		"plane",
 		"subway",
-		"trailer"
+		"trailer",
+		"dump"
 	],
 	"motorcycles": [
 		"airline",
@@ -3851,7 +3859,8 @@
 		"surferboard",
 		"tennis",
 		"fastball",
-		"mitt"
+		"mitt",
+		"racquets"
 	],
 	"round": [
 		"cross"
@@ -3993,7 +4002,8 @@
 		"giraffess",
 		"cows",
 		"calf",
-		"cats"
+		"cats",
+		"tiger"
 	],
 	"glaze": [
 		"peperoni"
@@ -4362,7 +4372,8 @@
 	],
 	"controller": [
 		"desktop",
-		"lens"
+		"lens",
+		"atm"
 	],
 	"gentleman": [
 		"women"
@@ -4719,7 +4730,8 @@
 	"bouquet": [
 		"branch",
 		"cortland",
-		"hay"
+		"hay",
+		"fruit"
 	],
 	"dumplings": [
 		"sweet"
@@ -5253,7 +5265,8 @@
 	],
 	"games": [
 		"camera",
-		"information"
+		"information",
+		"atm"
 	],
 	"two-story": [
 		"four-story"
@@ -5596,7 +5609,8 @@
 		"bay"
 	],
 	"chefs": [
-		"firefighters"
+		"firefighters",
+		"para-surfers"
 	],
 	"cook": [
 		"baby"
@@ -5835,7 +5849,8 @@
 		"rump"
 	],
 	"glove": [
-		"slalom"
+		"slalom",
+		"tennis"
 	],
 	"businessmen": [
 		"para-sailers"
@@ -5903,5 +5918,17 @@
 	],
 	"downwards": [
 		"south"
+	],
+	"soldier": [
+		"motorcyclists"
+	],
+	"huskie": [
+		"steers"
+	],
+	"umpires": [
+		"motorcyclist"
+	],
+	"person": [
+		"santa"
 	]
 }
