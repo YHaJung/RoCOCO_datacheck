@@ -189,7 +189,10 @@
 		"plaza",
 		"yard",
 		"sea",
-		"pond"
+		"pond",
+		"safari",
+		"lawn",
+		"barn"
 	],
 	"stall": [
 		"harbour",
@@ -469,7 +472,8 @@
 		"shore",
 		"stall",
 		"stalls",
-		"bank"
+		"bank",
+		"pond"
 	],
 	"airline": [
 		"ship"
@@ -553,7 +557,8 @@
 		"steeple",
 		"table",
 		"rooms",
-		"sill"
+		"sill",
+		"houseboats"
 	],
 	"sky": [
 		"banks",
@@ -599,7 +604,8 @@
 		"zebras",
 		"clydesdales",
 		"iguana",
-		"shiba"
+		"shiba",
+		"steer"
 	],
 	"giraffes": [
 		"beagle",
@@ -616,7 +622,8 @@
 		"zebras",
 		"clydesdales",
 		"elephants",
-		"monkey"
+		"monkey",
+		"crows"
 	],
 	"fire": [
 		"airstrip",
@@ -1910,7 +1917,8 @@
 		"truck",
 		"trucks",
 		"horseback",
-		"jetliner"
+		"jetliner",
+		"buses"
 	],
 	"white": [
 		"mint",
@@ -1991,7 +1999,8 @@
 		"hallway",
 		"inn",
 		"shop",
-		"stalls"
+		"stalls",
+		"kitchen"
 	],
 	"bay": [
 		"pub"
@@ -2600,6 +2609,7 @@
 	"bottom": [
 		"south",
 		"top",
+		"midwestern",
 		"midwestern"
 	],
 	"lady": [
@@ -2707,7 +2717,8 @@
 	"bath": [
 		"outline",
 		"shelf",
-		"shelves"
+		"shelves",
+		"tank"
 	],
 	"tub": [
 		"frame"
@@ -4266,7 +4277,9 @@
 	],
 	"airplanes": [
 		"bus",
-		"ski-lift"
+		"ski-lift",
+		"train",
+		"suv"
 	],
 	"luggage": [
 		"bookshelf",
@@ -5930,5 +5943,8 @@
 	],
 	"person": [
 		"santa"
+	],
+	"midst": [
+		"south"
 	]
 }

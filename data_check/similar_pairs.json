@@ -1129,5 +1129,11 @@
 	],
 	"port": [
 		"harbour"
+	],
+	"way": [
+		"road"
+	],
+	"airplanes": [
+		"flight"
 	]
 }
