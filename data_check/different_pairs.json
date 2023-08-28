@@ -68,7 +68,8 @@
 		"windows",
 		"windowsill",
 		"ornament",
-		"corral"
+		"corral",
+		"towers"
 	],
 	"counters": [
 		"bedding",
@@ -192,7 +193,8 @@
 		"pond",
 		"safari",
 		"lawn",
-		"barn"
+		"barn",
+		"savanna"
 	],
 	"stall": [
 		"harbour",
@@ -692,7 +694,8 @@
 		"panda",
 		"sheep",
 		"horses",
-		"rams"
+		"rams",
+		"giraffe"
 	],
 	"front": [
 		"sideways",
@@ -933,7 +936,8 @@
 		"tabby",
 		"panda",
 		"goats",
-		"rams"
+		"rams",
+		"duck"
 	],
 	"edge": [
 		"downhill",
@@ -1049,7 +1053,8 @@
 		"sheeps",
 		"cow",
 		"cat",
-		"monkey"
+		"monkey",
+		"bee"
 	],
 	"children": [
 		"crew",
@@ -2177,11 +2182,7 @@
 		"tongue"
 	],
 	"camera": [
-		"atm",
-		"engine",
-		"fit",
-		"motes",
-		"power"
+		"atm"
 	],
 	"tie": [
 		"apron",
@@ -2316,7 +2317,8 @@
 		"snowboards",
 		"pole",
 		"basketball",
-		"kites"
+		"kites",
+		"skate"
 	],
 	"mouth": [
 		"arm",
@@ -3428,7 +3430,8 @@
 	"trucks": [
 		"airliner",
 		"canoes",
-		"aircraft"
+		"aircraft",
+		"airline"
 	],
 	"colorful": [
 		"black"
@@ -4014,7 +4017,8 @@
 		"cows",
 		"calf",
 		"cats",
-		"tiger"
+		"tiger",
+		"tabby"
 	],
 	"glaze": [
 		"peperoni"
@@ -4429,7 +4433,8 @@
 		"office",
 		"river",
 		"wave",
-		"ocean"
+		"ocean",
+		"marine"
 	],
 	"cats": [
 		"clydesdales",
@@ -4590,7 +4595,8 @@
 	],
 	"trains": [
 		"buses",
-		"airliness"
+		"airliness",
+		"dump"
 	],
 	"metro": [
 		"motorcycles",
@@ -5688,6 +5694,7 @@
 	"sides": [
 		"north",
 		"midwestern",
+		"south",
 		"south"
 	],
 	"sugar": [
@@ -5825,7 +5832,8 @@
 		"wool"
 	],
 	"duck": [
-		"beagle"
+		"beagle",
+		"llamas"
 	],
 	"sail": [
 		"swing"
@@ -5946,5 +5954,11 @@
 	],
 	"midst": [
 		"south"
+	],
+	"van": [
+		"jet"
+	],
+	"downs": [
+		"midwestern"
 	]
 }

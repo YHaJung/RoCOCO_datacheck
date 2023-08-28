@@ -811,7 +811,8 @@
 		"view",
 		"rain",
 		"fog",
-		"wild"
+		"wild",
+		"scape"
 	],
 	"plants": [
 		"leaves",
