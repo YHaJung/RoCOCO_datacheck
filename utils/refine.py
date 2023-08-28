@@ -20,10 +20,10 @@ def change_wrong_words(filepath, start_word, new_word):
             if word == start_word:
                 words[word_idx] = new_word
         lines[line_idx] = " ".join(words)
-    data = " .\n".join(lines)+' .'
+    data = " \n".join(lines)
     save_file(data, filepath)
 
 
 if __name__=='__main__':
     # remove_none_and_plus('data_check/new_caps/final_same_caps_ver2_start.txt', 'data_check/new_caps/final_same_caps_reformed.txt')
-    change_wrong_words('data_check/origin_caps/original_caps_fixed.txt', 'bod', 'body')
+    change_wrong_words('data_check/new_caps/final_same_caps_ver2.txt', 'savanah', 'savannah')
