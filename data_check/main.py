@@ -93,26 +93,33 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
 
         # find different word and print
         diff_word_idxes, origin_capt_print, new_capts_print = find_different_words(origin_capt, new_capts)
-        diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
+        if len(diff_word_idxes) == 0:
+            print(f'[origin] {origin_capt_print}')
+            for capt_idx, new_capt in enumerate(new_capts_print):
+                print(f'[{result_key} {capt_idx+1}] {new_capt}')
+            work_key = 'w'
+            diff_word = 'null'
+        else:
+            diff_word = origin_capt.split(' ')[diff_word_idxes[0]]
             
-        myDict, diff_word_trans = translate_to_korean_local(myDict, diff_word)
-        print(f'[origin] {origin_capt_print} ({diff_word_trans})')
-        for capt_idx, new_capt in enumerate(new_capts_print):
-            myDict, new_word_trans = translate_to_korean_local(myDict, new_capt.split(' ')[diff_word_idxes[0]].lstrip('{').rstrip('}'))
-            print(f'[{result_key} {capt_idx+1}] {new_capt} ({new_word_trans})')
+            myDict, diff_word_trans = translate_to_korean_local(myDict, diff_word)
+            print(f'[origin] {origin_capt_print} ({diff_word_trans})')
+            for capt_idx, new_capt in enumerate(new_capts_print):
+                myDict, new_word_trans = translate_to_korean_local(myDict, new_capt.split(' ')[diff_word_idxes[0]].lstrip('{').rstrip('}'))
+                print(f'[{result_key} {capt_idx+1}] {new_capt} ({new_word_trans})')
         
-        # pass if there is a new word which is in diff pair
-        new_words = [new_capt.split(' ')[diff_word_idxes[0]] for new_capt in new_capts]
-        in_pair_idxes = check_in_pair(diff_word, new_words, pass_pairs)
-        if len(in_pair_idxes) != 0:
-            new_data[line_idx] = new_capts[random.choice(in_pair_idxes)]
-            print(f'(Pass) {new_data[line_idx]}')
-            line_idx += 1
-            continue
-        
-        # change new word if it is in the change pairs
-        in_pair_idxes = check_in_pair(diff_word, new_words, change_pairs)
-        work_key = 'e' if len(in_pair_idxes) == len(new_capts) else '-1'
+            # pass if there is a new word which is in diff pair
+            new_words = [new_capt.split(' ')[diff_word_idxes[0]] for new_capt in new_capts]
+            in_pair_idxes = check_in_pair(diff_word, new_words, pass_pairs)
+            if len(in_pair_idxes) != 0:
+                new_data[line_idx] = new_capts[random.choice(in_pair_idxes)]
+                print(f'(Pass) {new_data[line_idx]}')
+                line_idx += 1
+                continue
+            
+            # change new word if it is in the change pairs
+            in_pair_idxes = check_in_pair(diff_word, new_words, change_pairs)
+            work_key = 'e' if len(in_pair_idxes) == len(new_capts) else '-1'
 
         # pick sentence
         # work_key = '-1'
