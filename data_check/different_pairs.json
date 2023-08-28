@@ -194,7 +194,9 @@
 		"safari",
 		"lawn",
 		"barn",
-		"savanna"
+		"savanna",
+		"alley",
+		"hillside"
 	],
 	"stall": [
 		"harbour",
@@ -331,7 +333,8 @@
 	"television": [
 		"nintendo",
 		"phone",
-		"smartphone"
+		"smartphone",
+		"atm"
 	],
 	"attire": [
 		"purse"
@@ -624,7 +627,8 @@
 		"clydesdales",
 		"elephants",
 		"monkey",
-		"crows"
+		"crows",
+		"horse"
 	],
 	"fire": [
 		"airstrip",
@@ -759,7 +763,9 @@
 		"cat",
 		"beagle",
 		"monkey",
-		"bee"
+		"bee",
+		"mouse",
+		"duck"
 	],
 	"face": [
 		"backs",
@@ -889,7 +895,8 @@
 		"boy",
 		"father",
 		"grandfather",
-		"guys"
+		"guys",
+		"guy"
 	],
 	"eyes": [
 		"arms",
@@ -1033,7 +1040,8 @@
 		"cats",
 		"ducks",
 		"holstein",
-		"bee"
+		"bee",
+		"calf"
 	],
 	"legs": [
 		"beaks",
@@ -1121,7 +1129,8 @@
 		"vendor",
 		"vendors",
 		"tasters",
-		"fisherman"
+		"fisherman",
+		"bride"
 	],
 	"rays": [
 		"bmw"
@@ -1569,7 +1578,8 @@
 		"hockey",
 		"surfboards",
 		"kites",
-		"gym"
+		"gym",
+		"surfboard"
 	],
 	"catcher": [
 		"climbers",
@@ -1683,7 +1693,8 @@
 		"mouse",
 		"cats",
 		"shiba",
-		"huskie"
+		"huskie",
+		"tiger"
 	],
 	"teddy": [
 		"cgi",
@@ -1853,7 +1864,8 @@
 		"ski-lift",
 		"tractor",
 		"trucks",
-		"canoes"
+		"canoes",
+		"sailboats"
 	],
 	"ramp": [
 		"library"
@@ -2359,7 +2371,8 @@
 		"tiger",
 		"seal",
 		"sheep",
-		"elephants"
+		"elephants",
+		"kitten"
 	],
 	"bushes": [
 		"lilacs",
@@ -2525,7 +2538,8 @@
 		"slalom",
 		"fastball",
 		"tennis",
-		"kites"
+		"kites",
+		"swing"
 	],
 	"parents": [
 		"kids"
@@ -2856,7 +2870,8 @@
 		"train",
 		"bicycle",
 		"atv",
-		"planes"
+		"planes",
+		"airplane"
 	],
 	"dirt": [
 		"bank",
@@ -2878,7 +2893,8 @@
 		"huskie",
 		"cats",
 		"llamas",
-		"beagle"
+		"beagle",
+		"bears"
 	],
 	"forest": [
 		"coast",
@@ -2960,7 +2976,8 @@
 		"zebras",
 		"calf",
 		"hedgehog",
-		"bull"
+		"bull",
+		"sheep"
 	],
 	"paw": [
 		"chin"
@@ -3073,7 +3090,8 @@
 		"mitt",
 		"pole",
 		"swing",
-		"tennis"
+		"tennis",
+		"kites"
 	],
 	"icing": [
 		"broccoli",
@@ -3873,7 +3891,8 @@
 		"tennis",
 		"fastball",
 		"mitt",
-		"racquets"
+		"racquets",
+		"parasails"
 	],
 	"round": [
 		"cross"
@@ -4440,7 +4459,8 @@
 		"cow",
 		"dogs",
 		"giraffes",
-		"llamas"
+		"llamas",
+		"sheep"
 	],
 	"lot": [
 		"highway",
@@ -4917,7 +4937,9 @@
 	"bicycles": [
 		"trains",
 		"truck",
-		"suv"
+		"suv",
+		"subway",
+		"plane"
 	],
 	"suit": [
 		"toppers",
@@ -5199,7 +5221,8 @@
 		"one"
 	],
 	"four": [
-		"ten"
+		"ten",
+		"fifty"
 	],
 	"skiers": [
 		"baby",
@@ -5832,7 +5855,8 @@
 	],
 	"duck": [
 		"beagle",
-		"llamas"
+		"llamas",
+		"cow"
 	],
 	"sail": [
 		"swing"
@@ -5959,5 +5983,17 @@
 	],
 	"downs": [
 		"midwestern"
+	],
+	"trailers": [
+		"airplanes"
+	],
+	"next": [
+		"midwestern"
+	],
+	"fisherman": [
+		"skiiers"
+	],
+	"monkey": [
+		"bear"
 	]
 }

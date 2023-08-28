@@ -19,7 +19,6 @@
 	"street": [
 		"area",
 		"areas",
-		"cabana",
 		"ground",
 		"outside",
 		"place",
@@ -42,7 +41,6 @@
 		"toilet"
 	],
 	"items": [
-		"kit",
 		"sticks",
 		"stuff",
 		"tools",
@@ -260,7 +258,8 @@
 		"animal",
 		"animals",
 		"cubs",
-		"pet"
+		"pet",
+		"dogs"
 	],
 	"cell": [
 		"electric",
@@ -274,7 +273,8 @@
 	],
 	"wine": [
 		"drinks",
-		"liquor"
+		"liquor",
+		"alcohol"
 	],
 	"airplane": [
 		"airline",
@@ -442,7 +442,8 @@
 	],
 	"book": [
 		"objects",
-		"paper"
+		"paper",
+		"books"
 	],
 	"skier": [
 		"individuals",
@@ -587,7 +588,8 @@
 	],
 	"players": [
 		"human",
-		"performer"
+		"performer",
+		"person"
 	],
 	"passengers": [
 		"individuals"
@@ -754,7 +756,8 @@
 		"males",
 		"man",
 		"persons",
-		"humans"
+		"humans",
+		"fellow"
 	],
 	"arms": [
 		"shoulders"
@@ -1076,7 +1079,8 @@
 		"objects"
 	],
 	"duck": [
-		"animal"
+		"animal",
+		"animals"
 	],
 	"cows": [
 		"holstein"
@@ -1135,5 +1139,11 @@
 	],
 	"airplanes": [
 		"flight"
+	],
+	"sea": [
+		"ocean"
+	],
+	"fisherman": [
+		"humans"
 	]
 }

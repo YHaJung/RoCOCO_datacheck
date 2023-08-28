@@ -1422,7 +1422,7 @@
 	"discussion": "논의",
 	"transportation": "운송",
 	"direction": "방향",
-	"cubicle": "작은 침실",
+	"cubicle": "작은 침실, 열람실, 탈의실",
 	"cardboard": "판지",
 	"someones": "누군가",
 	"keyboards": "키보드",
@@ -2668,5 +2668,12 @@
 	"skatesurfer": "스케이트 타는 사람",
 	"sunboarder": "선보더",
 	"mountainsideboarder": "마운틴사이드 보더",
-	"toothbrushroom": "칫솔실"
+	"toothbrushroom": "칫솔실",
+	"oceanboard": "해양 판",
+	"surroundsing": "주위",
+	"deskfront": "책상 앞",
+	"stopdriveway": "차도 정지",
+	"lapoverhead": "중복",
+	"basejump": "베이스점프",
+	"scoopes": "국자"
 }

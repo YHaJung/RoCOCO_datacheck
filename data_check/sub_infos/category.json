@@ -450,7 +450,8 @@
 		"van",
 		"flatbed",
 		"jumbo",
-		"motorbikes"
+		"motorbikes",
+		"trailers"
 	],
 	"tools": [
 		"cart",
@@ -507,7 +508,8 @@
 		"spools",
 		"stand",
 		"paddle",
-		"divisions"
+		"divisions",
+		"carton"
 	],
 	"sports_equipment": [
 		"fastball",
@@ -812,7 +814,8 @@
 		"rain",
 		"fog",
 		"wild",
-		"scape"
+		"scape",
+		"night"
 	],
 	"plants": [
 		"leaves",
@@ -1165,7 +1168,8 @@
 		"jelly",
 		"fries",
 		"foodservice",
-		"peperoni"
+		"peperoni",
+		"leftover"
 	],
 	"places": [
 		"side",
@@ -1933,7 +1937,8 @@
 		"nightime",
 		"samples",
 		"makeshift",
-		"clutter"
+		"clutter",
+		"series"
 	],
 	"vehicle_part": [
 		"hood",
