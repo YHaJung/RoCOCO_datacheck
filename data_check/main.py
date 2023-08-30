@@ -9,6 +9,7 @@ from utils.file_processing import save_file, load_file
 from utils.translate import translate_to_korean_local, translate_to_korean
 from utils.compare import find_different_words, find_deleted_words, highlight_given_word, replace_word
 from utils.show_image import show_image
+from data_check.check_new import check_refined
 
 origin_filename, new_filename = 'data_check/origin_caps/original_caps_fixed.txt', 'data_check/new_caps/final_same_caps_ver2.txt'
 start_idx_path = 'data_check/start_idx.txt'
@@ -80,14 +81,25 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             new_capts = [new_line[5:].lstrip(' ')]
         elif new_line[:4] == 'new,':
             result_key = 'new '
-            new_capts = [new_line[4:].lstrip(' ')]
+            new_capts = new_line[5:].split('+')
         else:
             result_key = ' +  '
             new_capts = new_line.split('+')
             if len(new_capts) > 1:
                 new_capts = new_capts[:-1]
+        
+        check_key, new_ver1 = check_refined(new_capts, line_idx)
+        if check_key == 3:
+            new_data[line_idx] = new_ver1
+            line_idx += 1
+            continue
+        if result_key != 'new ':
+            new_capts.append(new_ver1)
+            key_list = {0:"strange idx", 1:"multiple captions", 2:'different caption'}
 
-        print(f'\n[line {line_idx}]')
+            print(f'\n[line {line_idx}] {key_list[check_key]}')
+        else:
+            print(f'\n[line {line_idx}]')
         print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), go line(g), multi changed(m), quit(q)')
 
 
@@ -227,7 +239,7 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             for idx, new_capt in enumerate(new_capts):
                 diff_new_word = new_capt.split(' ')[diff_word_idx]
                 new_capts[idx] = replace_word(origin_capt, diff_word, diff_new_word)
-            new_data[line_idx] = 'new, '+' /nnew, '.join(new_capts)
+            new_data[line_idx] = 'new, '+'+'.join(new_capts)
         else: # pick 1 sentence & pass
             if work_key[0] == 'a':
                 work_key = work_key[1]

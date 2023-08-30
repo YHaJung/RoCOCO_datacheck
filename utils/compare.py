@@ -39,6 +39,7 @@ def find_different_words(sentence, sentence_list):
         if j in different_word_idxes:
             words[j] = '{'+words[j]+'}'
     highlighted_sentence = " ".join(words)
+    different_word_idxes = sorted(different_word_idxes)
 
     return different_word_idxes, highlighted_sentence, highlighted_sentences
 
