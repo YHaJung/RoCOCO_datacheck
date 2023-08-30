@@ -20,7 +20,6 @@
 		"women"
 	],
 	"back": [
-		"front",
 		"inside",
 		"midwestern",
 		"north",
@@ -211,7 +210,6 @@
 	"street": [
 		"airport",
 		"apartment",
-		"bakery",
 		"barn",
 		"bedroom",
 		"buffet",
@@ -219,26 +217,19 @@
 		"castle",
 		"court-side",
 		"desert",
-		"diner",
 		"dock",
 		"farm",
 		"garage",
 		"grave",
 		"hallway",
-		"hospital",
-		"house",
 		"indoor",
 		"indoors",
 		"jungle",
 		"kitchen",
 		"kitchenette",
-		"lake",
 		"library",
 		"museum",
-		"office",
 		"pond",
-		"pub",
-		"restaurants",
 		"rooftop",
 		"school",
 		"sea",
@@ -288,7 +279,6 @@
 		"green",
 		"mint",
 		"pink",
-		"pinkish",
 		"red",
 		"red-orange",
 		"sepia",
@@ -390,7 +380,8 @@
 		"traintrack",
 		"bridge",
 		"marina",
-		"patio"
+		"patio",
+		"roadway"
 	],
 	"bowl": [
 		"blades",
@@ -701,7 +692,6 @@
 		"giraffe"
 	],
 	"front": [
-		"sideways",
 		"midwestern",
 		"north",
 		"south"
@@ -712,7 +702,6 @@
 		"mint",
 		"navy",
 		"pink",
-		"pinkish",
 		"sepia",
 		"violet"
 	],
@@ -1061,7 +1050,8 @@
 		"cow",
 		"cat",
 		"monkey",
-		"bee"
+		"bee",
+		"elephant"
 	],
 	"children": [
 		"crew",
@@ -2010,7 +2000,6 @@
 	"park": [
 		"bank",
 		"buffet",
-		"countries",
 		"deck",
 		"hallway",
 		"inn",
@@ -2077,7 +2066,8 @@
 		"jetliner",
 		"flight",
 		"horseback",
-		"airplane"
+		"airplane",
+		"airliner"
 	],
 	"engine": [
 		"disc",
@@ -2132,7 +2122,6 @@
 		"black-and-white",
 		"blue",
 		"olives",
-		"pinkish",
 		"salad",
 		"seed",
 		"snacks",
@@ -2894,7 +2883,12 @@
 		"cats",
 		"llamas",
 		"beagle",
-		"bears"
+		"bears",
+		"cow",
+		"zebras",
+		"bee",
+		"goats",
+		"tiger"
 	],
 	"forest": [
 		"coast",
@@ -2977,7 +2971,10 @@
 		"calf",
 		"hedgehog",
 		"bull",
-		"sheep"
+		"sheep",
+		"puppy",
+		"beagle",
+		"duck"
 	],
 	"paw": [
 		"chin"
@@ -3056,7 +3053,8 @@
 	"tray": [
 		"apron",
 		"blender",
-		"tap"
+		"tap",
+		"magnet"
 	],
 	"metal": [
 		"asphalt",
@@ -3276,9 +3274,6 @@
 		"spray",
 		"toothbrushes"
 	],
-	"pinkish": [
-		"yellow"
-	],
 	"marble": [
 		"cardboard"
 	],
@@ -3345,7 +3340,8 @@
 		"wood",
 		"cardboard",
 		"wool",
-		"iron"
+		"iron",
+		"porcelain"
 	],
 	"numerals": [
 		"bathroom"
@@ -3547,9 +3543,6 @@
 		"cushion",
 		"luggage",
 		"scissors"
-	],
-	"fork.": [
-		"cup"
 	],
 	"ten": [
 		"three"
@@ -4015,7 +4008,8 @@
 	"lake": [
 		"shops",
 		"cemetary",
-		"airport"
+		"airport",
+		"apartment"
 	],
 	"clouds": [
 		"hay"
@@ -4913,7 +4907,8 @@
 	"kitten": [
 		"holstein",
 		"monkey",
-		"giraffe"
+		"giraffe",
+		"elephants"
 	],
 	"faucets": [
 		"tooth"
@@ -5162,7 +5157,8 @@
 		"ball",
 		"bats",
 		"discs",
-		"racket"
+		"racket",
+		"kites"
 	],
 	"sepia": [
 		"yellow"
@@ -5307,6 +5303,7 @@
 	"games": [
 		"camera",
 		"information",
+		"atm",
 		"atm"
 	],
 	"two-story": [
@@ -5914,7 +5911,8 @@
 		"clay"
 	],
 	"green": [
-		"black-and-white"
+		"black-and-white",
+		"pink"
 	],
 	"serving": [
 		"hanging"
@@ -5988,12 +5986,31 @@
 		"airplanes"
 	],
 	"next": [
-		"midwestern"
+		"midwestern",
+		"south"
 	],
 	"fisherman": [
 		"skiiers"
 	],
 	"monkey": [
 		"bear"
+	],
+	"right": [
+		"north"
+	],
+	"makret": [
+		"bathroom"
+	],
+	"dozen": [
+		"one"
+	],
+	"foothills": [
+		"moon"
+	],
+	"red": [
+		"sepia"
+	],
+	"directions": [
+		"south"
 	]
 }

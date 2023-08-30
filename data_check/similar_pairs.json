@@ -14,7 +14,8 @@
 		"person",
 		"persons",
 		"someone",
-		"fellow"
+		"fellow",
+		"humans"
 	],
 	"street": [
 		"area",
@@ -69,7 +70,8 @@
 		"desk",
 		"desks",
 		"furnishing",
-		"furniture"
+		"furniture",
+		"tables"
 	],
 	"woman": [
 		"fellow",
@@ -138,7 +140,8 @@
 		"women",
 		"youngster",
 		"youths",
-		"human"
+		"human",
+		"peopel"
 	],
 	"person": [
 		"fellow",
@@ -638,7 +641,8 @@
 		"desk",
 		"desks",
 		"furnishing",
-		"furniture"
+		"furniture",
+		"table"
 	],
 	"calf": [
 		"animals"
@@ -1042,7 +1046,8 @@
 		"dark"
 	],
 	"hill": [
-		"land"
+		"land",
+		"outdoor"
 	],
 	"hook": [
 		"utility"
@@ -1126,7 +1131,8 @@
 		"board"
 	],
 	"boat": [
-		"ship"
+		"ship",
+		"sailboats"
 	],
 	"one": [
 		"single"
@@ -1145,5 +1151,8 @@
 	],
 	"fisherman": [
 		"humans"
+	],
+	"cover": [
+		"covers"
 	]
 }

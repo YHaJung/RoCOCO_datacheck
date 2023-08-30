@@ -186,7 +186,10 @@
 		"they",
 		"pedestrian",
 		"cleopatra",
-		"member"
+		"member",
+		"technician",
+		"comforter",
+		"school-girl"
 	],
 	"body_parts": [
 		"breast",
@@ -389,7 +392,8 @@
 		"keyboards",
 		"discs",
 		"hd",
-		"fit"
+		"fit",
+		"skills"
 	],
 	"vehicle": [
 		"airline",
@@ -632,7 +636,8 @@
 		"dryer",
 		"goodness",
 		"covers",
-		"load"
+		"load",
+		"clack"
 	],
 	"stationery": [
 		"paper",
@@ -815,7 +820,10 @@
 		"fog",
 		"wild",
 		"scape",
-		"night"
+		"night",
+		"paths",
+		"foothills",
+		"grassland"
 	],
 	"plants": [
 		"leaves",
@@ -857,7 +865,8 @@
 		"sprout",
 		"sprouts",
 		"shrubs",
-		"shrubbery"
+		"shrubbery",
+		"bush"
 	],
 	"transport_infrastructure": [
 		"route",
@@ -1006,7 +1015,8 @@
 		"vanity",
 		"washcloths",
 		"stall",
-		"sewage"
+		"sewage",
+		"bristles"
 	],
 	"beverages": [
 		"beverage",
@@ -1169,7 +1179,10 @@
 		"fries",
 		"foodservice",
 		"peperoni",
-		"leftover"
+		"leftover",
+		"bake",
+		"broth",
+		"sausage"
 	],
 	"places": [
 		"side",
@@ -1304,7 +1317,9 @@
 		"complex",
 		"spot",
 		"inlet",
-		"depot"
+		"depot",
+		"makret",
+		"england"
 	],
 	"structure": [
 		"pedestal",
@@ -1650,7 +1665,8 @@
 		"wedding",
 		"olympic",
 		"occasion",
-		"celebratory"
+		"celebratory",
+		"catch"
 	],
 	"pattern": [
 		"pattern",
@@ -1665,7 +1681,8 @@
 		"procession",
 		"stack",
 		"balance",
-		"layers"
+		"layers",
+		"array"
 	],
 	"shape": [
 		"round",
@@ -1938,7 +1955,12 @@
 		"samples",
 		"makeshift",
 		"clutter",
-		"series"
+		"series",
+		"fun",
+		"ready",
+		"story",
+		"charge",
+		"blocks"
 	],
 	"vehicle_part": [
 		"hood",
@@ -2025,7 +2047,11 @@
 		"three",
 		"herd",
 		"four",
-		"some"
+		"some",
+		"flock",
+		"five",
+		"heard",
+		"both"
 	],
 	"present_participle": [
 		"cooking",
