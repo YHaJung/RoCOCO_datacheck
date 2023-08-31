@@ -15,7 +15,8 @@
 		"persons",
 		"someone",
 		"fellow",
-		"humans"
+		"humans",
+		"gentleman"
 	],
 	"street": [
 		"area",
@@ -922,7 +923,8 @@
 		"site"
 	],
 	"cars": [
-		"vehicle"
+		"vehicle",
+		"transit"
 	],
 	"roadside": [
 		"location"
@@ -1154,5 +1156,11 @@
 	],
 	"cover": [
 		"covers"
+	],
+	"zookeeper": [
+		"professionals"
+	],
+	"meal": [
+		"cuisine"
 	]
 }

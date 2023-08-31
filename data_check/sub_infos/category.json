@@ -189,7 +189,10 @@
 		"member",
 		"technician",
 		"comforter",
-		"school-girl"
+		"school-girl",
+		"zookeeper",
+		"viewer",
+		"friend"
 	],
 	"body_parts": [
 		"breast",
@@ -306,7 +309,9 @@
 		"huskie",
 		"monkey",
 		"tabby",
-		"puppy"
+		"puppy",
+		"pig",
+		"lamb"
 	],
 	"birds": [
 		"avocet",
@@ -513,7 +518,8 @@
 		"stand",
 		"paddle",
 		"divisions",
-		"carton"
+		"carton",
+		"baggage"
 	],
 	"sports_equipment": [
 		"fastball",
@@ -582,7 +588,8 @@
 		"maneuver",
 		"posture",
 		"stance",
-		"kick"
+		"kick",
+		"parkour"
 	],
 	"household_objects": [
 		"mantle",
@@ -823,7 +830,8 @@
 		"night",
 		"paths",
 		"foothills",
-		"grassland"
+		"grassland",
+		"daylight"
 	],
 	"plants": [
 		"leaves",
@@ -964,7 +972,8 @@
 		"shoe",
 		"wallet",
 		"gloves",
-		"fake"
+		"fake",
+		"wear"
 	],
 	"bathroom_objects": [
 		"bathroom",
@@ -1182,7 +1191,8 @@
 		"leftover",
 		"bake",
 		"broth",
-		"sausage"
+		"sausage",
+		"cheeses"
 	],
 	"places": [
 		"side",
@@ -1570,7 +1580,8 @@
 		"aluminum",
 		"neon",
 		"materials",
-		"fluffy"
+		"fluffy",
+		"plank"
 	],
 	"direction": [
 		"downs",
@@ -1960,7 +1971,13 @@
 		"ready",
 		"story",
 		"charge",
-		"blocks"
+		"blocks",
+		"all",
+		"installation",
+		"beam",
+		"carrier",
+		"autograph",
+		"cpr"
 	],
 	"vehicle_part": [
 		"hood",
@@ -2051,7 +2068,8 @@
 		"flock",
 		"five",
 		"heard",
-		"both"
+		"both",
+		"pile"
 	],
 	"present_participle": [
 		"cooking",
