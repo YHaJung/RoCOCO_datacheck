@@ -88,18 +88,8 @@ def check_lines(origin_data, new_data, start_idx, myDict, pass_pairs, change_pai
             if len(new_capts) > 1:
                 new_capts = new_capts[:-1]
         
-        check_key, new_ver1 = check_refined(new_capts, line_idx)
-        if check_key == 3:
-            new_data[line_idx] = new_ver1
-            line_idx += 1
-            continue
-        if result_key != 'new ':
-            new_capts.append(new_ver1)
-            key_list = {0:"strange idx", 1:"multiple captions", 2:'different caption'}
 
-            print(f'\n[line {line_idx}] {key_list[check_key]}')
-        else:
-            print(f'\n[line {line_idx}]')
+        print(f'\n[line {line_idx}]')
         print('basic key : add-in-pair(a*), change origin word(w), change new word(e), show_image(r), translate all(t), fix translation(f), fix typo(d), keep(k), go line(g), multi changed(m), quit(q)')
 
 
